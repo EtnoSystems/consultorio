@@ -33,5 +33,17 @@ namespace WindowsFormsApp1
             login _login = new login();
             _login.Show();
         }
+
+        private void principalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void principal_Load(object sender, EventArgs e)
+        {
+            // MessageBox.Show("Bienvenido " + Globales.userName);
+            if (Globales.userType == "admin") principalToolStripMenuItem.Visible = true; else principalToolStripMenuItem.Visible = false;
+            this.Text = "Gestión de obras sociales - USUARIO " + Globales.userName;
+        }
     }
 }

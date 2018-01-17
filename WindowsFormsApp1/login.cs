@@ -26,8 +26,11 @@ namespace WindowsFormsApp1
         // USUARIO ---------------------------------------------------------
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
-            txtUsuario.Text = "";
-            txtUsuario.ForeColor = Color.Black;
+            if (txtUsuario.Text == "Usuario")
+            {
+                txtUsuario.Text = "";
+                txtUsuario.ForeColor = Color.Black;
+            }
         }
         
         private void txtUsuario_TextChanged(object sender, EventArgs e)
@@ -51,8 +54,12 @@ namespace WindowsFormsApp1
         // PASSWORD ---------------------------------------------------------
         private void txtPassword_Enter(object sender, EventArgs e) //GET FOCUS
         {
-            txtPassword.Text = "";
-            txtPassword.ForeColor = Color.Black;
+            txtPassword.UseSystemPasswordChar = true;
+            if (txtPassword.Text == "Contraseña")
+            {
+                txtPassword.Text = "";
+                txtPassword.ForeColor = Color.Black;
+            }
         }
 
         private void txtPassword_LostFocus(object sender, EventArgs e)
@@ -62,7 +69,13 @@ namespace WindowsFormsApp1
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-     
+            if (txtPassword.Text != "")
+                btnMostrarOcultar.Visible = true;
+            else
+            {
+                btnMostrarOcultar.Visible = false;
+                
+            }
         }
 
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
@@ -76,7 +89,8 @@ namespace WindowsFormsApp1
 
         private void login_Load(object sender, EventArgs e)
         {
-
+            btnMostrarOcultar.Visible = false;
+            txtPassword.UseSystemPasswordChar = false;
         }
         
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -86,20 +100,41 @@ namespace WindowsFormsApp1
        
         private void btnSalir_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("¿Está seguro que desea salir del programa?","Cerar Sistema",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) Application.Exit();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e) //MOSTRAR / OCULTAR CONTRASEÑA
+        private void btnMostrarOcultar_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == true)
+
+        }
+
+        private void btnMostrarOcultar_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = false;
+        }
+
+        private void btnMostrarOcultar_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = true;
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "")
             {
-                checkBox1.Text = "Ocultar contraseña";
+                txtPassword.Text = "Contraseña";
                 txtPassword.UseSystemPasswordChar = false;
+                txtPassword.ForeColor = Color.LightGray;
+                btnMostrarOcultar.Visible = false;
             }
-            else
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "")
             {
-                checkBox1.Text = "Mostrar contraseña";
-                txtPassword.UseSystemPasswordChar = true;
+                txtUsuario.Text = "Usuario";
+                txtUsuario.ForeColor = Color.LightGray;
             }
         }
 
@@ -114,7 +149,13 @@ namespace WindowsFormsApp1
 
             if (_usuario != null)
             {
-                MessageBox.Show("Bienvenido al sistema " + _usuario.nombre, "Ha iniciado sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Globales.userName = _usuario.nombre;
+                Globales.userType = _usuario.tipo_usuario;
+                //MessageBox.Show("Bienvenido al sistema " + Globales.userName, "Ha iniciado sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+              
+               principal main = new principal();
+               main.Show();
+               this.Hide();
             }
             else
             {
