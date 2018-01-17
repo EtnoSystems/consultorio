@@ -24,8 +24,10 @@ namespace WindowsFormsApp1
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            consultaUsuarios consultaUsuarios = new consultaUsuarios();
-            consultaUsuarios.Show();    
+            //consultaUsuarios consultaUsuarios = new consultaUsuarios();
+            //consultaUsuarios.Show();    
+            usuarios_alta usuariosAlta = new usuarios_alta();
+            usuariosAlta.Show();
         }
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
