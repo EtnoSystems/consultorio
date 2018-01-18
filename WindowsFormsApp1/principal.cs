@@ -43,9 +43,11 @@ namespace WindowsFormsApp1
 
         private void principal_Load(object sender, EventArgs e)
         {
+           // MessageBox.Show("hola don " + Globales.userObject.Id.ToString());
+            
             // MessageBox.Show("Bienvenido " + Globales.userName);
             if (Globales.userType == "admin") principalToolStripMenuItem.Visible = true; else principalToolStripMenuItem.Visible = false;
-            this.Text = "Gestión de obras sociales - USUARIO " + Globales.userName;
+            this.Text = "Gestión de obras sociales - USUARIO " + Globales.userObject.nombre;
         }
     }
 }

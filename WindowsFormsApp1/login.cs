@@ -149,6 +149,7 @@ namespace WindowsFormsApp1
 
             if (_usuario != null)
             {
+                Globales.userObject = _gestorUsuarios.ObtenerCuentaPorUsername(_usuario.nombre);
                 Globales.userName = _usuario.nombre;
                 Globales.userType = _usuario.tipo_usuario;
                 //MessageBox.Show("Bienvenido al sistema " + Globales.userName, "Ha iniciado sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
