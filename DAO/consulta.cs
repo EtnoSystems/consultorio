@@ -15,11 +15,12 @@ namespace DAO
     public partial class consulta
     {
         public int Id { get; set; }
-        public string precio { get; set; }
-        public string fecha { get; set; }
+        public Nullable<decimal> precio { get; set; }
+        public System.DateTime fecha { get; set; }
         public int medico_Id { get; set; }
         public int tipo_consulta_Id { get; set; }
         public int paciente_Id { get; set; }
+        public bool pagada { get; set; }
     
         public virtual persona_medico persona_medico { get; set; }
         public virtual persona_paciente persona_paciente { get; set; }
