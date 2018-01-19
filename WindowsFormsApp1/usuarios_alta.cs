@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class usuarios_alta : Form
+    public partial class Usuarios_alta : Form
     {
-        public usuarios_alta()
+        public Usuarios_alta()
         {
             InitializeComponent();
         }

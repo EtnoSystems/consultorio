@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class usuarios_alta
+    partial class Usuarios_alta
     {
         /// <summary>
         /// Required designer variable.

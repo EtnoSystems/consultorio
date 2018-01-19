@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d30df138aa1a4717a02e40a114cc4fb4" Name="Diagram1" ZoomLevel="55">
+      <Diagram DiagramId="8c61e992967f40308471e11006ceef7a" Name="Diagram1">
         <EntityTypeShape EntityType="consultoriosModel.ciudad" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="consultoriosModel.consulta" Width="1.5" PointX="12.75" PointY="9.125" IsExpanded="true" />
         <EntityTypeShape EntityType="consultoriosModel.datos_contacto" Width="1.5" PointX="7.5" PointY="6.25" IsExpanded="true" />
@@ -16,7 +16,8 @@
         <EntityTypeShape EntityType="consultoriosModel.persona_paciente" Width="1.5" PointX="7.5" PointY="12" IsExpanded="true" />
         <EntityTypeShape EntityType="consultoriosModel.personaobra_social" Width="1.5" PointX="10.5" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="consultoriosModel.tipo_consulta" Width="1.5" PointX="10.5" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="consultoriosModel.usuario" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriosModel.tipo_usuario" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriosModel.usuario" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
         <AssociationConnector Association="consultoriosModel.FK_direccionciudad" ManuallyRouted="false" />
         <AssociationConnector Association="consultoriosModel.FK_medicoconsulta" ManuallyRouted="false" />
         <AssociationConnector Association="consultoriosModel.FK_pacienteconsulta" ManuallyRouted="false" />
@@ -27,6 +28,7 @@
         <AssociationConnector Association="consultoriosModel.FK_medico_inherits_persona" ManuallyRouted="false" />
         <AssociationConnector Association="consultoriosModel.FK_paciente_inherits_persona" ManuallyRouted="false" />
         <AssociationConnector Association="consultoriosModel.FK_personaobra_social_persona" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriosModel.FK_usuariotipo_usuario" ManuallyRouted="false" />
         <AssociationConnector Association="consultoriosModel.medicoespecialidad" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

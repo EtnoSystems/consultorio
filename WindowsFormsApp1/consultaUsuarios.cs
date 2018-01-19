@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
 {
     public partial class consultaUsuarios : Form
     {
-        gestorUsuarios obj_gestorUsuarios = new gestorUsuarios(); 
+        GestorUsuarios obj_gestorUsuarios = new GestorUsuarios(); 
 
         public consultaUsuarios()
         {

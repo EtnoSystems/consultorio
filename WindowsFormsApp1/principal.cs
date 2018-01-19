@@ -10,44 +10,53 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class principal : Form
+    public partial class Principal : Form
     {
-        public principal()
+        public Principal()
         {
             InitializeComponent();
         }
 
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        private void ContextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
 
         }
 
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void UsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //consultaUsuarios consultaUsuarios = new consultaUsuarios();
             //consultaUsuarios.Show();    
-            usuarios_alta usuariosAlta = new usuarios_alta();
+            Usuarios_alta usuariosAlta = new Usuarios_alta();
             usuariosAlta.Show();
         }
 
-        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        private void LoginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            login _login = new login();
+            Login _login = new Login();
             _login.Show();
         }
 
-        private void principalToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void principal_Load(object sender, EventArgs e)
+        private void Principal_Load(object sender, EventArgs e)
         {
            // MessageBox.Show("hola don " + Globales.userObject.Id.ToString());
             
             // MessageBox.Show("Bienvenido " + Globales.userName);
-            if (Globales.userType == "admin") principalToolStripMenuItem.Visible = true; else principalToolStripMenuItem.Visible = false;
+            if (Globales.userType == "admin")
+                principalToolStripMenuItem.Visible = true;
+            else
+                principalToolStripMenuItem.Visible = false;
+
             this.Text = "Gestión de obras sociales - USUARIO " + Globales.userObject.nombre;
+        }
+
+        private void MenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

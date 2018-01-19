@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class login
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -29,103 +29,121 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnIngresar = new System.Windows.Forms.Button();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.BtnMostrarOcultar = new System.Windows.Forms.Button();
+            this.BtnSalir = new System.Windows.Forms.Button();
+            this.BtnIngresar = new System.Windows.Forms.Button();
+            this.TxtPassword = new System.Windows.Forms.TextBox();
+            this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnMostrarOcultar = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.btnMostrarOcultar);
-            this.panel1.Controls.Add(this.btnSalir);
-            this.panel1.Controls.Add(this.btnIngresar);
-            this.panel1.Controls.Add(this.txtPassword);
-            this.panel1.Controls.Add(this.txtUsuario);
+            this.panel1.Controls.Add(this.BtnMostrarOcultar);
+            this.panel1.Controls.Add(this.BtnSalir);
+            this.panel1.Controls.Add(this.BtnIngresar);
+            this.panel1.Controls.Add(this.TxtPassword);
+            this.panel1.Controls.Add(this.TxtUsuario);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(67, 70);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(363, 257);
             this.panel1.TabIndex = 1;
             // 
-            // btnSalir
+            // BtnMostrarOcultar
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalir.BackgroundImage")));
-            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.ForeColor = System.Drawing.Color.Black;
-            this.btnSalir.ImageKey = "(ninguno)";
-            this.btnSalir.Location = new System.Drawing.Point(204, 175);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 55);
-            this.btnSalir.TabIndex = 4;
-            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip2.SetToolTip(this.btnSalir, "Cierra el programa");
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
+            this.BtnMostrarOcultar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnMostrarOcultar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnMostrarOcultar.BackgroundImage")));
+            this.BtnMostrarOcultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnMostrarOcultar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnMostrarOcultar.FlatAppearance.BorderSize = 0;
+            this.BtnMostrarOcultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMostrarOcultar.Location = new System.Drawing.Point(286, 96);
+            this.BtnMostrarOcultar.Name = "BtnMostrarOcultar";
+            this.BtnMostrarOcultar.Size = new System.Drawing.Size(35, 23);
+            this.BtnMostrarOcultar.TabIndex = 6;
+            this.BtnMostrarOcultar.UseVisualStyleBackColor = false;
+            this.BtnMostrarOcultar.Click += new System.EventHandler(this.BtnMostrarOcultar_Click);
+            this.BtnMostrarOcultar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BtnMostrarOcultar_MouseDown);
+            this.BtnMostrarOcultar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BtnMostrarOcultar_MouseUp);
             // 
-            // btnIngresar
+            // BtnSalir
             // 
-            this.btnIngresar.BackColor = System.Drawing.Color.Transparent;
-            this.btnIngresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIngresar.BackgroundImage")));
-            this.btnIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIngresar.FlatAppearance.BorderSize = 0;
-            this.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngresar.ForeColor = System.Drawing.Color.Black;
-            this.btnIngresar.ImageKey = "(ninguno)";
-            this.btnIngresar.Location = new System.Drawing.Point(82, 175);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(75, 55);
-            this.btnIngresar.TabIndex = 3;
-            this.btnIngresar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.btnIngresar, "Presiones para iniciar sesión");
-            this.btnIngresar.UseVisualStyleBackColor = false;
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            this.BtnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.BtnSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnSalir.BackgroundImage")));
+            this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSalir.FlatAppearance.BorderSize = 0;
+            this.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalir.ForeColor = System.Drawing.Color.Black;
+            this.BtnSalir.ImageKey = "(ninguno)";
+            this.BtnSalir.Location = new System.Drawing.Point(204, 175);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(75, 55);
+            this.BtnSalir.TabIndex = 4;
+            this.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip2.SetToolTip(this.BtnSalir, "Cierra el programa");
+            this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click_1);
             // 
-            // txtPassword
+            // BtnIngresar
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtPassword.Location = new System.Drawing.Point(81, 96);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(198, 24);
-            this.txtPassword.TabIndex = 2;
-            this.txtPassword.Text = "Contraseña";
-            this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
-            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
-            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
-            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
-            this.txtPassword.LostFocus += new System.EventHandler(this.txtPassword_LostFocus);
+            this.BtnIngresar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnIngresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnIngresar.BackgroundImage")));
+            this.BtnIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnIngresar.FlatAppearance.BorderSize = 0;
+            this.BtnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnIngresar.ForeColor = System.Drawing.Color.Black;
+            this.BtnIngresar.ImageKey = "(ninguno)";
+            this.BtnIngresar.Location = new System.Drawing.Point(82, 175);
+            this.BtnIngresar.Name = "BtnIngresar";
+            this.BtnIngresar.Size = new System.Drawing.Size(75, 55);
+            this.BtnIngresar.TabIndex = 3;
+            this.BtnIngresar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.BtnIngresar, "Presiones para iniciar sesión");
+            this.BtnIngresar.UseVisualStyleBackColor = false;
+            this.BtnIngresar.Click += new System.EventHandler(this.BtnIngresar_Click);
             // 
-            // txtUsuario
+            // TxtPassword
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtUsuario.Location = new System.Drawing.Point(81, 57);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(198, 24);
-            this.txtUsuario.TabIndex = 1;
-            this.txtUsuario.Text = "Usuario";
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
-            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
-            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsuario_KeyDown);
-            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
-            this.txtUsuario.LostFocus += new System.EventHandler(this.txtUsuario_LostFocus);
+            this.TxtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPassword.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.TxtPassword.Location = new System.Drawing.Point(81, 96);
+            this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.Size = new System.Drawing.Size(198, 24);
+            this.TxtPassword.TabIndex = 2;
+            this.TxtPassword.Text = "Contraseña";
+            this.TxtPassword.UseSystemPasswordChar = true;
+            this.TxtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
+            this.TxtPassword.Enter += new System.EventHandler(this.TxtPassword_Enter);
+            this.TxtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPassword_KeyDown);
+            // this.TxtPassword.Leave += new System.EventHandler(this.TxtPassword_Leave);
+            this.TxtPassword.LostFocus += new System.EventHandler(this.TxtPassword_LostFocus);
+            // 
+            // TxtUsuario
+            // 
+            this.TxtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUsuario.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.TxtUsuario.Location = new System.Drawing.Point(81, 57);
+            this.TxtUsuario.Name = "TxtUsuario";
+            this.TxtUsuario.Size = new System.Drawing.Size(198, 24);
+            this.TxtUsuario.TabIndex = 1;
+            this.TxtUsuario.Text = "Usuario";
+            this.TxtUsuario.TextChanged += new System.EventHandler(this.TxtUsuario_TextChanged);
+            this.TxtUsuario.Enter += new System.EventHandler(this.TxtUsuario_Enter);
+            this.TxtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUsuario_KeyDown);
+            this.TxtUsuario.Leave += new System.EventHandler(this.TxtUsuario_Leave);
+            this.TxtUsuario.LostFocus += new System.EventHandler(this.TxtUsuario_LostFocus);
             // 
             // label1
             // 
@@ -146,22 +164,11 @@
             // 
             this.toolTip2.ToolTipTitle = "Salir del sistema";
             // 
-            // btnMostrarOcultar
+            // contextMenuStrip1
             // 
-            this.btnMostrarOcultar.BackColor = System.Drawing.Color.Transparent;
-            this.btnMostrarOcultar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMostrarOcultar.BackgroundImage")));
-            this.btnMostrarOcultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMostrarOcultar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMostrarOcultar.FlatAppearance.BorderSize = 0;
-            this.btnMostrarOcultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMostrarOcultar.Location = new System.Drawing.Point(286, 96);
-            this.btnMostrarOcultar.Name = "btnMostrarOcultar";
-            this.btnMostrarOcultar.Size = new System.Drawing.Size(35, 23);
-            this.btnMostrarOcultar.TabIndex = 6;
-            this.btnMostrarOcultar.UseVisualStyleBackColor = false;
-            this.btnMostrarOcultar.Click += new System.EventHandler(this.btnMostrarOcultar_Click);
-            this.btnMostrarOcultar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnMostrarOcultar_MouseDown);
-            this.btnMostrarOcultar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnMostrarOcultar_MouseUp);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenuStrip1_Opening);
             // 
             // login
             // 
@@ -174,7 +181,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "login";
             this.Text = "Iniciar sesíon";
-            this.Load += new System.EventHandler(this.login_Load);
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -184,12 +191,13 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.TextBox TxtUsuario;
+        private System.Windows.Forms.TextBox TxtPassword;
+        private System.Windows.Forms.Button BtnSalir;
+        private System.Windows.Forms.Button BtnIngresar;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolTip toolTip2;
-        private System.Windows.Forms.Button btnMostrarOcultar;
+        private System.Windows.Forms.Button BtnMostrarOcultar;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

@@ -8,7 +8,7 @@ using Entidades;
 
 namespace Logica
 {
-    public class gestorUsuarios
+    public class GestorUsuarios
     {
         public List<UsuarioDTO> ListarUsuarios() //DEVUELVE UN LIST DE USUARIOS
         {

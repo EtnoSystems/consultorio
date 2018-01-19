@@ -12,135 +12,147 @@ using Entidades;
 
 namespace WindowsFormsApp1
 {
-    public partial class login : Form
+    public partial class Login : Form
     {
         //VARIABLES
         string nombre, clave;
         //
-        public login()
+        public Login()
         {
             InitializeComponent();
             this.ActiveControl = label1;
         }
         
         // USUARIO ---------------------------------------------------------
-        private void txtUsuario_Enter(object sender, EventArgs e)
+        private void TxtUsuario_Enter(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "Usuario")
+            if (TxtUsuario.Text == "Usuario")
             {
-                txtUsuario.Text = "";
-                txtUsuario.ForeColor = Color.Black;
+                TxtUsuario.Text = "";
+                TxtUsuario.ForeColor = Color.Black;
             }
         }
         
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        private void TxtUsuario_TextChanged(object sender, EventArgs e)
         {
       
         }
 
-        private void txtUsuario_LostFocus(object sender, EventArgs e) //Cuando se saca foco, guarda el usuario
+        private void TxtUsuario_LostFocus(object sender, EventArgs e) //Cuando se saca foco, guarda el usuario
         {
-            nombre = txtUsuario.Text;
+            nombre = TxtUsuario.Text;
         }
 
-        private void txtUsuario_KeyDown(object sender, KeyEventArgs e) //con enter hace foco en el campo password
+        private void TxtUsuario_KeyDown(object sender, KeyEventArgs e) //con enter hace foco en el campo password
         {
             if (e.KeyCode == Keys.Enter)
             {
-                txtPassword.Focus();
+                TxtPassword.Focus();
             }
         }
 
         // PASSWORD ---------------------------------------------------------
-        private void txtPassword_Enter(object sender, EventArgs e) //GET FOCUS
+        private void TxtPassword_Enter(object sender, EventArgs e) //GET FOCUS
         {
-            txtPassword.UseSystemPasswordChar = true;
-            if (txtPassword.Text == "Contraseña")
+            TxtPassword.UseSystemPasswordChar = true;
+            if (TxtPassword.Text == "Contraseña")
             {
-                txtPassword.Text = "";
-                txtPassword.ForeColor = Color.Black;
+                TxtPassword.Text = "";
+                TxtPassword.ForeColor = Color.Black;
             }
         }
 
-        private void txtPassword_LostFocus(object sender, EventArgs e)
+        private void TxtPassword_LostFocus(object sender, EventArgs e)
         {
            // clave = txtPassword.Text;
         }
 
-        private void txtPassword_TextChanged(object sender, EventArgs e)
+        private void TxtPassword_TextChanged(object sender, EventArgs e)
         {
-            if (txtPassword.Text != "")
-                btnMostrarOcultar.Visible = true;
+            if (TxtPassword.Text != "")
+                BtnMostrarOcultar.Visible = true;
             else
             {
-                btnMostrarOcultar.Visible = false;
+                BtnMostrarOcultar.Visible = false;
                 
             }
         }
 
-        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        private void TxtPassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                clave = txtPassword.Text;
-                iniciarSesion(nombre, clave);
+                clave = TxtPassword.Text;
+                IniciarSesion(nombre, clave);
             }
         }
 
-        private void login_Load(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
-            btnMostrarOcultar.Visible = false;
-            txtPassword.UseSystemPasswordChar = false;
+            BtnMostrarOcultar.Visible = false;
+            TxtPassword.UseSystemPasswordChar = false;
         }
         
-        private void btnIngresar_Click(object sender, EventArgs e)
+        private void BtnIngresar_Click(object sender, EventArgs e)
         {
-            if (nombre != "" && clave != "") iniciarSesion(nombre, clave); else txtUsuario.Focus();
+            if (nombre != "" && clave != "")
+                IniciarSesion(nombre, clave);
+            else
+            {
+                MessageBox.Show("Debe ingresar un nombre de usuario y una clave");
+                TxtUsuario.Focus();
+            }
+                
         }
        
-        private void btnSalir_Click_1(object sender, EventArgs e)
+        private void BtnSalir_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Está seguro que desea salir del programa?","Cerar Sistema",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) Application.Exit();
         }
 
-        private void btnMostrarOcultar_Click(object sender, EventArgs e)
+        private void BtnMostrarOcultar_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnMostrarOcultar_MouseDown(object sender, MouseEventArgs e)
+        private void BtnMostrarOcultar_MouseDown(object sender, MouseEventArgs e)
         {
-            txtPassword.UseSystemPasswordChar = false;
+            TxtPassword.UseSystemPasswordChar = false;
         }
 
-        private void btnMostrarOcultar_MouseUp(object sender, MouseEventArgs e)
+        private void BtnMostrarOcultar_MouseUp(object sender, MouseEventArgs e)
         {
-            txtPassword.UseSystemPasswordChar = true;
+            TxtPassword.UseSystemPasswordChar = true;
         }
 
-        private void txtPassword_Leave(object sender, EventArgs e)
+        private void BxtPassword_Leave(object sender, EventArgs e)
         {
-            if (txtPassword.Text == "")
+            if (TxtPassword.Text == "")
             {
-                txtPassword.Text = "Contraseña";
-                txtPassword.UseSystemPasswordChar = false;
-                txtPassword.ForeColor = Color.LightGray;
-                btnMostrarOcultar.Visible = false;
+                TxtPassword.Text = "Contraseña";
+                TxtPassword.UseSystemPasswordChar = false;
+                TxtPassword.ForeColor = Color.LightGray;
+                BtnMostrarOcultar.Visible = false;
             }
         }
 
-        private void txtUsuario_Leave(object sender, EventArgs e)
+        private void TxtUsuario_Leave(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "")
+            if (TxtUsuario.Text == "")
             {
-                txtUsuario.Text = "Usuario";
-                txtUsuario.ForeColor = Color.LightGray;
+                TxtUsuario.Text = "Usuario";
+                TxtUsuario.ForeColor = Color.LightGray;
             }
         }
 
-        private void iniciarSesion(string nombre, string clave)
+        private void ContextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
-            gestorUsuarios _gestorUsuarios = new gestorUsuarios();
+
+        }
+
+        private void IniciarSesion(string nombre, string clave)
+        {
+            GestorUsuarios _gestorUsuarios = new GestorUsuarios();
             //string nombre = txtUsuario.Text; //La variable nombre guarda el nombre con el que el usuario intenta iniciar sesión
             UsuarioDTO _usuario = new UsuarioDTO();
 
@@ -150,11 +162,13 @@ namespace WindowsFormsApp1
             if (_usuario != null)
             {
                 Globales.userObject = _gestorUsuarios.ObtenerCuentaPorUsername(_usuario.nombre);
+
+                
                 Globales.userName = _usuario.nombre;
                 Globales.userType = _usuario.tipo_usuario;
                 //MessageBox.Show("Bienvenido al sistema " + Globales.userName, "Ha iniciado sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
               
-               principal main = new principal();
+               Principal main = new Principal();
                main.Show();
                this.Hide();
             }
