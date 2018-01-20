@@ -121,13 +121,12 @@
             this.TxtPassword.Location = new System.Drawing.Point(81, 96);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(198, 24);
-            this.TxtPassword.TabIndex = 2;
+            this.TxtPassword.TabIndex = 3;
             this.TxtPassword.Text = "Contraseña";
             this.TxtPassword.UseSystemPasswordChar = true;
             this.TxtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
             this.TxtPassword.Enter += new System.EventHandler(this.TxtPassword_Enter);
             this.TxtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPassword_KeyDown);
-            // this.TxtPassword.Leave += new System.EventHandler(this.TxtPassword_Leave);
             this.TxtPassword.LostFocus += new System.EventHandler(this.TxtPassword_LostFocus);
             // 
             // TxtUsuario
@@ -137,7 +136,7 @@
             this.TxtUsuario.Location = new System.Drawing.Point(81, 57);
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(198, 24);
-            this.TxtUsuario.TabIndex = 1;
+            this.TxtUsuario.TabIndex = 2;
             this.TxtUsuario.Text = "Usuario";
             this.TxtUsuario.TextChanged += new System.EventHandler(this.TxtUsuario_TextChanged);
             this.TxtUsuario.Enter += new System.EventHandler(this.TxtUsuario_Enter);
@@ -153,7 +152,7 @@
             this.label1.Location = new System.Drawing.Point(34, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(287, 18);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 5;
             this.label1.Text = "Por favor, inicie sesión en el sistema";
             // 
             // toolTip1
@@ -170,7 +169,7 @@
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenuStrip1_Opening);
             // 
-            // login
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -179,7 +178,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "login";
+            this.Name = "Login";
             this.Text = "Iniciar sesíon";
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);

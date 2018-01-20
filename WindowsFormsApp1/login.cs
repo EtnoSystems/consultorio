@@ -153,20 +153,16 @@ namespace WindowsFormsApp1
         private void IniciarSesion(string nombre, string clave)
         {
             GestorUsuarios _gestorUsuarios = new GestorUsuarios();
-            //string nombre = txtUsuario.Text; //La variable nombre guarda el nombre con el que el usuario intenta iniciar sesión
             UsuarioDTO _usuario = new UsuarioDTO();
 
-            //_usuario = _gestorUsuarios.ObtenerCuentaPorUsername(nombre);
             _usuario = _gestorUsuarios.IniciarSesion(nombre, clave);
 
             if (_usuario != null)
             {
                 Globales.userObject = _gestorUsuarios.ObtenerCuentaPorUsername(_usuario.nombre);
 
-                
                 Globales.userName = _usuario.nombre;
                 Globales.userType = _usuario.tipo_usuario;
-                //MessageBox.Show("Bienvenido al sistema " + Globales.userName, "Ha iniciado sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
               
                Principal main = new Principal();
                main.Show();
@@ -176,16 +172,7 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("No se pudo iniciar sesión, controle los datos ingresados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            /*if (_usuario != null) //chequea si el nombre que el usuario ingresó existe en la BD
-            {
-                MessageBox.Show("se encontró el usuario: " + _usuario.nombre + " " + _usuario.password + " " + _usuario.tipo_usuario);
-            }
-            else
-            {
-                //Mensaje de error en el inicio de sesión
-                MessageBox.Show("El usuario ingresado no existe", "Error en el inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                txtUsuario.Focus();
-            }*/
+         
         }
 
     }
