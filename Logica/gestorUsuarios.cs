@@ -82,7 +82,7 @@ namespace Logica
             }
         }
 
-        public List<UsuarioDTO> ListarUsuariosAdministradores()
+       /* public List<UsuarioDTO> ListarUsuariosAdministradores()
         {
            try
            {
@@ -102,7 +102,7 @@ namespace Logica
            }
 
            
-        }
+        }*/
 
         public void AgregarUsuario (string nombre, string clave, string tipo)
         {

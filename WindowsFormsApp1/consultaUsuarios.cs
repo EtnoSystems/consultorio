@@ -12,11 +12,11 @@ using Logica;
 
 namespace WindowsFormsApp1
 {
-    public partial class consultaUsuarios : Form
+    public partial class ConsultaUsuarios : Form
     {
         GestorUsuarios obj_gestorUsuarios = new GestorUsuarios(); 
 
-        public consultaUsuarios()
+        public ConsultaUsuarios()
         {
             InitializeComponent();
         }
