@@ -89,6 +89,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Usuarios_alta.resx">
       <DependentUpon>Usuarios_alta.cs</DependentUpon>
@@ -115,6 +116,90 @@
       <Project>{b139a674-a498-4e90-9c00-4a132cb0278c}</Project>
       <Name>Logica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\medics.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\admin.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\doctorAdd.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\doctorEdit.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\doctorRemove.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\pacientAdd.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\pacientEdit.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\pacientRemove.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\pacients.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\userAdd2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\userEdit2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\userRemove2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\usuarios.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\medicCertified.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\medicOrder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\report.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\changeUser.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\checkout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\exitIcon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\help.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\fondoFormularios.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\obraSocialAdd.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\obraSocialRemove.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\obrasSociales.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\obrasSocialesEdit.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\botonGuardar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\botonGuardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\botonGuardarAgregar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

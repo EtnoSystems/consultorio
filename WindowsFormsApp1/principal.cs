@@ -42,21 +42,58 @@ namespace WindowsFormsApp1
         }
 
         private void Principal_Load(object sender, EventArgs e)
-        {
-           // MessageBox.Show("hola don " + Globales.userObject.Id.ToString());
-            
-            // MessageBox.Show("Bienvenido " + Globales.userName);
+        {       
             if (Globales.userType == "admin")
-                principalToolStripMenuItem.Visible = true;
+                mnuUsuarios.Visible = true;
             else
-                principalToolStripMenuItem.Visible = false;
+                mnuUsuarios.Visible = false;
 
-            this.Text = "Gestión de obras sociales - USUARIO " + Globales.userObject.nombre;
+            this.Text = "Gestión de obras sociales - USUARIO "+ Globales.userObject.nombre;
+
+            //Correcciones del tamaño de los menús
+           mnuMedicos.Size = new Size(125, 125);
+           mnuPacientes.Size = new Size(125, 125);
+           mnuPersonal.Size = new Size(125, 125);
+          
+            //mnuMedicos.Padding = new Padding(0, 0, -15, 0);
+
+            //mnuAgregarMedico.Size = new Size(125, 120);
+            //mnuAgregarMedico.Padding = new Padding(0, 0, 0, 0);
+
+            //mnuAgregarPaciente.Padding = new Padding(0, 0, 0, 0);
+            //mnuSalir.Size = new Size(120,120);
+            //mnuSalir.ImageScaling =
         }
 
         private void MenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void mnuSalir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro que desea salir del programa?", "Cerrar sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void cambiarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro que desea cambiar de usuario?", "Cerrar sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Login login = new Login();
+                Globales.userName = "";
+                Globales.userType = "";
+                login.Show();
+                this.Hide();
+            }
+        }
+
+        private void mnuAgregarPersonal_Click(object sender, EventArgs e)
+        {
+            Usuarios_alta altas = new Usuarios_alta();
+            altas.Show();
         }
     }
 }
