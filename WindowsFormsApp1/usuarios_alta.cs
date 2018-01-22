@@ -34,7 +34,6 @@ namespace WindowsFormsApp1
 
                 if (pass != pass2)
                 {
-                    errorProvider1.SetError(txtPassword2,"Las contraseñas insgresadas no coinciden");
                     txtPassword1.Text = "";
                     txtPassword2.Text = "";
                     txtPassword1.Focus();
@@ -53,6 +52,11 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void txtPassword1_Leave(object sender, EventArgs e)
         {
             if (txtPassword1.Text == "Contraseña" || txtPassword1.Text == "")
@@ -66,6 +70,16 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void txtPassword2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword2_Validating(object sender, CancelEventArgs e)
+        {
+            errorProvider1.SetError(txtPassword2, "Las contraseñas insgresadas no coinciden");
+        }
+
         public Usuarios_alta()
         {
             InitializeComponent();
@@ -73,7 +87,28 @@ namespace WindowsFormsApp1
 
         private void usuarios_alta_Load(object sender, EventArgs e)
         {
-          
+            btnGuardar.Enabled = false;
+            btnGuardarAgregar.Enabled = false;
+        }
+
+        // FUNCIONES 
+
+        void habilitarBotones()
+        {
+            if (txtNombre.Text != "" && txtNombre.Text != "Nombre completo"
+                && txtUsuario.Text != "" && txtUsuario.Text != "Nombre de usuario"
+                && txtPassword1.Text != "" && txtPassword1.Text != "Contraseña"
+                && txtPassword2.Text != "" && txtPassword2.Text != "Contraseña"
+                && cmbTipo.Text != "Tipo de usuario")
+            {
+                btnGuardar.Enabled = true;
+                btnGuardarAgregar.Enabled = true;
+            }
+            else
+            {
+                btnGuardar.Enabled = false;
+                btnGuardarAgregar.Enabled = false;
+            }
         }
     }
 }

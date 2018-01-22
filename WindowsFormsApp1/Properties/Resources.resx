@@ -118,82 +118,91 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="doctorRemove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\doctorRemove.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pacientEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\pacientEdit.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="doctorEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\doctorEdit.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondoFormularios" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\fondoFormularios.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="userEdit2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\userEdit2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="botonGuardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\botonGuardar.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="obrasSocialesEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\obrasSocialesEdit.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="userAdd2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\userAdd2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pacients" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\pacients.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="report" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\report.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="userRemove2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\userRemove2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="obraSocialRemove" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\obraSocialRemove.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="checkout" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\checkout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="obrasSociales" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\obrasSociales.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\usuarios.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="exitIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\exitIcon.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="doctorAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\doctorAdd.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pacientRemove" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\pacientRemove.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="doctorEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\doctorEdit.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="obraSocialAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\obraSocialAdd.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="changeUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\changeUser.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\help.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="medicOrder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\medicOrder.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="report" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\report.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonGuardar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\botonGuardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="obraSocialRemove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\obraSocialRemove.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="obrasSociales" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\obrasSociales.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pacients" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\pacients.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="medics" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\medics.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="medicCertified" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\medicCertified.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="exitIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\exitIcon.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="doctorRemove" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\doctorRemove.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="checkout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\checkout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pacientAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\pacientAdd.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\help.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="changeUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\changeUser.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\admin.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="botonGuardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="medicOrder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\medicOrder.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="userAdd2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\userAdd2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondoFormularios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\fondoFormularios.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pacientAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\pacientAdd.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonGuardar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\botonGuardar.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="medicCertified" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\medicCertified.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="userRemove2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\userRemove2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="userEdit2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\userEdit2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pacientRemove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\pacientRemove.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="doctorAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\doctorAdd.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonGuardarAgregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\botonGuardarAgregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
