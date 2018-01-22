@@ -82,6 +82,28 @@ namespace Logica
             }
         }
 
+        public List<UsuarioDTO> ListarUsuariosAdministradores()
+        {
+           try
+           {
+                using (consultoriosEntities dbContext = new consultoriosEntities())
+                {
+                    //List<tipo_usuario> tipos_usuarios = dbContext.tipo_usuario;
+
+                    var tipos = from item in dbContext.tipo_usuario
+                                where item.denominacion == "admin"
+                                select 
+
+                }
+           }
+           catch (Exception)
+           {
+                throw;
+           }
+
+           
+        }
+
         public void AgregarUsuario (string nombre, string clave, string tipo)
         {
             try
