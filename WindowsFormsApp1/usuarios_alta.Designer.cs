@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios_alta));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnGuardarAgregar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -38,10 +39,9 @@
             this.txtPassword2 = new System.Windows.Forms.TextBox();
             this.txtPassword1 = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,17 @@
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(35, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(275, 18);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Cargar nuevos usuarios  al sistema";
+            // 
             // btnGuardarAgregar
             // 
             this.btnGuardarAgregar.BackColor = System.Drawing.Color.Transparent;
@@ -71,6 +82,8 @@
             this.btnGuardarAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnGuardarAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardarAgregar.FlatAppearance.BorderSize = 0;
+            this.btnGuardarAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnGuardarAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarAgregar.Location = new System.Drawing.Point(135, 399);
             this.btnGuardarAgregar.Name = "btnGuardarAgregar";
@@ -107,6 +120,8 @@
             this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Location = new System.Drawing.Point(38, 397);
             this.btnGuardar.Name = "btnGuardar";
@@ -129,10 +144,10 @@
             this.cmbTipo.Size = new System.Drawing.Size(173, 26);
             this.cmbTipo.TabIndex = 4;
             this.cmbTipo.Text = "Tipo de usuario";
+            this.cmbTipo.DropDownClosed += new System.EventHandler(this.cmbTipo_DropDownClosed);
             // 
             // txtPassword2
             // 
-            this.errorProvider1.SetError(this.txtPassword2, "Las contraseñas ingresadas no coinciden");
             this.txtPassword2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword2.ForeColor = System.Drawing.Color.Silver;
             this.txtPassword2.Location = new System.Drawing.Point(38, 211);
@@ -149,7 +164,7 @@
             // 
             this.txtPassword1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword1.ForeColor = System.Drawing.Color.Silver;
-            this.txtPassword1.Location = new System.Drawing.Point(38, 160);
+            this.txtPassword1.Location = new System.Drawing.Point(38, 171);
             this.txtPassword1.Name = "txtPassword1";
             this.txtPassword1.Size = new System.Drawing.Size(261, 24);
             this.txtPassword1.TabIndex = 2;
@@ -161,11 +176,15 @@
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.Silver;
-            this.txtUsuario.Location = new System.Drawing.Point(38, 111);
+            this.txtUsuario.Location = new System.Drawing.Point(38, 103);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(261, 24);
+            this.txtUsuario.Size = new System.Drawing.Size(173, 24);
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Text = "Nombre de usuario";
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
+            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
+            this.txtUsuario.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsuario_Validating);
             // 
             // txtNombre
             // 
@@ -176,21 +195,13 @@
             this.txtNombre.Size = new System.Drawing.Size(261, 24);
             this.txtNombre.TabIndex = 0;
             this.txtNombre.Text = "Nombre completo";
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
+            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(287, 18);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Por favor, inicie sesión en el sistema";
             // 
             // Usuarios_alta
             // 
@@ -215,16 +226,16 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtPassword2;
         private System.Windows.Forms.TextBox txtPassword1;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnGuardarAgregar;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
