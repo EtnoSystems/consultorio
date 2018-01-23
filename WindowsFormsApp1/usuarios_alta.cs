@@ -23,22 +23,7 @@ namespace WindowsFormsApp1
 
         private void txtPassword2_Leave(object sender, EventArgs e)
         {
-            if (txtPassword2.Text == "Contraseña" || txtPassword2.Text == "")
-            {
-                txtPassword2.ForeColor = Color.Silver;
-                txtPassword2.Text = "Contraseña";
-            }
-            else
-            {
-                pass2 = txtPassword2.Text;
-
-                if (pass != pass2)
-                {
-                    txtPassword1.Text = "";
-                    txtPassword2.Text = "";
-                    txtPassword1.Focus();
-                }
-            }
+            habilitarBotones();
         }
 
         private void txtPassword2_Enter(object sender, EventArgs e)
@@ -67,6 +52,7 @@ namespace WindowsFormsApp1
             else
             {
                 pass = txtPassword1.Text;
+                habilitarBotones();
             }
         }
 
@@ -77,7 +63,72 @@ namespace WindowsFormsApp1
 
         private void TxtPassword2_Validating(object sender, CancelEventArgs e)
         {
-            errorProvider1.SetError(txtPassword2, "Las contraseñas insgresadas no coinciden");
+            if (txtPassword2.Text == "Contraseña" || txtPassword2.Text == "")
+            {
+                txtPassword2.ForeColor = Color.Silver;
+                txtPassword2.Text = "Contraseña";
+            }
+            else
+            {
+                pass2 = txtPassword2.Text;
+
+                if (pass != pass2)
+                {
+                    errorProvider1.SetError(txtPassword2, "Las contraseñas ingresadas no coinciden");
+                    txtPassword1.Text = "";
+                    txtPassword2.Text = "";
+                    txtPassword1.Focus();
+                }
+                else
+                {
+                    errorProvider1.SetError(txtPassword2, null);
+                }
+            }
+            
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsuario_Validating(object sender, CancelEventArgs e)
+        {
+            //verifica que el usuario ingresado no exista
+            errorProvider1.SetError(txtUsuario, "El usuario ingresado no está disponible");
+            txtUsuario.Focus();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_Leave(object sender, EventArgs e)
+        {
+            habilitarBotones();
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            habilitarBotones();
+        }
+
+        private void cmbTipo_DropDownClosed(object sender, EventArgs e)
+        {
+            habilitarBotones();
+        }
+
+        private void txtNombre_Enter(object sender, EventArgs e)
+        {
+            txtNombre.ForeColor = Color.Black;
+            txtNombre.Text = "";
+        }
+
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            txtUsuario.ForeColor = Color.Black;
+            txtUsuario.Text = "";
         }
 
         public Usuarios_alta()
@@ -91,7 +142,7 @@ namespace WindowsFormsApp1
             btnGuardarAgregar.Enabled = false;
         }
 
-        // FUNCIONES 
+        // FUNCIONES -------------------------------------------
 
         void habilitarBotones()
         {
