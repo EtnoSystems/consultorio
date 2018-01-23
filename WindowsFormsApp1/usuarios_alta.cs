@@ -15,31 +15,24 @@ namespace WindowsFormsApp1
 
         string pass, pass2, nombre, tipo;
 
+#region Formulario
+        public Usuarios_alta()
+        {
+            InitializeComponent();
+        }
+
+        private void usuarios_alta_Load(object sender, EventArgs e)
+        {
+            btnGuardar.Enabled = false;
+            btnGuardarAgregar.Enabled = false;
+        }
+        #endregion
+
+#region Password 1
         private void txtPassword1_Enter(object sender, EventArgs e)
         {
             txtPassword1.ForeColor = Color.Black;
             txtPassword1.Text = "";
-        }
-
-        private void txtPassword2_Leave(object sender, EventArgs e)
-        {
-            habilitarBotones();
-        }
-
-        private void txtPassword2_Enter(object sender, EventArgs e)
-        {
-            txtPassword2.ForeColor = Color.Black;
-            txtPassword2.Text = "";
-        }
-
-        private void BtnSalir_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void TxtPassword1_Leave(object sender, EventArgs e)
@@ -54,6 +47,19 @@ namespace WindowsFormsApp1
                 pass = txtPassword1.Text;
                 habilitarBotones();
             }
+        }
+        #endregion
+
+#region Password 2
+        private void txtPassword2_Leave(object sender, EventArgs e)
+        {
+            habilitarBotones();
+        }
+
+        private void txtPassword2_Enter(object sender, EventArgs e)
+        {
+            txtPassword2.ForeColor = Color.Black;
+            txtPassword2.Text = "";
         }
 
         private void txtPassword2_TextChanged(object sender, EventArgs e)
@@ -84,8 +90,10 @@ namespace WindowsFormsApp1
                     errorProvider1.SetError(txtPassword2, null);
                 }
             }
-            
         }
+        #endregion
+
+#region txtUsuario
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
@@ -99,6 +107,19 @@ namespace WindowsFormsApp1
             txtUsuario.Focus();
         }
 
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            habilitarBotones();
+        }
+
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            txtUsuario.ForeColor = Color.Black;
+            txtUsuario.Text = "";
+        }
+        #endregion
+
+#region txtNombre
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
 
@@ -109,9 +130,21 @@ namespace WindowsFormsApp1
             habilitarBotones();
         }
 
-        private void txtUsuario_Leave(object sender, EventArgs e)
+        private void txtNombre_Enter(object sender, EventArgs e)
         {
-            habilitarBotones();
+            txtNombre.ForeColor = Color.Black;
+            txtNombre.Text = "";
+        }
+        #endregion
+
+        private void BtnSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void cmbTipo_DropDownClosed(object sender, EventArgs e)
@@ -119,30 +152,7 @@ namespace WindowsFormsApp1
             habilitarBotones();
         }
 
-        private void txtNombre_Enter(object sender, EventArgs e)
-        {
-            txtNombre.ForeColor = Color.Black;
-            txtNombre.Text = "";
-        }
-
-        private void txtUsuario_Enter(object sender, EventArgs e)
-        {
-            txtUsuario.ForeColor = Color.Black;
-            txtUsuario.Text = "";
-        }
-
-        public Usuarios_alta()
-        {
-            InitializeComponent();
-        }
-
-        private void usuarios_alta_Load(object sender, EventArgs e)
-        {
-            btnGuardar.Enabled = false;
-            btnGuardarAgregar.Enabled = false;
-        }
-
-        // FUNCIONES -------------------------------------------
+#region Funciones
 
         void habilitarBotones()
         {
@@ -161,5 +171,6 @@ namespace WindowsFormsApp1
                 btnGuardarAgregar.Enabled = false;
             }
         }
+#endregion
     }
 }

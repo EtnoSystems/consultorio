@@ -44,25 +44,11 @@ namespace WindowsFormsApp1
         private void Principal_Load(object sender, EventArgs e)
         {       
             if (Globales.userType == "admin")
-                MnuUsuarios.Visible = true;
+                mnuReportes.Visible = true;
             else
-                MnuUsuarios.Visible = false;
+                mnuReportes.Visible = false;
 
-            this.Text = "Gestión de obras sociales - USUARIO "+ Globales.userObject.Nombre;
-
-            //Correcciones del tamaño de los menús
-           mnuMedicos.Size = new Size(125, 125);
-           mnuPacientes.Size = new Size(125, 125);
-           mnuPersonal.Size = new Size(125, 125);
-          
-            //mnuMedicos.Padding = new Padding(0, 0, -15, 0);
-
-            //mnuAgregarMedico.Size = new Size(125, 120);
-            //mnuAgregarMedico.Padding = new Padding(0, 0, 0, 0);
-
-            //mnuAgregarPaciente.Padding = new Padding(0, 0, 0, 0);
-            //mnuSalir.Size = new Size(120,120);
-            //mnuSalir.ImageScaling =
+            this.Text = "Gestión de obras sociales - USUARIO " + Globales.userObject.Nombre + " " + Globales.userType;
         }
 
         private void MenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -94,6 +80,12 @@ namespace WindowsFormsApp1
         {
             Usuarios_alta altas = new Usuarios_alta();
             altas.Show();
+        }
+
+        private void mnuEliminarPersonal_Click(object sender, EventArgs e)
+        {
+            Usuarios_baja bajas = new Usuarios_baja();
+            bajas.Show();
         }
     }
 }

@@ -48,8 +48,8 @@
             this.mnuEliminarObraSocial = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuEditarObrasSociales = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuRecetarios = new System.Windows.Forms.ToolStripMenuItem();
-            this.ReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CambiarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuReportes = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCambiarUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAyuda = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -62,8 +62,8 @@
             this.MnuUsuarios,
             this.MnuObrasSociales,
             this.MnuRecetarios,
-            this.ReportesToolStripMenuItem,
-            this.CambiarUsuarioToolStripMenuItem,
+            this.mnuReportes,
+            this.mnuCambiarUsuario,
             this.MnuSalir,
             this.mnuAyuda});
             this.menuStrip1.Location = new System.Drawing.Point(1244, 0);
@@ -243,8 +243,9 @@
             this.mnuEliminarPersonal.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuEliminarPersonal.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuEliminarPersonal.Name = "mnuEliminarPersonal";
-            this.mnuEliminarPersonal.Size = new System.Drawing.Size(173, 82);
+            this.mnuEliminarPersonal.Size = new System.Drawing.Size(211, 82);
             this.mnuEliminarPersonal.Text = "remove";
+            this.mnuEliminarPersonal.Click += new System.EventHandler(this.mnuEliminarPersonal_Click);
             // 
             // mnuEditarPersonal
             // 
@@ -253,7 +254,7 @@
             this.mnuEditarPersonal.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuEditarPersonal.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuEditarPersonal.Name = "mnuEditarPersonal";
-            this.mnuEditarPersonal.Size = new System.Drawing.Size(173, 82);
+            this.mnuEditarPersonal.Size = new System.Drawing.Size(211, 82);
             this.mnuEditarPersonal.Text = "edit";
             // 
             // MnuObrasSociales
@@ -280,7 +281,7 @@
             this.mnuAgregarObraSocial.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuAgregarObraSocial.Name = "mnuAgregarObraSocial";
             this.mnuAgregarObraSocial.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mnuAgregarObraSocial.Size = new System.Drawing.Size(211, 82);
+            this.mnuAgregarObraSocial.Size = new System.Drawing.Size(173, 82);
             this.mnuAgregarObraSocial.Text = "add";
             this.mnuAgregarObraSocial.ToolTipText = "Agregar una nueva obra social";
             // 
@@ -292,7 +293,7 @@
             this.mnuEliminarObraSocial.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuEliminarObraSocial.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuEliminarObraSocial.Name = "mnuEliminarObraSocial";
-            this.mnuEliminarObraSocial.Size = new System.Drawing.Size(211, 82);
+            this.mnuEliminarObraSocial.Size = new System.Drawing.Size(173, 82);
             this.mnuEliminarObraSocial.Text = "remove";
             this.mnuEliminarObraSocial.ToolTipText = "Eliminar obras sociales";
             // 
@@ -304,7 +305,7 @@
             this.mnuEditarObrasSociales.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuEditarObrasSociales.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuEditarObrasSociales.Name = "mnuEditarObrasSociales";
-            this.mnuEditarObrasSociales.Size = new System.Drawing.Size(211, 82);
+            this.mnuEditarObrasSociales.Size = new System.Drawing.Size(173, 82);
             this.mnuEditarObrasSociales.Text = "edit";
             this.mnuEditarObrasSociales.ToolTipText = "Editar datos de obras sociales";
             // 
@@ -321,32 +322,32 @@
             this.MnuRecetarios.Text = "receta";
             this.MnuRecetarios.ToolTipText = "Recetarios";
             // 
-            // ReportesToolStripMenuItem
+            // mnuReportes
             // 
-            this.ReportesToolStripMenuItem.AutoToolTip = true;
-            this.ReportesToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ReportesToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.report;
-            this.ReportesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ReportesToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
-            this.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem";
-            this.ReportesToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.ReportesToolStripMenuItem.Size = new System.Drawing.Size(105, 79);
-            this.ReportesToolStripMenuItem.Text = "reportes";
-            this.ReportesToolStripMenuItem.ToolTipText = "Imprimir reportes";
+            this.mnuReportes.AutoToolTip = true;
+            this.mnuReportes.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.mnuReportes.Image = global::WindowsFormsApp1.Properties.Resources.report;
+            this.mnuReportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mnuReportes.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.mnuReportes.Name = "mnuReportes";
+            this.mnuReportes.ShortcutKeys = System.Windows.Forms.Keys.F4;
+            this.mnuReportes.Size = new System.Drawing.Size(105, 79);
+            this.mnuReportes.Text = "reportes";
+            this.mnuReportes.ToolTipText = "Imprimir reportes";
             // 
-            // CambiarUsuarioToolStripMenuItem
+            // mnuCambiarUsuario
             // 
-            this.CambiarUsuarioToolStripMenuItem.AutoToolTip = true;
-            this.CambiarUsuarioToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CambiarUsuarioToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.changeUser;
-            this.CambiarUsuarioToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.CambiarUsuarioToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
-            this.CambiarUsuarioToolStripMenuItem.Name = "CambiarUsuarioToolStripMenuItem";
-            this.CambiarUsuarioToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.CambiarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(105, 79);
-            this.CambiarUsuarioToolStripMenuItem.Text = "cambiar usuario";
-            this.CambiarUsuarioToolStripMenuItem.ToolTipText = "Cerrar sesión e iniciar con otro usuario";
-            this.CambiarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.CambiarUsuarioToolStripMenuItem_Click);
+            this.mnuCambiarUsuario.AutoToolTip = true;
+            this.mnuCambiarUsuario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.mnuCambiarUsuario.Image = global::WindowsFormsApp1.Properties.Resources.changeUser;
+            this.mnuCambiarUsuario.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mnuCambiarUsuario.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.mnuCambiarUsuario.Name = "mnuCambiarUsuario";
+            this.mnuCambiarUsuario.ShortcutKeys = System.Windows.Forms.Keys.F5;
+            this.mnuCambiarUsuario.Size = new System.Drawing.Size(105, 79);
+            this.mnuCambiarUsuario.Text = "cambiar usuario";
+            this.mnuCambiarUsuario.ToolTipText = "Cerrar sesión e iniciar con otro usuario";
+            this.mnuCambiarUsuario.Click += new System.EventHandler(this.CambiarUsuarioToolStripMenuItem_Click);
             // 
             // MnuSalir
             // 
@@ -409,8 +410,8 @@
         private System.Windows.Forms.ToolStripMenuItem mnuEliminarPaciente;
         private System.Windows.Forms.ToolStripMenuItem mnuEditarPacientes;
         private System.Windows.Forms.ToolStripMenuItem MnuRecetarios;
-        private System.Windows.Forms.ToolStripMenuItem ReportesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem CambiarUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuReportes;
+        private System.Windows.Forms.ToolStripMenuItem mnuCambiarUsuario;
         private System.Windows.Forms.ToolStripMenuItem MnuSalir;
         private System.Windows.Forms.ToolStripMenuItem mnuPersonal;
         private System.Windows.Forms.ToolStripMenuItem mnuAgregarPersonal;

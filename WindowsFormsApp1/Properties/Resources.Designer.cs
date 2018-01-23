@@ -73,6 +73,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botonEliminarUsuario {
+            get {
+                object obj = ResourceManager.GetObject("botonEliminarUsuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botonGuardar {
             get {
                 object obj = ResourceManager.GetObject("botonGuardar", resourceCulture);
@@ -176,6 +186,16 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap fondoFormularios {
             get {
                 object obj = ResourceManager.GetObject("fondoFormularios", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondoFormulariosBaja {
+            get {
+                object obj = ResourceManager.GetObject("fondoFormulariosBaja", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

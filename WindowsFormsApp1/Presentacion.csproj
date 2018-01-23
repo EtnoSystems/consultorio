@@ -72,6 +72,12 @@
     <Compile Include="Usuarios_alta.Designer.cs">
       <DependentUpon>Usuarios_alta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios_baja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios_baja.Designer.cs">
+      <DependentUpon>Usuarios_baja.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ConsultasUsuarios.resx">
       <DependentUpon>ConsultasUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +99,9 @@
     </Compile>
     <EmbeddedResource Include="Usuarios_alta.resx">
       <DependentUpon>Usuarios_alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios_baja.resx">
+      <DependentUpon>Usuarios_baja.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -204,6 +213,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\botonGuardarAgregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\fondoFormulariosBaja.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\botonEliminarUsuario.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
