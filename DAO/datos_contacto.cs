@@ -12,15 +12,15 @@ namespace DAO
     using System;
     using System.Collections.Generic;
     
-    public partial class datos_contacto
+    public partial class Datos_contacto
     {
         public int Id { get; set; }
-        public string email_primario { get; set; }
-        public string email_secundario { get; set; }
-        public string tel_celular { get; set; }
-        public string tel_fijo { get; set; }
-        public int persona_Id { get; set; }
+        public string Email_primario { get; set; }
+        public string Email_secundario { get; set; }
+        public string Tel_celular { get; set; }
+        public string Tel_fijo { get; set; }
+        public int Persona_Id { get; set; }
     
-        public virtual persona persona { get; set; }
+        public virtual Persona Persona { get; set; }
     }
 }

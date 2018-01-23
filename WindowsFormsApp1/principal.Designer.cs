@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mnuUsuarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMedicos = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAgregarMedico = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuEliminarMedico = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,15 +43,15 @@
             this.mnuAgregarPersonal = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuEliminarPersonal = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuEditarPersonal = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuObrasSociales = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuRecetarios = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cambiarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSalir = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuAyuda = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuObrasSociales = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAgregarObraSocial = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuEliminarObraSocial = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuEditarObrasSociales = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuRecetarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CambiarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuSalir = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAyuda = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,39 +59,39 @@
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Right;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuUsuarios,
-            this.mnuObrasSociales,
-            this.mnuRecetarios,
-            this.reportesToolStripMenuItem,
-            this.cambiarUsuarioToolStripMenuItem,
-            this.mnuSalir,
+            this.MnuUsuarios,
+            this.MnuObrasSociales,
+            this.MnuRecetarios,
+            this.ReportesToolStripMenuItem,
+            this.CambiarUsuarioToolStripMenuItem,
+            this.MnuSalir,
             this.mnuAyuda});
-            this.menuStrip1.Location = new System.Drawing.Point(1273, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(1244, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(118, 664);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuStrip1_ItemClicked);
             // 
-            // mnuUsuarios
+            // MnuUsuarios
             // 
-            this.mnuUsuarios.AutoSize = false;
-            this.mnuUsuarios.AutoToolTip = true;
-            this.mnuUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.mnuUsuarios.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.mnuUsuarios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MnuUsuarios.AutoSize = false;
+            this.MnuUsuarios.AutoToolTip = true;
+            this.MnuUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.MnuUsuarios.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MnuUsuarios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuMedicos,
             this.mnuPacientes,
             this.mnuPersonal});
-            this.mnuUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("mnuUsuarios.Image")));
-            this.mnuUsuarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.mnuUsuarios.ImageTransparentColor = System.Drawing.Color.Transparent;
-            this.mnuUsuarios.Name = "mnuUsuarios";
-            this.mnuUsuarios.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.mnuUsuarios.Size = new System.Drawing.Size(112, 111);
-            this.mnuUsuarios.Text = "Principal";
-            this.mnuUsuarios.ToolTipText = "Administrador de mèdicos, pacientes y usuarios (ctrl + u)";
-            this.mnuUsuarios.Click += new System.EventHandler(this.PrincipalToolStripMenuItem_Click);
+            this.MnuUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("MnuUsuarios.Image")));
+            this.MnuUsuarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MnuUsuarios.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.MnuUsuarios.Name = "MnuUsuarios";
+            this.MnuUsuarios.ShortcutKeys = System.Windows.Forms.Keys.F2;
+            this.MnuUsuarios.Size = new System.Drawing.Size(112, 111);
+            this.MnuUsuarios.Text = "Principal";
+            this.MnuUsuarios.ToolTipText = "Administrador de mèdicos, pacientes y usuarios (ctrl + u)";
+            this.MnuUsuarios.Click += new System.EventHandler(this.PrincipalToolStripMenuItem_Click);
             // 
             // mnuMedicos
             // 
@@ -234,7 +234,7 @@
             this.mnuAgregarPersonal.Size = new System.Drawing.Size(211, 82);
             this.mnuAgregarPersonal.Text = "add";
             this.mnuAgregarPersonal.ToolTipText = "Agregar un empleado nuevo";
-            this.mnuAgregarPersonal.Click += new System.EventHandler(this.mnuAgregarPersonal_Click);
+            this.mnuAgregarPersonal.Click += new System.EventHandler(this.MnuAgregarPersonal_Click);
             // 
             // mnuEliminarPersonal
             // 
@@ -243,7 +243,7 @@
             this.mnuEliminarPersonal.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuEliminarPersonal.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuEliminarPersonal.Name = "mnuEliminarPersonal";
-            this.mnuEliminarPersonal.Size = new System.Drawing.Size(211, 82);
+            this.mnuEliminarPersonal.Size = new System.Drawing.Size(173, 82);
             this.mnuEliminarPersonal.Text = "remove";
             // 
             // mnuEditarPersonal
@@ -253,89 +253,24 @@
             this.mnuEditarPersonal.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuEditarPersonal.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuEditarPersonal.Name = "mnuEditarPersonal";
-            this.mnuEditarPersonal.Size = new System.Drawing.Size(211, 82);
+            this.mnuEditarPersonal.Size = new System.Drawing.Size(173, 82);
             this.mnuEditarPersonal.Text = "edit";
             // 
-            // mnuObrasSociales
+            // MnuObrasSociales
             // 
-            this.mnuObrasSociales.AutoToolTip = true;
-            this.mnuObrasSociales.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.mnuObrasSociales.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MnuObrasSociales.AutoToolTip = true;
+            this.MnuObrasSociales.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MnuObrasSociales.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuAgregarObraSocial,
             this.mnuEliminarObraSocial,
             this.mnuEditarObrasSociales});
-            this.mnuObrasSociales.Image = global::WindowsFormsApp1.Properties.Resources.obrasSociales;
-            this.mnuObrasSociales.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.mnuObrasSociales.ImageTransparentColor = System.Drawing.Color.Transparent;
-            this.mnuObrasSociales.Name = "mnuObrasSociales";
-            this.mnuObrasSociales.Size = new System.Drawing.Size(105, 79);
-            this.mnuObrasSociales.Text = "os";
-            this.mnuObrasSociales.ToolTipText = "Administrar datos de obras sociales";
-            // 
-            // mnuRecetarios
-            // 
-            this.mnuRecetarios.AutoToolTip = true;
-            this.mnuRecetarios.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.mnuRecetarios.Image = global::WindowsFormsApp1.Properties.Resources.medicOrder;
-            this.mnuRecetarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.mnuRecetarios.ImageTransparentColor = System.Drawing.Color.Transparent;
-            this.mnuRecetarios.Name = "mnuRecetarios";
-            this.mnuRecetarios.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.mnuRecetarios.Size = new System.Drawing.Size(105, 79);
-            this.mnuRecetarios.Text = "receta";
-            this.mnuRecetarios.ToolTipText = "Recetarios";
-            // 
-            // reportesToolStripMenuItem
-            // 
-            this.reportesToolStripMenuItem.AutoToolTip = true;
-            this.reportesToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.reportesToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.report;
-            this.reportesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.reportesToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(105, 79);
-            this.reportesToolStripMenuItem.Text = "reportes";
-            this.reportesToolStripMenuItem.ToolTipText = "Imprimir reportes";
-            // 
-            // cambiarUsuarioToolStripMenuItem
-            // 
-            this.cambiarUsuarioToolStripMenuItem.AutoToolTip = true;
-            this.cambiarUsuarioToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.cambiarUsuarioToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.changeUser;
-            this.cambiarUsuarioToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.cambiarUsuarioToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
-            this.cambiarUsuarioToolStripMenuItem.Name = "cambiarUsuarioToolStripMenuItem";
-            this.cambiarUsuarioToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.cambiarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(105, 79);
-            this.cambiarUsuarioToolStripMenuItem.Text = "cambiar usuario";
-            this.cambiarUsuarioToolStripMenuItem.ToolTipText = "Cerrar sesión e iniciar con otro usuario";
-            this.cambiarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.cambiarUsuarioToolStripMenuItem_Click);
-            // 
-            // mnuSalir
-            // 
-            this.mnuSalir.AutoToolTip = true;
-            this.mnuSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.mnuSalir.Image = global::WindowsFormsApp1.Properties.Resources.exitIcon;
-            this.mnuSalir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.mnuSalir.ImageTransparentColor = System.Drawing.Color.Transparent;
-            this.mnuSalir.Name = "mnuSalir";
-            this.mnuSalir.Size = new System.Drawing.Size(105, 79);
-            this.mnuSalir.Text = "cerrar";
-            this.mnuSalir.ToolTipText = "Salir del sistema";
-            this.mnuSalir.Click += new System.EventHandler(this.mnuSalir_Click);
-            // 
-            // mnuAyuda
-            // 
-            this.mnuAyuda.AutoToolTip = true;
-            this.mnuAyuda.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.mnuAyuda.Image = global::WindowsFormsApp1.Properties.Resources.help;
-            this.mnuAyuda.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.mnuAyuda.ImageTransparentColor = System.Drawing.Color.Transparent;
-            this.mnuAyuda.Name = "mnuAyuda";
-            this.mnuAyuda.Size = new System.Drawing.Size(105, 79);
-            this.mnuAyuda.Text = "help";
-            this.mnuAyuda.ToolTipText = "Ayuda";
+            this.MnuObrasSociales.Image = global::WindowsFormsApp1.Properties.Resources.obrasSociales;
+            this.MnuObrasSociales.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MnuObrasSociales.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.MnuObrasSociales.Name = "MnuObrasSociales";
+            this.MnuObrasSociales.Size = new System.Drawing.Size(105, 79);
+            this.MnuObrasSociales.Text = "os";
+            this.MnuObrasSociales.ToolTipText = "Administrar datos de obras sociales";
             // 
             // mnuAgregarObraSocial
             // 
@@ -373,13 +308,78 @@
             this.mnuEditarObrasSociales.Text = "edit";
             this.mnuEditarObrasSociales.ToolTipText = "Editar datos de obras sociales";
             // 
+            // MnuRecetarios
+            // 
+            this.MnuRecetarios.AutoToolTip = true;
+            this.MnuRecetarios.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MnuRecetarios.Image = global::WindowsFormsApp1.Properties.Resources.medicOrder;
+            this.MnuRecetarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MnuRecetarios.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.MnuRecetarios.Name = "MnuRecetarios";
+            this.MnuRecetarios.ShortcutKeys = System.Windows.Forms.Keys.F3;
+            this.MnuRecetarios.Size = new System.Drawing.Size(105, 79);
+            this.MnuRecetarios.Text = "receta";
+            this.MnuRecetarios.ToolTipText = "Recetarios";
+            // 
+            // ReportesToolStripMenuItem
+            // 
+            this.ReportesToolStripMenuItem.AutoToolTip = true;
+            this.ReportesToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ReportesToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.report;
+            this.ReportesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ReportesToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem";
+            this.ReportesToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
+            this.ReportesToolStripMenuItem.Size = new System.Drawing.Size(105, 79);
+            this.ReportesToolStripMenuItem.Text = "reportes";
+            this.ReportesToolStripMenuItem.ToolTipText = "Imprimir reportes";
+            // 
+            // CambiarUsuarioToolStripMenuItem
+            // 
+            this.CambiarUsuarioToolStripMenuItem.AutoToolTip = true;
+            this.CambiarUsuarioToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CambiarUsuarioToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.changeUser;
+            this.CambiarUsuarioToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CambiarUsuarioToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.CambiarUsuarioToolStripMenuItem.Name = "CambiarUsuarioToolStripMenuItem";
+            this.CambiarUsuarioToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
+            this.CambiarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(105, 79);
+            this.CambiarUsuarioToolStripMenuItem.Text = "cambiar usuario";
+            this.CambiarUsuarioToolStripMenuItem.ToolTipText = "Cerrar sesión e iniciar con otro usuario";
+            this.CambiarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.CambiarUsuarioToolStripMenuItem_Click);
+            // 
+            // MnuSalir
+            // 
+            this.MnuSalir.AutoToolTip = true;
+            this.MnuSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MnuSalir.Image = global::WindowsFormsApp1.Properties.Resources.exitIcon;
+            this.MnuSalir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MnuSalir.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.MnuSalir.Name = "MnuSalir";
+            this.MnuSalir.Size = new System.Drawing.Size(105, 79);
+            this.MnuSalir.Text = "cerrar";
+            this.MnuSalir.ToolTipText = "Salir del sistema";
+            this.MnuSalir.Click += new System.EventHandler(this.MnuSalir_Click);
+            // 
+            // mnuAyuda
+            // 
+            this.mnuAyuda.AutoToolTip = true;
+            this.mnuAyuda.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.mnuAyuda.Image = global::WindowsFormsApp1.Properties.Resources.help;
+            this.mnuAyuda.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mnuAyuda.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.mnuAyuda.Name = "mnuAyuda";
+            this.mnuAyuda.Size = new System.Drawing.Size(105, 79);
+            this.mnuAyuda.Text = "help";
+            this.mnuAyuda.ToolTipText = "Ayuda";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1391, 664);
+            this.ClientSize = new System.Drawing.Size(1362, 664);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
@@ -399,7 +399,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem mnuUsuarios;
+        private System.Windows.Forms.ToolStripMenuItem MnuUsuarios;
         private System.Windows.Forms.ToolStripMenuItem mnuMedicos;
         private System.Windows.Forms.ToolStripMenuItem mnuAgregarMedico;
         private System.Windows.Forms.ToolStripMenuItem mnuEliminarMedico;
@@ -408,16 +408,16 @@
         private System.Windows.Forms.ToolStripMenuItem mnuAgregarPaciente;
         private System.Windows.Forms.ToolStripMenuItem mnuEliminarPaciente;
         private System.Windows.Forms.ToolStripMenuItem mnuEditarPacientes;
-        private System.Windows.Forms.ToolStripMenuItem mnuRecetarios;
-        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cambiarUsuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mnuSalir;
+        private System.Windows.Forms.ToolStripMenuItem MnuRecetarios;
+        private System.Windows.Forms.ToolStripMenuItem ReportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CambiarUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MnuSalir;
         private System.Windows.Forms.ToolStripMenuItem mnuPersonal;
         private System.Windows.Forms.ToolStripMenuItem mnuAgregarPersonal;
         private System.Windows.Forms.ToolStripMenuItem mnuEliminarPersonal;
         private System.Windows.Forms.ToolStripMenuItem mnuEditarPersonal;
         private System.Windows.Forms.ToolStripMenuItem mnuAyuda;
-        private System.Windows.Forms.ToolStripMenuItem mnuObrasSociales;
+        private System.Windows.Forms.ToolStripMenuItem MnuObrasSociales;
         private System.Windows.Forms.ToolStripMenuItem mnuAgregarObraSocial;
         private System.Windows.Forms.ToolStripMenuItem mnuEliminarObraSocial;
         private System.Windows.Forms.ToolStripMenuItem mnuEditarObrasSociales;

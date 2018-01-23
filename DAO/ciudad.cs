@@ -12,16 +12,16 @@ namespace DAO
     using System;
     using System.Collections.Generic;
     
-    public partial class ciudad
+    public partial class Ciudad
     {
-        public ciudad()
+        public Ciudad()
         {
-            this.direccion = new HashSet<direccion>();
+            this.Direccion = new HashSet<Direccion>();
         }
     
         public int Id { get; set; }
-        public string denominacion { get; set; }
+        public string Denominacion { get; set; }
     
-        public virtual ICollection<direccion> direccion { get; set; }
+        public virtual ICollection<Direccion> Direccion { get; set; }
     }
 }

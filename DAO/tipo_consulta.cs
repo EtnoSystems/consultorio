@@ -12,17 +12,17 @@ namespace DAO
     using System;
     using System.Collections.Generic;
     
-    public partial class tipo_consulta
+    public partial class Tipo_consulta
     {
-        public tipo_consulta()
+        public Tipo_consulta()
         {
-            this.consulta = new HashSet<consulta>();
+            this.Consulta = new HashSet<Consulta>();
         }
     
         public int Id { get; set; }
-        public string descripcion { get; set; }
-        public Nullable<decimal> precio { get; set; }
+        public string Descripcion { get; set; }
+        public Nullable<decimal> Precio { get; set; }
     
-        public virtual ICollection<consulta> consulta { get; set; }
+        public virtual ICollection<Consulta> Consulta { get; set; }
     }
 }

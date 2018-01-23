@@ -25,18 +25,18 @@ namespace DAO
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<ciudad> ciudad { get; set; }
-        public DbSet<consulta> consulta { get; set; }
-        public DbSet<datos_contacto> datos_contacto { get; set; }
-        public DbSet<direccion> direccion { get; set; }
-        public DbSet<especialidad> especialidad { get; set; }
-        public DbSet<obra_social> obra_social { get; set; }
-        public DbSet<persona> persona { get; set; }
-        public DbSet<persona_medico> persona_medico { get; set; }
-        public DbSet<persona_paciente> persona_paciente { get; set; }
-        public DbSet<personaobra_social> personaobra_social { get; set; }
-        public DbSet<tipo_consulta> tipo_consulta { get; set; }
-        public DbSet<tipo_usuario> tipo_usuario { get; set; }
-        public DbSet<usuario> usuario { get; set; }
+        public DbSet<Ciudad> Ciudad { get; set; }
+        public DbSet<Consulta> Consulta { get; set; }
+        public DbSet<Datos_contacto> Datos_contacto { get; set; }
+        public DbSet<Direccion> Direccion { get; set; }
+        public DbSet<Especialidad> Especialidad { get; set; }
+        public DbSet<Obra_social> Obra_social { get; set; }
+        public DbSet<Persona> Persona { get; set; }
+        public DbSet<Persona_medico> Persona_medico { get; set; }
+        public DbSet<Persona_paciente> Persona_paciente { get; set; }
+        public DbSet<Personaobra_social> Personaobra_social { get; set; }
+        public DbSet<Tipo_consulta> Tipo_consulta { get; set; }
+        public DbSet<Tipo_usuario> Tipo_usuario { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
     }
 }

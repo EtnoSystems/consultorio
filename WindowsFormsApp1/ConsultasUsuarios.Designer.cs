@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class ConsultaUsuarios
+    partial class ConsultasUsuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -35,20 +35,20 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(49, 37);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(751, 237);
+            this.dataGridView1.Size = new System.Drawing.Size(677, 168);
             this.dataGridView1.TabIndex = 0;
             // 
-            // consultaUsuarios
+            // ConsultasUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 261);
+            this.ClientSize = new System.Drawing.Size(782, 261);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "consultaUsuarios";
-            this.Text = "consultaUsuarios";
-            this.Load += new System.EventHandler(this.consultaUsuarios_Load);
+            this.Name = "ConsultasUsuarios";
+            this.Text = "ConsultasUsuarios";
+            this.Load += new System.EventHandler(this.ConsultasUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

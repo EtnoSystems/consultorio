@@ -12,16 +12,16 @@ namespace DAO
     using System;
     using System.Collections.Generic;
     
-    public partial class especialidad
+    public partial class Especialidad
     {
-        public especialidad()
+        public Especialidad()
         {
-            this.persona_medico = new HashSet<persona_medico>();
+            this.Persona_medico = new HashSet<Persona_medico>();
         }
     
         public int Id { get; set; }
-        public string denominacion { get; set; }
+        public string Denominacion { get; set; }
     
-        public virtual ICollection<persona_medico> persona_medico { get; set; }
+        public virtual ICollection<Persona_medico> Persona_medico { get; set; }
     }
 }

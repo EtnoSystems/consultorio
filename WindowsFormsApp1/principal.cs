@@ -44,11 +44,11 @@ namespace WindowsFormsApp1
         private void Principal_Load(object sender, EventArgs e)
         {       
             if (Globales.userType == "admin")
-                mnuUsuarios.Visible = true;
+                MnuUsuarios.Visible = true;
             else
-                mnuUsuarios.Visible = false;
+                MnuUsuarios.Visible = false;
 
-            this.Text = "Gestión de obras sociales - USUARIO "+ Globales.userObject.nombre;
+            this.Text = "Gestión de obras sociales - USUARIO "+ Globales.userObject.Nombre;
 
             //Correcciones del tamaño de los menús
            mnuMedicos.Size = new Size(125, 125);
@@ -70,7 +70,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void mnuSalir_Click(object sender, EventArgs e)
+        private void MnuSalir_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Está seguro que desea salir del programa?", "Cerrar sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -78,7 +78,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void cambiarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CambiarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Está seguro que desea cambiar de usuario?", "Cerrar sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -90,7 +90,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void mnuAgregarPersonal_Click(object sender, EventArgs e)
+        private void MnuAgregarPersonal_Click(object sender, EventArgs e)
         {
             Usuarios_alta altas = new Usuarios_alta();
             altas.Show();

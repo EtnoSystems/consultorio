@@ -121,7 +121,7 @@
             this.TxtPassword.Location = new System.Drawing.Point(81, 96);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(198, 24);
-            this.TxtPassword.TabIndex = 3;
+            this.TxtPassword.TabIndex = 2;
             this.TxtPassword.Text = "Contraseña";
             this.TxtPassword.UseSystemPasswordChar = true;
             this.TxtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
@@ -136,7 +136,7 @@
             this.TxtUsuario.Location = new System.Drawing.Point(81, 57);
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(198, 24);
-            this.TxtUsuario.TabIndex = 2;
+            this.TxtUsuario.TabIndex = 1;
             this.TxtUsuario.Text = "Usuario";
             this.TxtUsuario.TextChanged += new System.EventHandler(this.TxtUsuario_TextChanged);
             this.TxtUsuario.Enter += new System.EventHandler(this.TxtUsuario_Enter);

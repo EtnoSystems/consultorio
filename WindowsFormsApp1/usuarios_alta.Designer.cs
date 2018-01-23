@@ -62,7 +62,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(345, 475);
             this.panel1.TabIndex = 2;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // btnGuardarAgregar
             // 
@@ -98,7 +98,7 @@
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.toolTip1.SetToolTip(this.btnSalir, "Salir sin guardar");
             this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
+            this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click_1);
             // 
             // btnGuardar
             // 
@@ -143,7 +143,7 @@
             this.txtPassword2.TextChanged += new System.EventHandler(this.txtPassword2_TextChanged);
             this.txtPassword2.Enter += new System.EventHandler(this.txtPassword2_Enter);
             this.txtPassword2.Leave += new System.EventHandler(this.txtPassword2_Leave);
-            this.txtPassword2.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassword2_Validating);
+            this.txtPassword2.Validating += new System.ComponentModel.CancelEventHandler(this.TxtPassword2_Validating);
             // 
             // txtPassword1
             // 
@@ -155,7 +155,7 @@
             this.txtPassword1.TabIndex = 2;
             this.txtPassword1.Text = "Contraseña";
             this.txtPassword1.Enter += new System.EventHandler(this.txtPassword1_Enter);
-            this.txtPassword1.Leave += new System.EventHandler(this.txtPassword1_Leave);
+            this.txtPassword1.Leave += new System.EventHandler(this.TxtPassword1_Leave);
             // 
             // txtUsuario
             // 

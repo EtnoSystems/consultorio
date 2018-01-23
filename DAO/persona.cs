@@ -12,24 +12,24 @@ namespace DAO
     using System;
     using System.Collections.Generic;
     
-    public partial class persona
+    public partial class Persona
     {
-        public persona()
+        public Persona()
         {
-            this.datos_contacto = new HashSet<datos_contacto>();
-            this.personaobra_social = new HashSet<personaobra_social>();
+            this.Datos_contacto = new HashSet<Datos_contacto>();
+            this.Personaobra_social = new HashSet<Personaobra_social>();
         }
     
         public int Id { get; set; }
-        public int dni { get; set; }
-        public string nombre { get; set; }
-        public string apellido { get; set; }
-        public Nullable<int> direccion_Id { get; set; }
+        public int DNI { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public Nullable<int> Direccion_Id { get; set; }
     
-        public virtual ICollection<datos_contacto> datos_contacto { get; set; }
-        public virtual direccion direccion { get; set; }
-        public virtual persona_medico persona_medico { get; set; }
-        public virtual persona_paciente persona_paciente { get; set; }
-        public virtual ICollection<personaobra_social> personaobra_social { get; set; }
+        public virtual ICollection<Datos_contacto> Datos_contacto { get; set; }
+        public virtual Direccion Direccion { get; set; }
+        public virtual Persona_medico Persona_medico { get; set; }
+        public virtual Persona_paciente Persona_paciente { get; set; }
+        public virtual ICollection<Personaobra_social> Personaobra_social { get; set; }
     }
 }

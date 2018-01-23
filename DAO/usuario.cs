@@ -12,14 +12,14 @@ namespace DAO
     using System;
     using System.Collections.Generic;
     
-    public partial class usuario
+    public partial class Usuario
     {
         public int Id { get; set; }
-        public string nombre { get; set; }
-        public string password { get; set; }
-        public string tipo_usuario { get; set; }
-        public int tipo_usuario1_Id { get; set; }
+        public string Nombre { get; set; }
+        public string Password { get; set; }
+        public string Tipo_usuario { get; set; }
+        public int Tipo_usuario1_Id { get; set; }
     
-        public virtual tipo_usuario tipo_usuario1 { get; set; }
+        public virtual Tipo_usuario Tipo_usuario1 { get; set; }
     }
 }

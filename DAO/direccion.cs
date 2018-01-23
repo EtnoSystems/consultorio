@@ -12,21 +12,21 @@ namespace DAO
     using System;
     using System.Collections.Generic;
     
-    public partial class direccion
+    public partial class Direccion
     {
-        public direccion()
+        public Direccion()
         {
-            this.persona = new HashSet<persona>();
+            this.Persona = new HashSet<Persona>();
         }
     
         public int Id { get; set; }
-        public string calle { get; set; }
-        public Nullable<short> numero { get; set; }
-        public string piso { get; set; }
-        public Nullable<short> dpto { get; set; }
-        public int ciudad_Id { get; set; }
+        public string Calle { get; set; }
+        public Nullable<short> Numero { get; set; }
+        public string Piso { get; set; }
+        public Nullable<short> Departamento { get; set; }
+        public int Ciudad_Id { get; set; }
     
-        public virtual ciudad ciudad { get; set; }
-        public virtual ICollection<persona> persona { get; set; }
+        public virtual Ciudad Ciudad { get; set; }
+        public virtual ICollection<Persona> Persona { get; set; }
     }
 }

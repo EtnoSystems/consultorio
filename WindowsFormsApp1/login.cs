@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica; //Agregué la referencia a la capa lógica para tener acceso al gestor de usuarios
+using DAO;
 using Entidades;
 
 namespace WindowsFormsApp1
@@ -155,15 +156,20 @@ namespace WindowsFormsApp1
             GestorUsuarios _gestorUsuarios = new GestorUsuarios();
             UsuarioDTO _usuario = new UsuarioDTO();
 
+           
             _usuario = _gestorUsuarios.IniciarSesion(nombre, clave);
 
             if (_usuario != null)
             {
-                Globales.userObject = _gestorUsuarios.ObtenerCuentaPorUsername(_usuario.nombre);
+                Globales.userObject = _gestorUsuarios.ObtenerCuentaPorUsername(_usuario.Nombre);
 
-                Globales.userName = _usuario.nombre;
-                Globales.userType = _usuario.tipo_usuario;
-              
+                Globales.userName = _usuario.Nombre;
+                Globales.userType = _usuario.Tipo_usuario;
+
+               // ConsultasUsuarios _consultasUsuarios = new ConsultasUsuarios();
+               // _consultasUsuarios.Show();
+
+
                Principal main = new Principal();
                main.Show();
                this.Hide();

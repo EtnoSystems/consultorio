@@ -47,17 +47,17 @@ namespace WindowsFormsApp1
             txtPassword2.Text = "";
         }
 
-        private void btnSalir_Click_1(object sender, EventArgs e)
+        private void BtnSalir_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void txtPassword1_Leave(object sender, EventArgs e)
+        private void TxtPassword1_Leave(object sender, EventArgs e)
         {
             if (txtPassword1.Text == "Contraseña" || txtPassword1.Text == "")
             {
@@ -75,7 +75,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void txtPassword2_Validating(object sender, CancelEventArgs e)
+        private void TxtPassword2_Validating(object sender, CancelEventArgs e)
         {
             errorProvider1.SetError(txtPassword2, "Las contraseñas insgresadas no coinciden");
         }

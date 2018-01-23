@@ -12,18 +12,18 @@ namespace DAO
     using System;
     using System.Collections.Generic;
     
-    public partial class consulta
+    public partial class Consulta
     {
         public int Id { get; set; }
-        public Nullable<decimal> precio { get; set; }
-        public System.DateTime fecha { get; set; }
-        public int medico_Id { get; set; }
-        public int tipo_consulta_Id { get; set; }
-        public int paciente_Id { get; set; }
-        public bool pagada { get; set; }
+        public Nullable<decimal> Precio { get; set; }
+        public System.DateTime Fecha { get; set; }
+        public int Medico_Id { get; set; }
+        public int Tipo_consulta_Id { get; set; }
+        public int Paciente_Id { get; set; }
+        public bool Pagada { get; set; }
     
-        public virtual persona_medico persona_medico { get; set; }
-        public virtual persona_paciente persona_paciente { get; set; }
-        public virtual tipo_consulta tipo_consulta { get; set; }
+        public virtual Persona_medico Persona_medico { get; set; }
+        public virtual Persona_paciente Persona_paciente { get; set; }
+        public virtual Tipo_consulta Tipo_consulta { get; set; }
     }
 }
