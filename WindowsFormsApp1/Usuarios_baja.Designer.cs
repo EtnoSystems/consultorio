@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios_baja));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.lblConexion = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.lblTipoUsuario = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -51,8 +49,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.btnEliminar);
-            this.panel1.Controls.Add(this.lblConexion);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.lblTipoUsuario);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.lblNombre);
@@ -85,29 +81,6 @@
             this.toolTip1.SetToolTip(this.btnEliminar, "Eliminar usuario");
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // lblConexion
-            // 
-            this.lblConexion.AutoSize = true;
-            this.lblConexion.BackColor = System.Drawing.Color.Transparent;
-            this.lblConexion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConexion.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblConexion.Location = new System.Drawing.Point(35, 292);
-            this.lblConexion.Name = "lblConexion";
-            this.lblConexion.Size = new System.Drawing.Size(0, 18);
-            this.lblConexion.TabIndex = 15;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(35, 260);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 18);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Última conexión";
             // 
             // lblTipoUsuario
             // 
@@ -230,8 +203,6 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Label lblConexion;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -45,7 +45,7 @@ namespace WindowsFormsApp1
             if (_usuario != null)
             {
                 lblNombre.Text = _usuario.Nombre;
-                lblTipoUsuario.Text = _usuario.Tipo_usuario;
+                lblTipoUsuario.Text = _usuario.Tipo_usuario.Denominacion;
                 //lblConexion.Text = ultima conexion
                 btnEliminar.Enabled = true;
             }

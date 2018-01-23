@@ -43,7 +43,7 @@ namespace Logica
                                      Id = n.Id,
                                      Nombre = n.Nombre,
                                      Password = n.Password,
-                                     Tipo_usuario=n.Tipo_usuario
+                                     
                                  }).ToList();
                     return Query;
                 }
@@ -67,7 +67,9 @@ namespace Logica
                                        Id = n.Id,
                                        Nombre = n.Nombre,
                                        Password = n.Password,
-                                       Tipo_usuario = n.Tipo_usuario
+                                       Tipo_usuario = n.Tipo_usuario,
+                                       Tipo_usuario1_Id = n.Tipo_usuario1_Id
+                                       
                                    }).SingleOrDefault();
                 
                     
@@ -110,7 +112,7 @@ namespace Logica
                                 Nombre = n.Nombre,
                                 Password = n.Password,
                                 Tipo_usuario1_Id = n.Tipo_usuario1_Id,
-                                Tipo_usuario1=n.Tipo_usuario1
+                                Tipo_usuario=n.Tipo_usuario,
                             
                             }).SingleOrDefault();
                 }
@@ -169,7 +171,8 @@ namespace Logica
                     Usuario entidad = new Usuario();
                     entidad.Nombre = nombre;
                     entidad.Password = clave;
-                    entidad.Tipo_usuario = tipo;
+                    //entidad.Tipo_usuario.Denominacion = tipo;
+               
                     dbContext.Usuario.Add(entidad);
                     dbContext.SaveChanges();
                 }

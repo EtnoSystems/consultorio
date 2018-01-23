@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Logica;
+using Entidades;
 
 namespace WindowsFormsApp1
 {
@@ -25,26 +27,37 @@ namespace WindowsFormsApp1
         {
             btnGuardar.Enabled = false;
             btnGuardarAgregar.Enabled = false;
+            txtNombre.ForeColor = Color.Silver;
+
+            GestorTiposDeUsuarios gestorTiposUsuarios = new GestorTiposDeUsuarios();
+            /*List<Tipo_usuarioDTO> listaTipos = gestorTiposUsuarios.ListarTiposUsuarios();
+            /*CmbTipo.DataSource= (from n in listaTipos
+                        select n.Denominacion).ToList();*/
+            
+            CmbTipo.DataSource = gestorTiposUsuarios.ListarTiposUsuarios();
+            CmbTipo.ValueMember = "Id";
+            CmbTipo.DisplayMember = "Denominacion";
+            
         }
         #endregion
 
 #region Password 1
         private void txtPassword1_Enter(object sender, EventArgs e)
         {
-            txtPassword1.ForeColor = Color.Black;
-            txtPassword1.Text = "";
+            TxtPassword1.ForeColor = Color.Black;
+            TxtPassword1.Text = "";
         }
 
         private void TxtPassword1_Leave(object sender, EventArgs e)
         {
-            if (txtPassword1.Text == "Contraseña" || txtPassword1.Text == "")
+            if (TxtPassword1.Text == "Contraseña" || TxtPassword1.Text == "")
             {
-                txtPassword1.ForeColor = Color.Silver;
-                txtPassword1.Text = "Contraseña";
+                TxtPassword1.ForeColor = Color.Silver;
+                TxtPassword1.Text = "Contraseña";
             }
             else
             {
-                pass = txtPassword1.Text;
+                pass = TxtPassword1.Text;
                 habilitarBotones();
             }
         }
@@ -58,8 +71,8 @@ namespace WindowsFormsApp1
 
         private void txtPassword2_Enter(object sender, EventArgs e)
         {
-            txtPassword2.ForeColor = Color.Black;
-            txtPassword2.Text = "";
+            TxtPassword2.ForeColor = Color.Black;
+            TxtPassword2.Text = "";
         }
 
         private void txtPassword2_TextChanged(object sender, EventArgs e)
@@ -69,25 +82,24 @@ namespace WindowsFormsApp1
 
         private void TxtPassword2_Validating(object sender, CancelEventArgs e)
         {
-            if (txtPassword2.Text == "Contraseña" || txtPassword2.Text == "")
+            if (TxtPassword2.Text == "Contraseña" || TxtPassword2.Text == "")
             {
-                txtPassword2.ForeColor = Color.Silver;
-                txtPassword2.Text = "Contraseña";
+                TxtPassword2.ForeColor = Color.Silver;
+                TxtPassword2.Text = "Contraseña";
             }
             else
             {
-                pass2 = txtPassword2.Text;
+                pass2 = TxtPassword2.Text;
 
                 if (pass != pass2)
                 {
-                    errorProvider1.SetError(txtPassword2, "Las contraseñas ingresadas no coinciden");
-                    txtPassword1.Text = "";
-                    txtPassword2.Text = "";
-                    txtPassword1.Focus();
+                    errorProvider1.SetError(TxtPassword2, "Las contraseñas ingresadas no coinciden");
+                    TxtPassword2.Text = "";
+                    //TxtPassword1.Focus();
                 }
                 else
                 {
-                    errorProvider1.SetError(txtPassword2, null);
+                    errorProvider1.SetError(TxtPassword2, null);
                 }
             }
         }
@@ -102,14 +114,31 @@ namespace WindowsFormsApp1
 
         private void txtUsuario_Validating(object sender, CancelEventArgs e)
         {
+            nombre = txtUsuario.Text;
             //verifica que el usuario ingresado no exista
-            errorProvider1.SetError(txtUsuario, "El usuario ingresado no está disponible");
-            txtUsuario.Focus();
+            GestorUsuarios gestorUsuarios = new GestorUsuarios();
+            UsuarioDTO usuario = gestorUsuarios.ObtenerCuentaPorUsername(nombre);
+
+            if (usuario != null)
+            {
+                errorProvider1.SetError(txtUsuario, "El nombre de usuario ingresado no está disponible");
+                txtUsuario.Focus();
+            }
+            else
+            {
+                errorProvider1.SetError(txtUsuario, null);
+            }
+            
         }
 
         private void txtUsuario_Leave(object sender, EventArgs e)
         {
             habilitarBotones();
+            if (txtUsuario.Text == "")
+            {
+                txtUsuario.ForeColor = Color.Silver;
+                txtUsuario.Text = "Nombre de usuario";
+            }
         }
 
         private void txtUsuario_Enter(object sender, EventArgs e)
@@ -128,18 +157,41 @@ namespace WindowsFormsApp1
         private void txtNombre_Leave(object sender, EventArgs e)
         {
             habilitarBotones();
+            if (txtNombre.Text == "")
+            {
+                txtNombre.ForeColor = Color.Silver;
+                txtNombre.Text = "Nombre completo";
+            }
         }
 
         private void txtNombre_Enter(object sender, EventArgs e)
         {
-            txtNombre.ForeColor = Color.Black;
-            txtNombre.Text = "";
+           if (txtNombre.Text == "Nombre completo")
+            {
+                txtNombre.ForeColor = Color.Black;
+              //  txtNombre.Text = "";
+            }
         }
         #endregion
 
         private void BtnSalir_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CmbTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void CmbTipo_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void Panel1_Paint(object sender, PaintEventArgs e)
@@ -149,7 +201,8 @@ namespace WindowsFormsApp1
 
         private void cmbTipo_DropDownClosed(object sender, EventArgs e)
         {
-            habilitarBotones();
+           habilitarBotones();
+           MessageBox.Show(CmbTipo.SelectedValue.ToString());
         }
 
 #region Funciones
@@ -158,9 +211,9 @@ namespace WindowsFormsApp1
         {
             if (txtNombre.Text != "" && txtNombre.Text != "Nombre completo"
                 && txtUsuario.Text != "" && txtUsuario.Text != "Nombre de usuario"
-                && txtPassword1.Text != "" && txtPassword1.Text != "Contraseña"
-                && txtPassword2.Text != "" && txtPassword2.Text != "Contraseña"
-                && cmbTipo.Text != "Tipo de usuario")
+                && TxtPassword1.Text != "" && TxtPassword1.Text != "Contraseña"
+                && TxtPassword2.Text != "" && TxtPassword2.Text != "Repita la contraseña"
+                && CmbTipo.Text != "Tipo de usuario")
             {
                 btnGuardar.Enabled = true;
                 btnGuardarAgregar.Enabled = true;
@@ -170,6 +223,11 @@ namespace WindowsFormsApp1
                 btnGuardar.Enabled = false;
                 btnGuardarAgregar.Enabled = false;
             }
+        }
+
+        void agregarUsuario(string nombre, string usuario, string clave, int id)
+        {
+
         }
 #endregion
     }

@@ -35,13 +35,14 @@
             this.btnGuardarAgregar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.cmbTipo = new System.Windows.Forms.ComboBox();
-            this.txtPassword2 = new System.Windows.Forms.TextBox();
-            this.txtPassword1 = new System.Windows.Forms.TextBox();
+            this.CmbTipo = new System.Windows.Forms.ComboBox();
+            this.TxtPassword2 = new System.Windows.Forms.TextBox();
+            this.TxtPassword1 = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -49,13 +50,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnGuardarAgregar);
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.btnGuardar);
-            this.panel1.Controls.Add(this.cmbTipo);
-            this.panel1.Controls.Add(this.txtPassword2);
-            this.panel1.Controls.Add(this.txtPassword1);
+            this.panel1.Controls.Add(this.CmbTipo);
+            this.panel1.Controls.Add(this.TxtPassword2);
+            this.panel1.Controls.Add(this.TxtPassword1);
             this.panel1.Controls.Add(this.txtUsuario);
             this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Location = new System.Drawing.Point(144, 33);
@@ -88,7 +90,7 @@
             this.btnGuardarAgregar.Location = new System.Drawing.Point(135, 399);
             this.btnGuardarAgregar.Name = "btnGuardarAgregar";
             this.btnGuardarAgregar.Size = new System.Drawing.Size(79, 58);
-            this.btnGuardarAgregar.TabIndex = 8;
+            this.btnGuardarAgregar.TabIndex = 7;
             this.btnGuardarAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.toolTip1.SetToolTip(this.btnGuardarAgregar, "Guardar datos y agregar otro usuario");
             this.btnGuardarAgregar.UseVisualStyleBackColor = false;
@@ -107,7 +109,7 @@
             this.btnSalir.Location = new System.Drawing.Point(220, 397);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(79, 60);
-            this.btnSalir.TabIndex = 7;
+            this.btnSalir.TabIndex = 8;
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.toolTip1.SetToolTip(this.btnSalir, "Salir sin guardar");
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -126,51 +128,57 @@
             this.btnGuardar.Location = new System.Drawing.Point(38, 397);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(79, 58);
-            this.btnGuardar.TabIndex = 5;
+            this.btnGuardar.TabIndex = 6;
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.toolTip1.SetToolTip(this.btnGuardar, "Guardar los datos del nuevo usuario");
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // cmbTipo
+            // CmbTipo
             // 
-            this.cmbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Items.AddRange(new object[] {
+            this.CmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbTipo.FormattingEnabled = true;
+            this.CmbTipo.Items.AddRange(new object[] {
             "Administrativo",
             "Atención el público",
             "Otro"});
-            this.cmbTipo.Location = new System.Drawing.Point(38, 267);
-            this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(173, 26);
-            this.cmbTipo.TabIndex = 4;
-            this.cmbTipo.Text = "Tipo de usuario";
-            this.cmbTipo.DropDownClosed += new System.EventHandler(this.cmbTipo_DropDownClosed);
+            this.CmbTipo.Location = new System.Drawing.Point(38, 276);
+            this.CmbTipo.Name = "CmbTipo";
+            this.CmbTipo.Size = new System.Drawing.Size(173, 26);
+            this.CmbTipo.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.CmbTipo, "Seleccione el tipo de usuario");
+            this.CmbTipo.SelectedIndexChanged += new System.EventHandler(this.CmbTipo_SelectedIndexChanged);
+            this.CmbTipo.DropDownClosed += new System.EventHandler(this.cmbTipo_DropDownClosed);
+            this.CmbTipo.Click += new System.EventHandler(this.CmbTipo_Click);
             // 
-            // txtPassword2
+            // TxtPassword2
             // 
-            this.txtPassword2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword2.ForeColor = System.Drawing.Color.Silver;
-            this.txtPassword2.Location = new System.Drawing.Point(38, 211);
-            this.txtPassword2.Name = "txtPassword2";
-            this.txtPassword2.Size = new System.Drawing.Size(261, 24);
-            this.txtPassword2.TabIndex = 3;
-            this.txtPassword2.Text = "Repita la contraseña";
-            this.txtPassword2.TextChanged += new System.EventHandler(this.txtPassword2_TextChanged);
-            this.txtPassword2.Enter += new System.EventHandler(this.txtPassword2_Enter);
-            this.txtPassword2.Leave += new System.EventHandler(this.txtPassword2_Leave);
-            this.txtPassword2.Validating += new System.ComponentModel.CancelEventHandler(this.TxtPassword2_Validating);
+            this.TxtPassword2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPassword2.ForeColor = System.Drawing.Color.Silver;
+            this.TxtPassword2.Location = new System.Drawing.Point(38, 211);
+            this.TxtPassword2.Name = "TxtPassword2";
+            this.TxtPassword2.Size = new System.Drawing.Size(261, 24);
+            this.TxtPassword2.TabIndex = 4;
+            this.TxtPassword2.Text = "Repita la contraseña";
+            this.toolTip1.SetToolTip(this.TxtPassword2, "Repita la contraseña ingresada");
+            this.TxtPassword2.TextChanged += new System.EventHandler(this.txtPassword2_TextChanged);
+            this.TxtPassword2.Enter += new System.EventHandler(this.txtPassword2_Enter);
+            this.TxtPassword2.Leave += new System.EventHandler(this.txtPassword2_Leave);
+            this.TxtPassword2.Validating += new System.ComponentModel.CancelEventHandler(this.TxtPassword2_Validating);
             // 
-            // txtPassword1
+            // TxtPassword1
             // 
-            this.txtPassword1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword1.ForeColor = System.Drawing.Color.Silver;
-            this.txtPassword1.Location = new System.Drawing.Point(38, 171);
-            this.txtPassword1.Name = "txtPassword1";
-            this.txtPassword1.Size = new System.Drawing.Size(261, 24);
-            this.txtPassword1.TabIndex = 2;
-            this.txtPassword1.Text = "Contraseña";
-            this.txtPassword1.Enter += new System.EventHandler(this.txtPassword1_Enter);
-            this.txtPassword1.Leave += new System.EventHandler(this.TxtPassword1_Leave);
+            this.TxtPassword1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPassword1.ForeColor = System.Drawing.Color.Silver;
+            this.TxtPassword1.Location = new System.Drawing.Point(38, 171);
+            this.TxtPassword1.Name = "TxtPassword1";
+            this.TxtPassword1.Size = new System.Drawing.Size(261, 24);
+            this.TxtPassword1.TabIndex = 3;
+            this.TxtPassword1.Text = "Contraseña";
+            this.toolTip1.SetToolTip(this.TxtPassword1, "Ingrese la contraseña");
+            this.TxtPassword1.Enter += new System.EventHandler(this.txtPassword1_Enter);
+            this.TxtPassword1.Leave += new System.EventHandler(this.TxtPassword1_Leave);
             // 
             // txtUsuario
             // 
@@ -179,8 +187,9 @@
             this.txtUsuario.Location = new System.Drawing.Point(38, 103);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(173, 24);
-            this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.TabIndex = 2;
             this.txtUsuario.Text = "Nombre de usuario";
+            this.toolTip1.SetToolTip(this.txtUsuario, "Ingrese el nombre de usuario");
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
@@ -193,8 +202,9 @@
             this.txtNombre.Location = new System.Drawing.Point(38, 64);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(261, 24);
-            this.txtNombre.TabIndex = 0;
+            this.txtNombre.TabIndex = 1;
             this.txtNombre.Text = "Nombre completo";
+            this.toolTip1.SetToolTip(this.txtNombre, "Ingrese el nombre completo");
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
             this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
@@ -202,6 +212,17 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(35, 247);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(207, 17);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Seleccionar tipo de usuario";
             // 
             // Usuarios_alta
             // 
@@ -227,9 +248,9 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtPassword2;
-        private System.Windows.Forms.TextBox txtPassword1;
-        private System.Windows.Forms.ComboBox cmbTipo;
+        private System.Windows.Forms.TextBox TxtPassword2;
+        private System.Windows.Forms.TextBox TxtPassword1;
+        private System.Windows.Forms.ComboBox CmbTipo;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnGuardarAgregar;
@@ -237,5 +258,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label2;
     }
 }

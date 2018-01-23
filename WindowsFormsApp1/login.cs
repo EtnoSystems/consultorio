@@ -163,7 +163,7 @@ namespace WindowsFormsApp1
                Globales.userObject = _gestorUsuarios.ObtenerCuentaPorUsername(_usuario.Nombre);
 
                Globales.userName = _usuario.Nombre;
-               Globales.userType = _usuario.Tipo_usuario;
+               Globales.userType = _usuario.Tipo_usuario.Denominacion;
 
                Principal main = new Principal();
                main.Show();

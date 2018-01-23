@@ -124,8 +124,8 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Tipo_usuario" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Tipo_usuario1_Id" Type="int" Nullable="false" />
+          <Property Name="Nombre_completo" Type="varchar(max)" />
         </EntityType>
         <Association Name="FK_direccionciudad">
           <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="1" />
@@ -494,9 +494,9 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Tipo_usuario" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Tipo_usuario1_Id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Tipo_usuario1" Relationship="Self.FK_usuariotipo_usuario" FromRole="Usuario" ToRole="Tipo_usuario" />
+          <Property Name="Nombre_completo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tipo_usuario" Relationship="Self.FK_usuariotipo_usuario" FromRole="Usuario" ToRole="Tipo_usuario" />
         </EntityType>
         <Association Name="FK_direccionciudad">
           <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="1" />
@@ -828,8 +828,8 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Tipo_usuario" ColumnName="Tipo_usuario" />
                 <ScalarProperty Name="Tipo_usuario1_Id" ColumnName="Tipo_usuario1_Id" />
+                <ScalarProperty Name="Nombre_completo" ColumnName="Nombre_completo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

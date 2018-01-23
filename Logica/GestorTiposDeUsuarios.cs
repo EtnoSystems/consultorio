@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DAO;
+using Entidades;
+
+namespace Logica
+{
+    public class GestorTiposDeUsuarios
+    {
+        public List<Tipo_usuarioDTO> ListarTiposUsuarios() //DEVUELVE UN LIST DE TIPOS DE USUARIOS
+        {
+            try
+            {
+                using (consultoriosEntities dbContext = new consultoriosEntities())
+                {
+                    var Query = (from n in dbContext.Tipo_usuario
+                                 select new Tipo_usuarioDTO
+                                 {
+                                     Id = n.Id,
+                                     Denominacion = n.Denominacion
+                                 }).ToList();
+                    return Query;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+    }
+}

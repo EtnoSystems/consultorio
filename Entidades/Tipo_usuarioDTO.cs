@@ -9,14 +9,14 @@ namespace Entidades
 {
     public class Tipo_usuarioDTO
     {
-        public void Tipo_usuario()
+        /*public void Tipo_usuario()
         {
             this.Usuario = new HashSet<Usuario>();
-        }
+        }*/
 
         public int Id { get; set; }
         public string Denominacion { get; set; }
 
-        public virtual ICollection<Usuario> Usuario { get; set; }
+        //public virtual ICollection<Usuario> Usuario { get; set; }
     }
 }

@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
 
         private void Principal_Load(object sender, EventArgs e)
         {       
-            if (Globales.userType == "admin")
+            if (Globales.userType == "administrador")
                 mnuReportes.Visible = true;
             else
                 mnuReportes.Visible = false;
