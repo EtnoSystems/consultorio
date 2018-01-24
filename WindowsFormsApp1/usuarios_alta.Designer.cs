@@ -132,7 +132,7 @@
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.toolTip1.SetToolTip(this.btnGuardar, "Guardar los datos del nuevo usuario");
             this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // CmbTipo
             // 
@@ -149,7 +149,7 @@
             this.CmbTipo.TabIndex = 5;
             this.toolTip1.SetToolTip(this.CmbTipo, "Seleccione el tipo de usuario");
             this.CmbTipo.SelectedIndexChanged += new System.EventHandler(this.CmbTipo_SelectedIndexChanged);
-            this.CmbTipo.DropDownClosed += new System.EventHandler(this.cmbTipo_DropDownClosed);
+            this.CmbTipo.DropDownClosed += new System.EventHandler(this.CmbTipo_DropDownClosed);
             this.CmbTipo.Click += new System.EventHandler(this.CmbTipo_Click);
             // 
             // TxtPassword2
@@ -162,9 +162,9 @@
             this.TxtPassword2.TabIndex = 4;
             this.TxtPassword2.Text = "Repita la contraseña";
             this.toolTip1.SetToolTip(this.TxtPassword2, "Repita la contraseña ingresada");
-            this.TxtPassword2.TextChanged += new System.EventHandler(this.txtPassword2_TextChanged);
-            this.TxtPassword2.Enter += new System.EventHandler(this.txtPassword2_Enter);
-            this.TxtPassword2.Leave += new System.EventHandler(this.txtPassword2_Leave);
+            this.TxtPassword2.TextChanged += new System.EventHandler(this.TxtPassword2_TextChanged);
+            this.TxtPassword2.Enter += new System.EventHandler(this.TxtPassword2_Enter);
+            this.TxtPassword2.Leave += new System.EventHandler(this.TxtPassword2_Leave);
             this.TxtPassword2.Validating += new System.ComponentModel.CancelEventHandler(this.TxtPassword2_Validating);
             // 
             // TxtPassword1
@@ -177,7 +177,7 @@
             this.TxtPassword1.TabIndex = 3;
             this.TxtPassword1.Text = "Contraseña";
             this.toolTip1.SetToolTip(this.TxtPassword1, "Ingrese la contraseña");
-            this.TxtPassword1.Enter += new System.EventHandler(this.txtPassword1_Enter);
+            this.TxtPassword1.Enter += new System.EventHandler(this.TxtPassword1_Enter);
             this.TxtPassword1.Leave += new System.EventHandler(this.TxtPassword1_Leave);
             // 
             // txtUsuario
@@ -190,10 +190,10 @@
             this.txtUsuario.TabIndex = 2;
             this.txtUsuario.Text = "Nombre de usuario";
             this.toolTip1.SetToolTip(this.txtUsuario, "Ingrese el nombre de usuario");
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
-            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
-            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
-            this.txtUsuario.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsuario_Validating);
+            this.txtUsuario.TextChanged += new System.EventHandler(this.TxtUsuario_TextChanged);
+            this.txtUsuario.Enter += new System.EventHandler(this.TxtUsuario_Enter);
+            this.txtUsuario.Leave += new System.EventHandler(this.TxtUsuario_Leave);
+            this.txtUsuario.Validating += new System.ComponentModel.CancelEventHandler(this.TxtUsuario_Validating);
             // 
             // txtNombre
             // 
@@ -205,9 +205,9 @@
             this.txtNombre.TabIndex = 1;
             this.txtNombre.Text = "Nombre completo";
             this.toolTip1.SetToolTip(this.txtNombre, "Ingrese el nombre completo");
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
-            this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
-            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
+            this.txtNombre.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
+            this.txtNombre.Enter += new System.EventHandler(this.TxtNombre_Enter);
+            this.txtNombre.Leave += new System.EventHandler(this.TxtNombre_Leave);
             // 
             // errorProvider1
             // 
@@ -236,7 +236,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Usuarios_alta";
             this.Text = "Alta de usuarios";
-            this.Load += new System.EventHandler(this.usuarios_alta_Load);
+            this.Load += new System.EventHandler(this.Usuarios_alta_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

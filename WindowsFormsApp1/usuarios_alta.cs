@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void usuarios_alta_Load(object sender, EventArgs e)
+        private void Usuarios_alta_Load(object sender, EventArgs e)
         {
             btnGuardar.Enabled = false;
             btnGuardarAgregar.Enabled = false;
@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
         #endregion
 
 #region Password 1
-        private void txtPassword1_Enter(object sender, EventArgs e)
+        private void TxtPassword1_Enter(object sender, EventArgs e)
         {
             TxtPassword1.ForeColor = Color.Black;
             TxtPassword1.Text = "";
@@ -58,24 +58,24 @@ namespace WindowsFormsApp1
             else
             {
                 pass = TxtPassword1.Text;
-                habilitarBotones();
+                HabilitarBotones();
             }
         }
         #endregion
 
 #region Password 2
-        private void txtPassword2_Leave(object sender, EventArgs e)
+        private void TxtPassword2_Leave(object sender, EventArgs e)
         {
-            habilitarBotones();
+            HabilitarBotones();
         }
 
-        private void txtPassword2_Enter(object sender, EventArgs e)
+        private void TxtPassword2_Enter(object sender, EventArgs e)
         {
             TxtPassword2.ForeColor = Color.Black;
             TxtPassword2.Text = "";
         }
 
-        private void txtPassword2_TextChanged(object sender, EventArgs e)
+        private void TxtPassword2_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -107,12 +107,12 @@ namespace WindowsFormsApp1
 
 #region txtUsuario
 
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        private void TxtUsuario_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtUsuario_Validating(object sender, CancelEventArgs e)
+        private void TxtUsuario_Validating(object sender, CancelEventArgs e)
         {
             nombre = txtUsuario.Text;
             //verifica que el usuario ingresado no exista
@@ -131,9 +131,9 @@ namespace WindowsFormsApp1
             
         }
 
-        private void txtUsuario_Leave(object sender, EventArgs e)
+        private void TxtUsuario_Leave(object sender, EventArgs e)
         {
-            habilitarBotones();
+            HabilitarBotones();
             if (txtUsuario.Text == "")
             {
                 txtUsuario.ForeColor = Color.Silver;
@@ -141,7 +141,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void txtUsuario_Enter(object sender, EventArgs e)
+        private void TxtUsuario_Enter(object sender, EventArgs e)
         {
             txtUsuario.ForeColor = Color.Black;
             txtUsuario.Text = "";
@@ -149,14 +149,14 @@ namespace WindowsFormsApp1
         #endregion
 
 #region txtNombre
-        private void txtNombre_TextChanged(object sender, EventArgs e)
+        private void TxtNombre_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtNombre_Leave(object sender, EventArgs e)
+        private void TxtNombre_Leave(object sender, EventArgs e)
         {
-            habilitarBotones();
+            HabilitarBotones();
             if (txtNombre.Text == "")
             {
                 txtNombre.ForeColor = Color.Silver;
@@ -164,7 +164,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void txtNombre_Enter(object sender, EventArgs e)
+        private void TxtNombre_Enter(object sender, EventArgs e)
         {
            if (txtNombre.Text == "Nombre completo")
             {
@@ -179,7 +179,7 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void BtnGuardar_Click(object sender, EventArgs e)
         {
 
         }
@@ -199,15 +199,15 @@ namespace WindowsFormsApp1
 
         }
 
-        private void cmbTipo_DropDownClosed(object sender, EventArgs e)
+        private void CmbTipo_DropDownClosed(object sender, EventArgs e)
         {
-           habilitarBotones();
+           HabilitarBotones();
            MessageBox.Show(CmbTipo.SelectedValue.ToString());
         }
 
 #region Funciones
 
-        void habilitarBotones()
+        void HabilitarBotones()
         {
             if (txtNombre.Text != "" && txtNombre.Text != "Nombre completo"
                 && txtUsuario.Text != "" && txtUsuario.Text != "Nombre de usuario"
@@ -225,7 +225,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        void agregarUsuario(string nombre, string usuario, string clave, int id)
+        void AgregarUsuario(string nombre, string usuario, string clave, int id)
         {
 
         }

@@ -30,5 +30,27 @@ namespace Logica
                 throw;
             }
         }
+
+        public Tipo_usuarioDTO ObtenerTipoUsuarioPorId(int id)
+        {
+            try
+            {
+                using (consultoriosEntities dbContext = new consultoriosEntities())
+                {
+                    return (from n in dbContext.Tipo_usuario
+                                 where n.Id==id
+                                 select new Tipo_usuarioDTO
+                                 {
+                                     Id = n.Id,
+                                     Denominacion = n.Denominacion
+                                 }).FirstOrDefault();
+                    //return Query;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }
