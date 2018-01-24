@@ -87,5 +87,10 @@ namespace WindowsFormsApp1
             Usuarios_baja bajas = new Usuarios_baja();
             bajas.Show();
         }
+
+        private void Principal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

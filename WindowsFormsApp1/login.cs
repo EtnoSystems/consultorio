@@ -17,21 +17,33 @@ namespace WindowsFormsApp1
     {
         //VARIABLES
         string nombre, clave;
+        bool primerinicio = true;
         //
         public Login()
         {
             InitializeComponent();
-            this.ActiveControl = label1;
+           // this.ActiveControl = label1;
         }
         
         // USUARIO ---------------------------------------------------------
         private void TxtUsuario_Enter(object sender, EventArgs e)
         {
-            if (TxtUsuario.Text == "Usuario")
+            if (primerinicio)
             {
-                TxtUsuario.Text = "";
+                primerinicio = false;
+                TxtUsuario.SelectAll();
                 TxtUsuario.ForeColor = Color.Black;
             }
+            else
+            {
+                if (TxtUsuario.Text == "Usuario")
+                {
+                    TxtUsuario.Text = "";
+                    TxtUsuario.ForeColor = Color.Black;
+                }
+            }
+
+            
         }
         
         private void TxtUsuario_TextChanged(object sender, EventArgs e)
@@ -92,6 +104,16 @@ namespace WindowsFormsApp1
         {
             BtnMostrarOcultar.Visible = false;
             TxtPassword.UseSystemPasswordChar = false;
+            TxtPassword.ForeColor = Color.LightGray;
+            TxtPassword.Text = "Contraseña";
+            TxtUsuario.ForeColor = Color.LightGray;
+            TxtUsuario.Text = "Usuario";
+            TxtUsuario.SelectAll();
+            TxtUsuario.Focus();
+            TxtUsuario.TabIndex = 1;
+            TxtPassword.TabIndex = 2;
+            BtnIngresar.TabIndex = 3;
+            BtnSalir.TabIndex = 4;
         }
         
         private void BtnIngresar_Click(object sender, EventArgs e)
@@ -149,6 +171,17 @@ namespace WindowsFormsApp1
         private void ContextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
 
+        }
+
+        private void TxtPassword_Leave(object sender, EventArgs e)
+        {
+            if (TxtPassword.Text=="" || TxtPassword.Text=="Contraseña")
+            {
+                TxtPassword.ForeColor = Color.LightGray;
+                TxtPassword.Text = "Contraseña";
+                TxtPassword.UseSystemPasswordChar = false;
+                BtnMostrarOcultar.Visible = false;
+            }
         }
 
         private void IniciarSesion(string nombre, string clave)

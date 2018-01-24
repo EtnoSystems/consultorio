@@ -81,22 +81,6 @@ namespace Logica
             }   
         }
 
-        public Usuario ObtenerCuentaPorUsername2(string username) //BUSCA UN USUARIO POR "USERNAME": SI LO ENCUENTRA DEVUELVE EL OBJETO. sINO DEVUELVE NULL
-        {
-            try
-            {
-                using (consultoriosEntities dbContext = new consultoriosEntities())
-                {
-                    return (from n in dbContext.Usuario
-                            where n.Nombre == username
-                            select n).FirstOrDefault();
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
 
         public UsuarioDTO IniciarSesion(string username, string clave) //FUNCION INICIAR SESION
         {
@@ -123,22 +107,7 @@ namespace Logica
             }
         }
 
-        public Usuario IniciarSesion2(string username, string clave) //FUNCION INICIAR SESION
-        {
-            try
-            {
-                using (consultoriosEntities dbContext = new consultoriosEntities())
-                {
-                    return (from n in dbContext.Usuario
-                            where n.Nombre == username && n.Password == clave
-                            select n).SingleOrDefault();
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
+        
 
         /* public List<UsuarioDTO> ListarUsuariosAdministradores()
          {
@@ -162,19 +131,23 @@ namespace Logica
 
          }*/
 
-        public void AgregarUsuario (string nombre, string clave, string tipo)
+        public int AgregarUsuario (string nombreCompleto, string userName, string clave, Tipo_usuarioDTO tipo_UsuarioDTO)
         {
             try
             {
                 using (consultoriosEntities dbContext = new consultoriosEntities())
                 {
-                    Usuario entidad = new Usuario();
-                    entidad.Nombre = nombre;
-                    entidad.Password = clave;
+                    Usuario usuario = new Usuario();
+                    usuario.Nombre_completo = nombreCompleto;
+                    usuario.Nombre = userName;
+                    usuario.Password = clave;
+                    usuario.Tipo_usuario1_Id = tipo_UsuarioDTO.Id;
+
+
                     //entidad.Tipo_usuario.Denominacion = tipo;
                
-                    dbContext.Usuario.Add(entidad);
-                    dbContext.SaveChanges();
+                    dbContext.Usuario.Add(usuario);
+                    return(dbContext.SaveChanges());
                 }
                     
 

@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
     {
 
         string pass, pass2, nombre, tipo;
+        bool primerinicio = true;
 
 #region Formulario
         public Usuarios_alta()
@@ -25,9 +26,9 @@ namespace WindowsFormsApp1
 
         private void Usuarios_alta_Load(object sender, EventArgs e)
         {
-            btnGuardar.Enabled = false;
-            btnGuardarAgregar.Enabled = false;
-            txtNombre.ForeColor = Color.Silver;
+
+            EstadoInicial();
+            
 
             GestorTiposDeUsuarios gestorTiposUsuarios = new GestorTiposDeUsuarios();
             /*List<Tipo_usuarioDTO> listaTipos = gestorTiposUsuarios.ListarTiposUsuarios();
@@ -44,8 +45,12 @@ namespace WindowsFormsApp1
 #region Password 1
         private void TxtPassword1_Enter(object sender, EventArgs e)
         {
+            
             TxtPassword1.ForeColor = Color.Black;
-            TxtPassword1.Text = "";
+            if(TxtPassword1.Text=="Contraseña")
+                TxtPassword1.Text = "";
+            
+            
         }
 
         private void TxtPassword1_Leave(object sender, EventArgs e)
@@ -72,7 +77,8 @@ namespace WindowsFormsApp1
         private void TxtPassword2_Enter(object sender, EventArgs e)
         {
             TxtPassword2.ForeColor = Color.Black;
-            TxtPassword2.Text = "";
+            if(TxtPassword2.Text=="Repita la contraseña")
+                TxtPassword2.Text = "";
         }
 
         private void TxtPassword2_TextChanged(object sender, EventArgs e)
@@ -144,7 +150,8 @@ namespace WindowsFormsApp1
         private void TxtUsuario_Enter(object sender, EventArgs e)
         {
             txtUsuario.ForeColor = Color.Black;
-            txtUsuario.Text = "";
+            if(txtUsuario.Text=="Nombre de usuario")
+                txtUsuario.Text = "";
         }
         #endregion
 
@@ -157,20 +164,27 @@ namespace WindowsFormsApp1
         private void TxtNombre_Leave(object sender, EventArgs e)
         {
             HabilitarBotones();
-            if (txtNombre.Text == "")
+            if (txtNombre.Text == "" || txtNombre.Text=="Nombre completo")
             {
                 txtNombre.ForeColor = Color.Silver;
                 txtNombre.Text = "Nombre completo";
             }
+            
         }
 
         private void TxtNombre_Enter(object sender, EventArgs e)
         {
-           if (txtNombre.Text == "Nombre completo")
+            if (primerinicio)
             {
-                txtNombre.ForeColor = Color.Black;
-              //  txtNombre.Text = "";
+                primerinicio = false;
             }
+            else
+            {
+               // txtNombre.ForeColor = Color.Black;
+                //txtNombre.Text = "";
+            }
+            txtNombre.ForeColor = Color.Black;
+
         }
         #endregion
 
@@ -181,7 +195,8 @@ namespace WindowsFormsApp1
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-
+            AgregarUsuario(txtNombre.Text, txtUsuario.Text,TxtPassword1.Text,Convert.ToInt32(CmbTipo.SelectedValue.ToString()));
+            this.Close();
         }
 
         private void CmbTipo_SelectedIndexChanged(object sender, EventArgs e)
@@ -199,10 +214,16 @@ namespace WindowsFormsApp1
 
         }
 
+        private void btnGuardarAgregar_Click(object sender, EventArgs e)
+        {
+            AgregarUsuario(txtNombre.Text, txtUsuario.Text, TxtPassword1.Text, Convert.ToInt32(CmbTipo.SelectedValue.ToString()));
+            EstadoInicial();
+        }
+
         private void CmbTipo_DropDownClosed(object sender, EventArgs e)
         {
            HabilitarBotones();
-           MessageBox.Show(CmbTipo.SelectedValue.ToString());
+          // MessageBox.Show(CmbTipo.SelectedValue.ToString());
         }
 
 #region Funciones
@@ -225,10 +246,38 @@ namespace WindowsFormsApp1
             }
         }
 
-        void AgregarUsuario(string nombre, string usuario, string clave, int id)
+        void AgregarUsuario(string nombreCompleto, string username, string clave, int id)
         {
+            GestorTiposDeUsuarios gestorTiposDeUsuarios = new GestorTiposDeUsuarios();
+            gestorTiposDeUsuarios.ObtenerTipoUsuarioPorId(Convert.ToInt32(CmbTipo.SelectedValue.ToString()));
+            
+            //PRIMERO DEBO CREAR UN OBJETO TIPO_USUARIO BUSCANDOLO POR ID EN LA BASE DE DATOS
+            Tipo_usuarioDTO tipo_UsuarioDTO = gestorTiposDeUsuarios.ObtenerTipoUsuarioPorId(id);
 
+            GestorUsuarios gestorUsuarios = new GestorUsuarios();
+
+            if (gestorUsuarios.AgregarUsuario(nombreCompleto, username, clave, tipo_UsuarioDTO) > 0)
+                MessageBox.Show("El usuario ha sido agregado correctamente");
+            else
+                MessageBox.Show("El usuario no pudo ser guardado");
+            //MessageBox.Show("El usuario obtenido " + tipo_UsuarioDTO.Id.ToString() + " " + tipo_UsuarioDTO.Denominacion);
         }
 #endregion
+
+       void EstadoInicial()
+        {
+            btnGuardar.Enabled = false;
+            btnGuardarAgregar.Enabled = false;
+            txtNombre.ForeColor = Color.Silver;
+            txtNombre.Text = "Nombre completo";
+            txtNombre.SelectAll();
+            txtUsuario.ForeColor = Color.Silver;
+            txtUsuario.Text = "Nombre de usuario";
+            TxtPassword1.ForeColor = Color.Silver;
+            TxtPassword1.Text = "Contraseña";
+            TxtPassword2.ForeColor = Color.Silver;
+            TxtPassword2.Text = "Repita la contraseña";
+            txtNombre.Focus();
+        }
     }
 }

@@ -127,6 +127,7 @@
             this.TxtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
             this.TxtPassword.Enter += new System.EventHandler(this.TxtPassword_Enter);
             this.TxtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPassword_KeyDown);
+            this.TxtPassword.Leave += new System.EventHandler(this.TxtPassword_Leave);
             this.TxtPassword.LostFocus += new System.EventHandler(this.TxtPassword_LostFocus);
             // 
             // TxtUsuario

@@ -122,7 +122,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="450" Nullable="false" />
           <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Tipo_usuario1_Id" Type="int" Nullable="false" />
           <Property Name="Nombre_completo" Type="varchar(max)" />
@@ -492,7 +492,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="450" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Tipo_usuario1_Id" Type="Int32" Nullable="false" />
           <Property Name="Nombre_completo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
