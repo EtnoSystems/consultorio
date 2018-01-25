@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     public partial class Usuarios_alta : Form
     {
 
-        string pass, pass2, nombre, tipo;
+        string pass, pass2, nombre;
         bool primerinicio = true;
 
 #region Formulario
@@ -257,12 +257,11 @@ namespace WindowsFormsApp1
             GestorUsuarios gestorUsuarios = new GestorUsuarios();
 
             if (gestorUsuarios.AgregarUsuario(nombreCompleto, username, clave, tipo_UsuarioDTO) > 0)
-                MessageBox.Show("El usuario ha sido agregado correctamente");
+                MessageBox.Show("El usuario " + username + " ha sido agregado correctamente","¡Nuevo usuario en el sistema!",MessageBoxButtons.OK,MessageBoxIcon.Information);
             else
-                MessageBox.Show("El usuario no pudo ser guardado");
+                MessageBox.Show("El usuario no pudo ser guardado","Error de guardado",MessageBoxButtons.OK,MessageBoxIcon.Error);
             //MessageBox.Show("El usuario obtenido " + tipo_UsuarioDTO.Id.ToString() + " " + tipo_UsuarioDTO.Denominacion);
         }
-#endregion
 
        void EstadoInicial()
         {
@@ -279,5 +278,7 @@ namespace WindowsFormsApp1
             TxtPassword2.Text = "Repita la contraseña";
             txtNombre.Focus();
         }
+
+        #endregion
     }
 }

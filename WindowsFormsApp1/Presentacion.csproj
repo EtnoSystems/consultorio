@@ -78,6 +78,12 @@
     <Compile Include="Usuarios_baja.Designer.cs">
       <DependentUpon>Usuarios_baja.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios_modificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios_modificacion.Designer.cs">
+      <DependentUpon>Usuarios_modificacion.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ConsultasUsuarios.resx">
       <DependentUpon>ConsultasUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios_baja.resx">
       <DependentUpon>Usuarios_baja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios_modificacion.resx">
+      <DependentUpon>Usuarios_modificacion.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -219,6 +228,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\botonEliminarUsuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\fondoFormulariosModificacion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\buttons\PersonalEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\buttons\PersonalEditMulti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menuIcons\service.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

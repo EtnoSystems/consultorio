@@ -42,12 +42,17 @@ namespace WindowsFormsApp1
         }
 
         private void Principal_Load(object sender, EventArgs e)
-        {       
+        {
             if (Globales.userType == "administrador")
+            {
                 mnuReportes.Visible = true;
+                mnuPersonal.Visible = true;
+            }
             else
+            {
                 mnuReportes.Visible = false;
-
+                mnuPersonal.Visible = false;
+            }
             this.Text = "Gestión de obras sociales - USUARIO " + Globales.userObject.Nombre + " " + Globales.userType;
         }
 

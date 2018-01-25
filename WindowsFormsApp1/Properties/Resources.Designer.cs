@@ -203,6 +203,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondoFormulariosModificacion {
+            get {
+                object obj = ResourceManager.GetObject("fondoFormulariosModificacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap help {
             get {
                 object obj = ResourceManager.GetObject("help", resourceCulture);
@@ -323,9 +333,39 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PersonalEdit {
+            get {
+                object obj = ResourceManager.GetObject("PersonalEdit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PersonalEditMulti {
+            get {
+                object obj = ResourceManager.GetObject("PersonalEditMulti", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap report {
             get {
                 object obj = ResourceManager.GetObject("report", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap service {
+            get {
+                object obj = ResourceManager.GetObject("service", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

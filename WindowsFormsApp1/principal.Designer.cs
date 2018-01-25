@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.MnuUsuarios = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +53,8 @@
             this.mnuCambiarUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAyuda = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuServicio = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +62,7 @@
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Right;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuServicio,
             this.MnuUsuarios,
             this.MnuObrasSociales,
             this.MnuRecetarios,
@@ -108,7 +112,7 @@
             this.mnuMedicos.MergeAction = System.Windows.Forms.MergeAction.MatchOnly;
             this.mnuMedicos.Name = "mnuMedicos";
             this.mnuMedicos.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mnuMedicos.Size = new System.Drawing.Size(183, 82);
+            this.mnuMedicos.Size = new System.Drawing.Size(211, 82);
             this.mnuMedicos.Text = "Usuarios";
             this.mnuMedicos.ToolTipText = "Gestionar personal médico";
             this.mnuMedicos.Click += new System.EventHandler(this.UsuariosToolStripMenuItem_Click);
@@ -160,7 +164,7 @@
             this.mnuPacientes.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuPacientes.Name = "mnuPacientes";
             this.mnuPacientes.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mnuPacientes.Size = new System.Drawing.Size(183, 82);
+            this.mnuPacientes.Size = new System.Drawing.Size(211, 82);
             this.mnuPacientes.Text = "Pacientes";
             this.mnuPacientes.ToolTipText = "Gestionar los pacientes";
             // 
@@ -215,7 +219,7 @@
             this.mnuPersonal.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuPersonal.Name = "mnuPersonal";
             this.mnuPersonal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mnuPersonal.Size = new System.Drawing.Size(183, 82);
+            this.mnuPersonal.Size = new System.Drawing.Size(211, 82);
             this.mnuPersonal.Text = "admins";
             this.mnuPersonal.ToolTipText = "Gestionar el personal ";
             // 
@@ -278,7 +282,7 @@
             this.mnuAgregarObraSocial.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuAgregarObraSocial.Name = "mnuAgregarObraSocial";
             this.mnuAgregarObraSocial.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mnuAgregarObraSocial.Size = new System.Drawing.Size(173, 82);
+            this.mnuAgregarObraSocial.Size = new System.Drawing.Size(211, 82);
             this.mnuAgregarObraSocial.Text = "add";
             this.mnuAgregarObraSocial.ToolTipText = "Agregar una nueva obra social";
             // 
@@ -290,7 +294,7 @@
             this.mnuEliminarObraSocial.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuEliminarObraSocial.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuEliminarObraSocial.Name = "mnuEliminarObraSocial";
-            this.mnuEliminarObraSocial.Size = new System.Drawing.Size(173, 82);
+            this.mnuEliminarObraSocial.Size = new System.Drawing.Size(211, 82);
             this.mnuEliminarObraSocial.Text = "remove";
             this.mnuEliminarObraSocial.ToolTipText = "Eliminar obras sociales";
             // 
@@ -302,7 +306,7 @@
             this.mnuEditarObrasSociales.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuEditarObrasSociales.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuEditarObrasSociales.Name = "mnuEditarObrasSociales";
-            this.mnuEditarObrasSociales.Size = new System.Drawing.Size(173, 82);
+            this.mnuEditarObrasSociales.Size = new System.Drawing.Size(211, 82);
             this.mnuEditarObrasSociales.Text = "edit";
             this.mnuEditarObrasSociales.ToolTipText = "Editar datos de obras sociales";
             // 
@@ -371,6 +375,19 @@
             this.mnuAyuda.Text = "help";
             this.mnuAyuda.ToolTipText = "Ayuda";
             // 
+            // mnuServicio
+            // 
+            this.mnuServicio.AutoToolTip = true;
+            this.mnuServicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.mnuServicio.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.mnuServicio.Image = global::WindowsFormsApp1.Properties.Resources.service;
+            this.mnuServicio.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mnuServicio.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.mnuServicio.Name = "mnuServicio";
+            this.mnuServicio.Size = new System.Drawing.Size(112, 79);
+            this.mnuServicio.Text = "servicio";
+            this.mnuServicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -420,6 +437,8 @@
         private System.Windows.Forms.ToolStripMenuItem mnuAgregarObraSocial;
         private System.Windows.Forms.ToolStripMenuItem mnuEliminarObraSocial;
         private System.Windows.Forms.ToolStripMenuItem mnuEditarObrasSociales;
+        private System.Windows.Forms.ToolStripMenuItem mnuServicio;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
