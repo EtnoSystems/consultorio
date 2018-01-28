@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
 {
     public partial class Usuarios_baja : Form
     {
+        bool primerInicio = true;
         string usuario;
 
         public Usuarios_baja()
@@ -29,13 +30,13 @@ namespace WindowsFormsApp1
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         #region txtUsuario
-        private void txtUsuario_Validating(object sender, CancelEventArgs e)
+       /* private void txtUsuario_Validating(object sender, CancelEventArgs e)
         {
-           usuario = txtUsuario.Text;
+           usuario = TxtUsuario.Text;
 
             GestorUsuarios _gestorUsuarios = new GestorUsuarios();
             UsuarioDTO _usuario = new UsuarioDTO();
@@ -44,33 +45,124 @@ namespace WindowsFormsApp1
 
             if (_usuario != null)
             {
-                lblNombre.Text = _usuario.Nombre;
-                lblTipoUsuario.Text = _usuario.Tipo_usuario.Denominacion;
-                //lblConexion.Text = ultima conexion
-                btnEliminar.Enabled = true;
+                if(_usuario.Nombre!=Globales.userName)
+                {
+                    LblNombreCompleto.Text = _usuario.Nombre_completo;
+                    LblTipoUsuario.Text = _usuario.Tipo_usuario.Denominacion;
+                    //lblConexion.Text = ultima conexion
+                    btnEliminar.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("No puede eliminar su propia cuenta de usuario");
+                    EstadoInicial();
+                }
+                
             }
             else
             {
-                errorProvider1.SetError(txtUsuario, "El usuario buscado no existe");
-                txtUsuario.Focus();
+                errorProvider1.SetError(TxtUsuario, "El usuario buscado no existe");
+                TxtUsuario.Focus();
                 btnEliminar.Enabled = false;
             }
-        }
+        }*/
 
         #endregion
 
         private void Usuarios_baja_Load(object sender, EventArgs e)
         {
-            btnEliminar.Enabled = false;
+            EstadoInicial();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Está seguro que desea eliminar al usuario " + usuario,"Baja de usuarios",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                //Elimina el usuario
-                usuario = "";
-                txtUsuario.Focus();
+                GestorUsuarios gestorUsuarios = new GestorUsuarios();
+                
+                gestorUsuarios.EliminarUsuarioPorUsername(TxtUsuario.Text);
+            }
+            EstadoInicial();
+        }
+
+        private void TxtUsuario_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtUsuario_Enter(object sender, EventArgs e)
+        {
+            if (primerInicio)
+            {
+                primerInicio = false;
+                TxtUsuario.ForeColor = Color.Black;
+            }
+            else
+            {
+
+            }
+            
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void EstadoInicial()
+        {
+            DgvResultadoBusqueda.Visible = false;
+            btnEliminar.Enabled = false;
+            TxtUsuario.Text = "Nombre de usuario";
+            TxtUsuario.ForeColor = Color.LightGreen;
+            LblTipoUsuario.Text = "";
+            LblNombreCompleto.Text = "";
+            TxtUsuario.SelectAll();
+            TxtUsuario.Focus();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void TxtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                BuscarUsuarios();
+            }
+           
+        }
+
+        private void DgvResultadoBusqueda_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //MessageBox.Show("El id del usuario seleccionado es "+ DgvResultadoBusqueda.Rows[e.RowIndex].Cells[0].Value.ToString());
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            BuscarUsuarios();
+        }
+
+        void BuscarUsuarios()
+        {
+            GestorUsuarios gestorUsuarios = new GestorUsuarios();
+            List<object> resultado_busqueda= gestorUsuarios.BuscarUsuarios(TxtUsuario.Text);
+            
+            if (resultado_busqueda.Count!=0)
+            {
+                DgvResultadoBusqueda.DataSource = resultado_busqueda;
+                DgvResultadoBusqueda.Columns["Id"].Visible = false;
+                DgvResultadoBusqueda.Visible = true;
+                //DgvResultadoBusqueda.BackgroundColor = Color.Transparent;
+                DgvResultadoBusqueda.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                DgvResultadoBusqueda.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                DgvResultadoBusqueda.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+            }
+            else
+            {
+                MessageBox.Show("La busqueda no produjo resultados");
             }
         }
     }

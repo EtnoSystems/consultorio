@@ -181,16 +181,42 @@ namespace Logica
 
             }
         }
-        
-        
-        public void EliminarUsuario (UsuarioDTO _Usuario)
+
+
+        public List<object> BuscarUsuarios(string NombreCompleto)
+        {
+            try
+            {
+                using (consultoriosEntities dbContext = new consultoriosEntities())
+                {
+                    var Query = (from n in dbContext.Usuario
+                                 where n.Nombre_completo.Contains(NombreCompleto)
+                                 select new
+                                 {
+                                     Id=n.Id,
+                                     Usuario=n.Nombre,
+                                     Nombre_completo=n.Nombre_completo,
+                                     Tipo_usuario=n.Tipo_usuario.Denominacion,
+                                     
+                                 }).ToList<object>();
+                    return Query;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+
+        public void EliminarUsuarioPorUsername (string userName)
         {
             try
             {
                 using (consultoriosEntities dbContext = new consultoriosEntities())
                 {
                     Usuario Entidad = (from n in dbContext.Usuario
-                                       where n.Id == _Usuario.Id
+                                       where n.Nombre == userName
                                        select n).FirstOrDefault();
                     dbContext.Usuario.Remove(Entidad);
                     dbContext.SaveChanges();
