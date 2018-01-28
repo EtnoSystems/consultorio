@@ -195,7 +195,7 @@ namespace WindowsFormsApp1
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            AgregarUsuario(txtNombre.Text, txtUsuario.Text,TxtPassword1.Text,Convert.ToInt32(CmbTipo.SelectedValue.ToString()));
+            AgregarUsuario(txtNombre.Text.ToLower(), txtUsuario.Text.ToLower(),TxtPassword1.Text.ToLower(),Convert.ToInt32(CmbTipo.SelectedValue.ToString()));
             this.Close();
         }
 
@@ -216,7 +216,7 @@ namespace WindowsFormsApp1
 
         private void btnGuardarAgregar_Click(object sender, EventArgs e)
         {
-            AgregarUsuario(txtNombre.Text, txtUsuario.Text, TxtPassword1.Text, Convert.ToInt32(CmbTipo.SelectedValue.ToString()));
+            AgregarUsuario(txtNombre.Text.ToLower(), txtUsuario.Text.ToLower(), TxtPassword1.Text.ToLower(), Convert.ToInt32(CmbTipo.SelectedValue.ToString()));
             EstadoInicial();
         }
 
