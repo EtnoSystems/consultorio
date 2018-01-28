@@ -63,7 +63,7 @@ namespace WindowsFormsApp1
             else
             {
                 pass = TxtPassword1.Text;
-                //HabilitarBotones();
+                HabilitarBotones();
             }
         }
         #endregion
@@ -71,12 +71,7 @@ namespace WindowsFormsApp1
 #region Password 2
         private void TxtPassword2_Leave(object sender, EventArgs e)
         {
-            if (TxtPassword2.Text == "Repita la contraseña" || TxtPassword2.Text == "")
-            {
-                TxtPassword1.ForeColor = Color.Silver;
-                TxtPassword1.Text = "Repita la contraseña";
-            }
-            //HabilitarBotones();
+            HabilitarBotones();
         }
 
         private void TxtPassword2_Enter(object sender, EventArgs e)
@@ -88,23 +83,15 @@ namespace WindowsFormsApp1
 
         private void TxtPassword2_TextChanged(object sender, EventArgs e)
         {
-            ValidarCamposCompletos();
+
         }
 
         private void TxtPassword2_Validating(object sender, CancelEventArgs e)
         {
-            if (TxtPassword1.Text != TxtPassword2.Text)
-            {
-                errorProvider1.SetError(TxtPassword2, "Las contraseñas ingresadas no coinciden");
-            }
-            else
-            {
-                errorProvider1.SetError(TxtPassword2, null);
-            }
-            /*if (TxtPassword2.Text == "Repita la contraseña" || TxtPassword2.Text == "")
+            if (TxtPassword2.Text == "Contraseña" || TxtPassword2.Text == "")
             {
                 TxtPassword2.ForeColor = Color.Silver;
-                TxtPassword2.Text = "Repita la contraseña";
+                TxtPassword2.Text = "Contraseña";
             }
             else
             {
@@ -113,14 +100,14 @@ namespace WindowsFormsApp1
                 if (pass != pass2)
                 {
                     errorProvider1.SetError(TxtPassword2, "Las contraseñas ingresadas no coinciden");
-                    //TxtPassword2.Text = "";
+                    TxtPassword2.Text = "";
                     //TxtPassword1.Focus();
                 }
                 else
                 {
                     errorProvider1.SetError(TxtPassword2, null);
                 }
-            }*/
+            }
         }
         #endregion
 
@@ -128,7 +115,7 @@ namespace WindowsFormsApp1
 
         private void TxtUsuario_TextChanged(object sender, EventArgs e)
         {
-            ValidarCamposCompletos();
+
         }
 
         private void TxtUsuario_Validating(object sender, CancelEventArgs e)
@@ -152,7 +139,7 @@ namespace WindowsFormsApp1
 
         private void TxtUsuario_Leave(object sender, EventArgs e)
         {
-            //HabilitarBotones();
+            HabilitarBotones();
             if (txtUsuario.Text == "")
             {
                 txtUsuario.ForeColor = Color.Silver;
@@ -171,12 +158,12 @@ namespace WindowsFormsApp1
 #region txtNombre
         private void TxtNombre_TextChanged(object sender, EventArgs e)
         {
-            ValidarCamposCompletos();
+
         }
 
         private void TxtNombre_Leave(object sender, EventArgs e)
         {
-            //HabilitarBotones();
+            HabilitarBotones();
             if (txtNombre.Text == "" || txtNombre.Text=="Nombre completo")
             {
                 txtNombre.ForeColor = Color.Silver;
@@ -235,38 +222,27 @@ namespace WindowsFormsApp1
 
         private void CmbTipo_DropDownClosed(object sender, EventArgs e)
         {
-           //HabilitarBotones();
+           HabilitarBotones();
           // MessageBox.Show(CmbTipo.SelectedValue.ToString());
         }
 
-        private void TxtPassword1_TextChanged(object sender, EventArgs e)
-        {
-            ValidarCamposCompletos();
-        }
+#region Funciones
 
-        #region Funciones
-
-        void ValidarCamposCompletos()
+        void HabilitarBotones()
         {
             if (txtNombre.Text != "" && txtNombre.Text != "Nombre completo"
                 && txtUsuario.Text != "" && txtUsuario.Text != "Nombre de usuario"
                 && TxtPassword1.Text != "" && TxtPassword1.Text != "Contraseña"
                 && TxtPassword2.Text != "" && TxtPassword2.Text != "Repita la contraseña"
-                && TxtPassword1.Text == TxtPassword2.Text)
-                //&& CmbTipo.Text != "Tipo de usuario")
+                && CmbTipo.Text != "Tipo de usuario")
             {
                 btnGuardar.Enabled = true;
                 btnGuardarAgregar.Enabled = true;
-                btnGuardar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\botonGuardarHabilitado.bmp");
-                btnGuardarAgregar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\botonGuardarAgregarHabilitado.png");
             }
-                
             else
             {
                 btnGuardar.Enabled = false;
                 btnGuardarAgregar.Enabled = false;
-                btnGuardar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\botonGuardarDeshabilitado.bmp");
-                btnGuardarAgregar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\botonGuardarAgregarDeshabilitado.png");
             }
         }
 
@@ -290,8 +266,6 @@ namespace WindowsFormsApp1
 
        void EstadoInicial()
         {
-            btnGuardar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\botonGuardarDeshabilitado.bmp");
-            btnGuardarAgregar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\botonGuardarAgregarDeshabilitado.png");
             btnGuardar.Enabled = false;
             btnGuardarAgregar.Enabled = false;
             txtNombre.ForeColor = Color.Silver;
