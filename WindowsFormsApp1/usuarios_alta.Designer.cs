@@ -91,7 +91,7 @@
             // btnGuardarAgregar
             // 
             this.btnGuardarAgregar.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuardarAgregar.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.botonGuardarAgregar;
+            this.btnGuardarAgregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGuardarAgregar.BackgroundImage")));
             this.btnGuardarAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnGuardarAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardarAgregar.FlatAppearance.BorderSize = 0;
@@ -130,7 +130,7 @@
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.botonGuardar2;
+            this.btnGuardar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGuardar.BackgroundImage")));
             this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
@@ -189,6 +189,7 @@
             this.TxtPassword1.TabIndex = 3;
             this.TxtPassword1.Text = "Contraseña";
             this.toolTip1.SetToolTip(this.TxtPassword1, "Ingrese la contraseña");
+            this.TxtPassword1.TextChanged += new System.EventHandler(this.TxtPassword1_TextChanged);
             this.TxtPassword1.Enter += new System.EventHandler(this.TxtPassword1_Enter);
             this.TxtPassword1.Leave += new System.EventHandler(this.TxtPassword1_Leave);
             // 
