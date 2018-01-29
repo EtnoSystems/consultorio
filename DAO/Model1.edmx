@@ -10,7 +10,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Denominacion" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Denominacion" Type="varchar" MaxLength="200" Nullable="false" />
         </EntityType>
         <EntityType Name="Consulta">
           <Key>
@@ -29,10 +29,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Email_primario" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Email_secundario" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Tel_celular" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Tel_fijo" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Email_primario" Type="varchar" MaxLength="320" />
+          <Property Name="Email_secundario" Type="varchar" MaxLength="320" />
+          <Property Name="Tel_celular" Type="char" MaxLength="14" />
+          <Property Name="Tel_fijo" Type="char" MaxLength="13" />
           <Property Name="Persona_Id" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Direccion">
@@ -40,10 +40,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Calle" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Numero" Type="smallint" />
-          <Property Name="Piso" Type="nvarchar(max)" />
-          <Property Name="Departamento" Type="smallint" />
+          <Property Name="Calle" Type="varchar" MaxLength="100" />
+          <Property Name="Numero" Type="varchar" MaxLength="6" />
+          <Property Name="Piso" Type="varchar" MaxLength="3" />
+          <Property Name="Departamento" Type="varchar" MaxLength="3" />
           <Property Name="Ciudad_Id" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Especialidad">
@@ -51,7 +51,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Denominacion" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Denominacion" Type="varchar" MaxLength="40" Nullable="false" />
         </EntityType>
         <EntityType Name="Medicoespecialidad">
           <Key>
@@ -66,24 +66,24 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Denominacion" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Plus" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Denominacion" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="Plus" Type="decimal" Precision="4" Scale="2" Nullable="false" />
         </EntityType>
         <EntityType Name="Persona">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="DNI" Type="int" Nullable="false" />
-          <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Apellido" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DNI" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="Apellido" Type="varchar" MaxLength="60" Nullable="false" />
           <Property Name="Direccion_Id" Type="int" />
         </EntityType>
         <EntityType Name="Persona_medico">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Matricula" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Matricula" Type="varchar" MaxLength="40" Nullable="false" />
           <Property Name="Id" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Persona_paciente">
@@ -107,7 +107,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="70" Nullable="false" />
           <Property Name="Precio" Type="decimal" Precision="6" Scale="2" />
         </EntityType>
         <EntityType Name="Tipo_usuario">
@@ -115,17 +115,17 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Denominacion" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Denominacion" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nombre" Type="varchar" MaxLength="450" Nullable="false" />
-          <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="35" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="60" Nullable="false" />
           <Property Name="Tipo_usuario1_Id" Type="int" Nullable="false" />
-          <Property Name="Nombre_completo" Type="varchar(max)" />
+          <Property Name="Nombre_completo" Type="varchar" MaxLength="70" Nullable="false" />
         </EntityType>
         <Association Name="FK_direccionciudad">
           <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="1" />
@@ -365,7 +365,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Denominacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Denominacion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Direccion" Relationship="Self.FK_direccionciudad" FromRole="Ciudad" ToRole="Direccion" />
         </EntityType>
         <EntityType Name="Consulta">
@@ -388,10 +388,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Email_primario" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Email_secundario" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Tel_celular" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Tel_fijo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email_primario" Type="String" MaxLength="320" FixedLength="false" Unicode="false" />
+          <Property Name="Email_secundario" Type="String" MaxLength="320" FixedLength="false" Unicode="false" />
+          <Property Name="Tel_celular" Type="String" MaxLength="14" FixedLength="true" Unicode="false" />
+          <Property Name="Tel_fijo" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
           <Property Name="Persona_Id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Persona" Relationship="Self.FK_personadatos_contacto" FromRole="Datos_contacto" ToRole="Persona" />
         </EntityType>
@@ -400,10 +400,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Calle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Numero" Type="Int16" />
-          <Property Name="Piso" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Departamento" Type="Int16" />
+          <Property Name="Calle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Numero" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Piso" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Departamento" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
           <Property Name="Ciudad_Id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Ciudad" Relationship="Self.FK_direccionciudad" FromRole="Direccion" ToRole="Ciudad" />
           <NavigationProperty Name="Persona" Relationship="Self.FK_personadireccion" FromRole="Direccion" ToRole="Persona" />
@@ -413,7 +413,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Denominacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Denominacion" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Persona_medico" Relationship="Self.Medicoespecialidad" FromRole="Especialidad" ToRole="Persona_medico" />
         </EntityType>
         <EntityType Name="Obra_social">
@@ -421,8 +421,8 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Denominacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Plus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Denominacion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Plus" Type="Decimal" Precision="4" Scale="2" Nullable="false" />
           <NavigationProperty Name="Personaobra_social" Relationship="Self.FK_personaobra_social_obra_social" FromRole="Obra_social" ToRole="Personaobra_social" />
         </EntityType>
         <EntityType Name="Persona">
@@ -430,9 +430,9 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="DNI" Type="Int32" Nullable="false" />
-          <Property Name="Nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Apellido" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DNI" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Apellido" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Direccion_Id" Type="Int32" />
           <NavigationProperty Name="Datos_contacto" Relationship="Self.FK_personadatos_contacto" FromRole="Persona" ToRole="Datos_contacto" />
           <NavigationProperty Name="Direccion" Relationship="Self.FK_personadireccion" FromRole="Persona" ToRole="Direccion" />
@@ -444,7 +444,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Matricula" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Matricula" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Consulta" Relationship="Self.FK_medicoconsulta" FromRole="Persona_medico" ToRole="Consulta" />
           <NavigationProperty Name="Persona" Relationship="Self.FK_medico_inherits_persona" FromRole="Persona_medico" ToRole="Persona" />
@@ -475,7 +475,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Precio" Type="Decimal" Precision="6" Scale="2" />
           <NavigationProperty Name="Consulta" Relationship="Self.FK_tipo_consultaconsulta" FromRole="Tipo_consulta" ToRole="Consulta" />
         </EntityType>
@@ -484,7 +484,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Denominacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Denominacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK_usuariotipo_usuario" FromRole="Tipo_usuario" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="Usuario">
@@ -492,10 +492,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nombre" Type="String" MaxLength="450" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Tipo_usuario1_Id" Type="Int32" Nullable="false" />
-          <Property Name="Nombre_completo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre_completo" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Tipo_usuario" Relationship="Self.FK_usuariotipo_usuario" FromRole="Usuario" ToRole="Tipo_usuario" />
         </EntityType>
         <Association Name="FK_direccionciudad">

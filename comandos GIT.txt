@@ -10,3 +10,7 @@ git remote add origin (direccion HTTPS)    -> vincula el repositorio remoto con 
 git push origin master (rama)              -> sube los cambios al repositorio remoto
 git fetch origin                           -> baja los cambios del repositorio remoto al local
 git merge origin/master                    -> combina los commit y crea uno nuevo
+
+
+
+https://git-scm.com/book/es/v1/Ramificaciones-en-Git-Procedimientos-b%C3%A1sicos-para-ramificar-y-fusionar

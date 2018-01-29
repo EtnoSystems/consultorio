@@ -21,7 +21,7 @@ namespace DAO
     
         public int Id { get; set; }
         public string Denominacion { get; set; }
-        public string Plus { get; set; }
+        public decimal Plus { get; set; }
     
         public virtual ICollection<Personaobra_social> Personaobra_social { get; set; }
     }
