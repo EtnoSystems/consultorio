@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
     public partial class Login : Form
     {
         //VARIABLES
-        string nombre, clave;
+ 
         bool primerinicio = true;
         //
         public Login()
@@ -48,12 +48,12 @@ namespace WindowsFormsApp1
         
         private void TxtUsuario_TextChanged(object sender, EventArgs e)
         {
-      
+            ValidarCamposCompletos();
         }
 
         private void TxtUsuario_LostFocus(object sender, EventArgs e) //Cuando se saca foco, guarda el usuario
         {
-            nombre = TxtUsuario.Text;
+            
         }
 
         private void TxtUsuario_KeyDown(object sender, KeyEventArgs e) //con enter hace foco en el campo password
@@ -82,48 +82,35 @@ namespace WindowsFormsApp1
 
         private void TxtPassword_TextChanged(object sender, EventArgs e)
         {
+            ValidarCamposCompletos();
             if (TxtPassword.Text != "")
                 BtnMostrarOcultar.Visible = true;
             else
-            {
                 BtnMostrarOcultar.Visible = false;
-                
-            }
         }
 
         private void TxtPassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                clave = TxtPassword.Text;
-                IniciarSesion(nombre, clave);
+                IniciarSesion(TxtUsuario.Text.ToLower(), TxtPassword.Text.ToLower());
             }
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
-            BtnMostrarOcultar.Visible = false;
-            TxtPassword.UseSystemPasswordChar = false;
-            TxtPassword.ForeColor = Color.LightGray;
-            TxtPassword.Text = "Contraseña";
-            TxtUsuario.ForeColor = Color.LightGray;
-            TxtUsuario.Text = "Usuario";
-            TxtUsuario.SelectAll();
-            TxtUsuario.Focus();
-            TxtUsuario.TabIndex = 1;
-            TxtPassword.TabIndex = 2;
-            BtnIngresar.TabIndex = 3;
-            BtnSalir.TabIndex = 4;
+            EstadoInicial();
         }
         
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
-            if (nombre != "" && clave != "")
-                IniciarSesion(nombre, clave);
+            if (TxtUsuario.Text != "" && TxtPassword.Text!= "" && TxtUsuario.Text!="Usuario" && TxtPassword.Text!="Contraseña")
+                IniciarSesion(TxtUsuario.Text.ToLower().Trim(), TxtPassword.Text.Trim());
             else
             {
                 MessageBox.Show("Debe ingresar un nombre de usuario y una clave");
-                TxtUsuario.Focus();
+                EstadoInicial();
+                
             }
                 
         }
@@ -189,24 +176,69 @@ namespace WindowsFormsApp1
             GestorUsuarios _gestorUsuarios = new GestorUsuarios();
             UsuarioDTO _usuario = new UsuarioDTO();
             
-            _usuario = _gestorUsuarios.IniciarSesion(nombre, clave);
+            _usuario = _gestorUsuarios.BuscarUsuarioPorUsername(nombre);
 
             if (_usuario != null)
             {
-               Globales.userObject = _gestorUsuarios.ObtenerCuentaPorUsername(_usuario.Nombre);
+                
+                if (string.Equals(clave, _usuario.Password))
+                {
+                    Globales.userObject = _gestorUsuarios.ObtenerCuentaPorUsername(_usuario.Nombre);
 
-               Globales.userName = _usuario.Nombre;
-               Globales.userType = _usuario.Tipo_usuario.Denominacion;
+                    Globales.userName = _usuario.Nombre;
+                    Globales.userType = _usuario.Tipo_usuario.Denominacion;
 
-               Principal main = new Principal();
-               main.Show();
-               this.Hide();
+                    Principal main = new Principal();
+                    main.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo iniciar sesión, controle los datos ingresados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+               
             }
             else
             {
                 MessageBox.Show("No se pudo iniciar sesión, controle los datos ingresados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
          
+        }
+
+        private void EstadoInicial()
+        {
+            primerinicio = true;
+            BtnMostrarOcultar.Visible = false;
+            BtnIngresar.Enabled = false;
+            BtnIngresar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\checkinDisable.png");
+            TxtPassword.UseSystemPasswordChar = false;
+            TxtPassword.ForeColor = Color.LightGray;
+            TxtPassword.Text = "Contraseña";
+            TxtUsuario.ForeColor = Color.LightGray;
+            TxtUsuario.Text = "Usuario";
+            TxtUsuario.SelectAll();
+            TxtUsuario.Focus();
+            TxtUsuario.TabIndex = 1;
+            TxtPassword.TabIndex = 2;
+            BtnIngresar.TabIndex = 3;
+            BtnSalir.TabIndex = 4;
+        }
+
+        private void ValidarCamposCompletos()
+        {
+            if (TxtUsuario.Text!="" && TxtUsuario.Text!="Usuario"
+                && TxtPassword.Text!="" && TxtPassword.Text!="Contraseña")
+            {
+                BtnIngresar.Enabled = true;
+                BtnIngresar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\checkinEnabled.png");
+            }
+            else
+            {
+                BtnIngresar.Enabled = false;
+                BtnIngresar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\checkinDisable.png");
+            }
         }
 
     }

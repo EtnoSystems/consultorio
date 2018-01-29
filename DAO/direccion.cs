@@ -21,9 +21,9 @@ namespace DAO
     
         public int Id { get; set; }
         public string Calle { get; set; }
-        public Nullable<short> Numero { get; set; }
+        public string Numero { get; set; }
         public string Piso { get; set; }
-        public Nullable<short> Departamento { get; set; }
+        public string Departamento { get; set; }
         public int Ciudad_Id { get; set; }
     
         public virtual Ciudad Ciudad { get; set; }
