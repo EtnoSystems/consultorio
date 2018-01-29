@@ -82,14 +82,14 @@ namespace Logica
         }
 
 
-        public UsuarioDTO IniciarSesion(string username, string clave) //FUNCION INICIAR SESION
+        public UsuarioDTO BuscarUsuarioPorUsername(string username) //FUNCION INICIAR SESION
         {
             try
             {
                 using (consultoriosEntities dbContext = new consultoriosEntities())
                 {
                     return (from n in dbContext.Usuario
-                            where n.Nombre == username && n.Password == clave
+                            where n.Nombre == username   //n.Password == clave
                             select new UsuarioDTO
                             {
                                 Id = n.Id,

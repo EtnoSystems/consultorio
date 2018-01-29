@@ -217,7 +217,7 @@ namespace WindowsFormsApp1
             if (!ValidarErrorProviders())
                 return;
 
-            AgregarUsuario(txtNombre.Text.ToLower().Trim(), txtUsuario.Text.ToLower().Trim(), TxtPassword1.Text.ToLower().Trim(), Convert.ToInt32(CmbTipo.SelectedValue.ToString()));
+            AgregarUsuario(txtNombre.Text.ToLower().Trim(), txtUsuario.Text.ToLower().Trim(), TxtPassword1.Text.Trim(), Convert.ToInt32(CmbTipo.SelectedValue.ToString()));
             this.Close();  
         }
 
@@ -243,7 +243,7 @@ namespace WindowsFormsApp1
 
 
             
-            AgregarUsuario(txtNombre.Text.ToLower().Trim(), txtUsuario.Text.ToLower().Trim(), TxtPassword1.Text.ToLower().Trim(), Convert.ToInt32(CmbTipo.SelectedValue.ToString()));
+            AgregarUsuario(txtNombre.Text.ToLower().Trim(), txtUsuario.Text.ToLower().Trim(), TxtPassword1.Text.Trim(), Convert.ToInt32(CmbTipo.SelectedValue.ToString()));
             EstadoInicial();
                    
         }

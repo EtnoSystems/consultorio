@@ -104,11 +104,8 @@ namespace WindowsFormsApp1
         
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
-
-
-
             if (TxtUsuario.Text != "" && TxtPassword.Text!= "" && TxtUsuario.Text!="Usuario" && TxtPassword.Text!="Contraseña")
-                IniciarSesion(TxtUsuario.Text.ToLower(), TxtPassword.Text.ToLower());
+                IniciarSesion(TxtUsuario.Text.ToLower().Trim(), TxtPassword.Text.Trim());
             else
             {
                 MessageBox.Show("Debe ingresar un nombre de usuario y una clave");
@@ -179,18 +176,29 @@ namespace WindowsFormsApp1
             GestorUsuarios _gestorUsuarios = new GestorUsuarios();
             UsuarioDTO _usuario = new UsuarioDTO();
             
-            _usuario = _gestorUsuarios.IniciarSesion(nombre, clave);
+            _usuario = _gestorUsuarios.BuscarUsuarioPorUsername(nombre);
 
             if (_usuario != null)
             {
-               Globales.userObject = _gestorUsuarios.ObtenerCuentaPorUsername(_usuario.Nombre);
+                
+                if (string.Equals(clave, _usuario.Password))
+                {
+                    Globales.userObject = _gestorUsuarios.ObtenerCuentaPorUsername(_usuario.Nombre);
 
-               Globales.userName = _usuario.Nombre;
-               Globales.userType = _usuario.Tipo_usuario.Denominacion;
+                    Globales.userName = _usuario.Nombre;
+                    Globales.userType = _usuario.Tipo_usuario.Denominacion;
 
-               Principal main = new Principal();
-               main.Show();
-               this.Hide();
+                    Principal main = new Principal();
+                    main.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo iniciar sesión, controle los datos ingresados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+               
             }
             else
             {
