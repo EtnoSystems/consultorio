@@ -212,7 +212,7 @@ namespace WindowsFormsApp1
             primerinicio = true;
             BtnMostrarOcultar.Visible = false;
             BtnIngresar.Enabled = false;
-            BtnIngresar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\checkinDisable.png");
+           // BtnIngresar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\checkinDisable.png");
             TxtPassword.UseSystemPasswordChar = false;
             TxtPassword.ForeColor = Color.LightGray;
             TxtPassword.Text = "Contraseña";
@@ -232,12 +232,12 @@ namespace WindowsFormsApp1
                 && TxtPassword.Text!="" && TxtPassword.Text!="Contraseña")
             {
                 BtnIngresar.Enabled = true;
-                BtnIngresar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\checkinEnabled.png");
+                //BtnIngresar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\checkinEnabled.png");
             }
             else
             {
                 BtnIngresar.Enabled = false;
-                BtnIngresar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\checkinDisable.png");
+                //BtnIngresar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\checkinDisable.png");
             }
         }
 

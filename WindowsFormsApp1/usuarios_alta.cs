@@ -15,11 +15,7 @@ namespace WindowsFormsApp1
     public partial class Usuarios_alta : Form
     {
 
-<<<<<<< HEAD
-        string pass, pass2, nombre;
-=======
-       // string nombre;
->>>>>>> 3711e4ef5a44ee4130be86794bf457bb0e149882
+        //string pass, pass2, nombre;
         bool primerinicio = true;
         bool badpassword = false;
 
@@ -373,7 +369,5 @@ namespace WindowsFormsApp1
             }
 
         }
-
-        #endregion
     }
 }

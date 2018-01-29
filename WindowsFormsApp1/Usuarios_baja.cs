@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
     {
         int id;
         bool primerInicio = true;
-        string usuario;
+        //string //usuario;
 
         public Usuarios_baja()
         {
@@ -78,7 +78,7 @@ namespace WindowsFormsApp1
         private void btnEliminar_Click(object sender, EventArgs e)
         {
 
-            if (MessageBox.Show("¿Está seguro que desea eliminar al usuario " + usuario,"Baja de usuarios",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("¿Está seguro que desea eliminar al usuario " + TxtUsuario.Text,"Baja de usuarios",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 GestorUsuarios gestorUsuarios = new GestorUsuarios();
                 
