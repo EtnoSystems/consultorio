@@ -48,7 +48,7 @@ namespace WindowsFormsApp1
         
         private void TxtUsuario_TextChanged(object sender, EventArgs e)
         {
-      
+            ValidarCamposCompletos();
         }
 
         private void TxtUsuario_LostFocus(object sender, EventArgs e) //Cuando se saca foco, guarda el usuario
@@ -82,20 +82,14 @@ namespace WindowsFormsApp1
 
         private void TxtPassword_TextChanged(object sender, EventArgs e)
         {
-            if (TxtPassword.Text != "")
-                BtnMostrarOcultar.Visible = true;
-            else
-            {
-                BtnMostrarOcultar.Visible = false;
-                
-            }
+            ValidarCamposCompletos();
         }
 
         private void TxtPassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                IniciarSesion(TxtUsuario.Text, TxtPassword.Text);
+                IniciarSesion(TxtUsuario.Text.ToLower(), TxtPassword.Text.ToLower());
             }
         }
 
@@ -106,8 +100,11 @@ namespace WindowsFormsApp1
         
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
+
+
+
             if (TxtUsuario.Text != "" && TxtPassword.Text!= "" && TxtUsuario.Text!="Usuario" && TxtPassword.Text!="Contraseña")
-                IniciarSesion(TxtUsuario.Text, TxtPassword.Text);
+                IniciarSesion(TxtUsuario.Text.ToLower(), TxtPassword.Text.ToLower());
             else
             {
                 MessageBox.Show("Debe ingresar un nombre de usuario y una clave");
@@ -202,6 +199,8 @@ namespace WindowsFormsApp1
         {
             primerinicio = true;
             BtnMostrarOcultar.Visible = false;
+            BtnIngresar.Enabled = false;
+            BtnIngresar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\checkinDisable.png");
             TxtPassword.UseSystemPasswordChar = false;
             TxtPassword.ForeColor = Color.LightGray;
             TxtPassword.Text = "Contraseña";
@@ -213,6 +212,21 @@ namespace WindowsFormsApp1
             TxtPassword.TabIndex = 2;
             BtnIngresar.TabIndex = 3;
             BtnSalir.TabIndex = 4;
+        }
+
+        private void ValidarCamposCompletos()
+        {
+            if (TxtUsuario.Text!="" && TxtUsuario.Text!="Usuario"
+                && TxtPassword.Text!="" && TxtPassword.Text!="Contraseña")
+            {
+                BtnIngresar.Enabled = true;
+                BtnIngresar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\checkinEnabled.png");
+            }
+            else
+            {
+                BtnIngresar.Enabled = false;
+                BtnIngresar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\checkinDisable.png");
+            }
         }
 
     }

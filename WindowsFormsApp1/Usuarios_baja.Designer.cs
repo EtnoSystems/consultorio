@@ -70,7 +70,7 @@
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.botonEliminarUsuario;
+           // this.btnEliminar.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.botonEliminarUsuario;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
@@ -217,7 +217,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.fondoFormulariosBaja;
+            //this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.fondoFormulariosBaja;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(659, 546);
             this.Controls.Add(this.panel1);
