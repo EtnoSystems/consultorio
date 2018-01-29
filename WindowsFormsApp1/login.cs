@@ -83,6 +83,10 @@ namespace WindowsFormsApp1
         private void TxtPassword_TextChanged(object sender, EventArgs e)
         {
             ValidarCamposCompletos();
+            if (TxtPassword.Text != "")
+                BtnMostrarOcultar.Visible = true;
+            else
+                BtnMostrarOcultar.Visible = false;
         }
 
         private void TxtPassword_KeyDown(object sender, KeyEventArgs e)

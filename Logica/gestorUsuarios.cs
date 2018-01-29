@@ -101,7 +101,7 @@ namespace Logica
                             }).SingleOrDefault();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }
