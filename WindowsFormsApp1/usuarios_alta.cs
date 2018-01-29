@@ -278,16 +278,16 @@ namespace WindowsFormsApp1
             {
                 btnGuardar.Enabled = true;
                 btnGuardarAgregar.Enabled = true;
-                btnGuardar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\botonGuardarHabilitado.png");
-                btnGuardarAgregar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\botonGuardarAgregarHabilitado.png");
+                btnGuardar.BackgroundImage = Image.FromFile(@"..\..\images\botonGuardarHabilitado.png");
+                btnGuardarAgregar.BackgroundImage = Image.FromFile(@"..\..\images\botonGuardarAgregarHabilitado.png");
 
             }
             else
             {
                 btnGuardar.Enabled = false;
                 btnGuardarAgregar.Enabled = false;
-                btnGuardar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\botonGuardarDeshabilitado.png");
-                btnGuardarAgregar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\botonGuardarAgregarDeshabilitado.png");
+                btnGuardar.BackgroundImage = Image.FromFile(@"..\..\images\botonGuardarDeshabilitado.png");
+                btnGuardarAgregar.BackgroundImage = Image.FromFile(@"..\..\images\botonGuardarAgregarDeshabilitado.png");
             }
         }
 
@@ -335,8 +335,8 @@ namespace WindowsFormsApp1
             btnGuardar.Enabled = false;
             btnGuardarAgregar.Enabled = false;
             txtNombre.ForeColor = Color.Silver;
-            btnGuardar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\botonGuardarDeshabilitado.png");
-            btnGuardarAgregar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\botonGuardarAgregarDeshabilitado.png");
+            btnGuardar.BackgroundImage = Image.FromFile(@"..\..\images\botonGuardarDeshabilitado.png");
+            btnGuardarAgregar.BackgroundImage = Image.FromFile(@"..\..\images\botonGuardarAgregarDeshabilitado.png");
             txtNombre.Text = "Nombre completo";
             txtNombre.SelectAll();
             txtUsuario.ForeColor = Color.Silver;
