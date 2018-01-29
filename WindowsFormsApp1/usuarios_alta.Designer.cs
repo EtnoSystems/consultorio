@@ -192,6 +192,7 @@
             this.TxtPassword1.TextChanged += new System.EventHandler(this.TxtPassword1_TextChanged);
             this.TxtPassword1.Enter += new System.EventHandler(this.TxtPassword1_Enter);
             this.TxtPassword1.Leave += new System.EventHandler(this.TxtPassword1_Leave);
+            this.TxtPassword1.Validating += new System.ComponentModel.CancelEventHandler(this.TxtPassword1_Validating);
             // 
             // txtUsuario
             // 

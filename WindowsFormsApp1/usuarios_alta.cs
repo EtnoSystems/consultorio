@@ -93,7 +93,12 @@ namespace WindowsFormsApp1
 
         private void TxtPassword2_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(TxtPassword2, null);
+            if (TxtPassword2.Text!="Repita la contraseña")
+            {
+                errorProvider1.SetError(TxtPassword2, null);
+            }
+                
+
             ValidarCamposCompletos();
 
         }
@@ -101,14 +106,20 @@ namespace WindowsFormsApp1
         private void TxtPassword2_Validating(object sender, CancelEventArgs e)
         {
 
+            if (string.IsNullOrWhiteSpace(TxtPassword2.Text)||(TxtPassword2.Text=="")||(TxtPassword2.Text=="Repita la contraseña"))
+            {
+                TxtPassword2.Text = "Repita la contraseña";
+                TxtPassword2.ForeColor = Color.Silver;
+                errorProvider1.SetError(TxtPassword2, "Debe confirmar la contraseña");
+                return;
+          
+            }
 
-            if (TxtPassword1.Text != TxtPassword2.Text)
+            if (TxtPassword1.Text.Trim() != TxtPassword2.Text.Trim())
             {
                 errorProvider1.SetError(TxtPassword2, "Las contraseñas ingresadas no coinciden");
-                //TxtPassword2.Text = "";
-                //TxtPassword1.Focus();
+                return;
             }
-            
         }
         #endregion
 
@@ -123,12 +134,12 @@ namespace WindowsFormsApp1
         {
             //verifica que el usuario ingresado no exista
             GestorUsuarios gestorUsuarios = new GestorUsuarios();
-            UsuarioDTO usuario = gestorUsuarios.ObtenerCuentaPorUsername(txtUsuario.Text.ToLower());
+            UsuarioDTO usuario = gestorUsuarios.ObtenerCuentaPorUsername(txtUsuario.Text.ToLower().Trim());
 
             if (usuario != null)
             {
                 errorProvider1.SetError(txtUsuario, "El nombre de usuario ingresado no está disponible");
-                txtUsuario.Focus();
+                //txtUsuario.Focus();
             }
             else
             {
@@ -203,21 +214,11 @@ namespace WindowsFormsApp1
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            if (TxtPassword1.Text==TxtPassword2.Text)
-            {
-                AgregarUsuario(txtNombre.Text.ToLower(), txtUsuario.Text.ToLower(), TxtPassword1.Text.ToLower(), Convert.ToInt32(CmbTipo.SelectedValue.ToString()));
-                this.Close();
-            }
-            else
-            {
-                badpassword = true;
-                TxtPassword1.Text = "Contraseña";
-                TxtPassword2.Text = "Repita la contraseña";
-                TxtPassword2.ForeColor = Color.Gray;
-                TxtPassword1.Focus();
-                TxtPassword1.SelectAll();
-            }
-            
+            if (!ValidarErrorProviders())
+                return;
+
+            AgregarUsuario(txtNombre.Text.ToLower().Trim(), txtUsuario.Text.ToLower().Trim(), TxtPassword1.Text.ToLower().Trim(), Convert.ToInt32(CmbTipo.SelectedValue.ToString()));
+            this.Close();  
         }
 
         private void CmbTipo_SelectedIndexChanged(object sender, EventArgs e)
@@ -237,13 +238,14 @@ namespace WindowsFormsApp1
 
         private void btnGuardarAgregar_Click(object sender, EventArgs e)
         {
-            if (TxtPassword1.Text == TxtPassword2.Text)
-            {
-                AgregarUsuario(txtNombre.Text.ToLower(), txtUsuario.Text.ToLower(), TxtPassword1.Text.ToLower(), Convert.ToInt32(CmbTipo.SelectedValue.ToString()));
-                EstadoInicial();
-            }
-            else
-                TxtPassword2.Focus();         
+            if (!ValidarErrorProviders())
+                return;
+
+
+            
+            AgregarUsuario(txtNombre.Text.ToLower().Trim(), txtUsuario.Text.ToLower().Trim(), TxtPassword1.Text.ToLower().Trim(), Convert.ToInt32(CmbTipo.SelectedValue.ToString()));
+            EstadoInicial();
+                   
         }
 
         private void CmbTipo_DropDownClosed(object sender, EventArgs e)
@@ -254,7 +256,13 @@ namespace WindowsFormsApp1
 
         private void TxtPassword1_TextChanged(object sender, EventArgs e)
         {
-            errorProvider1.SetError(TxtPassword2, null);
+            if (TxtPassword1.Text!="Contraseña")
+            {
+                errorProvider1.SetError(TxtPassword1, null);
+                errorProvider1.SetError(TxtPassword2, null);
+            }
+                
+
             ValidarCamposCompletos();
         }
 
@@ -281,6 +289,28 @@ namespace WindowsFormsApp1
                 btnGuardar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\botonGuardarDeshabilitado.png");
                 btnGuardarAgregar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\botonGuardarAgregarDeshabilitado.png");
             }
+        }
+
+        bool ValidarErrorProviders()
+        {
+            if (errorProvider1.GetError(txtUsuario) != "")
+            {
+                txtUsuario.SelectAll();
+                txtUsuario.Focus();
+                return false;
+            }
+
+            if (errorProvider1.GetError(TxtPassword2) != "")
+            {
+                badpassword = true;
+                TxtPassword1.Text = "Contraseña";
+                TxtPassword2.Text = "Repita la contraseña";
+                TxtPassword2.ForeColor = Color.Silver;
+                TxtPassword1.Focus();
+                TxtPassword1.SelectAll();
+                return false;
+            }
+            return true;
         }
 
         void AgregarUsuario(string nombreCompleto, string username, string clave, int id)
@@ -318,8 +348,26 @@ namespace WindowsFormsApp1
             txtNombre.Focus();
             
         }
+
         #endregion
 
+        private void TxtPassword1_Validating(object sender, CancelEventArgs e)
+        {
+            
+            if (string.IsNullOrWhiteSpace(TxtPassword1.Text) || (TxtPassword1.Text=="") || (TxtPassword1.Text=="Contraseña"))
+            {
+                TxtPassword1.Text = "Contraseña";
+                TxtPassword1.ForeColor = Color.Silver;
+                errorProvider1.SetError(TxtPassword1, "Debe definir una contraseña");
+                return;
+            }
 
+            if ((TxtPassword2.Text.Trim() != "") && (TxtPassword1.Text.Trim() != TxtPassword2.Text.Trim()))
+            {
+                errorProvider1.SetError(TxtPassword2, "Las contraseñas ingresadas no coinciden");
+                return;
+            }
+
+        }
     }
 }
