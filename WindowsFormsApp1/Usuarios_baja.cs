@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
 {
     public partial class Usuarios_baja : Form
     {
+        int id;
         bool primerInicio = true;
         string usuario;
 
@@ -76,11 +77,12 @@ namespace WindowsFormsApp1
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+
             if (MessageBox.Show("¿Está seguro que desea eliminar al usuario " + usuario,"Baja de usuarios",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 GestorUsuarios gestorUsuarios = new GestorUsuarios();
                 
-                gestorUsuarios.EliminarUsuarioPorUsername(TxtUsuario.Text);
+                gestorUsuarios.EliminarUsuarioPorId(id);
             }
             EstadoInicial();
         }
@@ -137,7 +139,10 @@ namespace WindowsFormsApp1
 
         private void DgvResultadoBusqueda_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnEliminar.Enabled = true;
+            btnEliminar.BackgroundImage = Image.FromFile(@"C:\Users\Jorge\Desktop\consultorios\consultorios\WindowsFormsApp1\images\botonEliminarUsuario.png");
             //MessageBox.Show("El id del usuario seleccionado es "+ DgvResultadoBusqueda.Rows[e.RowIndex].Cells[0].Value.ToString());
+            id = Convert.ToInt32(DgvResultadoBusqueda.Rows[e.RowIndex].Cells[0].Value);
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)

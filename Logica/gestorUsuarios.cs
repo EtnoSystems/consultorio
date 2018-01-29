@@ -209,14 +209,14 @@ namespace Logica
         }
 
 
-        public void EliminarUsuarioPorUsername (string userName)
+        public void EliminarUsuarioPorId (int id)
         {
             try
             {
                 using (consultoriosEntities dbContext = new consultoriosEntities())
                 {
                     Usuario Entidad = (from n in dbContext.Usuario
-                                       where n.Nombre == userName
+                                       where n.Id == id
                                        select n).FirstOrDefault();
                     dbContext.Usuario.Remove(Entidad);
                     dbContext.SaveChanges();
