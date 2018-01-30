@@ -73,6 +73,7 @@
             this.BtnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.BackgroundImage")));
             this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnBuscar.FlatAppearance.BorderSize = 0;
+            this.BtnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscar.Location = new System.Drawing.Point(220, 70);
             this.BtnBuscar.Name = "BtnBuscar";
@@ -83,6 +84,7 @@
             // 
             // DgvResultadoBusqueda
             // 
+            this.DgvResultadoBusqueda.AllowUserToAddRows = false;
             this.DgvResultadoBusqueda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
             this.DgvResultadoBusqueda.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvResultadoBusqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -203,6 +205,7 @@
             this.TxtUsuario.Enter += new System.EventHandler(this.TxtUsuario_Enter);
             this.TxtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUsuario_KeyPress);
             this.TxtUsuario.Leave += new System.EventHandler(this.TxtUsuario_Leave);
+            this.TxtUsuario.Validating += new System.ComponentModel.CancelEventHandler(this.TxtUsuario_Validating);
             // 
             // errorProvider1
             // 
