@@ -21,5 +21,58 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void CargarSevicio_Load(object sender, EventArgs e)
+        {
+            estadoInicial();
+        }
+
+        void estadoInicial()
+        {
+            lblNombrePaciente.Text = "";
+            chkOrden.Checked = false;
+            lblCostoConsulta.Text = "";
+            lblTotal.Text = "";
+            lblReintegro.Text = "";
+        }
+
+        private void btnAsentarYCargarOtro_Click(object sender, EventArgs e)
+        {
+            if (cargarServicio())
+            {
+                MessageBox.Show("Se cargó correctamente el servicio", "Carga de servicio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                estadoInicial();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Hubo un error", "Carga de servicio", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnAsentarServicio_Click(object sender, EventArgs e)
+        {
+            if (cargarServicio())
+            {
+                MessageBox.Show("Se cargó correctamente el servicio", "Carga de servicio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                estadoInicial();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Hubo un error", "Carga de servicio", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        bool cargarServicio()
+        {
+            //Proceso de carga de servicio
+            return true; //Si se pudo cargar
+        }
     }
 }

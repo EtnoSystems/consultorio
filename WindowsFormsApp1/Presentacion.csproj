@@ -262,5 +262,17 @@
   <ItemGroup>
     <None Include="images\fondoLogIn.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images\buttons\ServiceButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\buttons\Service2Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\buttons\botonEliminarUsuarioDeshabilitado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\lupa1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -127,20 +127,26 @@
   <data name="pacientEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\pacientEdit.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\usuarios.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ServiceButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\buttons\ServiceButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="botonEliminarUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\botonEliminarUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botonGuardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\botonGuardar.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="obrasSocialesEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\obrasSocialesEdit.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\usuarios.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="service" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\service.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fondoFormulariosBaja" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\fondoFormulariosBaja.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Service2Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\buttons\Service2Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="obraSocialAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\obraSocialAdd.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -153,6 +159,12 @@
   </data>
   <data name="report" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\report.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonEliminarUsuarioDeshabilitado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\buttons\botonEliminarUsuarioDeshabilitado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondoLogIn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\fondoLogIn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PersonalEditMulti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\buttons\PersonalEditMulti.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,14 +193,14 @@
   <data name="doctorAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\doctorAdd.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="service" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\service.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="changeUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\changeUser.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\admin.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="obrasSocialesEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\obrasSocialesEdit.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="medicOrder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\medicOrder.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,7 +232,7 @@
   <data name="doctorEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\doctorEdit.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fondoLogIn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\fondoLogIn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lupa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\lupa1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

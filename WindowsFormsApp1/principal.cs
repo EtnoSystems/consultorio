@@ -97,5 +97,11 @@ namespace WindowsFormsApp1
         {
             Application.Exit();
         }
+
+        private void mnuServicio_Click(object sender, EventArgs e)
+        {
+            IngresoPaciente ingreso = new IngresoPaciente();
+            ingreso.Show();
+        }
     }
 }
