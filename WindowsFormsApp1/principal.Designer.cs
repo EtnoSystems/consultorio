@@ -89,7 +89,7 @@
             this.mnuServicio.Size = new System.Drawing.Size(112, 79);
             this.mnuServicio.Text = "servicio";
             this.mnuServicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.mnuServicio.Click += new System.EventHandler(this.mnuServicio_Click);
+            this.mnuServicio.Click += new System.EventHandler(this.MnuServicio_Click);
             // 
             // MnuUsuarios
             // 
@@ -260,7 +260,7 @@
             this.mnuEliminarPersonal.Name = "mnuEliminarPersonal";
             this.mnuEliminarPersonal.Size = new System.Drawing.Size(173, 82);
             this.mnuEliminarPersonal.Text = "remove";
-            this.mnuEliminarPersonal.Click += new System.EventHandler(this.mnuEliminarPersonal_Click);
+            this.mnuEliminarPersonal.Click += new System.EventHandler(this.MnuEliminarPersonal_Click);
             // 
             // mnuEditarPersonal
             // 

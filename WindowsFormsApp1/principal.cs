@@ -87,7 +87,7 @@ namespace WindowsFormsApp1
             altas.Show();
         }
 
-        private void mnuEliminarPersonal_Click(object sender, EventArgs e)
+        private void MnuEliminarPersonal_Click(object sender, EventArgs e)
         {
             Usuarios_baja bajas = new Usuarios_baja();
             bajas.Show();
@@ -98,7 +98,7 @@ namespace WindowsFormsApp1
             Application.Exit();
         }
 
-        private void mnuServicio_Click(object sender, EventArgs e)
+        private void MnuServicio_Click(object sender, EventArgs e)
         {
             IngresoPaciente ingreso = new IngresoPaciente();
             ingreso.Show();
