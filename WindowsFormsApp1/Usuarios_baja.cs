@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        private void TxtUsuario_TextChanged(object sender, EventArgs e)
         {
 
         }

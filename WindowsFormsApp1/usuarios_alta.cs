@@ -236,7 +236,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void btnGuardarAgregar_Click(object sender, EventArgs e)
+        private void BtnGuardarAgregar_Click(object sender, EventArgs e)
         {
             if (!ValidarErrorProviders())
                 return;

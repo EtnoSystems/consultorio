@@ -31,24 +31,23 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbObraSocial = new System.Windows.Forms.ComboBox();
-            this.chkOrden = new System.Windows.Forms.CheckBox();
+            this.CmbObraSocial = new System.Windows.Forms.ComboBox();
+            this.ChkOrden = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblCostoConsulta = new System.Windows.Forms.Label();
+            this.LblCostoConsulta = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmbMedico = new System.Windows.Forms.ComboBox();
+            this.CmbMedico = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnAsentarServicio = new System.Windows.Forms.Button();
+            this.BtnAsentarServicio = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblNombrePaciente = new System.Windows.Forms.Label();
+            this.LblNombrePaciente = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnAsentarYCargarOtro = new System.Windows.Forms.Button();
+            this.BtnSalir = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblReintegro = new System.Windows.Forms.Label();
+            this.LblTotal = new System.Windows.Forms.Label();
+            this.LblReintegro = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -69,8 +68,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.cmbObraSocial);
-            this.groupBox1.Controls.Add(this.chkOrden);
+            this.groupBox1.Controls.Add(this.CmbObraSocial);
+            this.groupBox1.Controls.Add(this.ChkOrden);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(34, 80);
             this.groupBox1.Name = "groupBox1";
@@ -79,23 +78,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Obra Social";
             // 
-            // cmbObraSocial
+            // CmbObraSocial
             // 
-            this.cmbObraSocial.FormattingEnabled = true;
-            this.cmbObraSocial.Location = new System.Drawing.Point(18, 33);
-            this.cmbObraSocial.Name = "cmbObraSocial";
-            this.cmbObraSocial.Size = new System.Drawing.Size(178, 26);
-            this.cmbObraSocial.TabIndex = 1;
+            this.CmbObraSocial.FormattingEnabled = true;
+            this.CmbObraSocial.Location = new System.Drawing.Point(18, 33);
+            this.CmbObraSocial.Name = "CmbObraSocial";
+            this.CmbObraSocial.Size = new System.Drawing.Size(178, 26);
+            this.CmbObraSocial.TabIndex = 1;
             // 
-            // chkOrden
+            // ChkOrden
             // 
-            this.chkOrden.AutoSize = true;
-            this.chkOrden.Location = new System.Drawing.Point(212, 35);
-            this.chkOrden.Name = "chkOrden";
-            this.chkOrden.Size = new System.Drawing.Size(134, 22);
-            this.chkOrden.TabIndex = 0;
-            this.chkOrden.Text = "¿Tiene orden?";
-            this.chkOrden.UseVisualStyleBackColor = true;
+            this.ChkOrden.AutoSize = true;
+            this.ChkOrden.Location = new System.Drawing.Point(212, 35);
+            this.ChkOrden.Name = "ChkOrden";
+            this.ChkOrden.Size = new System.Drawing.Size(134, 22);
+            this.ChkOrden.TabIndex = 0;
+            this.ChkOrden.Text = "¿Tiene orden?";
+            this.ChkOrden.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -107,15 +106,15 @@
             this.label2.Size = new System.Drawing.Size(243, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "COSTO TOTAL DEL SERVICIO";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+           
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.lblCostoConsulta);
+            this.groupBox2.Controls.Add(this.LblCostoConsulta);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.cmbMedico);
+            this.groupBox2.Controls.Add(this.CmbMedico);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(34, 187);
             this.groupBox2.Name = "groupBox2";
@@ -124,16 +123,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Médico tratante";
             // 
-            // lblCostoConsulta
+            // LblCostoConsulta
             // 
-            this.lblCostoConsulta.AutoSize = true;
-            this.lblCostoConsulta.BackColor = System.Drawing.Color.Transparent;
-            this.lblCostoConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCostoConsulta.Location = new System.Drawing.Point(246, 41);
-            this.lblCostoConsulta.Name = "lblCostoConsulta";
-            this.lblCostoConsulta.Size = new System.Drawing.Size(51, 18);
-            this.lblCostoConsulta.TabIndex = 4;
-            this.lblCostoConsulta.Text = "costo";
+            this.LblCostoConsulta.AutoSize = true;
+            this.LblCostoConsulta.BackColor = System.Drawing.Color.Transparent;
+            this.LblCostoConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCostoConsulta.Location = new System.Drawing.Point(246, 41);
+            this.LblCostoConsulta.Name = "LblCostoConsulta";
+            this.LblCostoConsulta.Size = new System.Drawing.Size(51, 18);
+            this.LblCostoConsulta.TabIndex = 4;
+            this.LblCostoConsulta.Text = "costo";
             // 
             // label4
             // 
@@ -157,13 +156,13 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Costo consulta";
             // 
-            // cmbMedico
+            // CmbMedico
             // 
-            this.cmbMedico.FormattingEnabled = true;
-            this.cmbMedico.Location = new System.Drawing.Point(18, 33);
-            this.cmbMedico.Name = "cmbMedico";
-            this.cmbMedico.Size = new System.Drawing.Size(178, 26);
-            this.cmbMedico.TabIndex = 1;
+            this.CmbMedico.FormattingEnabled = true;
+            this.CmbMedico.Location = new System.Drawing.Point(18, 33);
+            this.CmbMedico.Name = "CmbMedico";
+            this.CmbMedico.Size = new System.Drawing.Size(178, 26);
+            this.CmbMedico.TabIndex = 1;
             // 
             // label5
             // 
@@ -176,21 +175,21 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "$";
             // 
-            // btnAsentarServicio
+            // BtnAsentarServicio
             // 
-            this.btnAsentarServicio.BackColor = System.Drawing.Color.Transparent;
-            this.btnAsentarServicio.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.ServiceButton;
-            this.btnAsentarServicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAsentarServicio.FlatAppearance.BorderSize = 0;
-            this.btnAsentarServicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAsentarServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAsentarServicio.Location = new System.Drawing.Point(34, 400);
-            this.btnAsentarServicio.Name = "btnAsentarServicio";
-            this.btnAsentarServicio.Size = new System.Drawing.Size(87, 83);
-            this.btnAsentarServicio.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.btnAsentarServicio, "Asentar el servicio");
-            this.btnAsentarServicio.UseVisualStyleBackColor = false;
-            this.btnAsentarServicio.Click += new System.EventHandler(this.btnAsentarServicio_Click);
+            this.BtnAsentarServicio.BackColor = System.Drawing.Color.Transparent;
+            this.BtnAsentarServicio.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.ServiceButton;
+            this.BtnAsentarServicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnAsentarServicio.FlatAppearance.BorderSize = 0;
+            this.BtnAsentarServicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAsentarServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAsentarServicio.Location = new System.Drawing.Point(81, 400);
+            this.BtnAsentarServicio.Name = "BtnAsentarServicio";
+            this.BtnAsentarServicio.Size = new System.Drawing.Size(87, 83);
+            this.BtnAsentarServicio.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.BtnAsentarServicio, "Asentar el servicio");
+            this.BtnAsentarServicio.UseVisualStyleBackColor = false;
+            this.BtnAsentarServicio.Click += new System.EventHandler(this.BtnAsentarServicio_Click);
             // 
             // label7
             // 
@@ -203,16 +202,16 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "REINTEGRO POR ORDEN";
             // 
-            // lblNombrePaciente
+            // LblNombrePaciente
             // 
-            this.lblNombrePaciente.AutoSize = true;
-            this.lblNombrePaciente.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombrePaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombrePaciente.Location = new System.Drawing.Point(30, 35);
-            this.lblNombrePaciente.Name = "lblNombrePaciente";
-            this.lblNombrePaciente.Size = new System.Drawing.Size(168, 24);
-            this.lblNombrePaciente.TabIndex = 9;
-            this.lblNombrePaciente.Text = "nombre paciente";
+            this.LblNombrePaciente.AutoSize = true;
+            this.LblNombrePaciente.BackColor = System.Drawing.Color.Transparent;
+            this.LblNombrePaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNombrePaciente.Location = new System.Drawing.Point(30, 35);
+            this.LblNombrePaciente.Name = "LblNombrePaciente";
+            this.LblNombrePaciente.Size = new System.Drawing.Size(168, 24);
+            this.LblNombrePaciente.TabIndex = 9;
+            this.LblNombrePaciente.Text = "nombre paciente";
             // 
             // pictureBox1
             // 
@@ -225,59 +224,43 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // btnSalir
+            // BtnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.checkout;
-            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(306, 400);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(87, 83);
-            this.btnSalir.TabIndex = 11;
-            this.toolTip1.SetToolTip(this.btnSalir, "Salir de este menú");
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.BtnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.BtnSalir.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.checkout;
+            this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnSalir.FlatAppearance.BorderSize = 0;
+            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalir.Location = new System.Drawing.Point(273, 400);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(87, 83);
+            this.BtnSalir.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.BtnSalir, "Salir de este menú");
+            this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
-            // btnAsentarYCargarOtro
+            // LblTotal
             // 
-            this.btnAsentarYCargarOtro.BackColor = System.Drawing.Color.Transparent;
-            this.btnAsentarYCargarOtro.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Service2Button;
-            this.btnAsentarYCargarOtro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAsentarYCargarOtro.FlatAppearance.BorderSize = 0;
-            this.btnAsentarYCargarOtro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAsentarYCargarOtro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAsentarYCargarOtro.Location = new System.Drawing.Point(173, 400);
-            this.btnAsentarYCargarOtro.Name = "btnAsentarYCargarOtro";
-            this.btnAsentarYCargarOtro.Size = new System.Drawing.Size(87, 83);
-            this.btnAsentarYCargarOtro.TabIndex = 12;
-            this.toolTip1.SetToolTip(this.btnAsentarYCargarOtro, "Asentar el servvicio y cargar uno nuevo");
-            this.btnAsentarYCargarOtro.UseVisualStyleBackColor = false;
-            this.btnAsentarYCargarOtro.Click += new System.EventHandler(this.btnAsentarYCargarOtro_Click);
+            this.LblTotal.AutoSize = true;
+            this.LblTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.LblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotal.Location = new System.Drawing.Point(302, 307);
+            this.LblTotal.Name = "LblTotal";
+            this.LblTotal.Size = new System.Drawing.Size(58, 22);
+            this.LblTotal.TabIndex = 13;
+            this.LblTotal.Text = "costo";
             // 
-            // lblTotal
+            // LblReintegro
             // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(302, 307);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(58, 22);
-            this.lblTotal.TabIndex = 13;
-            this.lblTotal.Text = "costo";
-            // 
-            // lblReintegro
-            // 
-            this.lblReintegro.AutoSize = true;
-            this.lblReintegro.BackColor = System.Drawing.Color.Salmon;
-            this.lblReintegro.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReintegro.Location = new System.Drawing.Point(302, 337);
-            this.lblReintegro.Name = "lblReintegro";
-            this.lblReintegro.Size = new System.Drawing.Size(58, 22);
-            this.lblReintegro.TabIndex = 15;
-            this.lblReintegro.Text = "costo";
+            this.LblReintegro.AutoSize = true;
+            this.LblReintegro.BackColor = System.Drawing.Color.Salmon;
+            this.LblReintegro.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblReintegro.Location = new System.Drawing.Point(302, 337);
+            this.LblReintegro.Name = "LblReintegro";
+            this.LblReintegro.Size = new System.Drawing.Size(58, 22);
+            this.LblReintegro.TabIndex = 15;
+            this.LblReintegro.Text = "costo";
             // 
             // label9
             // 
@@ -298,15 +281,14 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.fondoFormularios;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(441, 522);
-            this.Controls.Add(this.lblReintegro);
+            this.Controls.Add(this.LblReintegro);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.btnAsentarYCargarOtro);
-            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.LblTotal);
+            this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.lblNombrePaciente);
+            this.Controls.Add(this.LblNombrePaciente);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btnAsentarServicio);
+            this.Controls.Add(this.BtnAsentarServicio);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label2);
@@ -329,24 +311,23 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox cmbObraSocial;
-        private System.Windows.Forms.CheckBox chkOrden;
+        private System.Windows.Forms.ComboBox CmbObraSocial;
+        private System.Windows.Forms.CheckBox ChkOrden;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbMedico;
+        private System.Windows.Forms.ComboBox CmbMedico;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnAsentarServicio;
+        private System.Windows.Forms.Button BtnAsentarServicio;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblCostoConsulta;
-        private System.Windows.Forms.Label lblNombrePaciente;
+        private System.Windows.Forms.Label LblCostoConsulta;
+        private System.Windows.Forms.Label LblNombrePaciente;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnAsentarYCargarOtro;
+        private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Label lblReintegro;
+        private System.Windows.Forms.Label LblTotal;
+        private System.Windows.Forms.Label LblReintegro;
         private System.Windows.Forms.Label label9;
     }
 }

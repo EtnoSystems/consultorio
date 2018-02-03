@@ -105,7 +105,7 @@
             this.btnGuardarAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.toolTip1.SetToolTip(this.btnGuardarAgregar, "Guardar datos y agregar otro usuario");
             this.btnGuardarAgregar.UseVisualStyleBackColor = false;
-            this.btnGuardarAgregar.Click += new System.EventHandler(this.btnGuardarAgregar_Click);
+            //this.btnGuardarAgregar.Click += new System.EventHandler(this.btnGuardarAgregar_Click);
             // 
             // btnSalir
             // 

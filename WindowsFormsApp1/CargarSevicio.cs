@@ -17,36 +17,32 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void BtnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         private void CargarSevicio_Load(object sender, EventArgs e)
         {
-            estadoInicial();
+            EstadoInicial();
         }
 
-        void estadoInicial()
+        void EstadoInicial()
         {
-            lblNombrePaciente.Text = "";
-            chkOrden.Checked = false;
-            lblCostoConsulta.Text = "";
-            lblTotal.Text = "";
-            lblReintegro.Text = "";
+            LblNombrePaciente.Text = "";
+            ChkOrden.Checked = false;
+            LblCostoConsulta.Text = "";
+            LblTotal.Text = "";
+            LblReintegro.Text = "";
         }
 
-        private void btnAsentarYCargarOtro_Click(object sender, EventArgs e)
+        private void BtnAsentarServicio_Click(object sender, EventArgs e)
         {
-            if (cargarServicio())
+            if (CargarServicio())
             {
                 MessageBox.Show("Se cargó correctamente el servicio", "Carga de servicio", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                estadoInicial();
+                EstadoInicial();
                 this.Hide();
             }
             else
@@ -55,21 +51,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void btnAsentarServicio_Click(object sender, EventArgs e)
-        {
-            if (cargarServicio())
-            {
-                MessageBox.Show("Se cargó correctamente el servicio", "Carga de servicio", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                estadoInicial();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Hubo un error", "Carga de servicio", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        bool cargarServicio()
+        bool CargarServicio()
         {
             //Proceso de carga de servicio
             return true; //Si se pudo cargar

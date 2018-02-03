@@ -8,18 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace WindowsFormsApp1.reportes
 {
-    public partial class IngresoPaciente : Form
+    public partial class OrdenDeAtencion : Form
     {
-        public IngresoPaciente()
+        public OrdenDeAtencion()
         {
             InitializeComponent();
         }
 
-        private void BtnSalir_Click(object sender, EventArgs e)
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
         {
-            this.Close();
+
         }
     }
 }
