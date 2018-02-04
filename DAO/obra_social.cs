@@ -16,13 +16,18 @@ namespace DAO
     {
         public Obra_social()
         {
-            this.Personaobra_social = new HashSet<Personaobra_social>();
+            this.Consulta = new HashSet<Consulta>();
+            this.Persona = new HashSet<Persona>();
         }
     
         public int Id { get; set; }
         public string Denominacion { get; set; }
         public decimal Plus { get; set; }
+        public string Telefono { get; set; }
+        public string Direccion { get; set; }
+        public string Observaciones { get; set; }
     
-        public virtual ICollection<Personaobra_social> Personaobra_social { get; set; }
+        public virtual ICollection<Consulta> Consulta { get; set; }
+        public virtual ICollection<Persona> Persona { get; set; }
     }
 }

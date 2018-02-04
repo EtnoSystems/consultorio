@@ -4,32 +4,32 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="07ef584e00c748b5a65b5dab56c74c61" Name="Diagram1">
-        <EntityTypeShape EntityType="consultoriosModel.Ciudad" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="consultoriosModel.Consulta" Width="1.5" PointX="12.75" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="consultoriosModel.Datos_contacto" Width="1.5" PointX="7.5" PointY="6.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="consultoriosModel.Direccion" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="consultoriosModel.Especialidad" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="consultoriosModel.Obra_social" Width="1.5" PointX="8.25" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="consultoriosModel.Persona" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="consultoriosModel.Persona_medico" Width="1.5" PointX="10.5" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="consultoriosModel.Persona_paciente" Width="1.5" PointX="7.5" PointY="12" IsExpanded="true" />
-        <EntityTypeShape EntityType="consultoriosModel.Personaobra_social" Width="1.5" PointX="10.5" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="consultoriosModel.Tipo_consulta" Width="1.5" PointX="10.5" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="consultoriosModel.Tipo_usuario" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="consultoriosModel.Usuario" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+      <Diagram DiagramId="a95880e766314d8183caed1300df6d20" Name="Diagram1">
+        <EntityTypeShape EntityType="consultoriosModel.Ciudad" Width="1.5" PointX="1.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriosModel.Consulta" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriosModel.Datos_contacto" Width="1.5" PointX="8.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriosModel.Direccion" Width="1.5" PointX="3.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriosModel.Especialidad" Width="1.5" PointX="9" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriosModel.Feriado" Width="1.5" PointX="5.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriosModel.Obra_social" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriosModel.Persona" Width="1.5" PointX="6" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriosModel.Persona_medico" Width="1.5" PointX="11.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriosModel.Persona_paciente" Width="1.5" PointX="8.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriosModel.Tipo_consulta" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriosModel.Tipo_usuario" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriosModel.Usuario" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
         <AssociationConnector Association="consultoriosModel.FK_direccionciudad" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriosModel.FK_ConsultaObra_social" ManuallyRouted="false" />
         <AssociationConnector Association="consultoriosModel.FK_medicoconsulta" ManuallyRouted="false" />
         <AssociationConnector Association="consultoriosModel.FK_pacienteconsulta" ManuallyRouted="false" />
         <AssociationConnector Association="consultoriosModel.FK_tipo_consultaconsulta" ManuallyRouted="false" />
         <AssociationConnector Association="consultoriosModel.FK_personadatos_contacto" ManuallyRouted="false" />
         <AssociationConnector Association="consultoriosModel.FK_personadireccion" ManuallyRouted="false" />
-        <AssociationConnector Association="consultoriosModel.FK_personaobra_social_obra_social" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriosModel.FK_Medicoespecialidad" ManuallyRouted="false" />
         <AssociationConnector Association="consultoriosModel.FK_medico_inherits_persona" ManuallyRouted="false" />
         <AssociationConnector Association="consultoriosModel.FK_paciente_inherits_persona" ManuallyRouted="false" />
-        <AssociationConnector Association="consultoriosModel.FK_personaobra_social_persona" ManuallyRouted="false" />
-        <AssociationConnector Association="consultoriosModel.FK_usuariotipo_usuario" ManuallyRouted="false" />
-        <AssociationConnector Association="consultoriosModel.Medicoespecialidad" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriosModel.FK_UsuarioTipo_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="consultoriosModel.Personaobra_social" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

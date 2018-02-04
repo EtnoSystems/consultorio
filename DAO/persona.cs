@@ -17,7 +17,7 @@ namespace DAO
         public Persona()
         {
             this.Datos_contacto = new HashSet<Datos_contacto>();
-            this.Personaobra_social = new HashSet<Personaobra_social>();
+            this.Obra_social = new HashSet<Obra_social>();
         }
     
         public int Id { get; set; }
@@ -25,11 +25,12 @@ namespace DAO
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public Nullable<int> Direccion_Id { get; set; }
+        public string Sexo { get; set; }
     
         public virtual ICollection<Datos_contacto> Datos_contacto { get; set; }
         public virtual Direccion Direccion { get; set; }
         public virtual Persona_medico Persona_medico { get; set; }
         public virtual Persona_paciente Persona_paciente { get; set; }
-        public virtual ICollection<Personaobra_social> Personaobra_social { get; set; }
+        public virtual ICollection<Obra_social> Obra_social { get; set; }
     }
 }

@@ -78,7 +78,7 @@ namespace WindowsFormsApp1
         private void btnEliminar_Click(object sender, EventArgs e)
         {
 
-            if (MessageBox.Show("¿Está seguro que desea eliminar al usuario " + TxtUsuario.Text, "Baja de usuarios", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("¿Está seguro que desea eliminar el usuario seleccionado?" , "Baja de usuarios", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 GestorUsuarios gestorUsuarios = new GestorUsuarios();
 
@@ -170,6 +170,10 @@ namespace WindowsFormsApp1
                 DgvResultadoBusqueda.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 DgvResultadoBusqueda.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 DgvResultadoBusqueda.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+                DgvResultadoBusqueda.Columns[1].HeaderText = "Usuario";
+                DgvResultadoBusqueda.Columns[2].HeaderText = "Nombre completo";
+                DgvResultadoBusqueda.Columns[3].HeaderText = "Privilegios";
+                btnEliminar.Enabled = true;
             }
             else
             {
@@ -204,5 +208,12 @@ namespace WindowsFormsApp1
             }
             return true;
         }
+
+        private void TxtUsuario_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+      
     }
 }

@@ -68,7 +68,7 @@ namespace Logica
                                        Nombre = n.Nombre,
                                        Password = n.Password,
                                        Tipo_usuario = n.Tipo_usuario,
-                                       Tipo_usuario1_Id = n.Tipo_usuario1_Id
+                                       Tipo_usuario1_Id = n.Tipo_usuario_Id
                                        
                                    }).SingleOrDefault();
                 
@@ -95,7 +95,7 @@ namespace Logica
                                 Id = n.Id,
                                 Nombre = n.Nombre,
                                 Password = n.Password,
-                                Tipo_usuario1_Id = n.Tipo_usuario1_Id,
+                                Tipo_usuario1_Id = n.Tipo_usuario_Id,
                                 Tipo_usuario=n.Tipo_usuario,
                             
                             }).SingleOrDefault();
@@ -141,7 +141,7 @@ namespace Logica
                     usuario.Nombre_completo = nombreCompleto;
                     usuario.Nombre = userName;
                     usuario.Password = clave;
-                    usuario.Tipo_usuario1_Id = tipo_UsuarioDTO.Id;
+                    usuario.Tipo_usuario_Id = tipo_UsuarioDTO.Id;
 
 
                     //entidad.Tipo_usuario.Denominacion = tipo;
@@ -193,10 +193,10 @@ namespace Logica
                                  where n.Nombre_completo.Contains(NombreCompleto)
                                  select new
                                  {
-                                     Id=n.Id,
-                                     Usuario=n.Nombre,
-                                     Nombre_completo=n.Nombre_completo,
-                                     Tipo_usuario=n.Tipo_usuario.Denominacion,
+                                     n.Id,
+                                     n.Nombre,
+                                     n.Nombre_completo,
+                                     n.Tipo_usuario.Denominacion
                                      
                                  }).ToList<object>();
                     return Query;

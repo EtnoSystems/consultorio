@@ -12,14 +12,10 @@ namespace DAO
     using System;
     using System.Collections.Generic;
     
-    public partial class Personaobra_social
+    public partial class Feriado
     {
-        public int Obra_social_Id { get; set; }
-        public int Persona_Id { get; set; }
-        public Nullable<bool> orden_OS { get; set; }
-        public Nullable<System.DateTime> fecha_vencimiento { get; set; }
-    
-        public virtual Obra_social Obra_social { get; set; }
-        public virtual Persona Persona { get; set; }
+        public int Id { get; set; }
+        public System.DateTime Fecha { get; set; }
+        public string Descripcion { get; set; }
     }
 }

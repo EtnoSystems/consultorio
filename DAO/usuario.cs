@@ -17,8 +17,8 @@ namespace DAO
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Password { get; set; }
-        public int Tipo_usuario1_Id { get; set; }
         public string Nombre_completo { get; set; }
+        public int Tipo_usuario_Id { get; set; }
     
         public virtual Tipo_usuario Tipo_usuario { get; set; }
     }

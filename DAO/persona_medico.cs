@@ -17,14 +17,16 @@ namespace DAO
         public Persona_medico()
         {
             this.Consulta = new HashSet<Consulta>();
-            this.Especialidad = new HashSet<Especialidad>();
         }
     
         public string Matricula { get; set; }
         public int Id { get; set; }
+        public decimal Valor_consulta { get; set; }
+        public decimal Porcentaje_retencion { get; set; }
+        public int Especialidad_Id { get; set; }
     
         public virtual ICollection<Consulta> Consulta { get; set; }
+        public virtual Especialidad Especialidad { get; set; }
         public virtual Persona Persona { get; set; }
-        public virtual ICollection<Especialidad> Especialidad { get; set; }
     }
 }

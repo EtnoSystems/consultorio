@@ -30,13 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios_baja));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnBuscar = new System.Windows.Forms.Button();
-            this.DgvResultadoBusqueda = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.LblTipoUsuario = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,16 +42,17 @@
             this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.DgvResultadoBusqueda = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvResultadoBusqueda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvResultadoBusqueda)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.BtnBuscar);
             this.panel1.Controls.Add(this.DgvResultadoBusqueda);
+            this.panel1.Controls.Add(this.BtnBuscar);
             this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.LblTipoUsuario);
             this.panel1.Controls.Add(this.label4);
@@ -85,59 +81,6 @@
             this.BtnBuscar.TabIndex = 18;
             this.BtnBuscar.UseVisualStyleBackColor = false;
             this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
-            // 
-            // DgvResultadoBusqueda
-            // 
-            this.DgvResultadoBusqueda.AllowUserToAddRows = false;
-            this.DgvResultadoBusqueda.AllowUserToResizeColumns = false;
-            this.DgvResultadoBusqueda.AllowUserToResizeRows = false;
-            this.DgvResultadoBusqueda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvResultadoBusqueda.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.DgvResultadoBusqueda.BackgroundColor = System.Drawing.Color.White;
-            this.DgvResultadoBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DgvResultadoBusqueda.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvResultadoBusqueda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DgvResultadoBusqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvResultadoBusqueda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.NombreUsuario});
-            this.DgvResultadoBusqueda.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvResultadoBusqueda.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DgvResultadoBusqueda.EnableHeadersVisualStyles = false;
-            this.DgvResultadoBusqueda.GridColor = System.Drawing.SystemColors.HotTrack;
-            this.DgvResultadoBusqueda.Location = new System.Drawing.Point(3, 131);
-            this.DgvResultadoBusqueda.Name = "DgvResultadoBusqueda";
-            this.DgvResultadoBusqueda.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.DgvResultadoBusqueda.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.DgvResultadoBusqueda.Size = new System.Drawing.Size(336, 89);
-            this.DgvResultadoBusqueda.TabIndex = 17;
-            this.DgvResultadoBusqueda.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResultadoBusqueda_CellContentClick);
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // NombreUsuario
-            // 
-            this.NombreUsuario.HeaderText = "Nombre de usuario";
-            this.NombreUsuario.Name = "NombreUsuario";
             // 
             // btnEliminar
             // 
@@ -246,7 +189,7 @@
             this.TxtUsuario.Size = new System.Drawing.Size(173, 24);
             this.TxtUsuario.TabIndex = 1;
             this.TxtUsuario.Text = "Nombre de usuario";
-            this.TxtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            this.TxtUsuario.TextChanged += new System.EventHandler(this.TxtUsuario_TextChanged_1);
             this.TxtUsuario.Enter += new System.EventHandler(this.TxtUsuario_Enter);
             this.TxtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUsuario_KeyPress);
             this.TxtUsuario.Leave += new System.EventHandler(this.TxtUsuario_Leave);
@@ -259,6 +202,15 @@
             // toolTip1
             // 
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
+            // DgvResultadoBusqueda
+            // 
+            this.DgvResultadoBusqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvResultadoBusqueda.Location = new System.Drawing.Point(3, 120);
+            this.DgvResultadoBusqueda.Name = "DgvResultadoBusqueda";
+            this.DgvResultadoBusqueda.Size = new System.Drawing.Size(339, 77);
+            this.DgvResultadoBusqueda.TabIndex = 19;
+            this.DgvResultadoBusqueda.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResultadoBusqueda_CellContentClick);
             // 
             // Usuarios_baja
             // 
@@ -273,8 +225,8 @@
             this.Load += new System.EventHandler(this.Usuarios_baja_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvResultadoBusqueda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvResultadoBusqueda)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -292,9 +244,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.DataGridView DgvResultadoBusqueda;
         private System.Windows.Forms.Button BtnBuscar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreUsuario;
+        private System.Windows.Forms.DataGridView DgvResultadoBusqueda;
     }
 }
