@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 02/04/2018 15:23:16
+-- Date Created: 02/04/2018 17:13:23
 -- Generated from EDMX file: C:\Users\Jorge\Desktop\consultorios\consultorio\DAO\Model1.edmx
 -- --------------------------------------------------
 
@@ -52,6 +52,12 @@ IF OBJECT_ID(N'[dbo].[FK_Personaobra_social_Persona]', 'F') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[FK_tipo_consultaconsulta]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_tipo_consultaconsulta];
+GO
+IF OBJECT_ID(N'[dbo].[FK_UsuarioConsulta]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_UsuarioConsulta];
+GO
+IF OBJECT_ID(N'[dbo].[FK_UsuarioFeriado]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Feriado] DROP CONSTRAINT [FK_UsuarioFeriado];
 GO
 IF OBJECT_ID(N'[dbo].[FK_UsuarioTipo_usuario]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Usuario] DROP CONSTRAINT [FK_UsuarioTipo_usuario];
@@ -127,7 +133,8 @@ CREATE TABLE [dbo].[Consulta] (
     [Retencion_medico] decimal(3,2)  NOT NULL,
     [Reintegro_por_orden] decimal(6,2)  NOT NULL,
     [Orden_presentada] bit  NOT NULL,
-    [Obra_social_Id] int  NULL
+    [Obra_social_Id] int  NULL,
+    [Usuario_Id] int  NOT NULL
 );
 GO
 
@@ -164,7 +171,8 @@ GO
 CREATE TABLE [dbo].[Feriado] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Fecha] datetime  NOT NULL,
-    [Descripcion] nvarchar(100)  NOT NULL
+    [Descripcion] nvarchar(100)  NOT NULL,
+    [Editor_Id] int  NOT NULL
 );
 GO
 
@@ -186,7 +194,7 @@ CREATE TABLE [dbo].[Persona] (
     [Nombre] varchar(60)  NOT NULL,
     [Apellido] varchar(60)  NOT NULL,
     [Direccion_Id] int  NULL,
-    [Sexo] nvarchar(max)  NOT NULL
+    [Sexo] char(1)  NULL
 );
 GO
 
@@ -405,6 +413,21 @@ ON [dbo].[Consulta]
     ([Tipo_consulta_Id]);
 GO
 
+-- Creating foreign key on [Usuario_Id] in table 'Consulta'
+ALTER TABLE [dbo].[Consulta]
+ADD CONSTRAINT [FK_UsuarioConsulta]
+    FOREIGN KEY ([Usuario_Id])
+    REFERENCES [dbo].[Usuario]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_UsuarioConsulta'
+CREATE INDEX [IX_FK_UsuarioConsulta]
+ON [dbo].[Consulta]
+    ([Usuario_Id]);
+GO
+
 -- Creating foreign key on [Persona_Id] in table 'Datos_contacto'
 ALTER TABLE [dbo].[Datos_contacto]
 ADD CONSTRAINT [FK_personadatos_contacto]
@@ -448,6 +471,21 @@ GO
 CREATE INDEX [IX_FK_Medicoespecialidad]
 ON [dbo].[Persona_medico]
     ([Especialidad_Id]);
+GO
+
+-- Creating foreign key on [Editor_Id] in table 'Feriado'
+ALTER TABLE [dbo].[Feriado]
+ADD CONSTRAINT [FK_UsuarioFeriado]
+    FOREIGN KEY ([Editor_Id])
+    REFERENCES [dbo].[Usuario]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_UsuarioFeriado'
+CREATE INDEX [IX_FK_UsuarioFeriado]
+ON [dbo].[Feriado]
+    ([Editor_Id]);
 GO
 
 -- Creating foreign key on [Id] in table 'Persona_medico'

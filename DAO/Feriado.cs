@@ -17,5 +17,8 @@ namespace DAO
         public int Id { get; set; }
         public System.DateTime Fecha { get; set; }
         public string Descripcion { get; set; }
+        public int Editor_Id { get; set; }
+    
+        public virtual Usuario Usuario { get; set; }
     }
 }

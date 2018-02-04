@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios_baja));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.DgvResultadoBusqueda = new System.Windows.Forms.DataGridView();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.LblTipoUsuario = new System.Windows.Forms.Label();
@@ -42,10 +43,9 @@
             this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.DgvResultadoBusqueda = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvResultadoBusqueda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,6 +66,16 @@
             this.panel1.Size = new System.Drawing.Size(345, 475);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // DgvResultadoBusqueda
+            // 
+            this.DgvResultadoBusqueda.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.DgvResultadoBusqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvResultadoBusqueda.Location = new System.Drawing.Point(3, 120);
+            this.DgvResultadoBusqueda.Name = "DgvResultadoBusqueda";
+            this.DgvResultadoBusqueda.Size = new System.Drawing.Size(339, 77);
+            this.DgvResultadoBusqueda.TabIndex = 19;
+            this.DgvResultadoBusqueda.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResultadoBusqueda_CellContentClick);
             // 
             // BtnBuscar
             // 
@@ -203,15 +213,6 @@
             // 
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
-            // DgvResultadoBusqueda
-            // 
-            this.DgvResultadoBusqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvResultadoBusqueda.Location = new System.Drawing.Point(3, 120);
-            this.DgvResultadoBusqueda.Name = "DgvResultadoBusqueda";
-            this.DgvResultadoBusqueda.Size = new System.Drawing.Size(339, 77);
-            this.DgvResultadoBusqueda.TabIndex = 19;
-            this.DgvResultadoBusqueda.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResultadoBusqueda_CellContentClick);
-            // 
             // Usuarios_baja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,8 +226,8 @@
             this.Load += new System.EventHandler(this.Usuarios_baja_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvResultadoBusqueda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }

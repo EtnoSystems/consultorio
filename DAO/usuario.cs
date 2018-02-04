@@ -14,12 +14,20 @@ namespace DAO
     
     public partial class Usuario
     {
+        public Usuario()
+        {
+            this.Consulta = new HashSet<Consulta>();
+            this.Feriado = new HashSet<Feriado>();
+        }
+    
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Password { get; set; }
         public string Nombre_completo { get; set; }
         public int Tipo_usuario_Id { get; set; }
     
+        public virtual ICollection<Consulta> Consulta { get; set; }
+        public virtual ICollection<Feriado> Feriado { get; set; }
         public virtual Tipo_usuario Tipo_usuario { get; set; }
     }
 }

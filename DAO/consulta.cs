@@ -25,10 +25,12 @@ namespace DAO
         public decimal Reintegro_por_orden { get; set; }
         public bool Orden_presentada { get; set; }
         public Nullable<int> Obra_social_Id { get; set; }
+        public int Usuario_Id { get; set; }
     
         public virtual Obra_social Obra_social { get; set; }
         public virtual Persona_medico Persona_medico { get; set; }
         public virtual Persona_paciente Persona_paciente { get; set; }
         public virtual Tipo_consulta Tipo_consulta { get; set; }
+        public virtual Usuario Usuario { get; set; }
     }
 }
