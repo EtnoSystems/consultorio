@@ -31,6 +31,6 @@ namespace DAO
         public virtual Persona_medico Persona_medico { get; set; }
         public virtual Persona_paciente Persona_paciente { get; set; }
         public virtual Tipo_consulta Tipo_consulta { get; set; }
-        public virtual Usuario Usuario { get; set; }
+        public virtual Usuario Editor { get; set; }
     }
 }
