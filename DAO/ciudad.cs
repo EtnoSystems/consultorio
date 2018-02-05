@@ -21,7 +21,9 @@ namespace DAO
     
         public int Id { get; set; }
         public string Denominacion { get; set; }
+        public int Editor_Id { get; set; }
     
         public virtual ICollection<Direccion> Direccion { get; set; }
+        public virtual Usuario Usuario { get; set; }
     }
 }

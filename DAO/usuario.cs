@@ -16,8 +16,13 @@ namespace DAO
     {
         public Usuario()
         {
+            this.Ciudad = new HashSet<Ciudad>();
             this.Consulta = new HashSet<Consulta>();
+            this.Especialidad = new HashSet<Especialidad>();
             this.Feriado = new HashSet<Feriado>();
+            this.Obra_social = new HashSet<Obra_social>();
+            this.Persona = new HashSet<Persona>();
+            this.Persona_medico = new HashSet<Persona_medico>();
         }
     
         public int Id { get; set; }
@@ -26,8 +31,13 @@ namespace DAO
         public string Nombre_completo { get; set; }
         public int Tipo_usuario_Id { get; set; }
     
+        public virtual ICollection<Ciudad> Ciudad { get; set; }
         public virtual ICollection<Consulta> Consulta { get; set; }
+        public virtual ICollection<Especialidad> Especialidad { get; set; }
         public virtual ICollection<Feriado> Feriado { get; set; }
+        public virtual ICollection<Obra_social> Obra_social { get; set; }
+        public virtual ICollection<Persona> Persona { get; set; }
+        public virtual ICollection<Persona_medico> Persona_medico { get; set; }
         public virtual Tipo_usuario Tipo_usuario { get; set; }
     }
 }

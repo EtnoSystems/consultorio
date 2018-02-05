@@ -34,8 +34,6 @@ namespace DAO
         public DbSet<Obra_social> Obra_social { get; set; }
         public DbSet<Persona> Persona { get; set; }
         public DbSet<Persona_medico> Persona_medico { get; set; }
-        public DbSet<Persona_paciente> Persona_paciente { get; set; }
-        public DbSet<Tipo_consulta> Tipo_consulta { get; set; }
         public DbSet<Tipo_usuario> Tipo_usuario { get; set; }
         public DbSet<Usuario> Usuario { get; set; }
     }

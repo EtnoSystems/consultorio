@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 02/04/2018 17:13:23
+-- Date Created: 02/04/2018 22:52:18
 -- Generated from EDMX file: C:\Users\Jorge\Desktop\consultorios\consultorio\DAO\Model1.edmx
 -- --------------------------------------------------
 
@@ -17,26 +17,23 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[FK_ConsultaObra_social]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_ConsultaObra_social];
-GO
 IF OBJECT_ID(N'[dbo].[FK_direccionciudad]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Direccion] DROP CONSTRAINT [FK_direccionciudad];
 GO
-IF OBJECT_ID(N'[dbo].[FK_medico_inherits_persona]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Persona_medico] DROP CONSTRAINT [FK_medico_inherits_persona];
+IF OBJECT_ID(N'[dbo].[FK_UsuarioCiudad]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Ciudad] DROP CONSTRAINT [FK_UsuarioCiudad];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ConsultaObra_social]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_ConsultaObra_social];
 GO
 IF OBJECT_ID(N'[dbo].[FK_medicoconsulta]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_medicoconsulta];
 GO
-IF OBJECT_ID(N'[dbo].[FK_Medicoespecialidad]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Persona_medico] DROP CONSTRAINT [FK_Medicoespecialidad];
+IF OBJECT_ID(N'[dbo].[FK_PersonaConsulta]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_PersonaConsulta];
 GO
-IF OBJECT_ID(N'[dbo].[FK_paciente_inherits_persona]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Persona_paciente] DROP CONSTRAINT [FK_paciente_inherits_persona];
-GO
-IF OBJECT_ID(N'[dbo].[FK_pacienteconsulta]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_pacienteconsulta];
+IF OBJECT_ID(N'[dbo].[FK_UsuarioConsulta]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_UsuarioConsulta];
 GO
 IF OBJECT_ID(N'[dbo].[FK_personadatos_contacto]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Datos_contacto] DROP CONSTRAINT [FK_personadatos_contacto];
@@ -44,23 +41,35 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_personadireccion]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Persona] DROP CONSTRAINT [FK_personadireccion];
 GO
+IF OBJECT_ID(N'[dbo].[FK_Medicoespecialidad]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Persona_medico] DROP CONSTRAINT [FK_Medicoespecialidad];
+GO
+IF OBJECT_ID(N'[dbo].[FK_UsuarioEspecialidad]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Especialidad] DROP CONSTRAINT [FK_UsuarioEspecialidad];
+GO
+IF OBJECT_ID(N'[dbo].[FK_UsuarioFeriado]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Feriado] DROP CONSTRAINT [FK_UsuarioFeriado];
+GO
+IF OBJECT_ID(N'[dbo].[FK_UsuarioObra_social]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Obra_social] DROP CONSTRAINT [FK_UsuarioObra_social];
+GO
+IF OBJECT_ID(N'[dbo].[FK_medico_inherits_persona]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Persona_medico] DROP CONSTRAINT [FK_medico_inherits_persona];
+GO
+IF OBJECT_ID(N'[dbo].[FK_UsuarioPersona]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Persona] DROP CONSTRAINT [FK_UsuarioPersona];
+GO
+IF OBJECT_ID(N'[dbo].[FK_UsuarioPersona_medico]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Persona_medico] DROP CONSTRAINT [FK_UsuarioPersona_medico];
+GO
+IF OBJECT_ID(N'[dbo].[FK_UsuarioTipo_usuario]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Usuario] DROP CONSTRAINT [FK_UsuarioTipo_usuario];
+GO
 IF OBJECT_ID(N'[dbo].[FK_Personaobra_social_Obra_social]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Personaobra_social] DROP CONSTRAINT [FK_Personaobra_social_Obra_social];
 GO
 IF OBJECT_ID(N'[dbo].[FK_Personaobra_social_Persona]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Personaobra_social] DROP CONSTRAINT [FK_Personaobra_social_Persona];
-GO
-IF OBJECT_ID(N'[dbo].[FK_tipo_consultaconsulta]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_tipo_consultaconsulta];
-GO
-IF OBJECT_ID(N'[dbo].[FK_UsuarioConsulta]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_UsuarioConsulta];
-GO
-IF OBJECT_ID(N'[dbo].[FK_UsuarioFeriado]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Feriado] DROP CONSTRAINT [FK_UsuarioFeriado];
-GO
-IF OBJECT_ID(N'[dbo].[FK_UsuarioTipo_usuario]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Usuario] DROP CONSTRAINT [FK_UsuarioTipo_usuario];
 GO
 
 -- --------------------------------------------------
@@ -94,20 +103,14 @@ GO
 IF OBJECT_ID(N'[dbo].[Persona_medico]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Persona_medico];
 GO
-IF OBJECT_ID(N'[dbo].[Persona_paciente]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Persona_paciente];
-GO
-IF OBJECT_ID(N'[dbo].[Personaobra_social]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Personaobra_social];
-GO
-IF OBJECT_ID(N'[dbo].[Tipo_consulta]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Tipo_consulta];
-GO
 IF OBJECT_ID(N'[dbo].[Tipo_usuario]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Tipo_usuario];
 GO
 IF OBJECT_ID(N'[dbo].[Usuario]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Usuario];
+GO
+IF OBJECT_ID(N'[dbo].[Personaobra_social]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Personaobra_social];
 GO
 
 -- --------------------------------------------------
@@ -117,7 +120,8 @@ GO
 -- Creating table 'Ciudad'
 CREATE TABLE [dbo].[Ciudad] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Denominacion] varchar(200)  NOT NULL
+    [Denominacion] varchar(200)  NOT NULL,
+    [Editor_Id] int  NOT NULL
 );
 GO
 
@@ -127,14 +131,14 @@ CREATE TABLE [dbo].[Consulta] (
     [Precio] decimal(6,2)  NULL,
     [Fecha] datetime  NOT NULL,
     [Medico_Id] int  NOT NULL,
-    [Tipo_consulta_Id] int  NOT NULL,
     [Paciente_Id] int  NOT NULL,
     [Plus] decimal(6,2)  NOT NULL,
     [Retencion_medico] decimal(3,2)  NOT NULL,
     [Reintegro_por_orden] decimal(6,2)  NOT NULL,
     [Orden_presentada] bit  NOT NULL,
     [Obra_social_Id] int  NULL,
-    [Usuario_Id] int  NOT NULL
+    [Editor_Id] int  NOT NULL,
+    [Persona_Id] int  NOT NULL
 );
 GO
 
@@ -163,7 +167,8 @@ GO
 -- Creating table 'Especialidad'
 CREATE TABLE [dbo].[Especialidad] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Denominacion] varchar(40)  NOT NULL
+    [Denominacion] varchar(40)  NOT NULL,
+    [Editor_Id] int  NOT NULL
 );
 GO
 
@@ -183,7 +188,8 @@ CREATE TABLE [dbo].[Obra_social] (
     [Plus] decimal(6,2)  NOT NULL,
     [Telefono] nvarchar(13)  NULL,
     [Direccion] nvarchar(300)  NULL,
-    [Observaciones] nvarchar(max)  NULL
+    [Observaciones] nvarchar(max)  NULL,
+    [Editor_Id] int  NOT NULL
 );
 GO
 
@@ -194,7 +200,8 @@ CREATE TABLE [dbo].[Persona] (
     [Nombre] varchar(60)  NOT NULL,
     [Apellido] varchar(60)  NOT NULL,
     [Direccion_Id] int  NULL,
-    [Sexo] char(1)  NULL
+    [Sexo] char(1)  NULL,
+    [Editor_Id] int  NOT NULL
 );
 GO
 
@@ -204,21 +211,8 @@ CREATE TABLE [dbo].[Persona_medico] (
     [Id] int  NOT NULL,
     [Valor_consulta] decimal(6,2)  NOT NULL,
     [Porcentaje_retencion] decimal(3,2)  NOT NULL,
-    [Especialidad_Id] int  NOT NULL
-);
-GO
-
--- Creating table 'Persona_paciente'
-CREATE TABLE [dbo].[Persona_paciente] (
-    [Id] int  NOT NULL
-);
-GO
-
--- Creating table 'Tipo_consulta'
-CREATE TABLE [dbo].[Tipo_consulta] (
-    [Id] int IDENTITY(1,1) NOT NULL,
-    [Descripcion] varchar(70)  NOT NULL,
-    [Precio] decimal(6,2)  NULL
+    [Especialidad_Id] int  NOT NULL,
+    [Editor_Id] int  NOT NULL
 );
 GO
 
@@ -304,18 +298,6 @@ ADD CONSTRAINT [PK_Persona_medico]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
--- Creating primary key on [Id] in table 'Persona_paciente'
-ALTER TABLE [dbo].[Persona_paciente]
-ADD CONSTRAINT [PK_Persona_paciente]
-    PRIMARY KEY CLUSTERED ([Id] ASC);
-GO
-
--- Creating primary key on [Id] in table 'Tipo_consulta'
-ALTER TABLE [dbo].[Tipo_consulta]
-ADD CONSTRAINT [PK_Tipo_consulta]
-    PRIMARY KEY CLUSTERED ([Id] ASC);
-GO
-
 -- Creating primary key on [Id] in table 'Tipo_usuario'
 ALTER TABLE [dbo].[Tipo_usuario]
 ADD CONSTRAINT [PK_Tipo_usuario]
@@ -353,6 +335,21 @@ ON [dbo].[Direccion]
     ([Ciudad_Id]);
 GO
 
+-- Creating foreign key on [Editor_Id] in table 'Ciudad'
+ALTER TABLE [dbo].[Ciudad]
+ADD CONSTRAINT [FK_UsuarioCiudad]
+    FOREIGN KEY ([Editor_Id])
+    REFERENCES [dbo].[Usuario]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_UsuarioCiudad'
+CREATE INDEX [IX_FK_UsuarioCiudad]
+ON [dbo].[Ciudad]
+    ([Editor_Id]);
+GO
+
 -- Creating foreign key on [Obra_social_Id] in table 'Consulta'
 ALTER TABLE [dbo].[Consulta]
 ADD CONSTRAINT [FK_ConsultaObra_social]
@@ -383,40 +380,25 @@ ON [dbo].[Consulta]
     ([Medico_Id]);
 GO
 
--- Creating foreign key on [Paciente_Id] in table 'Consulta'
+-- Creating foreign key on [Persona_Id] in table 'Consulta'
 ALTER TABLE [dbo].[Consulta]
-ADD CONSTRAINT [FK_pacienteconsulta]
-    FOREIGN KEY ([Paciente_Id])
-    REFERENCES [dbo].[Persona_paciente]
+ADD CONSTRAINT [FK_PersonaConsulta]
+    FOREIGN KEY ([Persona_Id])
+    REFERENCES [dbo].[Persona]
         ([Id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
--- Creating non-clustered index for FOREIGN KEY 'FK_pacienteconsulta'
-CREATE INDEX [IX_FK_pacienteconsulta]
+-- Creating non-clustered index for FOREIGN KEY 'FK_PersonaConsulta'
+CREATE INDEX [IX_FK_PersonaConsulta]
 ON [dbo].[Consulta]
-    ([Paciente_Id]);
+    ([Persona_Id]);
 GO
 
--- Creating foreign key on [Tipo_consulta_Id] in table 'Consulta'
-ALTER TABLE [dbo].[Consulta]
-ADD CONSTRAINT [FK_tipo_consultaconsulta]
-    FOREIGN KEY ([Tipo_consulta_Id])
-    REFERENCES [dbo].[Tipo_consulta]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_tipo_consultaconsulta'
-CREATE INDEX [IX_FK_tipo_consultaconsulta]
-ON [dbo].[Consulta]
-    ([Tipo_consulta_Id]);
-GO
-
--- Creating foreign key on [Usuario_Id] in table 'Consulta'
+-- Creating foreign key on [Editor_Id] in table 'Consulta'
 ALTER TABLE [dbo].[Consulta]
 ADD CONSTRAINT [FK_UsuarioConsulta]
-    FOREIGN KEY ([Usuario_Id])
+    FOREIGN KEY ([Editor_Id])
     REFERENCES [dbo].[Usuario]
         ([Id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
@@ -425,7 +407,7 @@ GO
 -- Creating non-clustered index for FOREIGN KEY 'FK_UsuarioConsulta'
 CREATE INDEX [IX_FK_UsuarioConsulta]
 ON [dbo].[Consulta]
-    ([Usuario_Id]);
+    ([Editor_Id]);
 GO
 
 -- Creating foreign key on [Persona_Id] in table 'Datos_contacto'
@@ -473,6 +455,21 @@ ON [dbo].[Persona_medico]
     ([Especialidad_Id]);
 GO
 
+-- Creating foreign key on [Editor_Id] in table 'Especialidad'
+ALTER TABLE [dbo].[Especialidad]
+ADD CONSTRAINT [FK_UsuarioEspecialidad]
+    FOREIGN KEY ([Editor_Id])
+    REFERENCES [dbo].[Usuario]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_UsuarioEspecialidad'
+CREATE INDEX [IX_FK_UsuarioEspecialidad]
+ON [dbo].[Especialidad]
+    ([Editor_Id]);
+GO
+
 -- Creating foreign key on [Editor_Id] in table 'Feriado'
 ALTER TABLE [dbo].[Feriado]
 ADD CONSTRAINT [FK_UsuarioFeriado]
@@ -488,6 +485,21 @@ ON [dbo].[Feriado]
     ([Editor_Id]);
 GO
 
+-- Creating foreign key on [Editor_Id] in table 'Obra_social'
+ALTER TABLE [dbo].[Obra_social]
+ADD CONSTRAINT [FK_UsuarioObra_social]
+    FOREIGN KEY ([Editor_Id])
+    REFERENCES [dbo].[Usuario]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_UsuarioObra_social'
+CREATE INDEX [IX_FK_UsuarioObra_social]
+ON [dbo].[Obra_social]
+    ([Editor_Id]);
+GO
+
 -- Creating foreign key on [Id] in table 'Persona_medico'
 ALTER TABLE [dbo].[Persona_medico]
 ADD CONSTRAINT [FK_medico_inherits_persona]
@@ -497,13 +509,34 @@ ADD CONSTRAINT [FK_medico_inherits_persona]
     ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
--- Creating foreign key on [Id] in table 'Persona_paciente'
-ALTER TABLE [dbo].[Persona_paciente]
-ADD CONSTRAINT [FK_paciente_inherits_persona]
-    FOREIGN KEY ([Id])
-    REFERENCES [dbo].[Persona]
+-- Creating foreign key on [Editor_Id] in table 'Persona'
+ALTER TABLE [dbo].[Persona]
+ADD CONSTRAINT [FK_UsuarioPersona]
+    FOREIGN KEY ([Editor_Id])
+    REFERENCES [dbo].[Usuario]
         ([Id])
-    ON DELETE CASCADE ON UPDATE NO ACTION;
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_UsuarioPersona'
+CREATE INDEX [IX_FK_UsuarioPersona]
+ON [dbo].[Persona]
+    ([Editor_Id]);
+GO
+
+-- Creating foreign key on [Editor_Id] in table 'Persona_medico'
+ALTER TABLE [dbo].[Persona_medico]
+ADD CONSTRAINT [FK_UsuarioPersona_medico]
+    FOREIGN KEY ([Editor_Id])
+    REFERENCES [dbo].[Usuario]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_UsuarioPersona_medico'
+CREATE INDEX [IX_FK_UsuarioPersona_medico]
+ON [dbo].[Persona_medico]
+    ([Editor_Id]);
 GO
 
 -- Creating foreign key on [Tipo_usuario_Id] in table 'Usuario'

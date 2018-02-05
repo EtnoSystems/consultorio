@@ -24,9 +24,11 @@ namespace DAO
         public decimal Valor_consulta { get; set; }
         public decimal Porcentaje_retencion { get; set; }
         public int Especialidad_Id { get; set; }
+        public int Editor_Id { get; set; }
     
         public virtual ICollection<Consulta> Consulta { get; set; }
         public virtual Especialidad Especialidad { get; set; }
         public virtual Persona Persona { get; set; }
+        public virtual Usuario Usuario { get; set; }
     }
 }

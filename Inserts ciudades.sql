@@ -1,14 +1,3 @@
--- INSERTS DE LA TABLA TIPO_USUARIO
-insert into dbo.tipo_usuario (denominacion) values ('administrador');
-insert into dbo.tipo_usuario (denominacion) values ('usuario');
-
--- INSERTS DE LA TABLA USUARIO
-insert into dbo.usuario (nombre,password,nombre_completo,tipo_usuario_Id) VALUES('jrobas','jrobas','Jorge Javier Robas',1);
-insert into dbo.usuario (nombre,password,nombre_completo,tipo_usuario_Id) VALUES('mfabbro','mfabbro','Matias Fabbro',1);
-insert into dbo.usuario (nombre,password,nombre_completo,tipo_usuario_Id) VALUES('jperez','jperez','Juan perez',2);
-
--- INSERTS DE LA TABLA CIUDAD
--- aca deben ejecutarse los inserts del archivo "inserts ciudades.sql"
 -- INSERTS DE LA TABLA CIUDAD
 
 -- Departamento Villaguay
@@ -230,11 +219,4 @@ insert into dbo.ciudad (denominacion,Editor_id) values ('Molino Doll',1);
 insert into dbo.ciudad (denominacion,Editor_id) values ('Rincón de Nogoyá',1);
 insert into dbo.ciudad (denominacion,Editor_id) values ('Victoria',1);
 
-
-
-
--- INSERTS PARA CREAR UN PACIENTE
-insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('chile',157,null,null,1)
-insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Editor_id) values (34116494,'jorge javier','robas',1,'M',1);
-insert into dbo.datos_contacto (email_primario,email_secundario,tel_celular,tel_fijo,persona_id) values ('javier_robas@hotmail.com','jorgerobas@gmail.com','+5493455430130','+543455420313',1);
 
