@@ -102,6 +102,7 @@ namespace WindowsFormsApp1
         {
             IngresoPaciente ingreso = new IngresoPaciente();
             ingreso.Show();
+            Globales.codigoFormulario = 1; //Codigo para luego reenviar al formulario de carga de servicio
         }
     }
 }

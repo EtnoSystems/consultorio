@@ -21,5 +21,15 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+
+        private void BtnBuscarPaciente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        void Redireccionar(int dni, int codigo)
+        {
+
+        }
     }
 }

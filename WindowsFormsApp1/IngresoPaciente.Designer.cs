@@ -51,6 +51,7 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(159, 121);
             this.textBox1.Name = "textBox1";
+            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox1.Size = new System.Drawing.Size(243, 30);
             this.textBox1.TabIndex = 1;
             // 
@@ -61,6 +62,7 @@
             this.BtnBuscarPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnBuscarPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnBuscarPaciente.FlatAppearance.BorderSize = 0;
+            this.BtnBuscarPaciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnBuscarPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnBuscarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscarPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -69,6 +71,7 @@
             this.BtnBuscarPaciente.Size = new System.Drawing.Size(115, 74);
             this.BtnBuscarPaciente.TabIndex = 2;
             this.BtnBuscarPaciente.UseVisualStyleBackColor = false;
+            this.BtnBuscarPaciente.Click += new System.EventHandler(this.BtnBuscarPaciente_Click);
             // 
             // BtnSalir
             // 
