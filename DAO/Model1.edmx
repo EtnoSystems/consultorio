@@ -143,7 +143,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Denominacion" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="Denominacion" Type="varchar" Nullable="false" MaxLength="60" />
     <Property Name="Editor_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Feriado">
@@ -498,7 +498,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Denominacion" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Denominacion" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Editor_Id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Persona_medico" Relationship="Self.FK_Medicoespecialidad" FromRole="Especialidad" ToRole="Persona_medico" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK_UsuarioEspecialidad" FromRole="Especialidad" ToRole="Usuario" />

@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 02/04/2018 22:52:18
+-- Date Created: 02/05/2018 00:47:09
 -- Generated from EDMX file: C:\Users\Jorge\Desktop\consultorios\consultorio\DAO\Model1.edmx
 -- --------------------------------------------------
 
@@ -17,23 +17,23 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_ConsultaObra_social]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_ConsultaObra_social];
+GO
 IF OBJECT_ID(N'[dbo].[FK_direccionciudad]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Direccion] DROP CONSTRAINT [FK_direccionciudad];
 GO
-IF OBJECT_ID(N'[dbo].[FK_UsuarioCiudad]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Ciudad] DROP CONSTRAINT [FK_UsuarioCiudad];
-GO
-IF OBJECT_ID(N'[dbo].[FK_ConsultaObra_social]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_ConsultaObra_social];
+IF OBJECT_ID(N'[dbo].[FK_medico_inherits_persona]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Persona_medico] DROP CONSTRAINT [FK_medico_inherits_persona];
 GO
 IF OBJECT_ID(N'[dbo].[FK_medicoconsulta]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_medicoconsulta];
 GO
+IF OBJECT_ID(N'[dbo].[FK_Medicoespecialidad]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Persona_medico] DROP CONSTRAINT [FK_Medicoespecialidad];
+GO
 IF OBJECT_ID(N'[dbo].[FK_PersonaConsulta]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_PersonaConsulta];
-GO
-IF OBJECT_ID(N'[dbo].[FK_UsuarioConsulta]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_UsuarioConsulta];
 GO
 IF OBJECT_ID(N'[dbo].[FK_personadatos_contacto]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Datos_contacto] DROP CONSTRAINT [FK_personadatos_contacto];
@@ -41,8 +41,17 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_personadireccion]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Persona] DROP CONSTRAINT [FK_personadireccion];
 GO
-IF OBJECT_ID(N'[dbo].[FK_Medicoespecialidad]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Persona_medico] DROP CONSTRAINT [FK_Medicoespecialidad];
+IF OBJECT_ID(N'[dbo].[FK_Personaobra_social_Obra_social]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Personaobra_social] DROP CONSTRAINT [FK_Personaobra_social_Obra_social];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Personaobra_social_Persona]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Personaobra_social] DROP CONSTRAINT [FK_Personaobra_social_Persona];
+GO
+IF OBJECT_ID(N'[dbo].[FK_UsuarioCiudad]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Ciudad] DROP CONSTRAINT [FK_UsuarioCiudad];
+GO
+IF OBJECT_ID(N'[dbo].[FK_UsuarioConsulta]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_UsuarioConsulta];
 GO
 IF OBJECT_ID(N'[dbo].[FK_UsuarioEspecialidad]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Especialidad] DROP CONSTRAINT [FK_UsuarioEspecialidad];
@@ -53,9 +62,6 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_UsuarioObra_social]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Obra_social] DROP CONSTRAINT [FK_UsuarioObra_social];
 GO
-IF OBJECT_ID(N'[dbo].[FK_medico_inherits_persona]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Persona_medico] DROP CONSTRAINT [FK_medico_inherits_persona];
-GO
 IF OBJECT_ID(N'[dbo].[FK_UsuarioPersona]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Persona] DROP CONSTRAINT [FK_UsuarioPersona];
 GO
@@ -64,12 +70,6 @@ IF OBJECT_ID(N'[dbo].[FK_UsuarioPersona_medico]', 'F') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[FK_UsuarioTipo_usuario]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Usuario] DROP CONSTRAINT [FK_UsuarioTipo_usuario];
-GO
-IF OBJECT_ID(N'[dbo].[FK_Personaobra_social_Obra_social]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Personaobra_social] DROP CONSTRAINT [FK_Personaobra_social_Obra_social];
-GO
-IF OBJECT_ID(N'[dbo].[FK_Personaobra_social_Persona]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Personaobra_social] DROP CONSTRAINT [FK_Personaobra_social_Persona];
 GO
 
 -- --------------------------------------------------
@@ -103,14 +103,14 @@ GO
 IF OBJECT_ID(N'[dbo].[Persona_medico]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Persona_medico];
 GO
+IF OBJECT_ID(N'[dbo].[Personaobra_social]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Personaobra_social];
+GO
 IF OBJECT_ID(N'[dbo].[Tipo_usuario]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Tipo_usuario];
 GO
 IF OBJECT_ID(N'[dbo].[Usuario]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Usuario];
-GO
-IF OBJECT_ID(N'[dbo].[Personaobra_social]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Personaobra_social];
 GO
 
 -- --------------------------------------------------
@@ -167,7 +167,7 @@ GO
 -- Creating table 'Especialidad'
 CREATE TABLE [dbo].[Especialidad] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Denominacion] varchar(40)  NOT NULL,
+    [Denominacion] varchar(60)  NOT NULL,
     [Editor_Id] int  NOT NULL
 );
 GO
