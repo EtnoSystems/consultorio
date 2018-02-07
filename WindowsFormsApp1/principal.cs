@@ -104,5 +104,24 @@ namespace WindowsFormsApp1
             ingreso.Show();
             Globales.codigoFormulario = 1; //Codigo para luego reenviar al formulario de carga de servicio
         }
+
+        private void mnuAgregarObraSocial_Click(object sender, EventArgs e)
+        {
+            ObrasSociales_alta osa = new ObrasSociales_alta();
+            osa.Show();
+        }
+
+        private void mnuAgregarMedico_Click(object sender, EventArgs e)
+        {
+            Medicos_Alta medAlta = new Medicos_Alta();
+            medAlta.Show();
+        }
+
+        private void MnuRecetarios_Click(object sender, EventArgs e)
+        {
+            IngresoPaciente pacientes = new IngresoPaciente();
+            pacientes.Show();
+            Globales.codigoFormulario = 2;
+        }
     }
 }

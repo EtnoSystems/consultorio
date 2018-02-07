@@ -82,6 +82,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Medicos_Alta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medicos_Alta.Designer.cs">
+      <DependentUpon>Medicos_Alta.cs</DependentUpon>
+    </Compile>
     <Compile Include="ObrasSociales_alta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medicos_Alta.resx">
+      <DependentUpon>Medicos_Alta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ObrasSociales_Alta.resx">
       <DependentUpon>ObrasSociales_alta.cs</DependentUpon>

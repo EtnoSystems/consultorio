@@ -101,7 +101,7 @@ namespace WindowsFormsApp1
         {
             if (GuardarDatos())
             {
-                MessageBox.Show("La obra social " + TxtNombre + " se guardó correctamente", "Datos guardados exitosamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("La obra social " + TxtNombre.Text + " se guardó correctamente", "Datos guardados exitosamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 EstadoInicial();
                 this.Close();
             }

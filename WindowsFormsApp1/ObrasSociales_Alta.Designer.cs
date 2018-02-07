@@ -45,6 +45,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -82,6 +83,8 @@
             this.TxtDenominacion.Size = new System.Drawing.Size(353, 24);
             this.TxtDenominacion.TabIndex = 2;
             this.TxtDenominacion.Text = "Denominación";
+            this.toolTip1.SetToolTip(this.TxtDenominacion, "Coloque el nombre completo de la obra social (Ej. Obra Social de los Empleados de" +
+        " Comercio y Actividades Civiles)");
             this.TxtDenominacion.Enter += new System.EventHandler(this.TxtDenominacion_Enter);
             // 
             // ChkActiva
@@ -154,13 +157,13 @@
             // 
             // BtnAgregar
             // 
-            this.BtnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BtnAgregar.BackColor = System.Drawing.Color.Transparent;
             this.BtnAgregar.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.botonGuardar2;
             this.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnAgregar.FlatAppearance.BorderSize = 0;
             this.BtnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAgregar.Location = new System.Drawing.Point(66, 370);
+            this.BtnAgregar.Location = new System.Drawing.Point(17, 349);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(70, 69);
             this.BtnAgregar.TabIndex = 6;
@@ -169,13 +172,13 @@
             // 
             // BtnAgregarOtra
             // 
-            this.BtnAgregarOtra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BtnAgregarOtra.BackColor = System.Drawing.Color.Transparent;
             this.BtnAgregarOtra.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.botonGuardarAgregarDeshabilitado;
             this.BtnAgregarOtra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnAgregarOtra.FlatAppearance.BorderSize = 0;
             this.BtnAgregarOtra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnAgregarOtra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAgregarOtra.Location = new System.Drawing.Point(210, 370);
+            this.BtnAgregarOtra.Location = new System.Drawing.Point(163, 349);
             this.BtnAgregarOtra.Name = "BtnAgregarOtra";
             this.BtnAgregarOtra.Size = new System.Drawing.Size(67, 69);
             this.BtnAgregarOtra.TabIndex = 7;
@@ -183,13 +186,14 @@
             // 
             // BtnSalir
             // 
-            this.BtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BtnSalir.BackColor = System.Drawing.Color.Transparent;
             this.BtnSalir.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.checkout;
             this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnSalir.FlatAppearance.BorderSize = 0;
+            this.BtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSalir.Location = new System.Drawing.Point(344, 370);
+            this.BtnSalir.Location = new System.Drawing.Point(295, 349);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(75, 78);
             this.BtnSalir.TabIndex = 8;
@@ -199,9 +203,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.BtnAgregar);
+            this.panel1.Controls.Add(this.BtnAgregarOtra);
+            this.panel1.Controls.Add(this.BtnSalir);
             this.panel1.Location = new System.Drawing.Point(49, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(390, 449);
+            this.panel1.Size = new System.Drawing.Size(390, 436);
             this.panel1.TabIndex = 9;
             // 
             // ObrasSociales_alta
@@ -212,9 +219,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(499, 477);
             this.ControlBox = false;
-            this.Controls.Add(this.BtnSalir);
-            this.Controls.Add(this.BtnAgregarOtra);
-            this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.TxtPlus);
             this.Controls.Add(this.ChkActiva);
@@ -229,6 +233,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
