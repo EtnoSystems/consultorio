@@ -12,9 +12,17 @@ namespace WindowsFormsApp1
 {
     public partial class IngresoPaciente : Form
     {
+
+        private string codigo = "";
+
         public IngresoPaciente()
         {
             InitializeComponent();
+        }
+
+        public IngresoPaciente(string cod) : this()
+        {
+            this.codigo = cod;
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
@@ -31,5 +39,12 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void IngresoPaciente_Load(object sender, EventArgs e)
+        {
+           // TxtBusqueda.Text = codigo;
+        }
+
+        
     }
 }

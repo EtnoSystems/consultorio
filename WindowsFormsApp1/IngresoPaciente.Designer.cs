@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtBusqueda = new System.Windows.Forms.TextBox();
             this.BtnBuscarPaciente = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -46,14 +46,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Buscar Paciente por DNI";
             // 
-            // textBox1
+            // TxtBusqueda
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(159, 121);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox1.Size = new System.Drawing.Size(243, 30);
-            this.textBox1.TabIndex = 1;
+            this.TxtBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBusqueda.Location = new System.Drawing.Point(159, 121);
+            this.TxtBusqueda.Name = "TxtBusqueda";
+            this.TxtBusqueda.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TxtBusqueda.Size = new System.Drawing.Size(243, 30);
+            this.TxtBusqueda.TabIndex = 1;
             // 
             // BtnBuscarPaciente
             // 
@@ -109,10 +109,11 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnBuscarPaciente);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtBusqueda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "IngresoPaciente";
             this.Text = "Asentar un servicio a un paciente";
+            this.Load += new System.EventHandler(this.IngresoPaciente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,7 +122,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtBusqueda;
         private System.Windows.Forms.Button BtnBuscarPaciente;
         private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.Panel panel1;

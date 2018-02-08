@@ -100,7 +100,7 @@ namespace WindowsFormsApp1
 
         private void MnuServicio_Click(object sender, EventArgs e)
         {
-            IngresoPaciente ingreso = new IngresoPaciente();
+            IngresoPaciente ingreso = new IngresoPaciente("Consulta");
             ingreso.Show();
             Globales.codigoFormulario = 1; //Codigo para luego reenviar al formulario de carga de servicio
         }
