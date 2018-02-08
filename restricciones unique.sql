@@ -13,6 +13,3 @@ add constraint UC_obra_social unique (denominacion)
 alter table dbo.persona_medico with check
 add constraint UC_persona_medico unique (matricula)
 
-alter table dbo.feriado with check
-add constraint UC_feriado unique (fecha)
-
