@@ -28,19 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.TxtApellido = new System.Windows.Forms.TextBox();
             this.TxtDNI = new System.Windows.Forms.TextBox();
             this.TxtMatricula = new System.Windows.Forms.TextBox();
-            this.TxtTelefono = new System.Windows.Forms.TextBox();
             this.TxtValor = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.BtnAgregarOtra = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
-            this.CmbEspecialidad = new System.Windows.Forms.ComboBox();
+            this.TxtMail = new System.Windows.Forms.TextBox();
+            this.TxtTelefono = new System.Windows.Forms.TextBox();
+            this.CmbCiudad = new System.Windows.Forms.ComboBox();
+            this.TxtDireccion = new System.Windows.Forms.TextBox();
+            this.TxtCelular = new System.Windows.Forms.TextBox();
+            this.TxtDepto = new System.Windows.Forms.TextBox();
+            this.TxtPiso = new System.Windows.Forms.TextBox();
+            this.TxtRetencion = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.ChkLstEspecialidad = new System.Windows.Forms.CheckedListBox();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -78,7 +90,7 @@
             // 
             this.TxtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDNI.ForeColor = System.Drawing.Color.Silver;
-            this.TxtDNI.Location = new System.Drawing.Point(43, 117);
+            this.TxtDNI.Location = new System.Drawing.Point(22, 88);
             this.TxtDNI.Name = "TxtDNI";
             this.TxtDNI.Size = new System.Drawing.Size(207, 24);
             this.TxtDNI.TabIndex = 3;
@@ -88,36 +100,31 @@
             // 
             this.TxtMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtMatricula.ForeColor = System.Drawing.Color.Silver;
-            this.TxtMatricula.Location = new System.Drawing.Point(306, 186);
+            this.TxtMatricula.Location = new System.Drawing.Point(285, 361);
             this.TxtMatricula.Name = "TxtMatricula";
             this.TxtMatricula.Size = new System.Drawing.Size(117, 24);
-            this.TxtMatricula.TabIndex = 5;
+            this.TxtMatricula.TabIndex = 12;
             this.TxtMatricula.Text = "Matrícula";
-            // 
-            // TxtTelefono
-            // 
-            this.TxtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTelefono.ForeColor = System.Drawing.Color.Silver;
-            this.TxtTelefono.Location = new System.Drawing.Point(256, 117);
-            this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.Size = new System.Drawing.Size(167, 24);
-            this.TxtTelefono.TabIndex = 6;
-            this.TxtTelefono.Text = "Teléfono";
             // 
             // TxtValor
             // 
             this.TxtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtValor.ForeColor = System.Drawing.Color.Silver;
-            this.TxtValor.Location = new System.Drawing.Point(122, 217);
+            this.TxtValor.Location = new System.Drawing.Point(59, 410);
             this.TxtValor.Name = "TxtValor";
             this.TxtValor.Size = new System.Drawing.Size(169, 24);
-            this.TxtValor.TabIndex = 7;
+            this.TxtValor.TabIndex = 13;
             this.TxtValor.Text = "Valor de la consulta";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.CmbEspecialidad);
+            this.panel1.Controls.Add(this.ChkLstEspecialidad);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.TxtRetencion);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.TxtDNI);
+            this.panel1.Controls.Add(this.TxtMatricula);
             this.panel1.Controls.Add(this.BtnAgregar);
             this.panel1.Controls.Add(this.BtnAgregarOtra);
             this.panel1.Controls.Add(this.BtnSalir);
@@ -125,8 +132,26 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(21, 23);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(429, 517);
+            this.panel1.Size = new System.Drawing.Size(429, 568);
             this.panel1.TabIndex = 10;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.TxtPiso);
+            this.groupBox1.Controls.Add(this.TxtDepto);
+            this.groupBox1.Controls.Add(this.TxtCelular);
+            this.groupBox1.Controls.Add(this.TxtDireccion);
+            this.groupBox1.Controls.Add(this.CmbCiudad);
+            this.groupBox1.Controls.Add(this.TxtTelefono);
+            this.groupBox1.Controls.Add(this.TxtMail);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(23, 131);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(390, 208);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Datos de contacto";
             // 
             // BtnAgregar
             // 
@@ -136,10 +161,10 @@
             this.BtnAgregar.FlatAppearance.BorderSize = 0;
             this.BtnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAgregar.Location = new System.Drawing.Point(32, 419);
+            this.BtnAgregar.Location = new System.Drawing.Point(32, 476);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(70, 69);
-            this.BtnAgregar.TabIndex = 9;
+            this.BtnAgregar.TabIndex = 15;
             this.BtnAgregar.UseVisualStyleBackColor = false;
             // 
             // BtnAgregarOtra
@@ -150,10 +175,10 @@
             this.BtnAgregarOtra.FlatAppearance.BorderSize = 0;
             this.BtnAgregarOtra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnAgregarOtra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAgregarOtra.Location = new System.Drawing.Point(178, 419);
+            this.BtnAgregarOtra.Location = new System.Drawing.Point(178, 476);
             this.BtnAgregarOtra.Name = "BtnAgregarOtra";
             this.BtnAgregarOtra.Size = new System.Drawing.Size(67, 69);
-            this.BtnAgregarOtra.TabIndex = 10;
+            this.BtnAgregarOtra.TabIndex = 16;
             this.BtnAgregarOtra.UseVisualStyleBackColor = false;
             // 
             // BtnSalir
@@ -165,21 +190,116 @@
             this.BtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSalir.Location = new System.Drawing.Point(310, 419);
+            this.BtnSalir.Location = new System.Drawing.Point(310, 476);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(75, 78);
-            this.BtnSalir.TabIndex = 11;
+            this.BtnSalir.TabIndex = 17;
             this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
-            // CmbEspecialidad
+            // TxtMail
             // 
-            this.CmbEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CmbEspecialidad.FormattingEnabled = true;
-            this.CmbEspecialidad.Location = new System.Drawing.Point(22, 163);
-            this.CmbEspecialidad.Name = "CmbEspecialidad";
-            this.CmbEspecialidad.Size = new System.Drawing.Size(257, 26);
-            this.CmbEspecialidad.TabIndex = 12;
+            this.TxtMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtMail.ForeColor = System.Drawing.Color.Silver;
+            this.TxtMail.Location = new System.Drawing.Point(15, 75);
+            this.TxtMail.Name = "TxtMail";
+            this.TxtMail.Size = new System.Drawing.Size(254, 24);
+            this.TxtMail.TabIndex = 6;
+            this.TxtMail.Text = "E-Mail";
+            // 
+            // TxtTelefono
+            // 
+            this.TxtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTelefono.ForeColor = System.Drawing.Color.Silver;
+            this.TxtTelefono.Location = new System.Drawing.Point(15, 32);
+            this.TxtTelefono.Name = "TxtTelefono";
+            this.TxtTelefono.Size = new System.Drawing.Size(164, 24);
+            this.TxtTelefono.TabIndex = 4;
+            this.TxtTelefono.Text = "Teléfono";
+            // 
+            // CmbCiudad
+            // 
+            this.CmbCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbCiudad.FormattingEnabled = true;
+            this.CmbCiudad.Location = new System.Drawing.Point(15, 118);
+            this.CmbCiudad.Name = "CmbCiudad";
+            this.CmbCiudad.Size = new System.Drawing.Size(257, 26);
+            this.CmbCiudad.TabIndex = 7;
+            // 
+            // TxtDireccion
+            // 
+            this.TxtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDireccion.ForeColor = System.Drawing.Color.Silver;
+            this.TxtDireccion.Location = new System.Drawing.Point(15, 161);
+            this.TxtDireccion.Name = "TxtDireccion";
+            this.TxtDireccion.Size = new System.Drawing.Size(207, 24);
+            this.TxtDireccion.TabIndex = 8;
+            this.TxtDireccion.Text = "Dirección";
+            // 
+            // TxtCelular
+            // 
+            this.TxtCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCelular.ForeColor = System.Drawing.Color.Silver;
+            this.TxtCelular.Location = new System.Drawing.Point(212, 32);
+            this.TxtCelular.Name = "TxtCelular";
+            this.TxtCelular.Size = new System.Drawing.Size(161, 24);
+            this.TxtCelular.TabIndex = 5;
+            this.TxtCelular.Text = "Celular";
+            // 
+            // TxtDepto
+            // 
+            this.TxtDepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDepto.ForeColor = System.Drawing.Color.Silver;
+            this.TxtDepto.Location = new System.Drawing.Point(244, 161);
+            this.TxtDepto.Name = "TxtDepto";
+            this.TxtDepto.Size = new System.Drawing.Size(60, 24);
+            this.TxtDepto.TabIndex = 9;
+            this.TxtDepto.Text = "Depto";
+            // 
+            // TxtPiso
+            // 
+            this.TxtPiso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPiso.ForeColor = System.Drawing.Color.Silver;
+            this.TxtPiso.Location = new System.Drawing.Point(313, 161);
+            this.TxtPiso.Name = "TxtPiso";
+            this.TxtPiso.Size = new System.Drawing.Size(60, 24);
+            this.TxtPiso.TabIndex = 10;
+            this.TxtPiso.Text = "Piso";
+            // 
+            // TxtRetencion
+            // 
+            this.TxtRetencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtRetencion.ForeColor = System.Drawing.Color.Silver;
+            this.TxtRetencion.Location = new System.Drawing.Point(243, 410);
+            this.TxtRetencion.Name = "TxtRetencion";
+            this.TxtRetencion.Size = new System.Drawing.Size(36, 24);
+            this.TxtRetencion.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.TxtRetencion, "Porcentaje de retención para inquilinos de consultorios");
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(282, 413);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(22, 18);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "%";
+            // 
+            // ChkLstEspecialidad
+            // 
+            this.ChkLstEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChkLstEspecialidad.FormattingEnabled = true;
+            this.ChkLstEspecialidad.Items.AddRange(new object[] {
+            "Anestecista",
+            "Cirujano",
+            "Médico general"});
+            this.ChkLstEspecialidad.Location = new System.Drawing.Point(32, 363);
+            this.ChkLstEspecialidad.Name = "ChkLstEspecialidad";
+            this.ChkLstEspecialidad.Size = new System.Drawing.Size(213, 23);
+            this.ChkLstEspecialidad.Sorted = true;
+            this.ChkLstEspecialidad.TabIndex = 11;
             // 
             // Medicos_Alta
             // 
@@ -187,11 +307,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.fondoFormularios;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(478, 571);
+            this.ClientSize = new System.Drawing.Size(478, 617);
             this.ControlBox = false;
-            this.Controls.Add(this.TxtTelefono);
-            this.Controls.Add(this.TxtMatricula);
-            this.Controls.Add(this.TxtDNI);
             this.Controls.Add(this.TxtApellido);
             this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.panel1);
@@ -200,6 +317,8 @@
             this.Text = "Alta de médicos";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,12 +331,22 @@
         private System.Windows.Forms.TextBox TxtApellido;
         private System.Windows.Forms.TextBox TxtDNI;
         private System.Windows.Forms.TextBox TxtMatricula;
-        private System.Windows.Forms.TextBox TxtTelefono;
         private System.Windows.Forms.TextBox TxtValor;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.Button BtnAgregarOtra;
         private System.Windows.Forms.Button BtnSalir;
-        private System.Windows.Forms.ComboBox CmbEspecialidad;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox TxtDireccion;
+        private System.Windows.Forms.ComboBox CmbCiudad;
+        private System.Windows.Forms.TextBox TxtTelefono;
+        private System.Windows.Forms.TextBox TxtMail;
+        private System.Windows.Forms.TextBox TxtPiso;
+        private System.Windows.Forms.TextBox TxtDepto;
+        private System.Windows.Forms.TextBox TxtCelular;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TxtRetencion;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.CheckedListBox ChkLstEspecialidad;
     }
 }

@@ -107,6 +107,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ReportesAdministrativos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportesAdministrativos.Designer.cs">
+      <DependentUpon>ReportesAdministrativos.cs</DependentUpon>
+    </Compile>
     <Compile Include="reportes\OrdenDeAtencio.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -162,6 +168,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesAdministrativos.resx">
+      <DependentUpon>ReportesAdministrativos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\OrdenDeAtencio.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
