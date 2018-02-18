@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ObraSocialDTO.cs" />
+    <Compile Include="PacienteDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resultado_busqueda_bajas.cs" />
     <Compile Include="Tipo_usuarioDTO.cs" />

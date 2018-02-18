@@ -36,21 +36,21 @@
             this.TxtMatricula = new System.Windows.Forms.TextBox();
             this.TxtValor = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ChkLstEspecialidad = new System.Windows.Forms.CheckedListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TxtRetencion = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TxtPiso = new System.Windows.Forms.TextBox();
+            this.TxtDepto = new System.Windows.Forms.TextBox();
+            this.TxtCelular = new System.Windows.Forms.TextBox();
+            this.TxtDireccion = new System.Windows.Forms.TextBox();
+            this.CmbCiudad = new System.Windows.Forms.ComboBox();
+            this.TxtTelefono = new System.Windows.Forms.TextBox();
+            this.TxtMail = new System.Windows.Forms.TextBox();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.BtnAgregarOtra = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
-            this.TxtMail = new System.Windows.Forms.TextBox();
-            this.TxtTelefono = new System.Windows.Forms.TextBox();
-            this.CmbCiudad = new System.Windows.Forms.ComboBox();
-            this.TxtDireccion = new System.Windows.Forms.TextBox();
-            this.TxtCelular = new System.Windows.Forms.TextBox();
-            this.TxtDepto = new System.Windows.Forms.TextBox();
-            this.TxtPiso = new System.Windows.Forms.TextBox();
-            this.TxtRetencion = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.ChkLstEspecialidad = new System.Windows.Forms.CheckedListBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -135,6 +135,41 @@
             this.panel1.Size = new System.Drawing.Size(429, 568);
             this.panel1.TabIndex = 10;
             // 
+            // ChkLstEspecialidad
+            // 
+            this.ChkLstEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChkLstEspecialidad.FormattingEnabled = true;
+            this.ChkLstEspecialidad.Items.AddRange(new object[] {
+            "Anestecista",
+            "Cirujano",
+            "Médico general"});
+            this.ChkLstEspecialidad.Location = new System.Drawing.Point(32, 363);
+            this.ChkLstEspecialidad.Name = "ChkLstEspecialidad";
+            this.ChkLstEspecialidad.Size = new System.Drawing.Size(213, 23);
+            this.ChkLstEspecialidad.Sorted = true;
+            this.ChkLstEspecialidad.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(282, 413);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(22, 18);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "%";
+            // 
+            // TxtRetencion
+            // 
+            this.TxtRetencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtRetencion.ForeColor = System.Drawing.Color.Silver;
+            this.TxtRetencion.Location = new System.Drawing.Point(243, 410);
+            this.TxtRetencion.Name = "TxtRetencion";
+            this.TxtRetencion.Size = new System.Drawing.Size(36, 24);
+            this.TxtRetencion.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.TxtRetencion, "Porcentaje de retención para inquilinos de consultorios");
+            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
@@ -152,6 +187,75 @@
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de contacto";
+            // 
+            // TxtPiso
+            // 
+            this.TxtPiso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPiso.ForeColor = System.Drawing.Color.Silver;
+            this.TxtPiso.Location = new System.Drawing.Point(313, 161);
+            this.TxtPiso.Name = "TxtPiso";
+            this.TxtPiso.Size = new System.Drawing.Size(60, 24);
+            this.TxtPiso.TabIndex = 10;
+            this.TxtPiso.Text = "Piso";
+            // 
+            // TxtDepto
+            // 
+            this.TxtDepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDepto.ForeColor = System.Drawing.Color.Silver;
+            this.TxtDepto.Location = new System.Drawing.Point(244, 161);
+            this.TxtDepto.Name = "TxtDepto";
+            this.TxtDepto.Size = new System.Drawing.Size(60, 24);
+            this.TxtDepto.TabIndex = 9;
+            this.TxtDepto.Text = "Depto";
+            // 
+            // TxtCelular
+            // 
+            this.TxtCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCelular.ForeColor = System.Drawing.Color.Silver;
+            this.TxtCelular.Location = new System.Drawing.Point(212, 32);
+            this.TxtCelular.Name = "TxtCelular";
+            this.TxtCelular.Size = new System.Drawing.Size(161, 24);
+            this.TxtCelular.TabIndex = 5;
+            this.TxtCelular.Text = "Celular";
+            // 
+            // TxtDireccion
+            // 
+            this.TxtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDireccion.ForeColor = System.Drawing.Color.Silver;
+            this.TxtDireccion.Location = new System.Drawing.Point(15, 161);
+            this.TxtDireccion.Name = "TxtDireccion";
+            this.TxtDireccion.Size = new System.Drawing.Size(207, 24);
+            this.TxtDireccion.TabIndex = 8;
+            this.TxtDireccion.Text = "Dirección";
+            // 
+            // CmbCiudad
+            // 
+            this.CmbCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbCiudad.FormattingEnabled = true;
+            this.CmbCiudad.Location = new System.Drawing.Point(15, 118);
+            this.CmbCiudad.Name = "CmbCiudad";
+            this.CmbCiudad.Size = new System.Drawing.Size(257, 26);
+            this.CmbCiudad.TabIndex = 7;
+            // 
+            // TxtTelefono
+            // 
+            this.TxtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTelefono.ForeColor = System.Drawing.Color.Silver;
+            this.TxtTelefono.Location = new System.Drawing.Point(15, 32);
+            this.TxtTelefono.Name = "TxtTelefono";
+            this.TxtTelefono.Size = new System.Drawing.Size(164, 24);
+            this.TxtTelefono.TabIndex = 4;
+            this.TxtTelefono.Text = "Teléfono";
+            // 
+            // TxtMail
+            // 
+            this.TxtMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtMail.ForeColor = System.Drawing.Color.Silver;
+            this.TxtMail.Location = new System.Drawing.Point(15, 75);
+            this.TxtMail.Name = "TxtMail";
+            this.TxtMail.Size = new System.Drawing.Size(254, 24);
+            this.TxtMail.TabIndex = 6;
+            this.TxtMail.Text = "E-Mail";
             // 
             // BtnAgregar
             // 
@@ -196,110 +300,6 @@
             this.BtnSalir.TabIndex = 17;
             this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
-            // 
-            // TxtMail
-            // 
-            this.TxtMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtMail.ForeColor = System.Drawing.Color.Silver;
-            this.TxtMail.Location = new System.Drawing.Point(15, 75);
-            this.TxtMail.Name = "TxtMail";
-            this.TxtMail.Size = new System.Drawing.Size(254, 24);
-            this.TxtMail.TabIndex = 6;
-            this.TxtMail.Text = "E-Mail";
-            // 
-            // TxtTelefono
-            // 
-            this.TxtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTelefono.ForeColor = System.Drawing.Color.Silver;
-            this.TxtTelefono.Location = new System.Drawing.Point(15, 32);
-            this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.Size = new System.Drawing.Size(164, 24);
-            this.TxtTelefono.TabIndex = 4;
-            this.TxtTelefono.Text = "Teléfono";
-            // 
-            // CmbCiudad
-            // 
-            this.CmbCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CmbCiudad.FormattingEnabled = true;
-            this.CmbCiudad.Location = new System.Drawing.Point(15, 118);
-            this.CmbCiudad.Name = "CmbCiudad";
-            this.CmbCiudad.Size = new System.Drawing.Size(257, 26);
-            this.CmbCiudad.TabIndex = 7;
-            // 
-            // TxtDireccion
-            // 
-            this.TxtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDireccion.ForeColor = System.Drawing.Color.Silver;
-            this.TxtDireccion.Location = new System.Drawing.Point(15, 161);
-            this.TxtDireccion.Name = "TxtDireccion";
-            this.TxtDireccion.Size = new System.Drawing.Size(207, 24);
-            this.TxtDireccion.TabIndex = 8;
-            this.TxtDireccion.Text = "Dirección";
-            // 
-            // TxtCelular
-            // 
-            this.TxtCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCelular.ForeColor = System.Drawing.Color.Silver;
-            this.TxtCelular.Location = new System.Drawing.Point(212, 32);
-            this.TxtCelular.Name = "TxtCelular";
-            this.TxtCelular.Size = new System.Drawing.Size(161, 24);
-            this.TxtCelular.TabIndex = 5;
-            this.TxtCelular.Text = "Celular";
-            // 
-            // TxtDepto
-            // 
-            this.TxtDepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDepto.ForeColor = System.Drawing.Color.Silver;
-            this.TxtDepto.Location = new System.Drawing.Point(244, 161);
-            this.TxtDepto.Name = "TxtDepto";
-            this.TxtDepto.Size = new System.Drawing.Size(60, 24);
-            this.TxtDepto.TabIndex = 9;
-            this.TxtDepto.Text = "Depto";
-            // 
-            // TxtPiso
-            // 
-            this.TxtPiso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPiso.ForeColor = System.Drawing.Color.Silver;
-            this.TxtPiso.Location = new System.Drawing.Point(313, 161);
-            this.TxtPiso.Name = "TxtPiso";
-            this.TxtPiso.Size = new System.Drawing.Size(60, 24);
-            this.TxtPiso.TabIndex = 10;
-            this.TxtPiso.Text = "Piso";
-            // 
-            // TxtRetencion
-            // 
-            this.TxtRetencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRetencion.ForeColor = System.Drawing.Color.Silver;
-            this.TxtRetencion.Location = new System.Drawing.Point(243, 410);
-            this.TxtRetencion.Name = "TxtRetencion";
-            this.TxtRetencion.Size = new System.Drawing.Size(36, 24);
-            this.TxtRetencion.TabIndex = 14;
-            this.toolTip1.SetToolTip(this.TxtRetencion, "Porcentaje de retención para inquilinos de consultorios");
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(282, 413);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 18);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "%";
-            // 
-            // ChkLstEspecialidad
-            // 
-            this.ChkLstEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChkLstEspecialidad.FormattingEnabled = true;
-            this.ChkLstEspecialidad.Items.AddRange(new object[] {
-            "Anestecista",
-            "Cirujano",
-            "Médico general"});
-            this.ChkLstEspecialidad.Location = new System.Drawing.Point(32, 363);
-            this.ChkLstEspecialidad.Name = "ChkLstEspecialidad";
-            this.ChkLstEspecialidad.Size = new System.Drawing.Size(213, 23);
-            this.ChkLstEspecialidad.Sorted = true;
-            this.ChkLstEspecialidad.TabIndex = 11;
             // 
             // Medicos_Alta
             // 
