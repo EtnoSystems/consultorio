@@ -29,8 +29,6 @@ namespace WindowsFormsApp1
 
         void EstadoInicial()
         {
-            TxtNombre.Text = "Nombre";
-            TxtNombre.ForeColor = Color.Silver;
             TxtDenominacion.Text = "Denominación";
             TxtDenominacion.ForeColor = Color.Silver;
             TxtDireccion.Text = "Dirección";
@@ -44,8 +42,7 @@ namespace WindowsFormsApp1
 
         void ValidarCamposCompletos()
         {
-            if (TxtNombre.Text != "" && TxtNombre.Text != "Nombre"
-                && TxtDenominacion.Text != "" && TxtDenominacion.Text != "Denominación"
+            if (TxtDenominacion.Text != "" && TxtDenominacion.Text != "Denominación"
                 && TxtPlus.Text != "" && TxtPlus.Text != "Plus")
             {
                 BtnAgregar.Enabled = true;
@@ -60,12 +57,6 @@ namespace WindowsFormsApp1
                 BtnAgregar.BackgroundImage = Image.FromFile(@"..\..\images\botonGuardarDeshabilitado.png");
                 BtnAgregarOtra.BackgroundImage = Image.FromFile(@"..\..\images\botonGuardarAgregarDeshabilitado.png");
             }
-        }
-
-        private void TxtNombre_Enter(object sender, EventArgs e)
-        {
-            TxtNombre.Text = "";
-            TxtNombre.ForeColor = Color.Black;
         }
 
         private void TxtDenominacion_Enter(object sender, EventArgs e)
@@ -101,7 +92,7 @@ namespace WindowsFormsApp1
         {
             if (GuardarDatos())
             {
-                MessageBox.Show("La obra social " + TxtNombre + " se guardó correctamente", "Datos guardados exitosamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("La obra social " + TxtDenominacion.Text + " se guardó correctamente", "Datos guardados exitosamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 EstadoInicial();
                 this.Close();
             }

@@ -82,6 +82,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Medicos_Alta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medicos_Alta.Designer.cs">
+      <DependentUpon>Medicos_Alta.cs</DependentUpon>
+    </Compile>
     <Compile Include="ObrasSociales_alta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesAdministrativos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportesAdministrativos.Designer.cs">
+      <DependentUpon>ReportesAdministrativos.cs</DependentUpon>
     </Compile>
     <Compile Include="reportes\OrdenDeAtencio.cs">
       <AutoGen>True</AutoGen>
@@ -143,6 +155,9 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Medicos_Alta.resx">
+      <DependentUpon>Medicos_Alta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ObrasSociales_Alta.resx">
       <DependentUpon>ObrasSociales_alta.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +168,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesAdministrativos.resx">
+      <DependentUpon>ReportesAdministrativos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\OrdenDeAtencio.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

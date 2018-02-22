@@ -55,6 +55,7 @@
             this.MnuSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAyuda = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -141,6 +142,7 @@
             this.mnuAgregarMedico.Name = "mnuAgregarMedico";
             this.mnuAgregarMedico.Size = new System.Drawing.Size(126, 82);
             this.mnuAgregarMedico.ToolTipText = "Agregar personal médico";
+            this.mnuAgregarMedico.Click += new System.EventHandler(this.mnuAgregarMedico_Click);
             // 
             // mnuEliminarMedico
             // 
@@ -299,6 +301,7 @@
             this.mnuAgregarObraSocial.Size = new System.Drawing.Size(173, 82);
             this.mnuAgregarObraSocial.Text = "add";
             this.mnuAgregarObraSocial.ToolTipText = "Agregar una nueva obra social";
+            this.mnuAgregarObraSocial.Click += new System.EventHandler(this.mnuAgregarObraSocial_Click);
             // 
             // mnuEliminarObraSocial
             // 
@@ -336,6 +339,7 @@
             this.MnuRecetarios.Size = new System.Drawing.Size(112, 79);
             this.MnuRecetarios.Text = "receta";
             this.MnuRecetarios.ToolTipText = "Recetarios";
+            this.MnuRecetarios.Click += new System.EventHandler(this.MnuRecetarios_Click);
             // 
             // mnuReportes
             // 
@@ -389,6 +393,12 @@
             this.mnuAyuda.Text = "help";
             this.mnuAyuda.ToolTipText = "Ayuda";
             // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(18, 484);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 3;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,6 +406,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1362, 664);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
@@ -440,6 +451,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuEditarObrasSociales;
         private System.Windows.Forms.ToolStripMenuItem mnuServicio;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }
 
