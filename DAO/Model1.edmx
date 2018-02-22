@@ -14,35 +14,26 @@
     <EntitySet Name="Feriado" EntityType="consultoriosModel.Store.Feriado" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Obra_social" EntityType="consultoriosModel.Store.Obra_social" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Persona" EntityType="consultoriosModel.Store.Persona" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Persona_medico" EntityType="consultoriosModel.Store.Persona_medico" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Tipo_usuario" EntityType="consultoriosModel.Store.Tipo_usuario" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Usuario" EntityType="consultoriosModel.Store.Usuario" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Personaobra_social" EntityType="consultoriosModel.Store.Personaobra_social" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Obra_socialPersona" EntityType="consultoriosModel.Store.Obra_socialPersona" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="FK_direccionciudad" Association="consultoriosModel.Store.FK_direccionciudad">
       <End Role="Ciudad" EntitySet="Ciudad" />
       <End Role="Direccion" EntitySet="Direccion" />
     </AssociationSet>
-    <AssociationSet Name="FK_UsuarioCiudad" Association="consultoriosModel.Store.FK_UsuarioCiudad">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="Ciudad" EntitySet="Ciudad" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ConsultaObra_social" Association="consultoriosModel.Store.FK_ConsultaObra_social">
+    <AssociationSet Name="FK_Obra_socialConsulta" Association="consultoriosModel.Store.FK_Obra_socialConsulta">
       <End Role="Obra_social" EntitySet="Obra_social" />
-      <End Role="Consulta" EntitySet="Consulta" />
-    </AssociationSet>
-    <AssociationSet Name="FK_medicoconsulta" Association="consultoriosModel.Store.FK_medicoconsulta">
-      <End Role="Persona_medico" EntitySet="Persona_medico" />
       <End Role="Consulta" EntitySet="Consulta" />
     </AssociationSet>
     <AssociationSet Name="FK_PersonaConsulta" Association="consultoriosModel.Store.FK_PersonaConsulta">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="Consulta" EntitySet="Consulta" />
     </AssociationSet>
-    <AssociationSet Name="FK_UsuarioConsulta" Association="consultoriosModel.Store.FK_UsuarioConsulta">
-      <End Role="Usuario" EntitySet="Usuario" />
+    <AssociationSet Name="FK_PersonaConsulta1" Association="consultoriosModel.Store.FK_PersonaConsulta1">
+      <End Role="Persona" EntitySet="Persona" />
       <End Role="Consulta" EntitySet="Consulta" />
     </AssociationSet>
-    <AssociationSet Name="FK_personadatos_contacto" Association="consultoriosModel.Store.FK_personadatos_contacto">
+    <AssociationSet Name="FK_PersonaDatos_contacto" Association="consultoriosModel.Store.FK_PersonaDatos_contacto">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="Datos_contacto" EntitySet="Datos_contacto" />
     </AssociationSet>
@@ -50,45 +41,21 @@
       <End Role="Direccion" EntitySet="Direccion" />
       <End Role="Persona" EntitySet="Persona" />
     </AssociationSet>
-    <AssociationSet Name="FK_Medicoespecialidad" Association="consultoriosModel.Store.FK_Medicoespecialidad">
+    <AssociationSet Name="FK_EspecialidadPersona" Association="consultoriosModel.Store.FK_EspecialidadPersona">
       <End Role="Especialidad" EntitySet="Especialidad" />
-      <End Role="Persona_medico" EntitySet="Persona_medico" />
-    </AssociationSet>
-    <AssociationSet Name="FK_UsuarioEspecialidad" Association="consultoriosModel.Store.FK_UsuarioEspecialidad">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="Especialidad" EntitySet="Especialidad" />
-    </AssociationSet>
-    <AssociationSet Name="FK_UsuarioFeriado" Association="consultoriosModel.Store.FK_UsuarioFeriado">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="Feriado" EntitySet="Feriado" />
-    </AssociationSet>
-    <AssociationSet Name="FK_UsuarioObra_social" Association="consultoriosModel.Store.FK_UsuarioObra_social">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="Obra_social" EntitySet="Obra_social" />
-    </AssociationSet>
-    <AssociationSet Name="FK_medico_inherits_persona" Association="consultoriosModel.Store.FK_medico_inherits_persona">
       <End Role="Persona" EntitySet="Persona" />
-      <End Role="Persona_medico" EntitySet="Persona_medico" />
-    </AssociationSet>
-    <AssociationSet Name="FK_UsuarioPersona" Association="consultoriosModel.Store.FK_UsuarioPersona">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="Persona" EntitySet="Persona" />
-    </AssociationSet>
-    <AssociationSet Name="FK_UsuarioPersona_medico" Association="consultoriosModel.Store.FK_UsuarioPersona_medico">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="Persona_medico" EntitySet="Persona_medico" />
     </AssociationSet>
     <AssociationSet Name="FK_UsuarioTipo_usuario" Association="consultoriosModel.Store.FK_UsuarioTipo_usuario">
       <End Role="Tipo_usuario" EntitySet="Tipo_usuario" />
       <End Role="Usuario" EntitySet="Usuario" />
     </AssociationSet>
-    <AssociationSet Name="FK_Personaobra_social_Obra_social" Association="consultoriosModel.Store.FK_Personaobra_social_Obra_social">
+    <AssociationSet Name="FK_Obra_socialPersona_Obra_social" Association="consultoriosModel.Store.FK_Obra_socialPersona_Obra_social">
       <End Role="Obra_social" EntitySet="Obra_social" />
-      <End Role="Personaobra_social" EntitySet="Personaobra_social" />
+      <End Role="Obra_socialPersona" EntitySet="Obra_socialPersona" />
     </AssociationSet>
-    <AssociationSet Name="FK_Personaobra_social_Persona" Association="consultoriosModel.Store.FK_Personaobra_social_Persona">
+    <AssociationSet Name="FK_Obra_socialPersona_Persona" Association="consultoriosModel.Store.FK_Obra_socialPersona_Persona">
       <End Role="Persona" EntitySet="Persona" />
-      <End Role="Personaobra_social" EntitySet="Personaobra_social" />
+      <End Role="Obra_socialPersona" EntitySet="Obra_socialPersona" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Ciudad">
@@ -97,7 +64,6 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Denominacion" Type="varchar" Nullable="false" MaxLength="200" />
-    <Property Name="Editor_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Consulta">
     <Key>
@@ -112,9 +78,9 @@
     <Property Name="Retencion_medico" Type="decimal" Nullable="false" Precision="3" Scale="2" />
     <Property Name="Reintegro_por_orden" Type="decimal" Nullable="false" Precision="6" Scale="2" />
     <Property Name="Orden_presentada" Type="bit" Nullable="false" />
-    <Property Name="Obra_social_Id" Type="int" Nullable="true" />
-    <Property Name="Editor_Id" Type="int" Nullable="false" />
-    <Property Name="Persona_Id" Type="int" Nullable="false" />
+    <Property Name="Obra_social_Id" Type="int" Nullable="false" />
+    <Property Name="Persona_medico_Id" Type="int" Nullable="false" />
+    <Property Name="Persona_paciente_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Datos_contacto">
     <Key>
@@ -144,7 +110,6 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Denominacion" Type="varchar" Nullable="false" MaxLength="60" />
-    <Property Name="Editor_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Feriado">
     <Key>
@@ -153,7 +118,6 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Fecha" Type="datetime" Nullable="false" />
     <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="100" />
-    <Property Name="Editor_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Obra_social">
     <Key>
@@ -165,7 +129,6 @@
     <Property Name="Telefono" Type="nvarchar" Nullable="true" MaxLength="13" />
     <Property Name="Direccion" Type="nvarchar" Nullable="true" MaxLength="300" />
     <Property Name="Observaciones" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="Editor_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Persona">
     <Key>
@@ -175,20 +138,12 @@
     <Property Name="DNI" Type="varchar" Nullable="false" MaxLength="11" />
     <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="60" />
     <Property Name="Apellido" Type="varchar" Nullable="false" MaxLength="60" />
-    <Property Name="Direccion_Id" Type="int" Nullable="true" />
     <Property Name="Sexo" Type="char" Nullable="true" MaxLength="1" />
-    <Property Name="Editor_Id" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Persona_medico">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Matricula" Type="varchar" Nullable="false" MaxLength="40" />
-    <Property Name="Id" Type="int" Nullable="false" />
-    <Property Name="Valor_consulta" Type="decimal" Nullable="false" Precision="6" Scale="2" />
-    <Property Name="Porcentaje_retencion" Type="decimal" Nullable="false" Precision="3" Scale="2" />
+    <Property Name="Direccion_Id" Type="int" Nullable="true" />
+    <Property Name="Matricula" Type="nvarchar" Nullable="true" MaxLength="12" />
+    <Property Name="Valor_consulta" Type="decimal" Nullable="true" Precision="6" Scale="2" />
+    <Property Name="Porcentaje_retencion" Type="decimal" Nullable="true" Precision="3" Scale="2" />
     <Property Name="Especialidad_Id" Type="int" Nullable="false" />
-    <Property Name="Editor_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Tipo_usuario">
     <Key>
@@ -207,7 +162,7 @@
     <Property Name="Nombre_completo" Type="varchar" Nullable="false" MaxLength="70" />
     <Property Name="Tipo_usuario_Id" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="Personaobra_social">
+  <EntityType Name="Obra_socialPersona">
     <Key>
       <PropertyRef Name="Obra_social_Id" />
       <PropertyRef Name="Persona_Id" />
@@ -227,20 +182,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_UsuarioCiudad">
-    <End Role="Usuario" Type="consultoriosModel.Store.Usuario" Multiplicity="1" />
-    <End Role="Ciudad" Type="consultoriosModel.Store.Ciudad" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Ciudad">
-        <PropertyRef Name="Editor_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ConsultaObra_social">
-    <End Role="Obra_social" Type="consultoriosModel.Store.Obra_social" Multiplicity="0..1" />
+  <Association Name="FK_Obra_socialConsulta">
+    <End Role="Obra_social" Type="consultoriosModel.Store.Obra_social" Multiplicity="1" />
     <End Role="Consulta" Type="consultoriosModel.Store.Consulta" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Obra_social">
@@ -248,18 +191,6 @@
       </Principal>
       <Dependent Role="Consulta">
         <PropertyRef Name="Obra_social_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_medicoconsulta">
-    <End Role="Persona_medico" Type="consultoriosModel.Store.Persona_medico" Multiplicity="1" />
-    <End Role="Consulta" Type="consultoriosModel.Store.Consulta" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Persona_medico">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Consulta">
-        <PropertyRef Name="Medico_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -271,23 +202,23 @@
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="Consulta">
-        <PropertyRef Name="Persona_Id" />
+        <PropertyRef Name="Persona_medico_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_UsuarioConsulta">
-    <End Role="Usuario" Type="consultoriosModel.Store.Usuario" Multiplicity="1" />
+  <Association Name="FK_PersonaConsulta1">
+    <End Role="Persona" Type="consultoriosModel.Store.Persona" Multiplicity="1" />
     <End Role="Consulta" Type="consultoriosModel.Store.Consulta" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Usuario">
+      <Principal Role="Persona">
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="Consulta">
-        <PropertyRef Name="Editor_Id" />
+        <PropertyRef Name="Persona_paciente_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_personadatos_contacto">
+  <Association Name="FK_PersonaDatos_contacto">
     <End Role="Persona" Type="consultoriosModel.Store.Persona" Multiplicity="1" />
     <End Role="Datos_contacto" Type="consultoriosModel.Store.Datos_contacto" Multiplicity="*" />
     <ReferentialConstraint>
@@ -311,89 +242,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Medicoespecialidad">
+  <Association Name="FK_EspecialidadPersona">
     <End Role="Especialidad" Type="consultoriosModel.Store.Especialidad" Multiplicity="1" />
-    <End Role="Persona_medico" Type="consultoriosModel.Store.Persona_medico" Multiplicity="*" />
+    <End Role="Persona" Type="consultoriosModel.Store.Persona" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Especialidad">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Persona_medico">
-        <PropertyRef Name="Especialidad_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_UsuarioEspecialidad">
-    <End Role="Usuario" Type="consultoriosModel.Store.Usuario" Multiplicity="1" />
-    <End Role="Especialidad" Type="consultoriosModel.Store.Especialidad" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Especialidad">
-        <PropertyRef Name="Editor_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_UsuarioFeriado">
-    <End Role="Usuario" Type="consultoriosModel.Store.Usuario" Multiplicity="1" />
-    <End Role="Feriado" Type="consultoriosModel.Store.Feriado" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Feriado">
-        <PropertyRef Name="Editor_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_UsuarioObra_social">
-    <End Role="Usuario" Type="consultoriosModel.Store.Usuario" Multiplicity="1" />
-    <End Role="Obra_social" Type="consultoriosModel.Store.Obra_social" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Obra_social">
-        <PropertyRef Name="Editor_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_medico_inherits_persona">
-    <End Role="Persona" Type="consultoriosModel.Store.Persona" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="Persona_medico" Type="consultoriosModel.Store.Persona_medico" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="Persona">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Persona_medico">
-        <PropertyRef Name="Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_UsuarioPersona">
-    <End Role="Usuario" Type="consultoriosModel.Store.Usuario" Multiplicity="1" />
-    <End Role="Persona" Type="consultoriosModel.Store.Persona" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="Id" />
-      </Principal>
       <Dependent Role="Persona">
-        <PropertyRef Name="Editor_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_UsuarioPersona_medico">
-    <End Role="Usuario" Type="consultoriosModel.Store.Usuario" Multiplicity="1" />
-    <End Role="Persona_medico" Type="consultoriosModel.Store.Persona_medico" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Persona_medico">
-        <PropertyRef Name="Editor_Id" />
+        <PropertyRef Name="Especialidad_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -409,26 +266,26 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Personaobra_social_Obra_social">
+  <Association Name="FK_Obra_socialPersona_Obra_social">
     <End Role="Obra_social" Type="consultoriosModel.Store.Obra_social" Multiplicity="1" />
-    <End Role="Personaobra_social" Type="consultoriosModel.Store.Personaobra_social" Multiplicity="*" />
+    <End Role="Obra_socialPersona" Type="consultoriosModel.Store.Obra_socialPersona" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Obra_social">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Personaobra_social">
+      <Dependent Role="Obra_socialPersona">
         <PropertyRef Name="Obra_social_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Personaobra_social_Persona">
-    <End Role="Personaobra_social" Type="consultoriosModel.Store.Personaobra_social" Multiplicity="*" />
+  <Association Name="FK_Obra_socialPersona_Persona">
+    <End Role="Obra_socialPersona" Type="consultoriosModel.Store.Obra_socialPersona" Multiplicity="*" />
     <End Role="Persona" Type="consultoriosModel.Store.Persona" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="Persona">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Personaobra_social">
+      <Dependent Role="Obra_socialPersona">
         <PropertyRef Name="Persona_Id" />
       </Dependent>
     </ReferentialConstraint>
@@ -443,9 +300,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Denominacion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Editor_Id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Direccion" Relationship="Self.FK_direccionciudad" FromRole="Ciudad" ToRole="Direccion" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK_UsuarioCiudad" FromRole="Ciudad" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="Consulta">
           <Key>
@@ -460,13 +315,12 @@
           <Property Name="Retencion_medico" Type="Decimal" Precision="3" Scale="2" Nullable="false" />
           <Property Name="Reintegro_por_orden" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
           <Property Name="Orden_presentada" Type="Boolean" Nullable="false" />
-          <Property Name="Obra_social_Id" Type="Int32" />
-          <Property Name="Editor_Id" Type="Int32" Nullable="false" />
-          <Property Name="Persona_Id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Obra_social" Relationship="Self.FK_ConsultaObra_social" FromRole="Consulta" ToRole="Obra_social" />
-          <NavigationProperty Name="Persona_medico" Relationship="Self.FK_medicoconsulta" FromRole="Consulta" ToRole="Persona_medico" />
-          <NavigationProperty Name="Persona" Relationship="Self.FK_PersonaConsulta" FromRole="Consulta" ToRole="Persona" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK_UsuarioConsulta" FromRole="Consulta" ToRole="Usuario" />
+          <Property Name="Obra_social_Id" Type="Int32" Nullable="false" />
+          <Property Name="Persona_medico_Id" Type="Int32" Nullable="false" />
+          <Property Name="Persona_paciente_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Obra_social" Relationship="Self.FK_Obra_socialConsulta" FromRole="Consulta" ToRole="Obra_social" />
+          <NavigationProperty Name="Persona_medico" Relationship="Self.FK_PersonaConsulta" FromRole="Consulta" ToRole="Persona" />
+          <NavigationProperty Name="Persona_paciente" Relationship="Self.FK_PersonaConsulta1" FromRole="Consulta" ToRole="Persona" />
         </EntityType>
         <EntityType Name="Datos_contacto">
           <Key>
@@ -478,7 +332,7 @@
           <Property Name="Tel_celular" Type="String" MaxLength="14" FixedLength="true" Unicode="false" />
           <Property Name="Tel_fijo" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
           <Property Name="Persona_Id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Persona" Relationship="Self.FK_personadatos_contacto" FromRole="Datos_contacto" ToRole="Persona" />
+          <NavigationProperty Name="Persona" Relationship="Self.FK_PersonaDatos_contacto" FromRole="Datos_contacto" ToRole="Persona" />
         </EntityType>
         <EntityType Name="Direccion">
           <Key>
@@ -499,9 +353,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Denominacion" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Editor_Id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Persona_medico" Relationship="Self.FK_Medicoespecialidad" FromRole="Especialidad" ToRole="Persona_medico" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK_UsuarioEspecialidad" FromRole="Especialidad" ToRole="Usuario" />
+          <NavigationProperty Name="Persona" Relationship="Self.FK_EspecialidadPersona" FromRole="Especialidad" ToRole="Persona" />
         </EntityType>
         <EntityType Name="Feriado">
           <Key>
@@ -510,8 +362,6 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Editor_Id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK_UsuarioFeriado" FromRole="Feriado" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="Obra_social">
           <Key>
@@ -523,10 +373,8 @@
           <Property Name="Telefono" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
           <Property Name="Direccion" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
           <Property Name="Observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Editor_Id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Consulta" Relationship="Self.FK_ConsultaObra_social" FromRole="Obra_social" ToRole="Consulta" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK_UsuarioObra_social" FromRole="Obra_social" ToRole="Usuario" />
-          <NavigationProperty Name="Persona" Relationship="Self.Personaobra_social" FromRole="Obra_social" ToRole="Persona" />
+          <NavigationProperty Name="Consulta" Relationship="Self.FK_Obra_socialConsulta" FromRole="Obra_social" ToRole="Consulta" />
+          <NavigationProperty Name="Persona" Relationship="Self.Obra_socialPersona" FromRole="Obra_social" ToRole="Persona" />
         </EntityType>
         <EntityType Name="Persona">
           <Key>
@@ -536,30 +384,18 @@
           <Property Name="DNI" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Apellido" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Direccion_Id" Type="Int32" />
           <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="Editor_Id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Consulta" Relationship="Self.FK_PersonaConsulta" FromRole="Persona" ToRole="Consulta" />
-          <NavigationProperty Name="Datos_contacto" Relationship="Self.FK_personadatos_contacto" FromRole="Persona" ToRole="Datos_contacto" />
-          <NavigationProperty Name="Direccion" Relationship="Self.FK_personadireccion" FromRole="Persona" ToRole="Direccion" />
-          <NavigationProperty Name="Persona_medico" Relationship="Self.FK_medico_inherits_persona" FromRole="Persona" ToRole="Persona_medico" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK_UsuarioPersona" FromRole="Persona" ToRole="Usuario" />
-          <NavigationProperty Name="Obra_social" Relationship="Self.Personaobra_social" FromRole="Persona" ToRole="Obra_social" />
-        </EntityType>
-        <EntityType Name="Persona_medico">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Matricula" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="Valor_consulta" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
-          <Property Name="Porcentaje_retencion" Type="Decimal" Precision="3" Scale="2" Nullable="false" />
+          <Property Name="Direccion_Id" Type="Int32" />
+          <Property Name="Matricula" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="Valor_consulta" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="Porcentaje_retencion" Type="Decimal" Precision="3" Scale="2" />
           <Property Name="Especialidad_Id" Type="Int32" Nullable="false" />
-          <Property Name="Editor_Id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Consulta" Relationship="Self.FK_medicoconsulta" FromRole="Persona_medico" ToRole="Consulta" />
-          <NavigationProperty Name="Especialidad" Relationship="Self.FK_Medicoespecialidad" FromRole="Persona_medico" ToRole="Especialidad" />
-          <NavigationProperty Name="Persona" Relationship="Self.FK_medico_inherits_persona" FromRole="Persona_medico" ToRole="Persona" />
-          <NavigationProperty Name="Usuario" Relationship="Self.FK_UsuarioPersona_medico" FromRole="Persona_medico" ToRole="Usuario" />
+          <NavigationProperty Name="Consulta" Relationship="Self.FK_PersonaConsulta" FromRole="Persona" ToRole="Consulta" />
+          <NavigationProperty Name="Consulta1" Relationship="Self.FK_PersonaConsulta1" FromRole="Persona" ToRole="Consulta" />
+          <NavigationProperty Name="Datos_contacto" Relationship="Self.FK_PersonaDatos_contacto" FromRole="Persona" ToRole="Datos_contacto" />
+          <NavigationProperty Name="Direccion" Relationship="Self.FK_personadireccion" FromRole="Persona" ToRole="Direccion" />
+          <NavigationProperty Name="Especialidad" Relationship="Self.FK_EspecialidadPersona" FromRole="Persona" ToRole="Especialidad" />
+          <NavigationProperty Name="Obra_social" Relationship="Self.Obra_socialPersona" FromRole="Persona" ToRole="Obra_social" />
         </EntityType>
         <EntityType Name="Tipo_usuario">
           <Key>
@@ -578,13 +414,6 @@
           <Property Name="Password" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Nombre_completo" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Tipo_usuario_Id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Ciudad" Relationship="Self.FK_UsuarioCiudad" FromRole="Usuario" ToRole="Ciudad" />
-          <NavigationProperty Name="Consulta" Relationship="Self.FK_UsuarioConsulta" FromRole="Usuario" ToRole="Consulta" />
-          <NavigationProperty Name="Especialidad" Relationship="Self.FK_UsuarioEspecialidad" FromRole="Usuario" ToRole="Especialidad" />
-          <NavigationProperty Name="Feriado" Relationship="Self.FK_UsuarioFeriado" FromRole="Usuario" ToRole="Feriado" />
-          <NavigationProperty Name="Obra_social" Relationship="Self.FK_UsuarioObra_social" FromRole="Usuario" ToRole="Obra_social" />
-          <NavigationProperty Name="Persona" Relationship="Self.FK_UsuarioPersona" FromRole="Usuario" ToRole="Persona" />
-          <NavigationProperty Name="Persona_medico" Relationship="Self.FK_UsuarioPersona_medico" FromRole="Usuario" ToRole="Persona_medico" />
           <NavigationProperty Name="Tipo_usuario" Relationship="Self.FK_UsuarioTipo_usuario" FromRole="Usuario" ToRole="Tipo_usuario" />
         </EntityType>
         <Association Name="FK_direccionciudad">
@@ -599,20 +428,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_UsuarioCiudad">
-          <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
-          <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Usuario">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Ciudad">
-              <PropertyRef Name="Editor_Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ConsultaObra_social">
-          <End Role="Obra_social" Type="Self.Obra_social" Multiplicity="0..1" />
+        <Association Name="FK_Obra_socialConsulta">
+          <End Role="Obra_social" Type="Self.Obra_social" Multiplicity="1" />
           <End Role="Consulta" Type="Self.Consulta" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Obra_social">
@@ -620,18 +437,6 @@
             </Principal>
             <Dependent Role="Consulta">
               <PropertyRef Name="Obra_social_Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_medicoconsulta">
-          <End Role="Persona_medico" Type="Self.Persona_medico" Multiplicity="1" />
-          <End Role="Consulta" Type="Self.Consulta" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Persona_medico">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Consulta">
-              <PropertyRef Name="Medico_Id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -643,23 +448,23 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Consulta">
-              <PropertyRef Name="Persona_Id" />
+              <PropertyRef Name="Persona_medico_Id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_UsuarioConsulta">
-          <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+        <Association Name="FK_PersonaConsulta1">
+          <End Role="Persona" Type="Self.Persona" Multiplicity="1" />
           <End Role="Consulta" Type="Self.Consulta" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Usuario">
+            <Principal Role="Persona">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Consulta">
-              <PropertyRef Name="Editor_Id" />
+              <PropertyRef Name="Persona_paciente_Id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_personadatos_contacto">
+        <Association Name="FK_PersonaDatos_contacto">
           <End Role="Persona" Type="Self.Persona" Multiplicity="1" />
           <End Role="Datos_contacto" Type="Self.Datos_contacto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -683,89 +488,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Medicoespecialidad">
+        <Association Name="FK_EspecialidadPersona">
           <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="1" />
-          <End Role="Persona_medico" Type="Self.Persona_medico" Multiplicity="*" />
+          <End Role="Persona" Type="Self.Persona" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Especialidad">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="Persona_medico">
-              <PropertyRef Name="Especialidad_Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_UsuarioEspecialidad">
-          <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
-          <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Usuario">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Especialidad">
-              <PropertyRef Name="Editor_Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_UsuarioFeriado">
-          <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
-          <End Role="Feriado" Type="Self.Feriado" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Usuario">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Feriado">
-              <PropertyRef Name="Editor_Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_UsuarioObra_social">
-          <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
-          <End Role="Obra_social" Type="Self.Obra_social" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Usuario">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Obra_social">
-              <PropertyRef Name="Editor_Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_medico_inherits_persona">
-          <End Role="Persona" Type="Self.Persona" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="Persona_medico" Type="Self.Persona_medico" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Persona">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Persona_medico">
-              <PropertyRef Name="Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_UsuarioPersona">
-          <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
-          <End Role="Persona" Type="Self.Persona" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Usuario">
-              <PropertyRef Name="Id" />
-            </Principal>
             <Dependent Role="Persona">
-              <PropertyRef Name="Editor_Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_UsuarioPersona_medico">
-          <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
-          <End Role="Persona_medico" Type="Self.Persona_medico" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Usuario">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Persona_medico">
-              <PropertyRef Name="Editor_Id" />
+              <PropertyRef Name="Especialidad_Id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -781,7 +512,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="Personaobra_social">
+        <Association Name="Obra_socialPersona">
           <End Role="Obra_social" Type="Self.Obra_social" Multiplicity="*" />
           <End Role="Persona" Type="Self.Persona" Multiplicity="*" />
         </Association>
@@ -794,34 +525,25 @@
           <EntitySet Name="Feriado" EntityType="Self.Feriado" />
           <EntitySet Name="Obra_social" EntityType="Self.Obra_social" />
           <EntitySet Name="Persona" EntityType="Self.Persona" />
-          <EntitySet Name="Persona_medico" EntityType="Self.Persona_medico" />
           <EntitySet Name="Tipo_usuario" EntityType="Self.Tipo_usuario" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
           <AssociationSet Name="FK_direccionciudad" Association="Self.FK_direccionciudad">
             <End Role="Ciudad" EntitySet="Ciudad" />
             <End Role="Direccion" EntitySet="Direccion" />
           </AssociationSet>
-          <AssociationSet Name="FK_UsuarioCiudad" Association="Self.FK_UsuarioCiudad">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Ciudad" EntitySet="Ciudad" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ConsultaObra_social" Association="Self.FK_ConsultaObra_social">
+          <AssociationSet Name="FK_Obra_socialConsulta" Association="Self.FK_Obra_socialConsulta">
             <End Role="Obra_social" EntitySet="Obra_social" />
-            <End Role="Consulta" EntitySet="Consulta" />
-          </AssociationSet>
-          <AssociationSet Name="FK_medicoconsulta" Association="Self.FK_medicoconsulta">
-            <End Role="Persona_medico" EntitySet="Persona_medico" />
             <End Role="Consulta" EntitySet="Consulta" />
           </AssociationSet>
           <AssociationSet Name="FK_PersonaConsulta" Association="Self.FK_PersonaConsulta">
             <End Role="Persona" EntitySet="Persona" />
             <End Role="Consulta" EntitySet="Consulta" />
           </AssociationSet>
-          <AssociationSet Name="FK_UsuarioConsulta" Association="Self.FK_UsuarioConsulta">
-            <End Role="Usuario" EntitySet="Usuario" />
+          <AssociationSet Name="FK_PersonaConsulta1" Association="Self.FK_PersonaConsulta1">
+            <End Role="Persona" EntitySet="Persona" />
             <End Role="Consulta" EntitySet="Consulta" />
           </AssociationSet>
-          <AssociationSet Name="FK_personadatos_contacto" Association="Self.FK_personadatos_contacto">
+          <AssociationSet Name="FK_PersonaDatos_contacto" Association="Self.FK_PersonaDatos_contacto">
             <End Role="Persona" EntitySet="Persona" />
             <End Role="Datos_contacto" EntitySet="Datos_contacto" />
           </AssociationSet>
@@ -829,39 +551,15 @@
             <End Role="Direccion" EntitySet="Direccion" />
             <End Role="Persona" EntitySet="Persona" />
           </AssociationSet>
-          <AssociationSet Name="FK_Medicoespecialidad" Association="Self.FK_Medicoespecialidad">
+          <AssociationSet Name="FK_EspecialidadPersona" Association="Self.FK_EspecialidadPersona">
             <End Role="Especialidad" EntitySet="Especialidad" />
-            <End Role="Persona_medico" EntitySet="Persona_medico" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UsuarioEspecialidad" Association="Self.FK_UsuarioEspecialidad">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Especialidad" EntitySet="Especialidad" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UsuarioFeriado" Association="Self.FK_UsuarioFeriado">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Feriado" EntitySet="Feriado" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UsuarioObra_social" Association="Self.FK_UsuarioObra_social">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Obra_social" EntitySet="Obra_social" />
-          </AssociationSet>
-          <AssociationSet Name="FK_medico_inherits_persona" Association="Self.FK_medico_inherits_persona">
             <End Role="Persona" EntitySet="Persona" />
-            <End Role="Persona_medico" EntitySet="Persona_medico" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UsuarioPersona" Association="Self.FK_UsuarioPersona">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Persona" EntitySet="Persona" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UsuarioPersona_medico" Association="Self.FK_UsuarioPersona_medico">
-            <End Role="Usuario" EntitySet="Usuario" />
-            <End Role="Persona_medico" EntitySet="Persona_medico" />
           </AssociationSet>
           <AssociationSet Name="FK_UsuarioTipo_usuario" Association="Self.FK_UsuarioTipo_usuario">
             <End Role="Tipo_usuario" EntitySet="Tipo_usuario" />
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
-          <AssociationSet Name="Personaobra_social" Association="Self.Personaobra_social">
+          <AssociationSet Name="Obra_socialPersona" Association="Self.Obra_socialPersona">
             <End Role="Obra_social" EntitySet="Obra_social" />
             <End Role="Persona" EntitySet="Persona" />
           </AssociationSet>
@@ -877,7 +575,6 @@
         <MappingFragment StoreEntitySet="Ciudad">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Denominacion" ColumnName="Denominacion" />
-          <ScalarProperty Name="Editor_Id" ColumnName="Editor_Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -894,8 +591,8 @@
           <ScalarProperty Name="Reintegro_por_orden" ColumnName="Reintegro_por_orden" />
           <ScalarProperty Name="Orden_presentada" ColumnName="Orden_presentada" />
           <ScalarProperty Name="Obra_social_Id" ColumnName="Obra_social_Id" />
-          <ScalarProperty Name="Editor_Id" ColumnName="Editor_Id" />
-          <ScalarProperty Name="Persona_Id" ColumnName="Persona_Id" />
+          <ScalarProperty Name="Persona_medico_Id" ColumnName="Persona_medico_Id" />
+          <ScalarProperty Name="Persona_paciente_Id" ColumnName="Persona_paciente_Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -928,7 +625,6 @@
         <MappingFragment StoreEntitySet="Especialidad">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Denominacion" ColumnName="Denominacion" />
-          <ScalarProperty Name="Editor_Id" ColumnName="Editor_Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -938,7 +634,6 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-          <ScalarProperty Name="Editor_Id" ColumnName="Editor_Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -951,7 +646,6 @@
           <ScalarProperty Name="Telefono" ColumnName="Telefono" />
           <ScalarProperty Name="Direccion" ColumnName="Direccion" />
           <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
-          <ScalarProperty Name="Editor_Id" ColumnName="Editor_Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -962,21 +656,12 @@
           <ScalarProperty Name="DNI" ColumnName="DNI" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Apellido" ColumnName="Apellido" />
-          <ScalarProperty Name="Direccion_Id" ColumnName="Direccion_Id" />
           <ScalarProperty Name="Sexo" ColumnName="Sexo" />
-          <ScalarProperty Name="Editor_Id" ColumnName="Editor_Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Persona_medico">
-      <EntityTypeMapping TypeName="IsTypeOf(consultoriosModel.Persona_medico)">
-        <MappingFragment StoreEntitySet="Persona_medico">
-          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Direccion_Id" ColumnName="Direccion_Id" />
           <ScalarProperty Name="Matricula" ColumnName="Matricula" />
           <ScalarProperty Name="Valor_consulta" ColumnName="Valor_consulta" />
           <ScalarProperty Name="Porcentaje_retencion" ColumnName="Porcentaje_retencion" />
           <ScalarProperty Name="Especialidad_Id" ColumnName="Especialidad_Id" />
-          <ScalarProperty Name="Editor_Id" ColumnName="Editor_Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -999,7 +684,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="Personaobra_social" TypeName="consultoriosModel.Personaobra_social" StoreEntitySet="Personaobra_social">
+    <AssociationSetMapping Name="Obra_socialPersona" TypeName="consultoriosModel.Obra_socialPersona" StoreEntitySet="Obra_socialPersona">
       <EndProperty Name="Obra_social">
         <ScalarProperty Name="Id" ColumnName="Obra_social_Id" />
       </EndProperty>

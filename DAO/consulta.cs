@@ -23,13 +23,12 @@ namespace DAO
         public decimal Retencion_medico { get; set; }
         public decimal Reintegro_por_orden { get; set; }
         public bool Orden_presentada { get; set; }
-        public Nullable<int> Obra_social_Id { get; set; }
-        public int Editor_Id { get; set; }
-        public int Persona_Id { get; set; }
+        public int Obra_social_Id { get; set; }
+        public int Persona_medico_Id { get; set; }
+        public int Persona_paciente_Id { get; set; }
     
         public virtual Obra_social Obra_social { get; set; }
-        public virtual Persona_medico Persona_medico { get; set; }
-        public virtual Persona Persona { get; set; }
-        public virtual Usuario Usuario { get; set; }
+        public virtual Persona Persona_medico { get; set; }
+        public virtual Persona Persona_paciente { get; set; }
     }
 }
