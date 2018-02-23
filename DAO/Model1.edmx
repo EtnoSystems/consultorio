@@ -319,8 +319,8 @@
           <Property Name="Persona_medico_Id" Type="Int32" Nullable="false" />
           <Property Name="Persona_paciente_Id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Obra_social" Relationship="Self.FK_Obra_socialConsulta" FromRole="Consulta" ToRole="Obra_social" />
-          <NavigationProperty Name="Persona_medico" Relationship="Self.FK_PersonaConsulta" FromRole="Consulta" ToRole="Persona" />
-          <NavigationProperty Name="Persona_paciente" Relationship="Self.FK_PersonaConsulta1" FromRole="Consulta" ToRole="Persona" />
+          <NavigationProperty Name="Persona" Relationship="Self.FK_PersonaConsulta" FromRole="Consulta" ToRole="Persona" />
+          <NavigationProperty Name="Persona1" Relationship="Self.FK_PersonaConsulta1" FromRole="Consulta" ToRole="Persona" />
         </EntityType>
         <EntityType Name="Datos_contacto">
           <Key>
