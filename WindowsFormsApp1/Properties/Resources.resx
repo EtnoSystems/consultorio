@@ -133,14 +133,17 @@
   <data name="usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\usuarios.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ServiceButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\buttons\ServiceButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="userAdd2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\userAdd2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botonEliminarUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\botonEliminarUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botonGuardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\botonGuardar.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="obrasSocialesEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\obrasSocialesEdit.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="service" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\service.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,8 +199,11 @@
   <data name="checkout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\checkout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="doctorAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\doctorAdd.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="doctorEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\doctorEdit.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonGuardarAgregarDeshabilitado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\botonGuardarAgregarDeshabilitado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="changeUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\changeUser.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,14 +211,11 @@
   <data name="admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\admin.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="obrasSocialesEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\obrasSocialesEdit.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="medicOrder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\medicOrder.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="userAdd2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\userAdd2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ServiceButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\buttons\ServiceButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fondoFormularios" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\fondoFormularios.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,10 +238,16 @@
   <data name="pacientRemove" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\menuIcons\pacientRemove.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="doctorEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\menuIcons\doctorEdit.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="doctorAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\menuIcons\doctorAdd.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="botonGuardarAgregarDeshabilitado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\botonGuardarAgregarDeshabilitado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CalendarAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\CalendarAdd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CalendarMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\CalendarMenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CalendarRemove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\CalendarRemove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

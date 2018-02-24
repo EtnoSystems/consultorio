@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CargarFeriados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CargarFeriados.Designer.cs">
+      <DependentUpon>CargarFeriados.cs</DependentUpon>
+    </Compile>
     <Compile Include="CargarSevicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     <Compile Include="Usuarios_modificacion.Designer.cs">
       <DependentUpon>Usuarios_modificacion.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CargarFeriados.resx">
+      <DependentUpon>CargarFeriados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CargarSevicio.resx">
       <DependentUpon>CargarSevicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -351,6 +360,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\botonGuardarAgregarDeshabilitado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\CalendarAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\CalendarMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\CalendarRemove.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -123,5 +123,17 @@ namespace WindowsFormsApp1
             pacientes.Show();
             Globales.codigoFormulario = 2;
         }
+
+        private void mnuReportes_Click(object sender, EventArgs e)
+        {
+            ReportesAdministrativos reportes = new ReportesAdministrativos();
+            reportes.Show();
+        }
+
+        private void MnuAgregarFeriados_Click(object sender, EventArgs e)
+        {
+            CargarFeriados feriados = new CargarFeriados();
+            feriados.Show();
+        }
     }
 }

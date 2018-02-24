@@ -51,6 +51,7 @@
             this.mnuEditarObrasSociales = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuRecetarios = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuReportes = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuAgregarFeriados = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuCambiarUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAyuda = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,12 +69,13 @@
             this.MnuObrasSociales,
             this.MnuRecetarios,
             this.mnuReportes,
+            this.MnuAgregarFeriados,
             this.mnuCambiarUsuario,
             this.MnuSalir,
             this.mnuAyuda});
             this.menuStrip1.Location = new System.Drawing.Point(1237, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(125, 664);
+            this.menuStrip1.Size = new System.Drawing.Size(125, 802);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuStrip1_ItemClicked);
@@ -87,6 +89,7 @@
             this.mnuServicio.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuServicio.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuServicio.Name = "mnuServicio";
+            this.mnuServicio.ShortcutKeys = System.Windows.Forms.Keys.F1;
             this.mnuServicio.Size = new System.Drawing.Size(112, 79);
             this.mnuServicio.Text = "servicio";
             this.mnuServicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -127,7 +130,7 @@
             this.mnuMedicos.MergeAction = System.Windows.Forms.MergeAction.MatchOnly;
             this.mnuMedicos.Name = "mnuMedicos";
             this.mnuMedicos.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mnuMedicos.Size = new System.Drawing.Size(183, 82);
+            this.mnuMedicos.Size = new System.Drawing.Size(211, 82);
             this.mnuMedicos.Text = "Usuarios";
             this.mnuMedicos.ToolTipText = "Gestionar personal médico";
             this.mnuMedicos.Click += new System.EventHandler(this.UsuariosToolStripMenuItem_Click);
@@ -180,7 +183,7 @@
             this.mnuPacientes.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuPacientes.Name = "mnuPacientes";
             this.mnuPacientes.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mnuPacientes.Size = new System.Drawing.Size(183, 82);
+            this.mnuPacientes.Size = new System.Drawing.Size(211, 82);
             this.mnuPacientes.Text = "Pacientes";
             this.mnuPacientes.ToolTipText = "Gestionar los pacientes";
             // 
@@ -235,7 +238,7 @@
             this.mnuPersonal.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuPersonal.Name = "mnuPersonal";
             this.mnuPersonal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mnuPersonal.Size = new System.Drawing.Size(183, 82);
+            this.mnuPersonal.Size = new System.Drawing.Size(211, 82);
             this.mnuPersonal.Text = "admins";
             this.mnuPersonal.ToolTipText = "Gestionar el personal ";
             // 
@@ -286,6 +289,7 @@
             this.MnuObrasSociales.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.MnuObrasSociales.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.MnuObrasSociales.Name = "MnuObrasSociales";
+            this.MnuObrasSociales.ShortcutKeys = System.Windows.Forms.Keys.F3;
             this.MnuObrasSociales.Size = new System.Drawing.Size(112, 79);
             this.MnuObrasSociales.Text = "os";
             this.MnuObrasSociales.ToolTipText = "Administrar datos de obras sociales";
@@ -298,7 +302,7 @@
             this.mnuAgregarObraSocial.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuAgregarObraSocial.Name = "mnuAgregarObraSocial";
             this.mnuAgregarObraSocial.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mnuAgregarObraSocial.Size = new System.Drawing.Size(173, 82);
+            this.mnuAgregarObraSocial.Size = new System.Drawing.Size(211, 82);
             this.mnuAgregarObraSocial.Text = "add";
             this.mnuAgregarObraSocial.ToolTipText = "Agregar una nueva obra social";
             this.mnuAgregarObraSocial.Click += new System.EventHandler(this.mnuAgregarObraSocial_Click);
@@ -311,7 +315,7 @@
             this.mnuEliminarObraSocial.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuEliminarObraSocial.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuEliminarObraSocial.Name = "mnuEliminarObraSocial";
-            this.mnuEliminarObraSocial.Size = new System.Drawing.Size(173, 82);
+            this.mnuEliminarObraSocial.Size = new System.Drawing.Size(211, 82);
             this.mnuEliminarObraSocial.Text = "remove";
             this.mnuEliminarObraSocial.ToolTipText = "Eliminar obras sociales";
             // 
@@ -323,7 +327,7 @@
             this.mnuEditarObrasSociales.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuEditarObrasSociales.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuEditarObrasSociales.Name = "mnuEditarObrasSociales";
-            this.mnuEditarObrasSociales.Size = new System.Drawing.Size(173, 82);
+            this.mnuEditarObrasSociales.Size = new System.Drawing.Size(211, 82);
             this.mnuEditarObrasSociales.Text = "edit";
             this.mnuEditarObrasSociales.ToolTipText = "Editar datos de obras sociales";
             // 
@@ -335,7 +339,7 @@
             this.MnuRecetarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.MnuRecetarios.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.MnuRecetarios.Name = "MnuRecetarios";
-            this.MnuRecetarios.ShortcutKeys = System.Windows.Forms.Keys.F3;
+            this.MnuRecetarios.ShortcutKeys = System.Windows.Forms.Keys.F4;
             this.MnuRecetarios.Size = new System.Drawing.Size(112, 79);
             this.MnuRecetarios.Text = "receta";
             this.MnuRecetarios.ToolTipText = "Recetarios";
@@ -349,10 +353,25 @@
             this.mnuReportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuReportes.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuReportes.Name = "mnuReportes";
-            this.mnuReportes.ShortcutKeys = System.Windows.Forms.Keys.F4;
+            this.mnuReportes.ShortcutKeys = System.Windows.Forms.Keys.F5;
             this.mnuReportes.Size = new System.Drawing.Size(112, 79);
             this.mnuReportes.Text = "reportes";
             this.mnuReportes.ToolTipText = "Imprimir reportes";
+            this.mnuReportes.Click += new System.EventHandler(this.mnuReportes_Click);
+            // 
+            // MnuAgregarFeriados
+            // 
+            this.MnuAgregarFeriados.AutoToolTip = true;
+            this.MnuAgregarFeriados.BackColor = System.Drawing.Color.Transparent;
+            this.MnuAgregarFeriados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.MnuAgregarFeriados.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MnuAgregarFeriados.Image = global::WindowsFormsApp1.Properties.Resources.CalendarMenu;
+            this.MnuAgregarFeriados.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MnuAgregarFeriados.Name = "MnuAgregarFeriados";
+            this.MnuAgregarFeriados.ShortcutKeys = System.Windows.Forms.Keys.F6;
+            this.MnuAgregarFeriados.Size = new System.Drawing.Size(112, 79);
+            this.MnuAgregarFeriados.Text = "Agregar feriados";
+            this.MnuAgregarFeriados.Click += new System.EventHandler(this.MnuAgregarFeriados_Click);
             // 
             // mnuCambiarUsuario
             // 
@@ -362,7 +381,7 @@
             this.mnuCambiarUsuario.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuCambiarUsuario.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuCambiarUsuario.Name = "mnuCambiarUsuario";
-            this.mnuCambiarUsuario.ShortcutKeys = System.Windows.Forms.Keys.F5;
+            this.mnuCambiarUsuario.ShortcutKeys = System.Windows.Forms.Keys.F7;
             this.mnuCambiarUsuario.Size = new System.Drawing.Size(112, 79);
             this.mnuCambiarUsuario.Text = "cambiar usuario";
             this.mnuCambiarUsuario.ToolTipText = "Cerrar sesión e iniciar con otro usuario";
@@ -376,6 +395,7 @@
             this.MnuSalir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.MnuSalir.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.MnuSalir.Name = "MnuSalir";
+            this.MnuSalir.ShortcutKeys = System.Windows.Forms.Keys.F8;
             this.MnuSalir.Size = new System.Drawing.Size(112, 79);
             this.MnuSalir.Text = "cerrar";
             this.MnuSalir.ToolTipText = "Salir del sistema";
@@ -389,13 +409,14 @@
             this.mnuAyuda.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuAyuda.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuAyuda.Name = "mnuAyuda";
+            this.mnuAyuda.ShortcutKeys = System.Windows.Forms.Keys.F9;
             this.mnuAyuda.Size = new System.Drawing.Size(112, 79);
             this.mnuAyuda.Text = "help";
             this.mnuAyuda.ToolTipText = "Ayuda";
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(18, 484);
+            this.monthCalendar1.Location = new System.Drawing.Point(18, 622);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 3;
             // 
@@ -405,7 +426,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1362, 664);
+            this.ClientSize = new System.Drawing.Size(1362, 802);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -452,6 +473,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuServicio;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.ToolStripMenuItem MnuAgregarFeriados;
     }
 }
 
