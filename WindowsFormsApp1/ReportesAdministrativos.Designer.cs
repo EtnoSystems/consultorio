@@ -30,23 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.RdObraSocial = new System.Windows.Forms.RadioButton();
-            this.RdProfesional = new System.Windows.Forms.RadioButton();
-            this.CmbPrimerFiltro = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.BtnConsultar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.BtnSalir = new System.Windows.Forms.Button();
+            this.CmbFiltro = new System.Windows.Forms.ComboBox();
+            this.CmbSegundoFiltro = new System.Windows.Forms.ComboBox();
+            this.BtnNuevaConsulta = new System.Windows.Forms.Button();
+            this.ChkFiltro = new System.Windows.Forms.CheckBox();
             this.RdEmpleado = new System.Windows.Forms.RadioButton();
             this.RdPaciente = new System.Windows.Forms.RadioButton();
-            this.ChkFiltro = new System.Windows.Forms.CheckBox();
-            this.BtnNuevaConsulta = new System.Windows.Forms.Button();
-            this.CmbSegundoFiltro = new System.Windows.Forms.ComboBox();
-            this.CmbFiltro = new System.Windows.Forms.ComboBox();
+            this.BtnSalir = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BtnConsultar = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.CmbPrimerFiltro = new System.Windows.Forms.ComboBox();
+            this.RdProfesional = new System.Windows.Forms.RadioButton();
+            this.RdObraSocial = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -80,111 +80,46 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informar por";
             // 
-            // panel1
+            // CmbFiltro
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 28);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(726, 256);
-            this.panel1.TabIndex = 1;
+            this.CmbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbFiltro.FormattingEnabled = true;
+            this.CmbFiltro.Location = new System.Drawing.Point(146, 124);
+            this.CmbFiltro.Name = "CmbFiltro";
+            this.CmbFiltro.Size = new System.Drawing.Size(139, 26);
+            this.CmbFiltro.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.CmbFiltro, "Seleccione otro filtro de la lista (P.E. filtrar profesionales que atendieron con" +
+        " determinada obra social)");
             // 
-            // dataGridView1
+            // CmbSegundoFiltro
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(33, 307);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(646, 351);
-            this.dataGridView1.TabIndex = 2;
+            this.CmbSegundoFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbSegundoFiltro.FormattingEnabled = true;
+            this.CmbSegundoFiltro.Location = new System.Drawing.Point(16, 168);
+            this.CmbSegundoFiltro.Name = "CmbSegundoFiltro";
+            this.CmbSegundoFiltro.Size = new System.Drawing.Size(269, 26);
+            this.CmbSegundoFiltro.TabIndex = 14;
             // 
-            // RdObraSocial
+            // BtnNuevaConsulta
             // 
-            this.RdObraSocial.AutoSize = true;
-            this.RdObraSocial.Location = new System.Drawing.Point(16, 29);
-            this.RdObraSocial.Name = "RdObraSocial";
-            this.RdObraSocial.Size = new System.Drawing.Size(113, 22);
-            this.RdObraSocial.TabIndex = 0;
-            this.RdObraSocial.TabStop = true;
-            this.RdObraSocial.Text = "Obra social";
-            this.RdObraSocial.UseVisualStyleBackColor = true;
-            this.RdObraSocial.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.BtnNuevaConsulta.Location = new System.Drawing.Point(428, 149);
+            this.BtnNuevaConsulta.Name = "BtnNuevaConsulta";
+            this.BtnNuevaConsulta.Size = new System.Drawing.Size(108, 45);
+            this.BtnNuevaConsulta.TabIndex = 12;
+            this.BtnNuevaConsulta.Text = "Nueva consulta";
+            this.BtnNuevaConsulta.UseVisualStyleBackColor = true;
             // 
-            // RdProfesional
+            // ChkFiltro
             // 
-            this.RdProfesional.AutoSize = true;
-            this.RdProfesional.Location = new System.Drawing.Point(16, 57);
-            this.RdProfesional.Name = "RdProfesional";
-            this.RdProfesional.Size = new System.Drawing.Size(112, 22);
-            this.RdProfesional.TabIndex = 1;
-            this.RdProfesional.TabStop = true;
-            this.RdProfesional.Text = "Profesional";
-            this.RdProfesional.UseVisualStyleBackColor = true;
-            this.RdProfesional.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
-            // CmbPrimerFiltro
-            // 
-            this.CmbPrimerFiltro.FormattingEnabled = true;
-            this.CmbPrimerFiltro.Location = new System.Drawing.Point(16, 85);
-            this.CmbPrimerFiltro.Name = "CmbPrimerFiltro";
-            this.CmbPrimerFiltro.Size = new System.Drawing.Size(269, 26);
-            this.CmbPrimerFiltro.TabIndex = 2;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(312, 41);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(341, 24);
-            this.dateTimePicker1.TabIndex = 3;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(312, 97);
-            this.dateTimePicker2.MaxDate = new System.DateTime(2018, 2, 11, 0, 0, 0, 0);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(341, 24);
-            this.dateTimePicker2.TabIndex = 4;
-            this.dateTimePicker2.Value = new System.DateTime(2018, 2, 11, 0, 0, 0, 0);
-            // 
-            // BtnConsultar
-            // 
-            this.BtnConsultar.Location = new System.Drawing.Point(312, 149);
-            this.BtnConsultar.Name = "BtnConsultar";
-            this.BtnConsultar.Size = new System.Drawing.Size(108, 45);
-            this.BtnConsultar.TabIndex = 5;
-            this.BtnConsultar.Text = "Consultar";
-            this.BtnConsultar.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(309, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 18);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Desde";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(309, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 18);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Hasta";
-            // 
-            // BtnSalir
-            // 
-            this.BtnSalir.Location = new System.Drawing.Point(545, 149);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(108, 45);
-            this.BtnSalir.TabIndex = 8;
-            this.BtnSalir.Text = "Salir";
-            this.BtnSalir.UseVisualStyleBackColor = true;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            this.ChkFiltro.AutoSize = true;
+            this.ChkFiltro.Location = new System.Drawing.Point(16, 126);
+            this.ChkFiltro.Name = "ChkFiltro";
+            this.ChkFiltro.Size = new System.Drawing.Size(124, 22);
+            this.ChkFiltro.TabIndex = 11;
+            this.ChkFiltro.Text = "Agregar filtro";
+            this.toolTip1.SetToolTip(this.ChkFiltro, "Marcar si desea agregar otro filtro a la consulta");
+            this.ChkFiltro.UseVisualStyleBackColor = true;
+            this.ChkFiltro.CheckedChanged += new System.EventHandler(this.ChkFiltro_CheckedChanged);
             // 
             // RdEmpleado
             // 
@@ -208,44 +143,112 @@
             this.RdPaciente.Text = "Paciente";
             this.RdPaciente.UseVisualStyleBackColor = true;
             // 
-            // ChkFiltro
+            // BtnSalir
             // 
-            this.ChkFiltro.AutoSize = true;
-            this.ChkFiltro.Location = new System.Drawing.Point(16, 126);
-            this.ChkFiltro.Name = "ChkFiltro";
-            this.ChkFiltro.Size = new System.Drawing.Size(124, 22);
-            this.ChkFiltro.TabIndex = 11;
-            this.ChkFiltro.Text = "Agregar filtro";
-            this.toolTip1.SetToolTip(this.ChkFiltro, "Marcar si desea agregar otro filtro a la consulta");
-            this.ChkFiltro.UseVisualStyleBackColor = true;
-            this.ChkFiltro.CheckedChanged += new System.EventHandler(this.ChkFiltro_CheckedChanged);
+            this.BtnSalir.Location = new System.Drawing.Point(545, 149);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(108, 45);
+            this.BtnSalir.TabIndex = 8;
+            this.BtnSalir.Text = "Salir";
+            this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
-            // BtnNuevaConsulta
+            // label2
             // 
-            this.BtnNuevaConsulta.Location = new System.Drawing.Point(428, 149);
-            this.BtnNuevaConsulta.Name = "BtnNuevaConsulta";
-            this.BtnNuevaConsulta.Size = new System.Drawing.Size(108, 45);
-            this.BtnNuevaConsulta.TabIndex = 12;
-            this.BtnNuevaConsulta.Text = "Nueva consulta";
-            this.BtnNuevaConsulta.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(309, 76);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 18);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Hasta";
             // 
-            // CmbSegundoFiltro
+            // label1
             // 
-            this.CmbSegundoFiltro.FormattingEnabled = true;
-            this.CmbSegundoFiltro.Location = new System.Drawing.Point(16, 168);
-            this.CmbSegundoFiltro.Name = "CmbSegundoFiltro";
-            this.CmbSegundoFiltro.Size = new System.Drawing.Size(269, 26);
-            this.CmbSegundoFiltro.TabIndex = 14;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(309, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 18);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Desde";
             // 
-            // CmbFiltro
+            // BtnConsultar
             // 
-            this.CmbFiltro.FormattingEnabled = true;
-            this.CmbFiltro.Location = new System.Drawing.Point(146, 124);
-            this.CmbFiltro.Name = "CmbFiltro";
-            this.CmbFiltro.Size = new System.Drawing.Size(139, 26);
-            this.CmbFiltro.TabIndex = 15;
-            this.toolTip1.SetToolTip(this.CmbFiltro, "Seleccione otro filtro de la lista (P.E. filtrar profesionales que atendieron con" +
-        " determinada obra social)");
+            this.BtnConsultar.Location = new System.Drawing.Point(312, 149);
+            this.BtnConsultar.Name = "BtnConsultar";
+            this.BtnConsultar.Size = new System.Drawing.Size(108, 45);
+            this.BtnConsultar.TabIndex = 5;
+            this.BtnConsultar.Text = "Consultar";
+            this.BtnConsultar.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(312, 97);
+            this.dateTimePicker2.MaxDate = new System.DateTime(2018, 2, 11, 0, 0, 0, 0);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(341, 24);
+            this.dateTimePicker2.TabIndex = 4;
+            this.dateTimePicker2.Value = new System.DateTime(2018, 2, 11, 0, 0, 0, 0);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(312, 41);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(341, 24);
+            this.dateTimePicker1.TabIndex = 3;
+            // 
+            // CmbPrimerFiltro
+            // 
+            this.CmbPrimerFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbPrimerFiltro.FormattingEnabled = true;
+            this.CmbPrimerFiltro.Location = new System.Drawing.Point(16, 85);
+            this.CmbPrimerFiltro.Name = "CmbPrimerFiltro";
+            this.CmbPrimerFiltro.Size = new System.Drawing.Size(269, 26);
+            this.CmbPrimerFiltro.TabIndex = 2;
+            // 
+            // RdProfesional
+            // 
+            this.RdProfesional.AutoSize = true;
+            this.RdProfesional.Location = new System.Drawing.Point(16, 57);
+            this.RdProfesional.Name = "RdProfesional";
+            this.RdProfesional.Size = new System.Drawing.Size(112, 22);
+            this.RdProfesional.TabIndex = 1;
+            this.RdProfesional.TabStop = true;
+            this.RdProfesional.Text = "Profesional";
+            this.RdProfesional.UseVisualStyleBackColor = true;
+            this.RdProfesional.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // RdObraSocial
+            // 
+            this.RdObraSocial.AutoSize = true;
+            this.RdObraSocial.Location = new System.Drawing.Point(16, 29);
+            this.RdObraSocial.Name = "RdObraSocial";
+            this.RdObraSocial.Size = new System.Drawing.Size(113, 22);
+            this.RdObraSocial.TabIndex = 0;
+            this.RdObraSocial.TabStop = true;
+            this.RdObraSocial.Text = "Obra social";
+            this.RdObraSocial.UseVisualStyleBackColor = true;
+            this.RdObraSocial.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Location = new System.Drawing.Point(0, 28);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(726, 256);
+            this.panel1.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(33, 307);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(646, 351);
+            this.dataGridView1.TabIndex = 2;
             // 
             // ReportesAdministrativos
             // 

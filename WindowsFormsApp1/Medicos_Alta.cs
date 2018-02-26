@@ -21,5 +21,10 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+
+        private void Medicos_Alta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
