@@ -28,7 +28,7 @@ namespace DAO
         public int Persona_paciente_Id { get; set; }
     
         public virtual Obra_social Obra_social { get; set; }
-        public virtual Persona Persona { get; set; }
-        public virtual Persona Persona1 { get; set; }
+        public virtual Persona Persona_medico { get; set; }
+        public virtual Persona Persona_paciente { get; set; }
     }
 }

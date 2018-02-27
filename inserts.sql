@@ -323,6 +323,25 @@ insert into dbo.especialidad (denominacion) values ('Traumatología y ortopedia'
 insert into dbo.especialidad (denominacion) values ('Traumatología y ortopedia infantil');
 insert into dbo.especialidad (denominacion) values ('Urología');
 
+--INSERTS PARA LAS OBRAS SOCIALES
+insert into dbo.obra_social (denominacion,plus,activa) values ('AMUR',250,'TRUE');
+insert into dbo.obra_social (denominacion,plus,activa) values ('DASUTEN',300,'TRUE');
+insert into dbo.obra_social (denominacion,plus,activa) values ('Federada Salud',0,'TRUE');
+insert into dbo.obra_social (denominacion,plus,activa) values ('Galeno',250,'TRUE');
+insert into dbo.obra_social (denominacion,plus,activa) values ('IOSE',250,'TRUE');
+insert into dbo.obra_social (denominacion,plus,activa) values ('IOSPER',250,'TRUE');
+insert into dbo.obra_social (denominacion,plus,activa) values ('OSBA',250,'TRUE');
+insert into dbo.obra_social (denominacion,plus,activa) values ('OSDE Binario',250,'TRUE');
+insert into dbo.obra_social (denominacion,plus,activa) values ('OSFATLyF',250,'TRUE');
+insert into dbo.obra_social (denominacion,plus,activa) values ('OSPE',250,'TRUE');
+insert into dbo.obra_social (denominacion,plus,activa) values ('OSECAC',250,'TRUE');
+insert into dbo.obra_social (denominacion,plus,activa) values ('OSPRERA',300,'TRUE');
+insert into dbo.obra_social (denominacion,plus,activa) values ('Panaderos',0,'FALSE');
+insert into dbo.obra_social (denominacion,plus,activa) values ('Jerarquicos Salud',0,'TRUE');
+insert into dbo.obra_social (denominacion,plus,activa) values ('Sancor Salud',150,'TRUE');
+insert into dbo.obra_social (denominacion,plus,activa) values ('SMEBER',300,'TRUE');
+insert into dbo.obra_social (denominacion,plus,activa) values ('Swiss Medical',250,'TRUE');
+insert into dbo.obra_social (denominacion,plus,activa) values ('Union Personal',0,'TRUE');
 
 
 -- INSERTS PARA CREAR UN PACIENTE
@@ -330,8 +349,26 @@ insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('ch
 insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo) values (34116494,'jorge javier','robas',1,'M');
 insert into dbo.datos_contacto (email_primario,email_secundario,tel_celular,tel_fijo,persona_id) values ('javier_robas@hotmail.com','jorgerobas@gmail.com','+5493455430130','+543455420313',1);
 
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo) values (34116494,'matias','flores fabbro',null,'M');
+insert into dbo.datos_contacto (email_primario,email_secundario,tel_celular,tel_fijo,persona_id) values ('matybienalto@gmail.com',null,'+5493455510599',null,2);
+
+
 -- INSERTS PARA CREAR UN MEDICO
 insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('san martin',1114,1,4,1);
-insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Matricula,Valor_consulta,Porcentaje_retencion,Especialidad_Id) values (34195888,'johanna natalia','buiatti',2,'F',500,'0001',0,12);
-insert into dbo.datos_contacto (email_primario,email_secundario,tel_celular,tel_fijo,persona_id) values ('johanna_buiatti@hotmail.com','johanna.buiatti@gmail.com','+5493455406811','+543455420282',2);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Matricula,Valor_consulta,Porcentaje_retencion) values (34195888,'johanna natalia','buiatti',2,'F',500,'0001',0);
+insert into dbo.datos_contacto (email_primario,email_secundario,tel_celular,tel_fijo,persona_id) values ('johanna_buiatti@hotmail.com','johanna.buiatti@gmail.com','+5493455406811','+543455420282',3);
+insert into dbo.especialidadPersona(especialidad_id,persona_id) values (73,3);
+
+insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('juan j. passo',562,null,null,1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Matricula,Valor_consulta,Porcentaje_retencion) values (23539783,'sergio julian','leissa',3,'M',500,'0001',0);
+insert into dbo.especialidadPersona(especialidad_id,persona_id) values (22,4);
+insert into dbo.especialidadPersona(especialidad_id,persona_id) values (40,4);
+
+
+-- INSERTS DE LA TABLA PACIENTE-OBRA SOCIALES
+insert into dbo.obra_socialPersona (Obra_social_Id,Persona_Id) values (14,1);
+insert into dbo.obra_socialPersona (Obra_social_Id,Persona_Id) values (16,1);
+insert into dbo.obra_socialPersona (Obra_social_Id,Persona_Id) values (11,2);
+
+
 
