@@ -138,12 +138,12 @@
     <Property Name="DNI" Type="varchar" Nullable="false" MaxLength="11" />
     <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="60" />
     <Property Name="Apellido" Type="varchar" Nullable="false" MaxLength="60" />
-    <Property Name="Sexo" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="Sexo" Type="char" Nullable="false" MaxLength="1" />
     <Property Name="Direccion_Id" Type="int" Nullable="true" />
     <Property Name="Matricula" Type="nvarchar" Nullable="true" MaxLength="12" />
     <Property Name="Valor_consulta" Type="decimal" Nullable="true" Precision="6" Scale="2" />
     <Property Name="Porcentaje_retencion" Type="decimal" Nullable="true" Precision="3" Scale="2" />
-    <Property Name="Especialidad_Id" Type="int" Nullable="false" />
+    <Property Name="Especialidad_Id" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="Tipo_usuario">
     <Key>
@@ -243,7 +243,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_EspecialidadPersona">
-    <End Role="Especialidad" Type="consultoriosModel.Store.Especialidad" Multiplicity="1" />
+    <End Role="Especialidad" Type="consultoriosModel.Store.Especialidad" Multiplicity="0..1" />
     <End Role="Persona" Type="consultoriosModel.Store.Persona" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Especialidad">
@@ -384,12 +384,12 @@
           <Property Name="DNI" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Apellido" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="Direccion_Id" Type="Int32" />
-          <Property Name="Matricula" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
-          <Property Name="Valor_consulta" Type="Decimal" Precision="6" Scale="2" />
-          <Property Name="Porcentaje_retencion" Type="Decimal" Precision="3" Scale="2" />
-          <Property Name="Especialidad_Id" Type="Int32" Nullable="false" />
+          <Property Name="Matricula" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="true" />
+          <Property Name="Valor_consulta" Type="Decimal" Precision="6" Scale="2" Nullable="true" />
+          <Property Name="Porcentaje_retencion" Type="Decimal" Precision="3" Scale="2" Nullable="true" />
+          <Property Name="Especialidad_Id" Type="Int32" Nullable="true" />
           <NavigationProperty Name="Consulta" Relationship="Self.FK_PersonaConsulta" FromRole="Persona" ToRole="Consulta" />
           <NavigationProperty Name="Consulta1" Relationship="Self.FK_PersonaConsulta1" FromRole="Persona" ToRole="Consulta" />
           <NavigationProperty Name="Datos_contacto" Relationship="Self.FK_PersonaDatos_contacto" FromRole="Persona" ToRole="Datos_contacto" />
@@ -489,7 +489,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_EspecialidadPersona">
-          <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="1" />
+          <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="0..1" />
           <End Role="Persona" Type="Self.Persona" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Especialidad">

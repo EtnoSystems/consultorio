@@ -31,7 +31,7 @@ namespace DAO
         public string Matricula { get; set; }
         public Nullable<decimal> Valor_consulta { get; set; }
         public Nullable<decimal> Porcentaje_retencion { get; set; }
-        public int Especialidad_Id { get; set; }
+        public Nullable<int> Especialidad_Id { get; set; }
     
         public virtual ICollection<Consulta> Consulta { get; set; }
         public virtual ICollection<Consulta> Consulta1 { get; set; }

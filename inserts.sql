@@ -328,5 +328,10 @@ insert into dbo.especialidad (denominacion) values ('Urología');
 -- INSERTS PARA CREAR UN PACIENTE
 insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('chile',157,null,null,1);
 insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo) values (34116494,'jorge javier','robas',1,'M');
-insert into dbo.datos_contacto (email_primario,email_secundario,tel_celular,tel_fijo,persona_id) values ('javier_robas@hotmail.com','jorgerobas@gmail.com','+5493455430130','+543455420313');
+insert into dbo.datos_contacto (email_primario,email_secundario,tel_celular,tel_fijo,persona_id) values ('javier_robas@hotmail.com','jorgerobas@gmail.com','+5493455430130','+543455420313',1);
+
+-- INSERTS PARA CREAR UN MEDICO
+insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('san martin',1114,1,4,1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Matricula,Valor_consulta,Porcentaje_retencion,Especialidad_Id) values (34195888,'johanna natalia','buiatti',2,'F',500,'0001',0,12);
+insert into dbo.datos_contacto (email_primario,email_secundario,tel_celular,tel_fijo,persona_id) values ('johanna_buiatti@hotmail.com','johanna.buiatti@gmail.com','+5493455406811','+543455420282',2);
 
