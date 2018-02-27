@@ -100,6 +100,12 @@
     <Compile Include="ObrasSociales_alta.Designer.cs">
       <DependentUpon>ObrasSociales_alta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pacientes_Alta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pacientes_Alta.Designer.cs">
+      <DependentUpon>Pacientes_Alta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ObrasSociales_Alta.resx">
       <DependentUpon>ObrasSociales_alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pacientes_Alta.resx">
+      <DependentUpon>Pacientes_Alta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

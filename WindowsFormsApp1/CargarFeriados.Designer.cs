@@ -52,6 +52,7 @@
             // 
             // monthCalendar1
             // 
+            this.monthCalendar1.FirstDayOfWeek = System.Windows.Forms.Day.Monday;
             this.monthCalendar1.Location = new System.Drawing.Point(50, 76);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 1;
@@ -62,6 +63,7 @@
             this.BtnCalendarAdd.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.CalendarAdd;
             this.BtnCalendarAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCalendarAdd.FlatAppearance.BorderSize = 0;
+            this.BtnCalendarAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnCalendarAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCalendarAdd.Location = new System.Drawing.Point(285, 76);
             this.BtnCalendarAdd.Name = "BtnCalendarAdd";
@@ -76,6 +78,7 @@
             this.BtnCalendarRemove.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.CalendarRemove;
             this.BtnCalendarRemove.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCalendarRemove.FlatAppearance.BorderSize = 0;
+            this.BtnCalendarRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnCalendarRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCalendarRemove.Location = new System.Drawing.Point(285, 160);
             this.BtnCalendarRemove.Name = "BtnCalendarRemove";
@@ -91,6 +94,7 @@
             this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnSalir.FlatAppearance.BorderSize = 0;
+            this.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSalir.Location = new System.Drawing.Point(385, 76);
             this.BtnSalir.Name = "BtnSalir";

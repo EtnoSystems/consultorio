@@ -75,7 +75,7 @@
             this.mnuAyuda});
             this.menuStrip1.Location = new System.Drawing.Point(1237, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(125, 802);
+            this.menuStrip1.Size = new System.Drawing.Size(125, 1061);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuStrip1_ItemClicked);
@@ -195,9 +195,10 @@
             this.mnuAgregarPaciente.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuAgregarPaciente.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuAgregarPaciente.Name = "mnuAgregarPaciente";
-            this.mnuAgregarPaciente.Size = new System.Drawing.Size(173, 82);
+            this.mnuAgregarPaciente.Size = new System.Drawing.Size(211, 82);
             this.mnuAgregarPaciente.Text = "addP";
             this.mnuAgregarPaciente.ToolTipText = "Agregar un paciente nuevo";
+            this.mnuAgregarPaciente.Click += new System.EventHandler(this.mnuAgregarPaciente_Click);
             // 
             // mnuEliminarPaciente
             // 
@@ -207,7 +208,7 @@
             this.mnuEliminarPaciente.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuEliminarPaciente.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuEliminarPaciente.Name = "mnuEliminarPaciente";
-            this.mnuEliminarPaciente.Size = new System.Drawing.Size(173, 82);
+            this.mnuEliminarPaciente.Size = new System.Drawing.Size(211, 82);
             this.mnuEliminarPaciente.Text = "remove";
             this.mnuEliminarPaciente.ToolTipText = "Eliminar pacientes";
             // 
@@ -219,7 +220,7 @@
             this.mnuEditarPacientes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuEditarPacientes.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuEditarPacientes.Name = "mnuEditarPacientes";
-            this.mnuEditarPacientes.Size = new System.Drawing.Size(173, 82);
+            this.mnuEditarPacientes.Size = new System.Drawing.Size(211, 82);
             this.mnuEditarPacientes.Text = "edit";
             this.mnuEditarPacientes.ToolTipText = "Editar datos de pacientes";
             // 
@@ -302,7 +303,7 @@
             this.mnuAgregarObraSocial.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuAgregarObraSocial.Name = "mnuAgregarObraSocial";
             this.mnuAgregarObraSocial.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mnuAgregarObraSocial.Size = new System.Drawing.Size(211, 82);
+            this.mnuAgregarObraSocial.Size = new System.Drawing.Size(173, 82);
             this.mnuAgregarObraSocial.Text = "add";
             this.mnuAgregarObraSocial.ToolTipText = "Agregar una nueva obra social";
             this.mnuAgregarObraSocial.Click += new System.EventHandler(this.mnuAgregarObraSocial_Click);
@@ -315,7 +316,7 @@
             this.mnuEliminarObraSocial.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuEliminarObraSocial.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuEliminarObraSocial.Name = "mnuEliminarObraSocial";
-            this.mnuEliminarObraSocial.Size = new System.Drawing.Size(211, 82);
+            this.mnuEliminarObraSocial.Size = new System.Drawing.Size(173, 82);
             this.mnuEliminarObraSocial.Text = "remove";
             this.mnuEliminarObraSocial.ToolTipText = "Eliminar obras sociales";
             // 
@@ -327,7 +328,7 @@
             this.mnuEditarObrasSociales.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuEditarObrasSociales.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuEditarObrasSociales.Name = "mnuEditarObrasSociales";
-            this.mnuEditarObrasSociales.Size = new System.Drawing.Size(211, 82);
+            this.mnuEditarObrasSociales.Size = new System.Drawing.Size(173, 82);
             this.mnuEditarObrasSociales.Text = "edit";
             this.mnuEditarObrasSociales.ToolTipText = "Editar datos de obras sociales";
             // 
@@ -416,7 +417,9 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(18, 622);
+            this.monthCalendar1.FirstDayOfWeek = System.Windows.Forms.Day.Monday;
+            this.monthCalendar1.Location = new System.Drawing.Point(18, 838);
+            this.monthCalendar1.MaxSelectionCount = 1;
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 3;
             // 
@@ -426,7 +429,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1362, 802);
+            this.ClientSize = new System.Drawing.Size(1362, 1061);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

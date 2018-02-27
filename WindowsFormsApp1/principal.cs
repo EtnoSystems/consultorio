@@ -135,5 +135,11 @@ namespace WindowsFormsApp1
             CargarFeriados feriados = new CargarFeriados();
             feriados.Show();
         }
+
+        private void mnuAgregarPaciente_Click(object sender, EventArgs e)
+        {
+            Pacientes_Alta pacientesAlta = new Pacientes_Alta();
+            pacientesAlta.Show();
+        }
     }
 }
