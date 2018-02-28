@@ -25,6 +25,7 @@ namespace DAO
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<Auditoria> Auditoria { get; set; }
         public DbSet<Ciudad> Ciudad { get; set; }
         public DbSet<Consulta> Consulta { get; set; }
         public DbSet<Datos_contacto> Datos_contacto { get; set; }

@@ -324,45 +324,49 @@ insert into dbo.especialidad (denominacion) values ('Traumatología y ortopedia 
 insert into dbo.especialidad (denominacion) values ('Urología');
 
 --INSERTS PARA LAS OBRAS SOCIALES
-insert into dbo.obra_social (denominacion,plus,activa) values ('AMUR',250,'TRUE');
-insert into dbo.obra_social (denominacion,plus,activa) values ('DASUTEN',300,'TRUE');
-insert into dbo.obra_social (denominacion,plus,activa) values ('Federada Salud',0,'TRUE');
-insert into dbo.obra_social (denominacion,plus,activa) values ('Galeno',250,'TRUE');
-insert into dbo.obra_social (denominacion,plus,activa) values ('IOSE',250,'TRUE');
-insert into dbo.obra_social (denominacion,plus,activa) values ('IOSPER',250,'TRUE');
-insert into dbo.obra_social (denominacion,plus,activa) values ('OSBA',250,'TRUE');
-insert into dbo.obra_social (denominacion,plus,activa) values ('OSDE Binario',250,'TRUE');
-insert into dbo.obra_social (denominacion,plus,activa) values ('OSFATLyF',250,'TRUE');
-insert into dbo.obra_social (denominacion,plus,activa) values ('OSPE',250,'TRUE');
-insert into dbo.obra_social (denominacion,plus,activa) values ('OSECAC',250,'TRUE');
-insert into dbo.obra_social (denominacion,plus,activa) values ('OSPRERA',300,'TRUE');
-insert into dbo.obra_social (denominacion,plus,activa) values ('Panaderos',0,'FALSE');
-insert into dbo.obra_social (denominacion,plus,activa) values ('Jerarquicos Salud',0,'TRUE');
-insert into dbo.obra_social (denominacion,plus,activa) values ('Sancor Salud',150,'TRUE');
-insert into dbo.obra_social (denominacion,plus,activa) values ('SMEBER',300,'TRUE');
-insert into dbo.obra_social (denominacion,plus,activa) values ('Swiss Medical',250,'TRUE');
-insert into dbo.obra_social (denominacion,plus,activa) values ('Union Personal',0,'TRUE');
+insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('AMUR','Asociación Mutual Ruralista',250,'TRUE');
+insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('DASUTEN','Dirección de Acción Social de la UTN',300,'TRUE');
+insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('Federada Salud',null,0,'TRUE');
+insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('Galeno',null,250,'TRUE');
+insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('IOSE','Instituto de Obra Social del Ejercito',250,'TRUE');
+insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('IOSPER','Instituto de Obra Social de la Provincia de Entre Ríos',250,'TRUE');
+insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('OSBA','Obra Social de la Ciudad de Buenos Aires',250,'TRUE');
+insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('OSDE Binario',null,250,'TRUE');
+insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('OSFATLyF','Obra Social de la Federación Argentina de Trabajadores de Luz y Fuerza',250,'TRUE');
+insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('OSPE','Obra Social de Petroleros',250,'TRUE');
+insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('OSECAC','Obra Social de Empleados de Comercio y Actividades Civiles',250,'TRUE');
+insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('OSPRERA','Obra Social de los Trabajadores Rurales y Estibadores de la República Argentina',300,'TRUE');
+insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('Panaderos',null,0,'FALSE');
+insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('Jerarquicos Salud',null,0,'TRUE');
+insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('Sancor Salud',null,150,'TRUE');
+insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('SMEBER','Sociedad Mutual de Empleados del Banco de Entre Ríos',300,'TRUE');
+insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('Swiss Medical',null,250,'TRUE');
+insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('Union Personal',null,0,'TRUE');
 
 
 -- INSERTS PARA CREAR UN PACIENTE
 insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('chile',157,null,null,1);
 insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo) values (34116494,'jorge javier','robas',1,'M');
-insert into dbo.datos_contacto (email_primario,email_secundario,tel_celular,tel_fijo,persona_id) values ('javier_robas@hotmail.com','jorgerobas@gmail.com','+5493455430130','+543455420313',1);
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('javier_robas@hotmail.com','+5493455430130','+543455420313',1);
 
 insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo) values (34116494,'matias','flores fabbro',null,'M');
-insert into dbo.datos_contacto (email_primario,email_secundario,tel_celular,tel_fijo,persona_id) values ('matybienalto@gmail.com',null,'+5493455510599',null,2);
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('matybienalto@gmail.com','+5493455510599',null,2);
+
+insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('juan herrero',100,null,null,1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo) values (16328437,'maria elena','bielinis',2,'F');
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('mariaelena.bielinis@hotmail.com','+5493455527719',null,3);
 
 
 -- INSERTS PARA CREAR UN MEDICO
 insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('san martin',1114,1,4,1);
 insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Matricula,Valor_consulta,Porcentaje_retencion) values (34195888,'johanna natalia','buiatti',2,'F',500,'0001',0);
-insert into dbo.datos_contacto (email_primario,email_secundario,tel_celular,tel_fijo,persona_id) values ('johanna_buiatti@hotmail.com','johanna.buiatti@gmail.com','+5493455406811','+543455420282',3);
-insert into dbo.especialidadPersona(especialidad_id,persona_id) values (73,3);
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('johanna_buiatti@hotmail.com','+5493455406811','+543455420282',4);
+insert into dbo.especialidadPersona(especialidad_id,persona_id) values (73,4);
 
 insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('juan j. passo',562,null,null,1);
 insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Matricula,Valor_consulta,Porcentaje_retencion) values (23539783,'sergio julian','leissa',3,'M',500,'0001',0);
-insert into dbo.especialidadPersona(especialidad_id,persona_id) values (22,4);
-insert into dbo.especialidadPersona(especialidad_id,persona_id) values (40,4);
+insert into dbo.especialidadPersona(especialidad_id,persona_id) values (22,5);
+insert into dbo.especialidadPersona(especialidad_id,persona_id) values (40,5);
 
 
 -- INSERTS DE LA TABLA PACIENTE-OBRA SOCIALES
@@ -370,5 +374,8 @@ insert into dbo.obra_socialPersona (Obra_social_Id,Persona_Id) values (14,1);
 insert into dbo.obra_socialPersona (Obra_social_Id,Persona_Id) values (16,1);
 insert into dbo.obra_socialPersona (Obra_social_Id,Persona_Id) values (11,2);
 
+
+-- INSERTS DE LA TABLA CONSULTA MEDICA
+insert into dbo.consulta (precio,fecha,plus,retencion_medico,reintegro_por_orden,orden_presentada,obra_social_id,persona_medico_id,persona_paciente_id) values (500,'2018-02-28',250,0,0,'FALSE',1,5,1);
 
 

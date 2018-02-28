@@ -27,6 +27,7 @@ namespace DAO
         public string Direccion { get; set; }
         public string Observaciones { get; set; }
         public bool Activa { get; set; }
+        public string Nombre_largo { get; set; }
     
         public virtual ICollection<Consulta> Consulta { get; set; }
         public virtual ICollection<Persona> Persona { get; set; }

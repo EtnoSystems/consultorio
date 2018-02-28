@@ -12,14 +12,13 @@ namespace DAO
     using System;
     using System.Collections.Generic;
     
-    public partial class Datos_contacto
+    public partial class Auditoria
     {
         public int Id { get; set; }
-        public string Email { get; set; }
-        public string Tel_celular { get; set; }
-        public string Tel_fijo { get; set; }
-        public int Persona_Id { get; set; }
-    
-        public virtual Persona Persona { get; set; }
+        public string fecha { get; set; }
+        public string Usuario { get; set; }
+        public string Tabla { get; set; }
+        public string Elemento { get; set; }
+        public string Accion { get; set; }
     }
 }

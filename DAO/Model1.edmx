@@ -6,6 +6,7 @@
     <edmx:StorageModels>
     <Schema Namespace="consultoriosModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="consultoriosModelStoreContainer">
+    <EntitySet Name="Auditoria" EntityType="consultoriosModel.Store.Auditoria" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Ciudad" EntityType="consultoriosModel.Store.Ciudad" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Consulta" EntityType="consultoriosModel.Store.Consulta" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Datos_contacto" EntityType="consultoriosModel.Store.Datos_contacto" store:Type="Tables" Schema="dbo" />
@@ -16,8 +17,8 @@
     <EntitySet Name="Persona" EntityType="consultoriosModel.Store.Persona" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Tipo_usuario" EntityType="consultoriosModel.Store.Tipo_usuario" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Usuario" EntityType="consultoriosModel.Store.Usuario" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Obra_socialPersona" EntityType="consultoriosModel.Store.Obra_socialPersona" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="EspecialidadPersona" EntityType="consultoriosModel.Store.EspecialidadPersona" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Obra_socialPersona" EntityType="consultoriosModel.Store.Obra_socialPersona" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="FK_direccionciudad" Association="consultoriosModel.Store.FK_direccionciudad">
       <End Role="Ciudad" EntitySet="Ciudad" />
       <End Role="Direccion" EntitySet="Direccion" />
@@ -46,14 +47,6 @@
       <End Role="Tipo_usuario" EntitySet="Tipo_usuario" />
       <End Role="Usuario" EntitySet="Usuario" />
     </AssociationSet>
-    <AssociationSet Name="FK_Obra_socialPersona_Obra_social" Association="consultoriosModel.Store.FK_Obra_socialPersona_Obra_social">
-      <End Role="Obra_social" EntitySet="Obra_social" />
-      <End Role="Obra_socialPersona" EntitySet="Obra_socialPersona" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Obra_socialPersona_Persona" Association="consultoriosModel.Store.FK_Obra_socialPersona_Persona">
-      <End Role="Persona" EntitySet="Persona" />
-      <End Role="Obra_socialPersona" EntitySet="Obra_socialPersona" />
-    </AssociationSet>
     <AssociationSet Name="FK_EspecialidadPersona_Especialidad" Association="consultoriosModel.Store.FK_EspecialidadPersona_Especialidad">
       <End Role="Especialidad" EntitySet="Especialidad" />
       <End Role="EspecialidadPersona" EntitySet="EspecialidadPersona" />
@@ -62,7 +55,26 @@
       <End Role="Persona" EntitySet="Persona" />
       <End Role="EspecialidadPersona" EntitySet="EspecialidadPersona" />
     </AssociationSet>
+    <AssociationSet Name="FK_Obra_socialPersona_Obra_social" Association="consultoriosModel.Store.FK_Obra_socialPersona_Obra_social">
+      <End Role="Obra_social" EntitySet="Obra_social" />
+      <End Role="Obra_socialPersona" EntitySet="Obra_socialPersona" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obra_socialPersona_Persona" Association="consultoriosModel.Store.FK_Obra_socialPersona_Persona">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Obra_socialPersona" EntitySet="Obra_socialPersona" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Auditoria">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tabla" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Elemento" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Accion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
   <EntityType Name="Ciudad">
     <Key>
       <PropertyRef Name="Id" />
@@ -77,8 +89,6 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Precio" Type="decimal" Nullable="true" Precision="6" Scale="2" />
     <Property Name="Fecha" Type="datetime" Nullable="false" />
-    <Property Name="Medico_Id" Type="int" Nullable="false" />
-    <Property Name="Paciente_Id" Type="int" Nullable="false" />
     <Property Name="Plus" Type="decimal" Nullable="false" Precision="6" Scale="2" />
     <Property Name="Retencion_medico" Type="decimal" Nullable="false" Precision="3" Scale="2" />
     <Property Name="Reintegro_por_orden" Type="decimal" Nullable="false" Precision="6" Scale="2" />
@@ -92,8 +102,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Email_primario" Type="varchar" Nullable="true" MaxLength="320" />
-    <Property Name="Email_secundario" Type="varchar" Nullable="true" MaxLength="320" />
+    <Property Name="Email" Type="varchar" Nullable="true" MaxLength="320" />
     <Property Name="Tel_celular" Type="char" Nullable="true" MaxLength="14" />
     <Property Name="Tel_fijo" Type="char" Nullable="true" MaxLength="13" />
     <Property Name="Persona_Id" Type="int" Nullable="false" />
@@ -129,12 +138,13 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Denominacion" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="Denominacion" Type="varchar" Nullable="false" MaxLength="75" />
     <Property Name="Plus" Type="decimal" Nullable="false" Precision="6" Scale="2" />
     <Property Name="Telefono" Type="nvarchar" Nullable="true" MaxLength="13" />
     <Property Name="Direccion" Type="nvarchar" Nullable="true" MaxLength="300" />
     <Property Name="Observaciones" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Activa" Type="bit" Nullable="false" />
+    <Property Name="Nombre_largo" Type="nvarchar" Nullable="true" MaxLength="200" />
   </EntityType>
   <EntityType Name="Persona">
     <Key>
@@ -167,20 +177,20 @@
     <Property Name="Nombre_completo" Type="varchar" Nullable="false" MaxLength="70" />
     <Property Name="Tipo_usuario_Id" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="Obra_socialPersona">
-    <Key>
-      <PropertyRef Name="Obra_social_Id" />
-      <PropertyRef Name="Persona_Id" />
-    </Key>
-    <Property Name="Obra_social_Id" Type="int" Nullable="false" />
-    <Property Name="Persona_Id" Type="int" Nullable="false" />
-  </EntityType>
   <EntityType Name="EspecialidadPersona">
     <Key>
       <PropertyRef Name="Especialidad_Id" />
       <PropertyRef Name="Persona_Id" />
     </Key>
     <Property Name="Especialidad_Id" Type="int" Nullable="false" />
+    <Property Name="Persona_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Obra_socialPersona">
+    <Key>
+      <PropertyRef Name="Obra_social_Id" />
+      <PropertyRef Name="Persona_Id" />
+    </Key>
+    <Property Name="Obra_social_Id" Type="int" Nullable="false" />
     <Property Name="Persona_Id" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_direccionciudad">
@@ -267,30 +277,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Obra_socialPersona_Obra_social">
-    <End Role="Obra_social" Type="consultoriosModel.Store.Obra_social" Multiplicity="1" />
-    <End Role="Obra_socialPersona" Type="consultoriosModel.Store.Obra_socialPersona" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Obra_social">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Obra_socialPersona">
-        <PropertyRef Name="Obra_social_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Obra_socialPersona_Persona">
-    <End Role="Obra_socialPersona" Type="consultoriosModel.Store.Obra_socialPersona" Multiplicity="*" />
-    <End Role="Persona" Type="consultoriosModel.Store.Persona" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="Persona">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Obra_socialPersona">
-        <PropertyRef Name="Persona_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_EspecialidadPersona_Especialidad">
     <End Role="Especialidad" Type="consultoriosModel.Store.Especialidad" Multiplicity="1" />
     <End Role="EspecialidadPersona" Type="consultoriosModel.Store.EspecialidadPersona" Multiplicity="*" />
@@ -315,10 +301,45 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Obra_socialPersona_Obra_social">
+    <End Role="Obra_social" Type="consultoriosModel.Store.Obra_social" Multiplicity="1" />
+    <End Role="Obra_socialPersona" Type="consultoriosModel.Store.Obra_socialPersona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Obra_social">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Obra_socialPersona">
+        <PropertyRef Name="Obra_social_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obra_socialPersona_Persona">
+    <End Role="Obra_socialPersona" Type="consultoriosModel.Store.Obra_socialPersona" Multiplicity="*" />
+    <End Role="Persona" Type="consultoriosModel.Store.Persona" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Obra_socialPersona">
+        <PropertyRef Name="Persona_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="consultoriosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Auditoria">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fecha" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Usuario" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tabla" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Elemento" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Accion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
         <EntityType Name="Ciudad">
           <Key>
             <PropertyRef Name="Id" />
@@ -334,8 +355,6 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Precio" Type="Decimal" Precision="6" Scale="2" />
           <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Medico_Id" Type="Int32" Nullable="false" />
-          <Property Name="Paciente_Id" Type="Int32" Nullable="false" />
           <Property Name="Plus" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
           <Property Name="Retencion_medico" Type="Decimal" Precision="3" Scale="2" Nullable="false" />
           <Property Name="Reintegro_por_orden" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
@@ -344,16 +363,15 @@
           <Property Name="Persona_medico_Id" Type="Int32" Nullable="false" />
           <Property Name="Persona_paciente_Id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Obra_social" Relationship="Self.FK_Obra_socialConsulta" FromRole="Consulta" ToRole="Obra_social" />
-          <NavigationProperty Name="Persona_medico" Relationship="Self.FK_PersonaConsulta" FromRole="Consulta" ToRole="Persona" />
-          <NavigationProperty Name="Persona_paciente" Relationship="Self.FK_PersonaConsulta1" FromRole="Consulta" ToRole="Persona" />
+          <NavigationProperty Name="Persona" Relationship="Self.FK_PersonaConsulta" FromRole="Consulta" ToRole="Persona" />
+          <NavigationProperty Name="Persona1" Relationship="Self.FK_PersonaConsulta1" FromRole="Consulta" ToRole="Persona" />
         </EntityType>
         <EntityType Name="Datos_contacto">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Email_primario" Type="String" MaxLength="320" FixedLength="false" Unicode="false" />
-          <Property Name="Email_secundario" Type="String" MaxLength="320" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="320" FixedLength="false" Unicode="false" />
           <Property Name="Tel_celular" Type="String" MaxLength="14" FixedLength="true" Unicode="false" />
           <Property Name="Tel_fijo" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
           <Property Name="Persona_Id" Type="Int32" Nullable="false" />
@@ -378,7 +396,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Denominacion" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Persona" Relationship="consultoriosModel.EspecialidadPersona" FromRole="Especialidad" ToRole="Persona" />
+          <NavigationProperty Name="Persona" Relationship="Self.EspecialidadPersona" FromRole="Especialidad" ToRole="Persona" />
         </EntityType>
         <EntityType Name="Feriado">
           <Key>
@@ -393,12 +411,13 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Denominacion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Denominacion" Type="String" MaxLength="75" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Plus" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
           <Property Name="Telefono" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
           <Property Name="Direccion" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
           <Property Name="Observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Activa" Type="Boolean" Nullable="false" />
+          <Property Name="Nombre_largo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Consulta" Relationship="Self.FK_Obra_socialConsulta" FromRole="Obra_social" ToRole="Consulta" />
           <NavigationProperty Name="Persona" Relationship="Self.Obra_socialPersona" FromRole="Obra_social" ToRole="Persona" />
         </EntityType>
@@ -415,12 +434,12 @@
           <Property Name="Matricula" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
           <Property Name="Valor_consulta" Type="Decimal" Precision="6" Scale="2" />
           <Property Name="Porcentaje_retencion" Type="Decimal" Precision="3" Scale="2" />
-          <NavigationProperty Name="Consulta_medico" Relationship="Self.FK_PersonaConsulta" FromRole="Persona" ToRole="Consulta" />
-          <NavigationProperty Name="Consulta_paciente" Relationship="Self.FK_PersonaConsulta1" FromRole="Persona" ToRole="Consulta" />
+          <NavigationProperty Name="Consulta" Relationship="Self.FK_PersonaConsulta" FromRole="Persona" ToRole="Consulta" />
+          <NavigationProperty Name="Consulta1" Relationship="Self.FK_PersonaConsulta1" FromRole="Persona" ToRole="Consulta" />
           <NavigationProperty Name="Datos_contacto" Relationship="Self.FK_PersonaDatos_contacto" FromRole="Persona" ToRole="Datos_contacto" />
           <NavigationProperty Name="Direccion" Relationship="Self.FK_personadireccion" FromRole="Persona" ToRole="Direccion" />
+          <NavigationProperty Name="Especialidad" Relationship="Self.EspecialidadPersona" FromRole="Persona" ToRole="Especialidad" />
           <NavigationProperty Name="Obra_social" Relationship="Self.Obra_socialPersona" FromRole="Persona" ToRole="Obra_social" />
-          <NavigationProperty Name="Especialidad" Relationship="consultoriosModel.EspecialidadPersona" FromRole="Persona" ToRole="Especialidad" />
         </EntityType>
         <EntityType Name="Tipo_usuario">
           <Key>
@@ -525,11 +544,16 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="EspecialidadPersona">
+          <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="*" />
+          <End Role="Persona" Type="Self.Persona" Multiplicity="*" />
+        </Association>
         <Association Name="Obra_socialPersona">
           <End Role="Obra_social" Type="Self.Obra_social" Multiplicity="*" />
           <End Role="Persona" Type="Self.Persona" Multiplicity="*" />
         </Association>
         <EntityContainer Name="consultoriosEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Auditoria" EntityType="Self.Auditoria" />
           <EntitySet Name="Ciudad" EntityType="Self.Ciudad" />
           <EntitySet Name="Consulta" EntityType="Self.Consulta" />
           <EntitySet Name="Datos_contacto" EntityType="Self.Datos_contacto" />
@@ -568,25 +592,33 @@
             <End Role="Tipo_usuario" EntitySet="Tipo_usuario" />
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
+          <AssociationSet Name="EspecialidadPersona" Association="Self.EspecialidadPersona">
+            <End Role="Especialidad" EntitySet="Especialidad" />
+            <End Role="Persona" EntitySet="Persona" />
+          </AssociationSet>
           <AssociationSet Name="Obra_socialPersona" Association="Self.Obra_socialPersona">
             <End Role="Obra_social" EntitySet="Obra_social" />
             <End Role="Persona" EntitySet="Persona" />
           </AssociationSet>
-          <AssociationSet Name="EspecialidadPersona" Association="consultoriosModel.EspecialidadPersona">
-            <End Role="Especialidad" EntitySet="Especialidad" />
-            <End Role="Persona" EntitySet="Persona" />
-          </AssociationSet>
         </EntityContainer>
-        <Association Name="EspecialidadPersona">
-          <End Type="consultoriosModel.Especialidad" Role="Especialidad" Multiplicity="*" />
-          <End Type="consultoriosModel.Persona" Role="Persona" Multiplicity="*" />
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="consultoriosModelStoreContainer" CdmEntityContainer="consultoriosEntities">
+    <EntitySetMapping Name="Auditoria">
+      <EntityTypeMapping TypeName="IsTypeOf(consultoriosModel.Auditoria)">
+        <MappingFragment StoreEntitySet="Auditoria">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Tabla" ColumnName="Tabla" />
+          <ScalarProperty Name="Elemento" ColumnName="Elemento" />
+          <ScalarProperty Name="Accion" ColumnName="Accion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Ciudad">
       <EntityTypeMapping TypeName="IsTypeOf(consultoriosModel.Ciudad)">
         <MappingFragment StoreEntitySet="Ciudad">
@@ -601,8 +633,6 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Precio" ColumnName="Precio" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-          <ScalarProperty Name="Medico_Id" ColumnName="Medico_Id" />
-          <ScalarProperty Name="Paciente_Id" ColumnName="Paciente_Id" />
           <ScalarProperty Name="Plus" ColumnName="Plus" />
           <ScalarProperty Name="Retencion_medico" ColumnName="Retencion_medico" />
           <ScalarProperty Name="Reintegro_por_orden" ColumnName="Reintegro_por_orden" />
@@ -617,8 +647,7 @@
       <EntityTypeMapping TypeName="IsTypeOf(consultoriosModel.Datos_contacto)">
         <MappingFragment StoreEntitySet="Datos_contacto">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Email_primario" ColumnName="Email_primario" />
-          <ScalarProperty Name="Email_secundario" ColumnName="Email_secundario" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Tel_celular" ColumnName="Tel_celular" />
           <ScalarProperty Name="Tel_fijo" ColumnName="Tel_fijo" />
           <ScalarProperty Name="Persona_Id" ColumnName="Persona_Id" />
@@ -664,6 +693,7 @@
           <ScalarProperty Name="Direccion" ColumnName="Direccion" />
           <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
           <ScalarProperty Name="Activa" ColumnName="Activa" />
+          <ScalarProperty Name="Nombre_largo" ColumnName="Nombre_largo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -701,17 +731,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="Obra_socialPersona" TypeName="consultoriosModel.Obra_socialPersona" StoreEntitySet="Obra_socialPersona">
-      <EndProperty Name="Obra_social">
-        <ScalarProperty Name="Id" ColumnName="Obra_social_Id" />
+    <AssociationSetMapping Name="EspecialidadPersona" TypeName="consultoriosModel.EspecialidadPersona" StoreEntitySet="EspecialidadPersona">
+      <EndProperty Name="Especialidad">
+        <ScalarProperty Name="Id" ColumnName="Especialidad_Id" />
       </EndProperty>
       <EndProperty Name="Persona">
         <ScalarProperty Name="Id" ColumnName="Persona_Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="EspecialidadPersona" TypeName="consultoriosModel.EspecialidadPersona" StoreEntitySet="EspecialidadPersona">
-      <EndProperty Name="Especialidad">
-        <ScalarProperty Name="Id" ColumnName="Especialidad_Id" />
+    <AssociationSetMapping Name="Obra_socialPersona" TypeName="consultoriosModel.Obra_socialPersona" StoreEntitySet="Obra_socialPersona">
+      <EndProperty Name="Obra_social">
+        <ScalarProperty Name="Id" ColumnName="Obra_social_Id" />
       </EndProperty>
       <EndProperty Name="Persona">
         <ScalarProperty Name="Id" ColumnName="Persona_Id" />

@@ -17,8 +17,6 @@ namespace DAO
         public int Id { get; set; }
         public Nullable<decimal> Precio { get; set; }
         public System.DateTime Fecha { get; set; }
-        public int Medico_Id { get; set; }
-        public int Paciente_Id { get; set; }
         public decimal Plus { get; set; }
         public decimal Retencion_medico { get; set; }
         public decimal Reintegro_por_orden { get; set; }
@@ -28,7 +26,7 @@ namespace DAO
         public int Persona_paciente_Id { get; set; }
     
         public virtual Obra_social Obra_social { get; set; }
-        public virtual Persona Persona_medico { get; set; }
-        public virtual Persona Persona_paciente { get; set; }
+        public virtual Persona Persona { get; set; }
+        public virtual Persona Persona1 { get; set; }
     }
 }

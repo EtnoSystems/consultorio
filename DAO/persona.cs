@@ -16,11 +16,11 @@ namespace DAO
     {
         public Persona()
         {
-            this.Consulta_medico = new HashSet<Consulta>();
-            this.Consulta_paciente = new HashSet<Consulta>();
+            this.Consulta = new HashSet<Consulta>();
+            this.Consulta1 = new HashSet<Consulta>();
             this.Datos_contacto = new HashSet<Datos_contacto>();
-            this.Obra_social = new HashSet<Obra_social>();
             this.Especialidad = new HashSet<Especialidad>();
+            this.Obra_social = new HashSet<Obra_social>();
         }
     
         public int Id { get; set; }
@@ -33,11 +33,11 @@ namespace DAO
         public Nullable<decimal> Valor_consulta { get; set; }
         public Nullable<decimal> Porcentaje_retencion { get; set; }
     
-        public virtual ICollection<Consulta> Consulta_medico { get; set; }
-        public virtual ICollection<Consulta> Consulta_paciente { get; set; }
+        public virtual ICollection<Consulta> Consulta { get; set; }
+        public virtual ICollection<Consulta> Consulta1 { get; set; }
         public virtual ICollection<Datos_contacto> Datos_contacto { get; set; }
         public virtual Direccion Direccion { get; set; }
-        public virtual ICollection<Obra_social> Obra_social { get; set; }
         public virtual ICollection<Especialidad> Especialidad { get; set; }
+        public virtual ICollection<Obra_social> Obra_social { get; set; }
     }
 }

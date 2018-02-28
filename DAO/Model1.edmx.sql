@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 02/27/2018 01:17:44
+-- Date Created: 02/28/2018 03:04:25
 -- Generated from EDMX file: C:\Users\Jorge\Desktop\consultorios\consultorio\DAO\Model1.edmx
 -- --------------------------------------------------
 
@@ -20,8 +20,20 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_direccionciudad]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Direccion] DROP CONSTRAINT [FK_direccionciudad];
 GO
+IF OBJECT_ID(N'[dbo].[FK_EspecialidadPersona_Especialidad]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[EspecialidadPersona] DROP CONSTRAINT [FK_EspecialidadPersona_Especialidad];
+GO
+IF OBJECT_ID(N'[dbo].[FK_EspecialidadPersona_Persona]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[EspecialidadPersona] DROP CONSTRAINT [FK_EspecialidadPersona_Persona];
+GO
 IF OBJECT_ID(N'[dbo].[FK_Obra_socialConsulta]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_Obra_socialConsulta];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Obra_socialPersona_Obra_social]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Obra_socialPersona] DROP CONSTRAINT [FK_Obra_socialPersona_Obra_social];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Obra_socialPersona_Persona]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Obra_socialPersona] DROP CONSTRAINT [FK_Obra_socialPersona_Persona];
 GO
 IF OBJECT_ID(N'[dbo].[FK_PersonaConsulta]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_PersonaConsulta];
@@ -38,23 +50,14 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_UsuarioTipo_usuario]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Usuario] DROP CONSTRAINT [FK_UsuarioTipo_usuario];
 GO
-IF OBJECT_ID(N'[dbo].[FK_Obra_socialPersona_Obra_social]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Obra_socialPersona] DROP CONSTRAINT [FK_Obra_socialPersona_Obra_social];
-GO
-IF OBJECT_ID(N'[dbo].[FK_Obra_socialPersona_Persona]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Obra_socialPersona] DROP CONSTRAINT [FK_Obra_socialPersona_Persona];
-GO
-IF OBJECT_ID(N'[dbo].[FK_EspecialidadPersona_Especialidad]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[EspecialidadPersona] DROP CONSTRAINT [FK_EspecialidadPersona_Especialidad];
-GO
-IF OBJECT_ID(N'[dbo].[FK_EspecialidadPersona_Persona]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[EspecialidadPersona] DROP CONSTRAINT [FK_EspecialidadPersona_Persona];
-GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[Auditoria]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Auditoria];
+GO
 IF OBJECT_ID(N'[dbo].[Ciudad]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Ciudad];
 GO
@@ -70,11 +73,17 @@ GO
 IF OBJECT_ID(N'[dbo].[Especialidad]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Especialidad];
 GO
+IF OBJECT_ID(N'[dbo].[EspecialidadPersona]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[EspecialidadPersona];
+GO
 IF OBJECT_ID(N'[dbo].[Feriado]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Feriado];
 GO
 IF OBJECT_ID(N'[dbo].[Obra_social]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Obra_social];
+GO
+IF OBJECT_ID(N'[dbo].[Obra_socialPersona]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Obra_socialPersona];
 GO
 IF OBJECT_ID(N'[dbo].[Persona]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Persona];
@@ -85,16 +94,21 @@ GO
 IF OBJECT_ID(N'[dbo].[Usuario]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Usuario];
 GO
-IF OBJECT_ID(N'[dbo].[Obra_socialPersona]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Obra_socialPersona];
-GO
-IF OBJECT_ID(N'[dbo].[EspecialidadPersona]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[EspecialidadPersona];
-GO
 
 -- --------------------------------------------------
 -- Creating all tables
 -- --------------------------------------------------
+
+-- Creating table 'Auditoria'
+CREATE TABLE [dbo].[Auditoria] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [fecha] nvarchar(max)  NOT NULL,
+    [Usuario] nvarchar(max)  NOT NULL,
+    [Tabla] nvarchar(max)  NOT NULL,
+    [Elemento] nvarchar(max)  NOT NULL,
+    [Accion] nvarchar(max)  NOT NULL
+);
+GO
 
 -- Creating table 'Ciudad'
 CREATE TABLE [dbo].[Ciudad] (
@@ -108,8 +122,6 @@ CREATE TABLE [dbo].[Consulta] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Precio] decimal(6,2)  NULL,
     [Fecha] datetime  NOT NULL,
-    [Medico_Id] int  NOT NULL,
-    [Paciente_Id] int  NOT NULL,
     [Plus] decimal(6,2)  NOT NULL,
     [Retencion_medico] decimal(3,2)  NOT NULL,
     [Reintegro_por_orden] decimal(6,2)  NOT NULL,
@@ -123,8 +135,7 @@ GO
 -- Creating table 'Datos_contacto'
 CREATE TABLE [dbo].[Datos_contacto] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Email_primario] varchar(320)  NULL,
-    [Email_secundario] varchar(320)  NULL,
+    [Email] varchar(320)  NULL,
     [Tel_celular] char(14)  NULL,
     [Tel_fijo] char(13)  NULL,
     [Persona_Id] int  NOT NULL
@@ -160,12 +171,13 @@ GO
 -- Creating table 'Obra_social'
 CREATE TABLE [dbo].[Obra_social] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Denominacion] varchar(150)  NOT NULL,
+    [Denominacion] varchar(75)  NOT NULL,
     [Plus] decimal(6,2)  NOT NULL,
     [Telefono] nvarchar(13)  NULL,
     [Direccion] nvarchar(300)  NULL,
     [Observaciones] nvarchar(max)  NULL,
-    [Activa] bit  NOT NULL
+    [Activa] bit  NOT NULL,
+    [Nombre_largo] nvarchar(200)  NULL
 );
 GO
 
@@ -200,13 +212,6 @@ CREATE TABLE [dbo].[Usuario] (
 );
 GO
 
--- Creating table 'Obra_socialPersona'
-CREATE TABLE [dbo].[Obra_socialPersona] (
-    [Obra_social_Id] int  NOT NULL,
-    [Persona_Id] int  NOT NULL
-);
-GO
-
 -- Creating table 'EspecialidadPersona'
 CREATE TABLE [dbo].[EspecialidadPersona] (
     [Especialidad_Id] int  NOT NULL,
@@ -214,9 +219,22 @@ CREATE TABLE [dbo].[EspecialidadPersona] (
 );
 GO
 
+-- Creating table 'Obra_socialPersona'
+CREATE TABLE [dbo].[Obra_socialPersona] (
+    [Obra_social_Id] int  NOT NULL,
+    [Persona_Id] int  NOT NULL
+);
+GO
+
 -- --------------------------------------------------
 -- Creating all PRIMARY KEY constraints
 -- --------------------------------------------------
+
+-- Creating primary key on [Id] in table 'Auditoria'
+ALTER TABLE [dbo].[Auditoria]
+ADD CONSTRAINT [PK_Auditoria]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
 
 -- Creating primary key on [Id] in table 'Ciudad'
 ALTER TABLE [dbo].[Ciudad]
@@ -278,16 +296,16 @@ ADD CONSTRAINT [PK_Usuario]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
--- Creating primary key on [Obra_social_Id], [Persona_Id] in table 'Obra_socialPersona'
-ALTER TABLE [dbo].[Obra_socialPersona]
-ADD CONSTRAINT [PK_Obra_socialPersona]
-    PRIMARY KEY CLUSTERED ([Obra_social_Id], [Persona_Id] ASC);
-GO
-
 -- Creating primary key on [Especialidad_Id], [Persona_Id] in table 'EspecialidadPersona'
 ALTER TABLE [dbo].[EspecialidadPersona]
 ADD CONSTRAINT [PK_EspecialidadPersona]
     PRIMARY KEY CLUSTERED ([Especialidad_Id], [Persona_Id] ASC);
+GO
+
+-- Creating primary key on [Obra_social_Id], [Persona_Id] in table 'Obra_socialPersona'
+ALTER TABLE [dbo].[Obra_socialPersona]
+ADD CONSTRAINT [PK_Obra_socialPersona]
+    PRIMARY KEY CLUSTERED ([Obra_social_Id], [Persona_Id] ASC);
 GO
 
 -- --------------------------------------------------
@@ -399,30 +417,6 @@ ON [dbo].[Usuario]
     ([Tipo_usuario_Id]);
 GO
 
--- Creating foreign key on [Obra_social_Id] in table 'Obra_socialPersona'
-ALTER TABLE [dbo].[Obra_socialPersona]
-ADD CONSTRAINT [FK_Obra_socialPersona_Obra_social]
-    FOREIGN KEY ([Obra_social_Id])
-    REFERENCES [dbo].[Obra_social]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating foreign key on [Persona_Id] in table 'Obra_socialPersona'
-ALTER TABLE [dbo].[Obra_socialPersona]
-ADD CONSTRAINT [FK_Obra_socialPersona_Persona]
-    FOREIGN KEY ([Persona_Id])
-    REFERENCES [dbo].[Persona]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_Obra_socialPersona_Persona'
-CREATE INDEX [IX_FK_Obra_socialPersona_Persona]
-ON [dbo].[Obra_socialPersona]
-    ([Persona_Id]);
-GO
-
 -- Creating foreign key on [Especialidad_Id] in table 'EspecialidadPersona'
 ALTER TABLE [dbo].[EspecialidadPersona]
 ADD CONSTRAINT [FK_EspecialidadPersona_Especialidad]
@@ -444,6 +438,30 @@ GO
 -- Creating non-clustered index for FOREIGN KEY 'FK_EspecialidadPersona_Persona'
 CREATE INDEX [IX_FK_EspecialidadPersona_Persona]
 ON [dbo].[EspecialidadPersona]
+    ([Persona_Id]);
+GO
+
+-- Creating foreign key on [Obra_social_Id] in table 'Obra_socialPersona'
+ALTER TABLE [dbo].[Obra_socialPersona]
+ADD CONSTRAINT [FK_Obra_socialPersona_Obra_social]
+    FOREIGN KEY ([Obra_social_Id])
+    REFERENCES [dbo].[Obra_social]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating foreign key on [Persona_Id] in table 'Obra_socialPersona'
+ALTER TABLE [dbo].[Obra_socialPersona]
+ADD CONSTRAINT [FK_Obra_socialPersona_Persona]
+    FOREIGN KEY ([Persona_Id])
+    REFERENCES [dbo].[Persona]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_Obra_socialPersona_Persona'
+CREATE INDEX [IX_FK_Obra_socialPersona_Persona]
+ON [dbo].[Obra_socialPersona]
     ([Persona_Id]);
 GO
 
