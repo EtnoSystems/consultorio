@@ -44,6 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CiudadDTO.cs" />
+    <Compile Include="Datos_ContactoDTO.cs" />
+    <Compile Include="DireccionDTO.cs" />
+    <Compile Include="FeriadoDTO.cs" />
     <Compile Include="ObraSocialDTO.cs" />
     <Compile Include="PacienteDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

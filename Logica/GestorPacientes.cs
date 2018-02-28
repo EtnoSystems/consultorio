@@ -10,6 +10,24 @@ namespace Logica
 {
     public class GestorPacientes
     {
+
+        public int AgregarPaciente(string nombre, string apellido, string documento, string sexo, ObraSocialDTO obraSocialDTO, Datos_ContactoDTO datos_ContactoDTO, DireccionDTO direccionDTO)
+        {
+            try
+            {
+                using (consultoriosEntities dbContext = new consultoriosEntities())
+                {
+                    Persona persona = new Persona();
+
+                    dbContext.Persona.Add(persona);
+                    return (dbContext.SaveChanges());
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
        /* public List<PacienteDTO> ListarPacientes() FALTA AGREGAR EL PACIENTEDTO.CS A LA CAPA ENTIDADES
         {
             try
