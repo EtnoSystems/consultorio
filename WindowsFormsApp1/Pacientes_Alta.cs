@@ -181,5 +181,15 @@ namespace WindowsFormsApp1
             TxtDepto.Text = "Depto";
             TxtDepto.ForeColor = Color.Silver;
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
