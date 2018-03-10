@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Logica;
 
 namespace WindowsFormsApp1
 {
@@ -190,6 +191,37 @@ namespace WindowsFormsApp1
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            AgregarPaciente();
+        }
+
+        void AgregarPaciente()
+        {
+            GestorDireccion gestorDireccion = new GestorDireccion();
+            int idDireccion = gestorDireccion.AgregarDireccion(TxtDireccion.Text, TxtNumero.Text, TxtPiso.Text, TxtDepto.Text, /*Convert.ToInt32(CmbCiudad.SelectedValue.ToString())*/1);
+            
+            //GestorObraSocial gestorObraSocial = new GestorObraSocial();
+            //gestorObraSocial.ObtenerObraSocialPorID(Convert.ToInt32(Cmb);
+
+            GestorPersona gestorPersona = new GestorPersona();
+            int idPersona = gestorPersona.AgregarPersona(TxtDNI.Text, TxtNombre.Text, TxtApellido.Text, CmbSexo.SelectedItem.ToString(), idDireccion, "dbd", 0);
+
+            GestorDatosContacto gestorDatosContacto = new GestorDatosContacto();
+            gestorDatosContacto.AgregarDatosDeContacto(TxtMail.Text, TxtCelular.Text, TxtTelefono.Text, idPersona);
+            
+        }
+
+        private void TxtNumero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAgregarOtra_Click(object sender, EventArgs e)
+        {
+            AgregarPaciente();
         }
     }
 }

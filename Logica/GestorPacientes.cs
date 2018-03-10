@@ -9,15 +9,21 @@ using DAO;
 namespace Logica
 {
     public class GestorPacientes
-    {
-
-        public int AgregarPaciente(string nombre, string apellido, string documento, string sexo, ObraSocialDTO obraSocialDTO, Datos_ContactoDTO datos_ContactoDTO, DireccionDTO direccionDTO)
+    { 
+        public int AgregarPaciente(string nombre, string apellido, string documento, string sexo, Obra_social obraSocial, Datos_contacto datos_contacto, Direccion direccion)
         {
             try
             {
                 using (consultoriosEntities dbContext = new consultoriosEntities())
                 {
                     Persona persona = new Persona();
+                    persona.Nombre = nombre;
+                    persona.Apellido = apellido;
+                    persona.Sexo = sexo;
+                    persona.DNI = documento;
+                    persona.Obra_social.Add(obraSocial);
+                    persona.Datos_contacto.Add(datos_contacto);
+                    persona.Direccion_Id = direccion.Id;
 
                     dbContext.Persona.Add(persona);
                     return (dbContext.SaveChanges());

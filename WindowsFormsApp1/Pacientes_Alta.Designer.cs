@@ -35,6 +35,7 @@
             this.CmbSexo = new System.Windows.Forms.ComboBox();
             this.ChkLstObrasSociales = new System.Windows.Forms.CheckedListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TxtNumero = new System.Windows.Forms.TextBox();
             this.TxtPiso = new System.Windows.Forms.TextBox();
             this.TxtDepto = new System.Windows.Forms.TextBox();
             this.TxtCelular = new System.Windows.Forms.TextBox();
@@ -48,7 +49,6 @@
             this.BtnSalir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -125,7 +125,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.TxtNumero);
             this.groupBox1.Controls.Add(this.TxtPiso);
             this.groupBox1.Controls.Add(this.TxtDepto);
             this.groupBox1.Controls.Add(this.TxtCelular);
@@ -141,6 +141,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de contacto";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // TxtNumero
+            // 
+            this.TxtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNumero.ForeColor = System.Drawing.Color.Silver;
+            this.TxtNumero.Location = new System.Drawing.Point(228, 161);
+            this.TxtNumero.Name = "TxtNumero";
+            this.TxtNumero.Size = new System.Drawing.Size(68, 24);
+            this.TxtNumero.TabIndex = 10;
+            this.TxtNumero.Text = "Nro.";
+            this.TxtNumero.TextChanged += new System.EventHandler(this.TxtNumero_TextChanged);
             // 
             // TxtPiso
             // 
@@ -249,6 +260,7 @@
             this.BtnAgregar.Size = new System.Drawing.Size(70, 69);
             this.BtnAgregar.TabIndex = 14;
             this.BtnAgregar.UseVisualStyleBackColor = false;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // BtnAgregarOtra
             // 
@@ -263,6 +275,7 @@
             this.BtnAgregarOtra.Size = new System.Drawing.Size(67, 69);
             this.BtnAgregarOtra.TabIndex = 15;
             this.BtnAgregarOtra.UseVisualStyleBackColor = false;
+            this.BtnAgregarOtra.Click += new System.EventHandler(this.BtnAgregarOtra_Click);
             // 
             // BtnSalir
             // 
@@ -290,16 +303,6 @@
             this.label1.Size = new System.Drawing.Size(225, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Agregar pacientes al sistema";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(228, 161);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(68, 24);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.Text = "Nro.";
             // 
             // Pacientes_Alta
             // 
@@ -344,6 +347,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox CmbSexo;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtNumero;
     }
 }

@@ -43,7 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestorDatosContacto.cs" />
+    <Compile Include="GestorDireccion.cs" />
+    <Compile Include="GestorObraSocial.cs" />
     <Compile Include="GestorPacientes.cs" />
+    <Compile Include="GestorPersona.cs" />
     <Compile Include="GestorTiposDeUsuarios.cs" />
     <Compile Include="GestorUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
