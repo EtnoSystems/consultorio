@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
+
 namespace WindowsFormsApp1
 {
     public partial class CargarSevicio : Form
@@ -44,6 +47,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Se cargó correctamente el servicio", "Carga de servicio", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 EstadoInicial();
                 this.Hide();
+                
             }
             else
             {

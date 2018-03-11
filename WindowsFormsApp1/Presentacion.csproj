@@ -125,6 +125,11 @@
     <Compile Include="ReportesAdministrativos.Designer.cs">
       <DependentUpon>ReportesAdministrativos.cs</DependentUpon>
     </Compile>
+    <Compile Include="reportes\DSConsultas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSConsultas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="reportes\OrdenDeAtencio.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -226,6 +231,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="reportes\DSConsultas.xsc">
+      <DependentUpon>DSConsultas.xsd</DependentUpon>
+    </None>
+    <None Include="reportes\DSConsultas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSConsultas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="reportes\DSConsultas.xss">
+      <DependentUpon>DSConsultas.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

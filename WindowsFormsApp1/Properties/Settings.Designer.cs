@@ -33,5 +33,16 @@ namespace WindowsFormsApp1.Properties {
                 return ((string)(this["consultoriosConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=den1.mssql2.gear.host;Initial Catalog=consultorios;Persist Security I" +
+            "nfo=True;User ID=consultorios;Password=etnosoft_2018")]
+        public string consultoriosConnectionString1 {
+            get {
+                return ((string)(this["consultoriosConnectionString1"]));
+            }
+        }
     }
 }
