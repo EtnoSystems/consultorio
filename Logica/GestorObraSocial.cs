@@ -36,5 +36,29 @@ namespace Logica
                 throw;
             }
         }
+
+        public void EliminarObraSocialPorId(int id)
+        {
+            try
+            {
+                using (consultoriosEntities dbContext = new consultoriosEntities())
+                {
+                    Obra_social obra_Social = (from n in dbContext.Obra_social
+                                               where n.Id == id
+                                               select n).FirstOrDefault();
+                    dbContext.Obra_social.Remove(obra_Social);
+                    dbContext.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public int AgregarObraSocial(string denominacion, string nombre, float plus, bool activa, string direccion, string telefono, string observacion)
+        {
+            return 1;
+        }
     }
 }

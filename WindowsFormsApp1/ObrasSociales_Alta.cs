@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Logica;
 
 namespace WindowsFormsApp1
 {
@@ -19,7 +20,7 @@ namespace WindowsFormsApp1
 
         private void ObrasSociales_alta_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
@@ -29,15 +30,55 @@ namespace WindowsFormsApp1
 
         void EstadoInicial()
         {
+            #region Agregar Obra Social
             TxtDenominacion.Text = "Denominación";
             TxtDenominacion.ForeColor = Color.Silver;
+
+            TxtNombre.Text = "Nombre";
+            TxtNombre.ForeColor = Color.Silver;
+
             TxtDireccion.Text = "Dirección";
             TxtDireccion.ForeColor = Color.Silver;
+
             TxtPlus.Text = "Plus";
             TxtPlus.ForeColor = Color.Silver;
+
+            TxtObservaciones.Text = "Observaciones";
+            TxtObservaciones.ForeColor = Color.Silver;
+
             TxtTelefono.Text = "Teléfono";
             TxtTelefono.ForeColor = Color.Silver;
+
             ChkActiva.Checked = true;
+            #endregion
+
+            #region Modificar Obra Social
+            TxtDireccionModif.Text = "Denominación";
+            TxtDireccionModif.ForeColor = Color.Silver;
+
+            TxtNombreModif.Text = "Nombre";
+            TxtNombreModif.ForeColor = Color.Silver;
+
+            TxtPlusModif.Text = "Plus";
+            TxtPlusModif.ForeColor = Color.Silver;
+
+            TxtObservacionesModif.Text = "Observaciones";
+            TxtObservacionesModif.ForeColor = Color.Silver;
+
+            TxtTelefonoModif.Text = "Teléfono";
+            TxtTelefonoModif.ForeColor = Color.Silver;
+
+            ChkActivaModif.Checked = false;
+            #endregion
+
+            #region Eliminar Obra Social
+            LblNombre.Text = "-";
+            LblDireccion.Text = "-";
+            LblObservaciones.Text = "-";
+            LblPlus.Text = "-";
+            LblTelefono.Text = "-";
+            ChkActivaEliminar.Checked = false;
+            #endregion
         }
 
         void ValidarCamposCompletos()
@@ -108,6 +149,16 @@ namespace WindowsFormsApp1
         {
             //Guarda los datos
             return true;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

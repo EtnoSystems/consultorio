@@ -395,5 +395,11 @@
   <ItemGroup>
     <None Include="images\CalendarRemove.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images\EliminarBoton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\EliminarOtroBoton.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
