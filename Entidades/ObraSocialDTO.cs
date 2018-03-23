@@ -15,6 +15,8 @@ namespace Entidades
         public string Telefono { get; set; }
         public string Direccion { get; set; }
         public string Observaciones { get; set; }
+        public string Nombre_Largo { get; set; }
+        public bool Activa { get; set; }
         public int Editor_Id { get; set; }
 
         public virtual ICollection<Consulta> Consulta { get; set; }

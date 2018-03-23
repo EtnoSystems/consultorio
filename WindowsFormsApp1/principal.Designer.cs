@@ -46,9 +46,6 @@
             this.mnuEliminarPersonal = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuEditarPersonal = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuObrasSociales = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuAgregarObraSocial = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuEliminarObraSocial = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuEditarObrasSociales = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuRecetarios = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuAgregarFeriados = new System.Windows.Forms.ToolStripMenuItem();
@@ -130,7 +127,7 @@
             this.mnuMedicos.MergeAction = System.Windows.Forms.MergeAction.MatchOnly;
             this.mnuMedicos.Name = "mnuMedicos";
             this.mnuMedicos.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mnuMedicos.Size = new System.Drawing.Size(211, 82);
+            this.mnuMedicos.Size = new System.Drawing.Size(183, 82);
             this.mnuMedicos.Text = "Usuarios";
             this.mnuMedicos.ToolTipText = "Gestionar personal médico";
             this.mnuMedicos.Click += new System.EventHandler(this.UsuariosToolStripMenuItem_Click);
@@ -183,7 +180,7 @@
             this.mnuPacientes.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuPacientes.Name = "mnuPacientes";
             this.mnuPacientes.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mnuPacientes.Size = new System.Drawing.Size(211, 82);
+            this.mnuPacientes.Size = new System.Drawing.Size(183, 82);
             this.mnuPacientes.Text = "Pacientes";
             this.mnuPacientes.ToolTipText = "Gestionar los pacientes";
             // 
@@ -195,7 +192,7 @@
             this.mnuAgregarPaciente.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuAgregarPaciente.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuAgregarPaciente.Name = "mnuAgregarPaciente";
-            this.mnuAgregarPaciente.Size = new System.Drawing.Size(211, 82);
+            this.mnuAgregarPaciente.Size = new System.Drawing.Size(173, 82);
             this.mnuAgregarPaciente.Text = "addP";
             this.mnuAgregarPaciente.ToolTipText = "Agregar un paciente nuevo";
             this.mnuAgregarPaciente.Click += new System.EventHandler(this.mnuAgregarPaciente_Click);
@@ -208,7 +205,7 @@
             this.mnuEliminarPaciente.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuEliminarPaciente.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuEliminarPaciente.Name = "mnuEliminarPaciente";
-            this.mnuEliminarPaciente.Size = new System.Drawing.Size(211, 82);
+            this.mnuEliminarPaciente.Size = new System.Drawing.Size(173, 82);
             this.mnuEliminarPaciente.Text = "remove";
             this.mnuEliminarPaciente.ToolTipText = "Eliminar pacientes";
             // 
@@ -220,7 +217,7 @@
             this.mnuEditarPacientes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuEditarPacientes.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuEditarPacientes.Name = "mnuEditarPacientes";
-            this.mnuEditarPacientes.Size = new System.Drawing.Size(211, 82);
+            this.mnuEditarPacientes.Size = new System.Drawing.Size(173, 82);
             this.mnuEditarPacientes.Text = "edit";
             this.mnuEditarPacientes.ToolTipText = "Editar datos de pacientes";
             // 
@@ -239,7 +236,7 @@
             this.mnuPersonal.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuPersonal.Name = "mnuPersonal";
             this.mnuPersonal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mnuPersonal.Size = new System.Drawing.Size(211, 82);
+            this.mnuPersonal.Size = new System.Drawing.Size(183, 82);
             this.mnuPersonal.Text = "admins";
             this.mnuPersonal.ToolTipText = "Gestionar el personal ";
             // 
@@ -282,10 +279,6 @@
             // 
             this.MnuObrasSociales.AutoToolTip = true;
             this.MnuObrasSociales.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.MnuObrasSociales.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuAgregarObraSocial,
-            this.mnuEliminarObraSocial,
-            this.mnuEditarObrasSociales});
             this.MnuObrasSociales.Image = global::WindowsFormsApp1.Properties.Resources.obrasSociales;
             this.MnuObrasSociales.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.MnuObrasSociales.ImageTransparentColor = System.Drawing.Color.Transparent;
@@ -294,43 +287,7 @@
             this.MnuObrasSociales.Size = new System.Drawing.Size(112, 79);
             this.MnuObrasSociales.Text = "os";
             this.MnuObrasSociales.ToolTipText = "Administrar datos de obras sociales";
-            // 
-            // mnuAgregarObraSocial
-            // 
-            this.mnuAgregarObraSocial.AutoToolTip = true;
-            this.mnuAgregarObraSocial.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.mnuAgregarObraSocial.Image = global::WindowsFormsApp1.Properties.Resources.obraSocialAdd;
-            this.mnuAgregarObraSocial.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.mnuAgregarObraSocial.Name = "mnuAgregarObraSocial";
-            this.mnuAgregarObraSocial.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mnuAgregarObraSocial.Size = new System.Drawing.Size(173, 82);
-            this.mnuAgregarObraSocial.Text = "add";
-            this.mnuAgregarObraSocial.ToolTipText = "Agregar una nueva obra social";
-            this.mnuAgregarObraSocial.Click += new System.EventHandler(this.mnuAgregarObraSocial_Click);
-            // 
-            // mnuEliminarObraSocial
-            // 
-            this.mnuEliminarObraSocial.AutoToolTip = true;
-            this.mnuEliminarObraSocial.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.mnuEliminarObraSocial.Image = global::WindowsFormsApp1.Properties.Resources.obraSocialRemove;
-            this.mnuEliminarObraSocial.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.mnuEliminarObraSocial.ImageTransparentColor = System.Drawing.Color.Transparent;
-            this.mnuEliminarObraSocial.Name = "mnuEliminarObraSocial";
-            this.mnuEliminarObraSocial.Size = new System.Drawing.Size(173, 82);
-            this.mnuEliminarObraSocial.Text = "remove";
-            this.mnuEliminarObraSocial.ToolTipText = "Eliminar obras sociales";
-            // 
-            // mnuEditarObrasSociales
-            // 
-            this.mnuEditarObrasSociales.AutoToolTip = true;
-            this.mnuEditarObrasSociales.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.mnuEditarObrasSociales.Image = global::WindowsFormsApp1.Properties.Resources.obrasSocialesEdit;
-            this.mnuEditarObrasSociales.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.mnuEditarObrasSociales.ImageTransparentColor = System.Drawing.Color.Transparent;
-            this.mnuEditarObrasSociales.Name = "mnuEditarObrasSociales";
-            this.mnuEditarObrasSociales.Size = new System.Drawing.Size(173, 82);
-            this.mnuEditarObrasSociales.Text = "edit";
-            this.mnuEditarObrasSociales.ToolTipText = "Editar datos de obras sociales";
+            this.MnuObrasSociales.Click += new System.EventHandler(this.MnuObrasSociales_Click);
             // 
             // MnuRecetarios
             // 
@@ -470,9 +427,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuEditarPersonal;
         private System.Windows.Forms.ToolStripMenuItem mnuAyuda;
         private System.Windows.Forms.ToolStripMenuItem MnuObrasSociales;
-        private System.Windows.Forms.ToolStripMenuItem mnuAgregarObraSocial;
-        private System.Windows.Forms.ToolStripMenuItem mnuEliminarObraSocial;
-        private System.Windows.Forms.ToolStripMenuItem mnuEditarObrasSociales;
         private System.Windows.Forms.ToolStripMenuItem mnuServicio;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;

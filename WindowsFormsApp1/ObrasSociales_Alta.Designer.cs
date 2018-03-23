@@ -41,6 +41,10 @@
             this.ChkActivaModif = new System.Windows.Forms.CheckBox();
             this.TxtPlusModif = new System.Windows.Forms.TextBox();
             this.ChkActivaEliminar = new System.Windows.Forms.CheckBox();
+            this.TxtObservaciones = new System.Windows.Forms.TextBox();
+            this.TxtObservacionesModif = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.TxtNombreModif = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -50,12 +54,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.CmbObrasSocialesModif = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.BtnGuardarCambios = new System.Windows.Forms.Button();
             this.BtnGuardarYModifOtro = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.LblNombre = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.LblObservaciones = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.LblPlus = new System.Windows.Forms.Label();
             this.Plus = new System.Windows.Forms.Label();
             this.CmbObrasSociales = new System.Windows.Forms.ComboBox();
@@ -70,15 +79,6 @@
             this.BtnSalir = new System.Windows.Forms.Button();
             this.consultoriosDataSet = new WindowsFormsApp1.consultoriosDataSet();
             this.consultoriosDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.CmbObrasSocialesModif = new System.Windows.Forms.ComboBox();
-            this.TxtObservaciones = new System.Windows.Forms.TextBox();
-            this.TxtObservacionesModif = new System.Windows.Forms.TextBox();
-            this.LblObservaciones = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.TxtNombre = new System.Windows.Forms.TextBox();
-            this.TxtNombreModif = new System.Windows.Forms.TextBox();
-            this.LblNombre = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -109,6 +109,9 @@
             this.TxtDenominacion.Text = "Denominación";
             this.toolTip1.SetToolTip(this.TxtDenominacion, "Coloque el nombre completo de la obra social (Ej. Obra Social de los Empleados de" +
         " Comercio y Actividades Civiles)");
+            this.TxtDenominacion.TextChanged += new System.EventHandler(this.TxtDenominacion_TextChanged);
+            this.TxtDenominacion.Enter += new System.EventHandler(this.TxtDenominacion_Enter_1);
+            this.TxtDenominacion.Leave += new System.EventHandler(this.TxtDenominacion_Leave);
             // 
             // TxtPlus
             // 
@@ -121,6 +124,10 @@
             this.TxtPlus.Text = "Plus";
             this.toolTip1.SetToolTip(this.TxtPlus, "Indique el monto que los usuarios de esta obra social deben abonar (0 siginifica " +
         "que no pagan)");
+            this.TxtPlus.TextChanged += new System.EventHandler(this.TxtPlus_TextChanged_1);
+            this.TxtPlus.Enter += new System.EventHandler(this.TxtPlus_Enter);
+            this.TxtPlus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPlus_KeyPress);
+            this.TxtPlus.Leave += new System.EventHandler(this.TxtPlus_Leave);
             // 
             // ChkActiva
             // 
@@ -147,6 +154,8 @@
             this.TxtDireccion.Text = "Dirección";
             this.toolTip1.SetToolTip(this.TxtDireccion, "Indique el monto que los usuarios de esta obra social deben abonar (0 siginifica " +
         "que no pagan)");
+            this.TxtDireccion.Enter += new System.EventHandler(this.TxtDireccion_Enter_1);
+            this.TxtDireccion.Leave += new System.EventHandler(this.TxtDireccion_Leave);
             // 
             // TxtTelefono
             // 
@@ -159,6 +168,8 @@
             this.TxtTelefono.Text = "Teléfono";
             this.toolTip1.SetToolTip(this.TxtTelefono, "Indique el monto que los usuarios de esta obra social deben abonar (0 siginifica " +
         "que no pagan)");
+            this.TxtTelefono.Enter += new System.EventHandler(this.TxtTelefono_Enter_1);
+            this.TxtTelefono.Leave += new System.EventHandler(this.TxtTelefono_Leave);
             // 
             // TxtTelefonoModif
             // 
@@ -171,6 +182,8 @@
             this.TxtTelefonoModif.Text = "Teléfono";
             this.toolTip1.SetToolTip(this.TxtTelefonoModif, "Indique el monto que los usuarios de esta obra social deben abonar (0 siginifica " +
         "que no pagan)");
+            this.TxtTelefonoModif.Enter += new System.EventHandler(this.TxtTelefonoModif_Enter);
+            this.TxtTelefonoModif.Leave += new System.EventHandler(this.TxtTelefonoModif_Leave);
             // 
             // TxtDireccionModif
             // 
@@ -183,6 +196,8 @@
             this.TxtDireccionModif.Text = "Dirección";
             this.toolTip1.SetToolTip(this.TxtDireccionModif, "Indique el monto que los usuarios de esta obra social deben abonar (0 siginifica " +
         "que no pagan)");
+            this.TxtDireccionModif.Enter += new System.EventHandler(this.TxtDireccionModif_Enter);
+            this.TxtDireccionModif.Leave += new System.EventHandler(this.TxtDireccionModif_Leave);
             // 
             // ChkActivaModif
             // 
@@ -209,6 +224,9 @@
             this.TxtPlusModif.Text = "Plus";
             this.toolTip1.SetToolTip(this.TxtPlusModif, "Indique el monto que los usuarios de esta obra social deben abonar (0 siginifica " +
         "que no pagan)");
+            this.TxtPlusModif.Enter += new System.EventHandler(this.TxtPlusModif_Enter);
+            this.TxtPlusModif.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPlusModif_KeyPress);
+            this.TxtPlusModif.Leave += new System.EventHandler(this.TxtPlusModif_Leave);
             // 
             // ChkActivaEliminar
             // 
@@ -224,6 +242,63 @@
             this.toolTip1.SetToolTip(this.ChkActivaEliminar, "Indique si la obra social está activa actualmente tildando la casilla o dejándola" +
         " vacía para indicar si está interrumpida");
             this.ChkActivaEliminar.UseVisualStyleBackColor = false;
+            // 
+            // TxtObservaciones
+            // 
+            this.TxtObservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtObservaciones.ForeColor = System.Drawing.Color.Silver;
+            this.TxtObservaciones.Location = new System.Drawing.Point(17, 167);
+            this.TxtObservaciones.Name = "TxtObservaciones";
+            this.TxtObservaciones.Size = new System.Drawing.Size(353, 24);
+            this.TxtObservaciones.TabIndex = 5;
+            this.TxtObservaciones.Text = "Observaciones";
+            this.toolTip1.SetToolTip(this.TxtObservaciones, "Coloque el nombre completo de la obra social (Ej. Obra Social de los Empleados de" +
+        " Comercio y Actividades Civiles)");
+            this.TxtObservaciones.Enter += new System.EventHandler(this.TxtObservaciones_Enter);
+            this.TxtObservaciones.Leave += new System.EventHandler(this.TxtObservaciones_Leave);
+            // 
+            // TxtObservacionesModif
+            // 
+            this.TxtObservacionesModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtObservacionesModif.ForeColor = System.Drawing.Color.Silver;
+            this.TxtObservacionesModif.Location = new System.Drawing.Point(17, 177);
+            this.TxtObservacionesModif.Name = "TxtObservacionesModif";
+            this.TxtObservacionesModif.Size = new System.Drawing.Size(353, 24);
+            this.TxtObservacionesModif.TabIndex = 10;
+            this.TxtObservacionesModif.Text = "Observaciones";
+            this.toolTip1.SetToolTip(this.TxtObservacionesModif, "Coloque el nombre completo de la obra social (Ej. Obra Social de los Empleados de" +
+        " Comercio y Actividades Civiles)");
+            this.TxtObservacionesModif.Enter += new System.EventHandler(this.TxtObservacionesModif_Enter);
+            this.TxtObservacionesModif.Leave += new System.EventHandler(this.TxtObservacionesModif_Leave);
+            // 
+            // TxtNombre
+            // 
+            this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombre.ForeColor = System.Drawing.Color.Silver;
+            this.TxtNombre.Location = new System.Drawing.Point(17, 81);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(353, 24);
+            this.TxtNombre.TabIndex = 2;
+            this.TxtNombre.Text = "Nombre";
+            this.toolTip1.SetToolTip(this.TxtNombre, "Coloque el nombre completo de la obra social (Ej. Obra Social de los Empleados de" +
+        " Comercio y Actividades Civiles)");
+            this.TxtNombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.TxtNombre.Enter += new System.EventHandler(this.TxtNombre_Enter);
+            this.TxtNombre.Leave += new System.EventHandler(this.TxtNombre_Leave);
+            // 
+            // TxtNombreModif
+            // 
+            this.TxtNombreModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombreModif.ForeColor = System.Drawing.Color.Silver;
+            this.TxtNombreModif.Location = new System.Drawing.Point(17, 92);
+            this.TxtNombreModif.Name = "TxtNombreModif";
+            this.TxtNombreModif.Size = new System.Drawing.Size(353, 24);
+            this.TxtNombreModif.TabIndex = 11;
+            this.TxtNombreModif.Text = "Nombre";
+            this.toolTip1.SetToolTip(this.TxtNombreModif, "Coloque el nombre completo de la obra social (Ej. Obra Social de los Empleados de" +
+        " Comercio y Actividades Civiles)");
+            this.TxtNombreModif.Enter += new System.EventHandler(this.TxtNombreModif_Enter);
+            this.TxtNombreModif.Leave += new System.EventHandler(this.TxtNombreModif_Leave);
             // 
             // tabControl1
             // 
@@ -294,6 +369,7 @@
             this.BtnAgregar.Size = new System.Drawing.Size(70, 69);
             this.BtnAgregar.TabIndex = 6;
             this.BtnAgregar.UseVisualStyleBackColor = false;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click_1);
             // 
             // BtnAgregarOtra
             // 
@@ -350,6 +426,16 @@
             this.panel2.Size = new System.Drawing.Size(390, 417);
             this.panel2.TabIndex = 11;
             // 
+            // CmbObrasSocialesModif
+            // 
+            this.CmbObrasSocialesModif.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbObrasSocialesModif.FormattingEnabled = true;
+            this.CmbObrasSocialesModif.Location = new System.Drawing.Point(17, 48);
+            this.CmbObrasSocialesModif.Name = "CmbObrasSocialesModif";
+            this.CmbObrasSocialesModif.Size = new System.Drawing.Size(353, 26);
+            this.CmbObrasSocialesModif.TabIndex = 9;
+            this.CmbObrasSocialesModif.SelectedIndexChanged += new System.EventHandler(this.CmbObrasSocialesModif_SelectedIndexChanged);
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
@@ -369,6 +455,7 @@
             this.BtnGuardarCambios.BackColor = System.Drawing.Color.Transparent;
             this.BtnGuardarCambios.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.botonGuardar2;
             this.BtnGuardarCambios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnGuardarCambios.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.BtnGuardarCambios.FlatAppearance.BorderSize = 0;
             this.BtnGuardarCambios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnGuardarCambios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -436,6 +523,46 @@
             this.panel3.Size = new System.Drawing.Size(390, 410);
             this.panel3.TabIndex = 12;
             // 
+            // LblNombre
+            // 
+            this.LblNombre.AutoSize = true;
+            this.LblNombre.BackColor = System.Drawing.Color.Transparent;
+            this.LblNombre.Location = new System.Drawing.Point(90, 93);
+            this.LblNombre.Name = "LblNombre";
+            this.LblNombre.Size = new System.Drawing.Size(14, 18);
+            this.LblNombre.TabIndex = 14;
+            this.LblNombre.Text = "-";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(16, 93);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 18);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Nombre";
+            // 
+            // LblObservaciones
+            // 
+            this.LblObservaciones.AutoSize = true;
+            this.LblObservaciones.BackColor = System.Drawing.Color.Transparent;
+            this.LblObservaciones.Location = new System.Drawing.Point(141, 171);
+            this.LblObservaciones.Name = "LblObservaciones";
+            this.LblObservaciones.Size = new System.Drawing.Size(14, 18);
+            this.LblObservaciones.TabIndex = 12;
+            this.LblObservaciones.Text = "-";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Location = new System.Drawing.Point(14, 171);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(121, 18);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Observaciones";
+            // 
             // LblPlus
             // 
             this.LblPlus.AutoSize = true;
@@ -459,11 +586,13 @@
             // 
             // CmbObrasSociales
             // 
+            this.CmbObrasSociales.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbObrasSociales.FormattingEnabled = true;
             this.CmbObrasSociales.Location = new System.Drawing.Point(17, 44);
             this.CmbObrasSociales.Name = "CmbObrasSociales";
             this.CmbObrasSociales.Size = new System.Drawing.Size(340, 26);
             this.CmbObrasSociales.TabIndex = 8;
+            this.CmbObrasSociales.SelectedIndexChanged += new System.EventHandler(this.CmbObrasSociales_SelectedIndexChanged);
             // 
             // groupBox3
             // 
@@ -565,6 +694,7 @@
             this.BtnSalir.BackColor = System.Drawing.Color.Transparent;
             this.BtnSalir.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.checkout;
             this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnSalir.FlatAppearance.BorderSize = 0;
             this.BtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -574,6 +704,7 @@
             this.BtnSalir.Size = new System.Drawing.Size(75, 78);
             this.BtnSalir.TabIndex = 9;
             this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click_1);
             // 
             // consultoriosDataSet
             // 
@@ -584,103 +715,6 @@
             // 
             this.consultoriosDataSetBindingSource.DataSource = this.consultoriosDataSet;
             this.consultoriosDataSetBindingSource.Position = 0;
-            // 
-            // CmbObrasSocialesModif
-            // 
-            this.CmbObrasSocialesModif.FormattingEnabled = true;
-            this.CmbObrasSocialesModif.Location = new System.Drawing.Point(17, 48);
-            this.CmbObrasSocialesModif.Name = "CmbObrasSocialesModif";
-            this.CmbObrasSocialesModif.Size = new System.Drawing.Size(214, 26);
-            this.CmbObrasSocialesModif.TabIndex = 9;
-            // 
-            // TxtObservaciones
-            // 
-            this.TxtObservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtObservaciones.ForeColor = System.Drawing.Color.Silver;
-            this.TxtObservaciones.Location = new System.Drawing.Point(17, 167);
-            this.TxtObservaciones.Name = "TxtObservaciones";
-            this.TxtObservaciones.Size = new System.Drawing.Size(353, 24);
-            this.TxtObservaciones.TabIndex = 5;
-            this.TxtObservaciones.Text = "Observaciones";
-            this.toolTip1.SetToolTip(this.TxtObservaciones, "Coloque el nombre completo de la obra social (Ej. Obra Social de los Empleados de" +
-        " Comercio y Actividades Civiles)");
-            // 
-            // TxtObservacionesModif
-            // 
-            this.TxtObservacionesModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtObservacionesModif.ForeColor = System.Drawing.Color.Silver;
-            this.TxtObservacionesModif.Location = new System.Drawing.Point(17, 177);
-            this.TxtObservacionesModif.Name = "TxtObservacionesModif";
-            this.TxtObservacionesModif.Size = new System.Drawing.Size(353, 24);
-            this.TxtObservacionesModif.TabIndex = 10;
-            this.TxtObservacionesModif.Text = "Observaciones";
-            this.toolTip1.SetToolTip(this.TxtObservacionesModif, "Coloque el nombre completo de la obra social (Ej. Obra Social de los Empleados de" +
-        " Comercio y Actividades Civiles)");
-            // 
-            // LblObservaciones
-            // 
-            this.LblObservaciones.AutoSize = true;
-            this.LblObservaciones.BackColor = System.Drawing.Color.Transparent;
-            this.LblObservaciones.Location = new System.Drawing.Point(141, 171);
-            this.LblObservaciones.Name = "LblObservaciones";
-            this.LblObservaciones.Size = new System.Drawing.Size(14, 18);
-            this.LblObservaciones.TabIndex = 12;
-            this.LblObservaciones.Text = "-";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(14, 171);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(121, 18);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Observaciones";
-            // 
-            // TxtNombre
-            // 
-            this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombre.ForeColor = System.Drawing.Color.Silver;
-            this.TxtNombre.Location = new System.Drawing.Point(17, 81);
-            this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(353, 24);
-            this.TxtNombre.TabIndex = 2;
-            this.TxtNombre.Text = "Nombre";
-            this.toolTip1.SetToolTip(this.TxtNombre, "Coloque el nombre completo de la obra social (Ej. Obra Social de los Empleados de" +
-        " Comercio y Actividades Civiles)");
-            this.TxtNombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // TxtNombreModif
-            // 
-            this.TxtNombreModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombreModif.ForeColor = System.Drawing.Color.Silver;
-            this.TxtNombreModif.Location = new System.Drawing.Point(17, 92);
-            this.TxtNombreModif.Name = "TxtNombreModif";
-            this.TxtNombreModif.Size = new System.Drawing.Size(353, 24);
-            this.TxtNombreModif.TabIndex = 11;
-            this.TxtNombreModif.Text = "Nombre";
-            this.toolTip1.SetToolTip(this.TxtNombreModif, "Coloque el nombre completo de la obra social (Ej. Obra Social de los Empleados de" +
-        " Comercio y Actividades Civiles)");
-            // 
-            // LblNombre
-            // 
-            this.LblNombre.AutoSize = true;
-            this.LblNombre.BackColor = System.Drawing.Color.Transparent;
-            this.LblNombre.Location = new System.Drawing.Point(90, 93);
-            this.LblNombre.Name = "LblNombre";
-            this.LblNombre.Size = new System.Drawing.Size(14, 18);
-            this.LblNombre.TabIndex = 14;
-            this.LblNombre.Text = "-";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(16, 93);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 18);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Nombre";
             // 
             // ObrasSociales_alta
             // 

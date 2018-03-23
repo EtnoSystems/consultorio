@@ -13,14 +13,35 @@ namespace WindowsFormsApp1
 {
     public partial class ObrasSociales_alta : Form
     {
+
+        string obraSocialNombre;
+        int indice;
+
         public ObrasSociales_alta()
         {
             InitializeComponent();
         }
 
+        void CompletarCombos()
+        {
+            GestorObraSocial gestor = new GestorObraSocial();
+            CmbObrasSociales.DataSource = gestor.ListarObrasSociales();
+            CmbObrasSociales.DisplayMember = "Denominacion";
+            CmbObrasSociales.ValueMember = "Id";
+
+            CmbObrasSocialesModif.DataSource = gestor.ListarObrasSociales();
+            CmbObrasSocialesModif.DisplayMember = "Denominacion";
+            CmbObrasSocialesModif.ValueMember = "Id";
+        }
+
+        void CompletarCamposEdicion(int ide)
+        {
+
+        }
+
         private void ObrasSociales_alta_Load(object sender, EventArgs e)
         {
-            
+            CompletarCombos();
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
@@ -131,6 +152,26 @@ namespace WindowsFormsApp1
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
+            if (ChkActiva.Checked == false)
+            {
+                if (MessageBox.Show("¿Está seguro que desea cargar la obra social como inactiva o interrumpida? - Si selecciona 'NO' se marcará automáticamente como activa y se guardará", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Guardar();
+                }
+                else
+                {
+                    ChkActiva.Checked = true;
+                    Guardar();
+                }
+            }
+            else
+            {
+                Guardar();
+            }
+        }
+
+        void Guardar()
+        {
             if (GuardarDatos())
             {
                 MessageBox.Show("La obra social " + TxtDenominacion.Text + " se guardó correctamente", "Datos guardados exitosamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -140,10 +181,8 @@ namespace WindowsFormsApp1
             else
             {
                 MessageBox.Show("Hubo un error en el guardado de los datos", "No se pudo guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
-
 
         bool GuardarDatos()
         {
@@ -157,6 +196,221 @@ namespace WindowsFormsApp1
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void TxtDenominacion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtDenominacion_Enter_1(object sender, EventArgs e)
+        {
+            TxtDenominacion.Text = "";
+            TxtDenominacion.ForeColor = Color.Black;
+        }
+
+        private void TxtDenominacion_Leave(object sender, EventArgs e)
+        {
+            if (TxtDenominacion.Text == "Denominación" || TxtDenominacion.Text == "")
+            {
+                TxtDenominacion.Text = "Denominación";
+                TxtDenominacion.ForeColor = Color.Silver;
+            }
+            ValidarCamposCompletos();
+        }
+
+        private void TxtNombre_Enter(object sender, EventArgs e)
+        {
+            TxtNombre.Text = "";
+            TxtNombre.ForeColor = Color.Black;
+        }
+
+        private void TxtNombre_Leave(object sender, EventArgs e)
+        {
+            if (TxtNombre.Text == "Nombre" || TxtNombre.Text == "")
+            {
+                TxtNombre.Text = "Nombre";
+                TxtNombre.ForeColor = Color.Silver;
+            }
+            ValidarCamposCompletos();
+        }
+
+        private void TxtPlus_Enter(object sender, EventArgs e)
+        {
+            TxtPlus.Text = "";
+            TxtPlus.ForeColor = Color.Black;
+        }
+
+        private void TxtPlus_Leave(object sender, EventArgs e)
+        {
+            if (TxtPlus.Text == "")
+            {
+                TxtPlus.Text = "Plus";
+                TxtPlus.ForeColor = Color.Silver;
+            }
+            ValidarCamposCompletos();
+        }
+
+        private void TxtPlus_TextChanged_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void TxtPlus_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtObservaciones_Enter(object sender, EventArgs e)
+        {
+            TxtObservaciones.Text = "";
+            TxtObservaciones.ForeColor = Color.Black;
+        }
+
+        private void TxtObservaciones_Leave(object sender, EventArgs e)
+        {
+            if (TxtObservaciones.Text == "" || TxtObservaciones.Text == "Observaciones")
+            {
+                TxtObservaciones.Text = "Observaciones";
+                TxtObservaciones.ForeColor = Color.Silver;
+            }
+        }
+
+        private void TxtDireccion_Enter_1(object sender, EventArgs e)
+        {
+            TxtDireccion.Text = "";
+            TxtDireccion.ForeColor = Color.Black;
+        }
+
+        private void TxtDireccion_Leave(object sender, EventArgs e)
+        {
+            if (TxtDireccion.Text == "Dirección" || TxtDireccion.Text == "")
+            {
+                TxtDireccion.Text = "Dirección";
+                TxtDireccion.ForeColor = Color.Silver;
+            }
+        }
+
+        private void TxtTelefono_Enter_1(object sender, EventArgs e)
+        {
+            TxtTelefono.Text = "";
+            TxtTelefono.ForeColor = Color.Black;
+        }
+
+        private void TxtTelefono_Leave(object sender, EventArgs e)
+        {
+            if (TxtTelefono.Text == "Teléfono" || TxtTelefono.Text == "")
+            {
+                TxtTelefono.Text = "Teléfono";
+                TxtTelefono.ForeColor = Color.Silver;
+            }
+        }
+
+        private void BtnAgregar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtNombreModif_Enter(object sender, EventArgs e)
+        {
+            TxtNombreModif.Text = "";
+            TxtNombreModif.ForeColor = Color.Black;
+        }
+
+        private void TxtNombreModif_Leave(object sender, EventArgs e)
+        {
+            if (TxtNombreModif.Text == "" || TxtNombreModif.Text == "Nombre")
+            {
+                TxtNombreModif.Text = "Nombre";
+                TxtNombreModif.ForeColor = Color.Silver;
+            }
+        }
+
+        private void TxtPlusModif_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtPlusModif_Enter(object sender, EventArgs e)
+        {
+            TxtPlusModif.Text = "";
+            TxtPlusModif.ForeColor = Color.Black;
+        }
+
+        private void TxtPlusModif_Leave(object sender, EventArgs e)
+        {
+            if (TxtPlusModif.Text == "")
+            {
+                TxtPlusModif.Text = "Plus";
+                TxtPlusModif.ForeColor = Color.Silver;
+            }
+        }
+
+        private void TxtObservacionesModif_Enter(object sender, EventArgs e)
+        {
+            TxtObservacionesModif.Text = "";
+            TxtObservacionesModif.ForeColor = Color.Black;
+        }
+
+        private void TxtObservacionesModif_Leave(object sender, EventArgs e)
+        {
+            if (TxtObservacionesModif.Text == "" || TxtObservacionesModif.Text == "Observaciones")
+            {
+                TxtObservacionesModif.Text = "Observaciones";
+                TxtObservacionesModif.ForeColor = Color.Silver;
+            }
+        }
+
+        private void TxtDireccionModif_Enter(object sender, EventArgs e)
+        {
+            TxtDireccionModif.Text = "";
+            TxtDireccionModif.ForeColor = Color.Black;
+        }
+
+        private void TxtDireccionModif_Leave(object sender, EventArgs e)
+        {
+            if (TxtDireccionModif.Text == "" || TxtDireccionModif.Text == "Dirección")
+            {
+                TxtDireccionModif.Text = "Dirección";
+                TxtDireccionModif.ForeColor = Color.Silver;
+            }
+        }
+
+        private void TxtTelefonoModif_Enter(object sender, EventArgs e)
+        {
+            TxtTelefonoModif.Text = "";
+            TxtTelefonoModif.ForeColor = Color.Black;
+        }
+
+        private void TxtTelefonoModif_Leave(object sender, EventArgs e)
+        {
+            if (TxtTelefonoModif.Text == "" || TxtTelefonoModif.Text == "Teléfono")
+            {
+                TxtTelefonoModif.Text = "Teléfono";
+                TxtTelefonoModif.ForeColor = Color.Silver;
+            }
+        }
+
+        private void CmbObrasSocialesModif_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //indice = CmbObrasSocialesModif.SelectedValue;
+            //MessageBox.Show(obraSocialNombre);
+        }
+
+        private void CmbObrasSociales_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

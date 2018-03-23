@@ -141,5 +141,11 @@ namespace WindowsFormsApp1
             Pacientes_Alta pacientesAlta = new Pacientes_Alta();
             pacientesAlta.Show();
         }
+
+        private void MnuObrasSociales_Click(object sender, EventArgs e)
+        {
+            ObrasSociales_alta _ObrasSociales = new ObrasSociales_alta();
+            _ObrasSociales.Show();
+        }
     }
 }
