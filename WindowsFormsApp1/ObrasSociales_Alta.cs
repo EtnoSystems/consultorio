@@ -14,13 +14,22 @@ namespace WindowsFormsApp1
     public partial class ObrasSociales_alta : Form
     {
 
-        string obraSocialNombre;
-        int indice;
-
         public ObrasSociales_alta()
         {
             InitializeComponent();
         }
+
+        private void ObrasSociales_alta_Load(object sender, EventArgs e)
+        {
+            CompletarCombos();
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        #region Funciones propias
 
         void CompletarCombos()
         {
@@ -37,16 +46,6 @@ namespace WindowsFormsApp1
         void CompletarCamposEdicion(int ide)
         {
 
-        }
-
-        private void ObrasSociales_alta_Load(object sender, EventArgs e)
-        {
-            CompletarCombos();
-        }
-
-        private void BtnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         void EstadoInicial()
@@ -121,6 +120,10 @@ namespace WindowsFormsApp1
             }
         }
 
+        #endregion
+
+        #region Formulario Agregar Obra Social
+
         private void TxtDenominacion_Enter(object sender, EventArgs e)
         {
             TxtDenominacion.Text = "";
@@ -170,50 +173,13 @@ namespace WindowsFormsApp1
             }
         }
 
-        void Guardar()
-        {
-            if (GuardarDatos())
-            {
-                MessageBox.Show("La obra social " + TxtDenominacion.Text + " se guardó correctamente", "Datos guardados exitosamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                EstadoInicial();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Hubo un error en el guardado de los datos", "No se pudo guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        bool GuardarDatos()
-        {
-            //Guarda los datos
-            return true;
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnSalir_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void TxtDenominacion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void TxtDenominacion_Enter_1(object sender, EventArgs e)
         {
-            TxtDenominacion.Text = "";
-            TxtDenominacion.ForeColor = Color.Black;
+            if (TxtDenominacion.Text == "Denominación")
+            {
+                TxtDenominacion.Text = "";
+                TxtDenominacion.ForeColor = Color.Black;
+            }
         }
 
         private void TxtDenominacion_Leave(object sender, EventArgs e)
@@ -228,8 +194,11 @@ namespace WindowsFormsApp1
 
         private void TxtNombre_Enter(object sender, EventArgs e)
         {
-            TxtNombre.Text = "";
-            TxtNombre.ForeColor = Color.Black;
+            if (TxtNombre.Text == "Nombre")
+            {
+                TxtNombre.Text = "";
+                TxtNombre.ForeColor = Color.Black;
+            }
         }
 
         private void TxtNombre_Leave(object sender, EventArgs e)
@@ -244,8 +213,11 @@ namespace WindowsFormsApp1
 
         private void TxtPlus_Enter(object sender, EventArgs e)
         {
-            TxtPlus.Text = "";
-            TxtPlus.ForeColor = Color.Black;
+            if (TxtPlus.Text == "Plus")
+            {
+                TxtPlus.Text = "";
+                TxtPlus.ForeColor = Color.Black;
+            }
         }
 
         private void TxtPlus_Leave(object sender, EventArgs e)
@@ -258,11 +230,6 @@ namespace WindowsFormsApp1
             ValidarCamposCompletos();
         }
 
-        private void TxtPlus_TextChanged_1(object sender, EventArgs e)
-        {
-            
-        }
-
         private void TxtPlus_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -273,8 +240,11 @@ namespace WindowsFormsApp1
 
         private void TxtObservaciones_Enter(object sender, EventArgs e)
         {
-            TxtObservaciones.Text = "";
-            TxtObservaciones.ForeColor = Color.Black;
+            if (TxtObservaciones.Text == "Observaciones")
+            {
+                TxtObservaciones.Text = "";
+                TxtObservaciones.ForeColor = Color.Black;
+            }
         }
 
         private void TxtObservaciones_Leave(object sender, EventArgs e)
@@ -288,8 +258,11 @@ namespace WindowsFormsApp1
 
         private void TxtDireccion_Enter_1(object sender, EventArgs e)
         {
-            TxtDireccion.Text = "";
-            TxtDireccion.ForeColor = Color.Black;
+            if (TxtDireccion.Text == "Dirección")
+            {
+                TxtDireccion.Text = "";
+                TxtDireccion.ForeColor = Color.Black;
+            }
         }
 
         private void TxtDireccion_Leave(object sender, EventArgs e)
@@ -303,8 +276,11 @@ namespace WindowsFormsApp1
 
         private void TxtTelefono_Enter_1(object sender, EventArgs e)
         {
-            TxtTelefono.Text = "";
-            TxtTelefono.ForeColor = Color.Black;
+            if (TxtTelefono.Text == "Teléfono")
+            {
+                TxtTelefono.Text = "";
+                TxtTelefono.ForeColor = Color.Black;
+            }
         }
 
         private void TxtTelefono_Leave(object sender, EventArgs e)
@@ -318,13 +294,60 @@ namespace WindowsFormsApp1
 
         private void BtnAgregar_Click_1(object sender, EventArgs e)
         {
+            //Verificar que no existe la denominacion que se esta por cargar
+            if (MessageBox.Show("Esta seguro que desea guardar la obra social " + TxtDenominacion.Text + " ?", "Cargar una nueva obra social", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Guardar();
+            }
 
         }
 
+        private void CmbObrasSociales_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
+
+        #region Funciones de guardado
+
+        void Guardar()
+        {
+            if (GuardarDatos() == 1)
+            {
+                MessageBox.Show("La obra social " + TxtDenominacion.Text + " se guardó correctamente", "Datos guardados exitosamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                EstadoInicial();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Hubo un error en el guardado de los datos", "No se pudo guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        int GuardarDatos()
+        {
+            decimal decimalVal = 0;
+            GestorObraSocial gestorObraSocial = new GestorObraSocial();
+            decimalVal = Convert.ToDecimal(TxtPlus.Text);
+            if (gestorObraSocial.AgregarObraSocial(TxtDenominacion.Text, TxtNombre.Text, decimalVal, ChkActiva.Checked, TxtDireccion.Text, TxtTelefono.Text, TxtObservaciones.Text) == 1)
+            {
+                return 1;
+            }
+            else return 0;
+        }
+
+        #endregion
+
+        #region Menú Editar o Modificar Obra Social
+
         private void TxtNombreModif_Enter(object sender, EventArgs e)
         {
-            TxtNombreModif.Text = "";
-            TxtNombreModif.ForeColor = Color.Black;
+            if (TxtNombreModif.Text == "Nombre")
+            {
+                TxtNombreModif.Text = "";
+                TxtNombreModif.ForeColor = Color.Black;
+            }
         }
 
         private void TxtNombreModif_Leave(object sender, EventArgs e)
@@ -346,8 +369,11 @@ namespace WindowsFormsApp1
 
         private void TxtPlusModif_Enter(object sender, EventArgs e)
         {
-            TxtPlusModif.Text = "";
-            TxtPlusModif.ForeColor = Color.Black;
+            if (TxtPlusModif.Text == "Plus")
+            {
+                TxtPlusModif.Text = "";
+                TxtPlusModif.ForeColor = Color.Black;
+            }
         }
 
         private void TxtPlusModif_Leave(object sender, EventArgs e)
@@ -361,8 +387,11 @@ namespace WindowsFormsApp1
 
         private void TxtObservacionesModif_Enter(object sender, EventArgs e)
         {
-            TxtObservacionesModif.Text = "";
-            TxtObservacionesModif.ForeColor = Color.Black;
+            if (TxtObservacionesModif.Text == "Observaciones")
+            {
+                TxtObservacionesModif.Text = "";
+                TxtObservacionesModif.ForeColor = Color.Black;
+            }
         }
 
         private void TxtObservacionesModif_Leave(object sender, EventArgs e)
@@ -376,8 +405,11 @@ namespace WindowsFormsApp1
 
         private void TxtDireccionModif_Enter(object sender, EventArgs e)
         {
-            TxtDireccionModif.Text = "";
-            TxtDireccionModif.ForeColor = Color.Black;
+            if (TxtDireccionModif.Text == "Dirección")
+            {
+                TxtDireccionModif.Text = "";
+                TxtDireccionModif.ForeColor = Color.Black;
+            }
         }
 
         private void TxtDireccionModif_Leave(object sender, EventArgs e)
@@ -391,8 +423,11 @@ namespace WindowsFormsApp1
 
         private void TxtTelefonoModif_Enter(object sender, EventArgs e)
         {
-            TxtTelefonoModif.Text = "";
-            TxtTelefonoModif.ForeColor = Color.Black;
+            if (TxtTelefonoModif.Text == "Teléfono")
+            {
+                TxtTelefonoModif.Text = "";
+                TxtTelefonoModif.ForeColor = Color.Black;
+            }
         }
 
         private void TxtTelefonoModif_Leave(object sender, EventArgs e)
@@ -410,9 +445,10 @@ namespace WindowsFormsApp1
             //MessageBox.Show(obraSocialNombre);
         }
 
-        private void CmbObrasSociales_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        #endregion
 
-        }
+        #region Formulario Eliminar obras sociales
+
+        #endregion
     }
 }

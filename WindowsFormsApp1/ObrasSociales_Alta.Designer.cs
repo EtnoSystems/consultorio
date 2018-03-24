@@ -109,7 +109,6 @@
             this.TxtDenominacion.Text = "Denominación";
             this.toolTip1.SetToolTip(this.TxtDenominacion, "Coloque el nombre completo de la obra social (Ej. Obra Social de los Empleados de" +
         " Comercio y Actividades Civiles)");
-            this.TxtDenominacion.TextChanged += new System.EventHandler(this.TxtDenominacion_TextChanged);
             this.TxtDenominacion.Enter += new System.EventHandler(this.TxtDenominacion_Enter_1);
             this.TxtDenominacion.Leave += new System.EventHandler(this.TxtDenominacion_Leave);
             // 
@@ -124,7 +123,6 @@
             this.TxtPlus.Text = "Plus";
             this.toolTip1.SetToolTip(this.TxtPlus, "Indique el monto que los usuarios de esta obra social deben abonar (0 siginifica " +
         "que no pagan)");
-            this.TxtPlus.TextChanged += new System.EventHandler(this.TxtPlus_TextChanged_1);
             this.TxtPlus.Enter += new System.EventHandler(this.TxtPlus_Enter);
             this.TxtPlus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPlus_KeyPress);
             this.TxtPlus.Leave += new System.EventHandler(this.TxtPlus_Leave);
@@ -282,7 +280,6 @@
             this.TxtNombre.Text = "Nombre";
             this.toolTip1.SetToolTip(this.TxtNombre, "Coloque el nombre completo de la obra social (Ej. Obra Social de los Empleados de" +
         " Comercio y Actividades Civiles)");
-            this.TxtNombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.TxtNombre.Enter += new System.EventHandler(this.TxtNombre_Enter);
             this.TxtNombre.Leave += new System.EventHandler(this.TxtNombre_Leave);
             // 
@@ -572,7 +569,6 @@
             this.LblPlus.Size = new System.Drawing.Size(14, 18);
             this.LblPlus.TabIndex = 10;
             this.LblPlus.Text = "-";
-            this.LblPlus.Click += new System.EventHandler(this.label4_Click);
             // 
             // Plus
             // 
@@ -704,7 +700,7 @@
             this.BtnSalir.Size = new System.Drawing.Size(75, 78);
             this.BtnSalir.TabIndex = 9;
             this.BtnSalir.UseVisualStyleBackColor = false;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click_1);
+            //this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click_1);
             // 
             // consultoriosDataSet
             // 

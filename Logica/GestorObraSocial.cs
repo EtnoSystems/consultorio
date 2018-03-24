@@ -84,9 +84,30 @@ namespace Logica
             }
         }
 
-        public int AgregarObraSocial(string denominacion, string nombre, float plus, bool activa, string direccion, string telefono, string observacion)
+        public int AgregarObraSocial(string denominacion, string nombre, decimal plus, bool activa, string direccion, string telefono, string observacion)
         {
-            return 1;
+            try
+            {
+                using (consultoriosEntities dbContext = new consultoriosEntities())
+                {
+                    Obra_social obra_Social = new Obra_social();
+                    obra_Social.Denominacion = denominacion;
+                    obra_Social.Nombre_largo = nombre;
+                    obra_Social.Plus = plus;
+                    obra_Social.Activa = activa;
+                    obra_Social.Observaciones = observacion;
+                    obra_Social.Direccion = direccion;
+                    obra_Social.Telefono = telefono;
+
+                    dbContext.Obra_social.Add(obra_Social);
+                    return (dbContext.SaveChanges());
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+                //return 0;
+            }
         }
     }
 }
