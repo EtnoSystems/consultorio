@@ -160,7 +160,12 @@ namespace WindowsFormsApp1
 
         private void Pacientes_Alta_Load(object sender, EventArgs e)
         {
+            GestorCiudades gestorCiudades = new GestorCiudades();
 
+            CmbCiudad.DataSource = gestorCiudades.ListarCiudades();
+            CmbCiudad.ValueMember = "Id";
+            CmbCiudad.DisplayMember = "Denominacion";
+            CmbCiudad.SelectedIndex = 0;
         }
 
         void EstadoInicial()
@@ -200,17 +205,24 @@ namespace WindowsFormsApp1
 
         void AgregarPaciente()
         {
+            string direccion="", numero="", piso="", dpto="";
+
+            if (TxtDireccion.Text != "Dirección") direccion = TxtDireccion.Text;
+            if (TxtPiso.Text != "Piso") piso = TxtPiso.Text;
+            if (TxtDepto.Text != "Dpto") dpto = TxtDepto.Text;
+            if (TxtNumero.Text != "Nro.") numero = TxtNumero.Text;
+            
             GestorDireccion gestorDireccion = new GestorDireccion();
-            int idDireccion = gestorDireccion.AgregarDireccion(TxtDireccion.Text, TxtNumero.Text, TxtPiso.Text, TxtDepto.Text, /*Convert.ToInt32(CmbCiudad.SelectedValue.ToString())*/1);
+            Nullable<int> idDireccion = gestorDireccion.AgregarDireccion(direccion,piso,numero,dpto, Convert.ToInt32(CmbCiudad.SelectedValue.ToString()));
             
             //GestorObraSocial gestorObraSocial = new GestorObraSocial();
             //gestorObraSocial.ObtenerObraSocialPorID(Convert.ToInt32(Cmb);
 
             GestorPersona gestorPersona = new GestorPersona();
-            int idPersona = gestorPersona.AgregarPersona(TxtDNI.Text, TxtNombre.Text, TxtApellido.Text, CmbSexo.SelectedItem.ToString(), idDireccion, "dbd", 0);
+            int idPersona = gestorPersona.AgregarPersona(TxtDNI.Text, TxtNombre.Text, TxtApellido.Text, "M"/*CmbSexo.SelectedItem.ToString()*/, idDireccion, null, 0);
 
-            GestorDatosContacto gestorDatosContacto = new GestorDatosContacto();
-            gestorDatosContacto.AgregarDatosDeContacto(TxtMail.Text, TxtCelular.Text, TxtTelefono.Text, idPersona);
+            // GestorDatosContacto gestorDatosContacto = new GestorDatosContacto();
+            // gestorDatosContacto.AgregarDatosDeContacto(TxtMail.Text, TxtCelular.Text, TxtTelefono.Text, idPersona);
             
         }
 

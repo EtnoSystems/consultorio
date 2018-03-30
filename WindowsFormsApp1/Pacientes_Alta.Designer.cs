@@ -157,7 +157,7 @@
             // 
             this.TxtPiso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPiso.ForeColor = System.Drawing.Color.Silver;
-            this.TxtPiso.Location = new System.Drawing.Point(357, 161);
+            this.TxtPiso.Location = new System.Drawing.Point(302, 161);
             this.TxtPiso.Name = "TxtPiso";
             this.TxtPiso.Size = new System.Drawing.Size(48, 24);
             this.TxtPiso.TabIndex = 12;
@@ -169,7 +169,7 @@
             // 
             this.TxtDepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDepto.ForeColor = System.Drawing.Color.Silver;
-            this.TxtDepto.Location = new System.Drawing.Point(302, 161);
+            this.TxtDepto.Location = new System.Drawing.Point(356, 161);
             this.TxtDepto.Name = "TxtDepto";
             this.TxtDepto.Size = new System.Drawing.Size(49, 24);
             this.TxtDepto.TabIndex = 11;

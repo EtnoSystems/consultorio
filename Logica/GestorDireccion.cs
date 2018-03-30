@@ -9,10 +9,15 @@ namespace Logica
 {
     public class GestorDireccion
     {
-        public int AgregarDireccion(string calle, string numero, string piso, string depto, int ciudadId)
+        public Nullable<int> AgregarDireccion(string calle, string numero, string piso, string depto, int ciudadId)
         {
             try
             {
+                if (calle == "" && numero == "" && piso == "" && depto == "")
+                {
+                    return null;
+                }
+
                 using (consultoriosEntities dbContext = new consultoriosEntities())
                 {
                     Direccion direccion = new Direccion();
