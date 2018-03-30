@@ -10,6 +10,28 @@ namespace Logica
 {
     public class GestorObraSocial
     {
+        public List<ListaObraSocialDTO> ObtenerListado()
+        {
+            try
+            {
+                using (consultoriosEntities dbContext = new consultoriosEntities())
+                {
+                    var query = (from n in dbContext.Obra_social
+                                 select new ListaObraSocialDTO
+                                 {
+                                     Chequeado = false,
+                                     Id=n.Id,
+                                     Nombre = n.Denominacion
+                                 }).ToList();
+                    return query;
+                }
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+        }
+
         public Obra_social ObtenerObraSocialPorID(int id)
         {
             try
@@ -19,17 +41,7 @@ namespace Logica
 
                     return (from n in dbContext.Obra_social
                             where n.Id == id
-                            select new Obra_social
-                            {
-                                Id = n.Id,
-                                Denominacion = n.Denominacion,
-                                Plus = n.Plus,
-                                Telefono = n.Telefono,
-                                Direccion = n.Direccion,
-                                Observaciones = n.Observaciones,
-                                Activa = n.Activa,
-                                Nombre_largo = n.Nombre_largo
-                            }).FirstOrDefault();
+                            select n).FirstOrDefault();
                 }
             }
             catch (Exception)

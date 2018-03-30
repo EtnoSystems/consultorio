@@ -99,13 +99,11 @@
             this.CmbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbSexo.FormattingEnabled = true;
-            this.CmbSexo.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino"});
             this.CmbSexo.Location = new System.Drawing.Point(236, 88);
             this.CmbSexo.Name = "CmbSexo";
             this.CmbSexo.Size = new System.Drawing.Size(166, 26);
             this.CmbSexo.TabIndex = 4;
+            this.CmbSexo.SelectedIndexChanged += new System.EventHandler(this.CmbSexo_SelectedIndexChanged);
             // 
             // ChkLstObrasSociales
             // 
@@ -116,11 +114,13 @@
             "Jerárquico Salud",
             "Osecac ",
             "Osprera"});
-            this.ChkLstObrasSociales.Location = new System.Drawing.Point(114, 358);
+            this.ChkLstObrasSociales.Location = new System.Drawing.Point(113, 345);
             this.ChkLstObrasSociales.Name = "ChkLstObrasSociales";
-            this.ChkLstObrasSociales.Size = new System.Drawing.Size(213, 23);
+            this.ChkLstObrasSociales.Size = new System.Drawing.Size(213, 61);
             this.ChkLstObrasSociales.Sorted = true;
             this.ChkLstObrasSociales.TabIndex = 13;
+            this.ChkLstObrasSociales.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.ChkLstObrasSociales_ItemCheck);
+            this.ChkLstObrasSociales.SelectedIndexChanged += new System.EventHandler(this.ChkLstObrasSociales_SelectedIndexChanged);
             // 
             // groupBox1
             // 

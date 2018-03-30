@@ -450,5 +450,10 @@ namespace WindowsFormsApp1
         #region Formulario Eliminar obras sociales
 
         #endregion
+
+        private void BtnSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

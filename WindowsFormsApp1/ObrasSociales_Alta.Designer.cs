@@ -700,7 +700,7 @@
             this.BtnSalir.Size = new System.Drawing.Size(75, 78);
             this.BtnSalir.TabIndex = 9;
             this.BtnSalir.UseVisualStyleBackColor = false;
-            //this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click_1);
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click_1);
             // 
             // consultoriosDataSet
             // 

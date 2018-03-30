@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
+using Entidades;
+using DAO;
 
 namespace WindowsFormsApp1
 {
@@ -166,6 +168,24 @@ namespace WindowsFormsApp1
             CmbCiudad.ValueMember = "Id";
             CmbCiudad.DisplayMember = "Denominacion";
             CmbCiudad.SelectedIndex = 0;
+
+            Dictionary<char,string> comboSource = new Dictionary<char,string>();
+            comboSource.Add('M',"Masculino");
+            comboSource.Add('F', "Femenino");
+
+            CmbSexo.DataSource=new BindingSource (comboSource,null);
+            CmbSexo.ValueMember = "Key";
+            CmbSexo.DisplayMember="Value";
+
+            GestorObraSocial gestorObraSocial = new GestorObraSocial();
+            List<ListaObraSocialDTO> listadoDeObrasSociales = gestorObraSocial.ObtenerListado();
+
+            ((ListBox)ChkLstObrasSociales).DataSource = listadoDeObrasSociales;
+            ((ListBox)ChkLstObrasSociales).DisplayMember = "Nombre";
+            ((ListBox)ChkLstObrasSociales).ValueMember = "Chequeado";
+
+            //.DataSource = gestor.ListarObrasSociales();
+
         }
 
         void EstadoInicial()
@@ -200,12 +220,22 @@ namespace WindowsFormsApp1
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
+
+            //List<int> obrasChequeadas = new List<int>();
+
+            //foreach (ListaObraSocialDTO os in ChkLstObrasSociales.CheckedItems)
+            //{
+            //    obrasChequeadas.Add(os.Id);
+            //}
+
+
             AgregarPaciente();
         }
 
         void AgregarPaciente()
         {
-            string direccion="", numero="", piso="", dpto="";
+
+            string direccion=null, numero=null, piso=null, dpto=null;
 
             if (TxtDireccion.Text != "Dirección") direccion = TxtDireccion.Text;
             if (TxtPiso.Text != "Piso") piso = TxtPiso.Text;
@@ -213,16 +243,22 @@ namespace WindowsFormsApp1
             if (TxtNumero.Text != "Nro.") numero = TxtNumero.Text;
             
             GestorDireccion gestorDireccion = new GestorDireccion();
-            Nullable<int> idDireccion = gestorDireccion.AgregarDireccion(direccion,piso,numero,dpto, Convert.ToInt32(CmbCiudad.SelectedValue.ToString()));
+            Nullable<int> idDireccion = gestorDireccion.AgregarDireccion(direccion, numero,piso, dpto, Convert.ToInt32(CmbCiudad.SelectedValue.ToString()));
             
-            //GestorObraSocial gestorObraSocial = new GestorObraSocial();
-            //gestorObraSocial.ObtenerObraSocialPorID(Convert.ToInt32(Cmb);
-
             GestorPersona gestorPersona = new GestorPersona();
-            int idPersona = gestorPersona.AgregarPersona(TxtDNI.Text, TxtNombre.Text, TxtApellido.Text, "M"/*CmbSexo.SelectedItem.ToString()*/, idDireccion, null, 0);
+            int idPersona = gestorPersona.AgregarPersona(TxtDNI.Text, TxtNombre.Text, TxtApellido.Text, CmbSexo.SelectedValue.ToString(), idDireccion, null,null,1);
 
-            // GestorDatosContacto gestorDatosContacto = new GestorDatosContacto();
-            // gestorDatosContacto.AgregarDatosDeContacto(TxtMail.Text, TxtCelular.Text, TxtTelefono.Text, idPersona);
+
+            string telFijo=null, telCelular=null, email=null;
+
+            if (TxtTelefono.Text != "Teléfono") telFijo = TxtTelefono.Text;
+            if (TxtCelular.Text != "Celular") telCelular = TxtCelular.Text;
+            if (TxtMail.Text != "E-Mail") email = TxtMail.Text;
+
+            GestorDatosContacto gestorDatosContacto = new GestorDatosContacto();
+            Nullable<int> idDC=gestorDatosContacto.AgregarDatosDeContacto(email,telCelular,telFijo, idPersona);
+
+            if (idDC != 0) MessageBox.Show("El paciente se ha guardado correctamente");
             
         }
 
@@ -234,6 +270,28 @@ namespace WindowsFormsApp1
         private void BtnAgregarOtra_Click(object sender, EventArgs e)
         {
             AgregarPaciente();
+        }
+
+        private void CmbSexo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChkLstObrasSociales_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ChkLstObrasSociales_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            /*
+            ListaObraSocialDTO listaObraSocialDTO = ChkLstObrasSociales.Items[e.Index] as ListaObraSocialDTO;
+            if (null != listaObraSocialDTO)
+            {
+                listaObraSocialDTO.Chequeado = e.NewValue == CheckState.Checked;
+                MessageBox.Show("Seleccionaste la obra social "+listaObraSocialDTO.Id.ToString());
+            }
+            */
         }
     }
 }
