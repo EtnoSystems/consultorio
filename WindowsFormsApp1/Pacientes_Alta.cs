@@ -221,39 +221,43 @@ namespace WindowsFormsApp1
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
 
-            //List<int> obrasChequeadas = new List<int>();
-
-            //foreach (ListaObraSocialDTO os in ChkLstObrasSociales.CheckedItems)
-            //{
-            //    obrasChequeadas.Add(os.Id);
-            //}
-
-
             AgregarPaciente();
         }
 
         void AgregarPaciente()
         {
+            string nombre = null, apellido = null,documento=null;
+
+            if (TxtNombre.Text != "Nombre") nombre = TxtNombre.Text.ToLower();
+            if (TxtDireccion.Text != "Apellido") apellido = TxtApellido.Text.ToLower();
+            if (TxtDNI.Text != "Documento") documento = TxtDNI.Text.ToLower();
 
             string direccion=null, numero=null, piso=null, dpto=null;
 
-            if (TxtDireccion.Text != "Dirección") direccion = TxtDireccion.Text;
-            if (TxtPiso.Text != "Piso") piso = TxtPiso.Text;
-            if (TxtDepto.Text != "Dpto") dpto = TxtDepto.Text;
-            if (TxtNumero.Text != "Nro.") numero = TxtNumero.Text;
+            if (TxtDireccion.Text != "Dirección") direccion = TxtDireccion.Text.ToLower();
+            if (TxtPiso.Text != "Piso") piso = TxtPiso.Text.ToLower();
+            if (TxtDepto.Text != "Dpto") dpto = TxtDepto.Text.ToLower();
+            if (TxtNumero.Text != "Nro.") numero = TxtNumero.Text.ToLower();
             
             GestorDireccion gestorDireccion = new GestorDireccion();
             Nullable<int> idDireccion = gestorDireccion.AgregarDireccion(direccion, numero,piso, dpto, Convert.ToInt32(CmbCiudad.SelectedValue.ToString()));
-            
+
+            List<Nullable<int>> obrasChequeadas = new List<Nullable<int>>();
+
+            foreach (ListaObraSocialDTO os in ChkLstObrasSociales.CheckedItems)
+            {
+                obrasChequeadas.Add(os.Id);
+            }
+
             GestorPersona gestorPersona = new GestorPersona();
-            int idPersona = gestorPersona.AgregarPersona(TxtDNI.Text, TxtNombre.Text, TxtApellido.Text, CmbSexo.SelectedValue.ToString(), idDireccion, null,null,1);
+            int idPersona = gestorPersona.AgregarPersona(documento, nombre, apellido, CmbSexo.SelectedValue.ToString(), idDireccion, null,null,obrasChequeadas);
 
 
             string telFijo=null, telCelular=null, email=null;
 
-            if (TxtTelefono.Text != "Teléfono") telFijo = TxtTelefono.Text;
-            if (TxtCelular.Text != "Celular") telCelular = TxtCelular.Text;
-            if (TxtMail.Text != "E-Mail") email = TxtMail.Text;
+            if (TxtTelefono.Text != "Teléfono") telFijo = TxtTelefono.Text.ToLower();
+            if (TxtCelular.Text != "Celular") telCelular = TxtCelular.Text.ToLower();
+            if (TxtMail.Text != "E-Mail") email = TxtMail.Text.ToLower();
 
             GestorDatosContacto gestorDatosContacto = new GestorDatosContacto();
             Nullable<int> idDC=gestorDatosContacto.AgregarDatosDeContacto(email,telCelular,telFijo, idPersona);
