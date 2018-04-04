@@ -21,7 +21,7 @@ namespace DAO
         public decimal Retencion_medico { get; set; }
         public decimal Reintegro_por_orden { get; set; }
         public bool Orden_presentada { get; set; }
-        public int Obra_social_Id { get; set; }
+        public Nullable<int> Obra_social_Id { get; set; }
         public int Persona_medico_Id { get; set; }
         public int Persona_paciente_Id { get; set; }
     

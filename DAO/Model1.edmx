@@ -93,7 +93,7 @@
     <Property Name="Retencion_medico" Type="decimal" Nullable="false" Precision="3" Scale="2" />
     <Property Name="Reintegro_por_orden" Type="decimal" Nullable="false" Precision="6" Scale="2" />
     <Property Name="Orden_presentada" Type="bit" Nullable="false" />
-    <Property Name="Obra_social_Id" Type="int" Nullable="false" />
+    <Property Name="Obra_social_Id" Type="int" Nullable="true" />
     <Property Name="Persona_medico_Id" Type="int" Nullable="false" />
     <Property Name="Persona_paciente_Id" Type="int" Nullable="false" />
   </EntityType>
@@ -206,7 +206,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Obra_socialConsulta">
-    <End Role="Obra_social" Type="consultoriosModel.Store.Obra_social" Multiplicity="1" />
+    <End Role="Obra_social" Type="consultoriosModel.Store.Obra_social" Multiplicity="0..1" />
     <End Role="Consulta" Type="consultoriosModel.Store.Consulta" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Obra_social">
@@ -359,7 +359,7 @@
           <Property Name="Retencion_medico" Type="Decimal" Precision="3" Scale="2" Nullable="false" />
           <Property Name="Reintegro_por_orden" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
           <Property Name="Orden_presentada" Type="Boolean" Nullable="false" />
-          <Property Name="Obra_social_Id" Type="Int32" Nullable="false" />
+          <Property Name="Obra_social_Id" Type="Int32" Nullable="true" />
           <Property Name="Persona_medico_Id" Type="Int32" Nullable="false" />
           <Property Name="Persona_paciente_Id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Obra_social" Relationship="Self.FK_Obra_socialConsulta" FromRole="Consulta" ToRole="Obra_social" />
@@ -473,7 +473,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Obra_socialConsulta">
-          <End Role="Obra_social" Type="Self.Obra_social" Multiplicity="1" />
+          <End Role="Obra_social" Type="Self.Obra_social" Multiplicity="0..1" />
           <End Role="Consulta" Type="Self.Consulta" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Obra_social">
