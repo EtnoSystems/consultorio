@@ -10,6 +10,23 @@ namespace Logica
 {
     public class GestorPacientes
     { 
+        public Persona BuscarPacientePorDNI(string DNI)
+        {
+            try
+            {
+                using (consultoriosEntities dbContext = new consultoriosEntities())
+                {
+                    return (from n in dbContext.Persona
+                            where n.DNI == DNI
+                            select n).FirstOrDefault();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public int AgregarPaciente(string nombre, string apellido, string documento, string sexo, Obra_social obraSocial, Datos_contacto datos_contacto, Direccion direccion)
         {
             try

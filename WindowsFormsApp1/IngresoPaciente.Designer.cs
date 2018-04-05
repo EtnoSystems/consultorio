@@ -54,6 +54,7 @@
             this.TxtBusqueda.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtBusqueda.Size = new System.Drawing.Size(243, 30);
             this.TxtBusqueda.TabIndex = 1;
+            this.TxtBusqueda.TextChanged += new System.EventHandler(this.TxtBusqueda_TextChanged);
             // 
             // BtnBuscarPaciente
             // 

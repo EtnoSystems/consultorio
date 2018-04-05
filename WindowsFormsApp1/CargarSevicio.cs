@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Logica;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 
@@ -29,6 +29,9 @@ namespace WindowsFormsApp1
         private void CargarSevicio_Load(object sender, EventArgs e)
         {
             EstadoInicial();
+
+
+
         }
 
         void EstadoInicial()

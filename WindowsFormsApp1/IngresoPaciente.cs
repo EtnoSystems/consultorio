@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Logica;
 
 namespace WindowsFormsApp1
 {
@@ -32,7 +33,20 @@ namespace WindowsFormsApp1
 
         private void BtnBuscarPaciente_Click(object sender, EventArgs e)
         {
+            // string dni = "34000000"; alto hardcoding
+            GestorPacientes gestorPacientes = new GestorPacientes();
+            if (gestorPacientes.BuscarPacientePorDNI(TxtBusqueda.Text)!=null)
+            {
+                CargarSevicio servicio = new CargarSevicio();
+                servicio.Show();
+                this.Hide();
 
+                //MessageBox.Show("encontre algo papee");
+            }
+            else
+            {
+                MessageBox.Show("no encontre nada papee");
+            }
         }
 
         void Redireccionar(int dni, int codigo)
@@ -45,6 +59,9 @@ namespace WindowsFormsApp1
            // TxtBusqueda.Text = codigo;
         }
 
-        
+        private void TxtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
