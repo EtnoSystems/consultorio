@@ -13,7 +13,7 @@ namespace Logica
         {
             try
             {
-                if (email == null && celular == null && fijo == null) return null;
+                if (string.IsNullOrEmpty(email) && string.IsNullOrEmpty(celular) && string.IsNullOrEmpty(fijo)) return null;
 
                 using (consultoriosEntities dbContext = new consultoriosEntities())
                 {

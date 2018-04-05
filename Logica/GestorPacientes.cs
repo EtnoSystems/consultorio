@@ -10,7 +10,7 @@ namespace Logica
 {
     public class GestorPacientes
     { 
-        public Persona BuscarPacientePorDNI(string DNI)
+        public PacienteDTO BuscarPacientePorDNI(string DNI)
         {
             try
             {
@@ -18,7 +18,15 @@ namespace Logica
                 {
                     return (from n in dbContext.Persona
                             where n.DNI == DNI
-                            select n).FirstOrDefault();
+                            select new PacienteDTO
+                            {
+                                Id = n.Id,
+                                DNI = n.DNI,
+                                Sexo=n.Sexo,
+                                Nombre =n.Nombre,
+                                Apellido =n.Apellido,
+                                Obra_Social=n.Obra_social
+                            }).FirstOrDefault();
                 }
             }
             catch (Exception)

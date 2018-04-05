@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
+using Entidades;
 
 namespace WindowsFormsApp1
 {
@@ -33,11 +34,14 @@ namespace WindowsFormsApp1
 
         private void BtnBuscarPaciente_Click(object sender, EventArgs e)
         {
-            // string dni = "34000000"; alto hardcoding
+           
             GestorPacientes gestorPacientes = new GestorPacientes();
-            if (gestorPacientes.BuscarPacientePorDNI(TxtBusqueda.Text)!=null)
+            PacienteDTO paciente = gestorPacientes.BuscarPacientePorDNI(TxtBusqueda.Text);
+
+            if (paciente!=null)
             {
                 CargarSevicio servicio = new CargarSevicio();
+                servicio.paciente = paciente;
                 servicio.Show();
                 this.Hide();
 

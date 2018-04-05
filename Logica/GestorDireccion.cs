@@ -13,7 +13,7 @@ namespace Logica
         {
             try
             {
-                if (calle == "" && numero == "" && piso == "" && depto == "")
+                if (string.IsNullOrEmpty(calle) && string.IsNullOrEmpty(numero) && string.IsNullOrEmpty(piso) && string.IsNullOrEmpty(depto))
                 {
                     return null;
                 }

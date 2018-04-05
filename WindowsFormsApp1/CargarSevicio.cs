@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,15 +11,19 @@ using System.Windows.Forms;
 using Logica;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
+using Entidades;
 
 namespace WindowsFormsApp1
 {
     public partial class CargarSevicio : Form
     {
+                
         public CargarSevicio()
         {
             InitializeComponent();
         }
+
+        public PacienteDTO paciente;
 
 
         private void BtnSalir_Click(object sender, EventArgs e)
@@ -36,7 +41,9 @@ namespace WindowsFormsApp1
 
         void EstadoInicial()
         {
-            LblNombrePaciente.Text = "";
+            string ap_y_nombre = paciente.Apellido + ", " + paciente.Nombre;
+            LblNombrePaciente.Text = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(ap_y_nombre);
+
             ChkOrden.Checked = false;
             LblCostoConsulta.Text = "";
             LblTotal.Text = "";
