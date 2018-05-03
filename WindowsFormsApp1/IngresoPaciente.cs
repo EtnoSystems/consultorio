@@ -34,23 +34,25 @@ namespace WindowsFormsApp1
 
         private void BtnBuscarPaciente_Click(object sender, EventArgs e)
         {
-           
-            GestorPacientes gestorPacientes = new GestorPacientes();
-            PacienteDTO paciente = gestorPacientes.BuscarPacientePorDNI(TxtBusqueda.Text);
+            CargarSevicio servicio = new CargarSevicio();
+            servicio.Show(); 
 
-            if (paciente!=null)
-            {
-                CargarSevicio servicio = new CargarSevicio();
-                servicio.paciente = paciente;
-                servicio.Show();
-                this.Hide();
+            //GestorPacientes gestorPacientes = new GestorPacientes();
+            //PacienteDTO paciente = gestorPacientes.BuscarPacientePorDNI(TxtBusqueda.Text);
 
-                //MessageBox.Show("encontre algo papee");
-            }
-            else
-            {
-                MessageBox.Show("no encontre nada papee");
-            }
+            //if (paciente!=null)
+            //{
+            //    CargarSevicio servicio = new CargarSevicio();
+            //    servicio.paciente = paciente;
+            //    servicio.Show();
+            //    this.Hide();
+
+            //    //MessageBox.Show("encontre algo papee");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("no encontre nada papee");
+            //}
         }
 
         void Redireccionar(int dni, int codigo)
