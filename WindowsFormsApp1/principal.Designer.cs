@@ -52,6 +52,7 @@
             this.mnuCambiarUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAyuda = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuBarCode = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.menuStrip1.SuspendLayout();
@@ -67,6 +68,7 @@
             this.MnuRecetarios,
             this.mnuReportes,
             this.MnuAgregarFeriados,
+            this.MnuBarCode,
             this.mnuCambiarUsuario,
             this.MnuSalir,
             this.mnuAyuda});
@@ -372,6 +374,16 @@
             this.mnuAyuda.Text = "help";
             this.mnuAyuda.ToolTipText = "Ayuda";
             // 
+            // MnuBarCode
+            // 
+            this.MnuBarCode.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MnuBarCode.Image = global::WindowsFormsApp1.Properties.Resources.barCodeIcon1;
+            this.MnuBarCode.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MnuBarCode.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.MnuBarCode.Name = "MnuBarCode";
+            this.MnuBarCode.Size = new System.Drawing.Size(112, 79);
+            this.MnuBarCode.Text = "BarCode";
+            // 
             // monthCalendar1
             // 
             this.monthCalendar1.FirstDayOfWeek = System.Windows.Forms.Day.Monday;
@@ -431,6 +443,7 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.ToolStripMenuItem MnuAgregarFeriados;
+        private System.Windows.Forms.ToolStripMenuItem MnuBarCode;
     }
 }
 

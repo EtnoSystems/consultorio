@@ -220,6 +220,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(659, 546);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Name = "Usuarios_baja";
             this.Text = "Dar de baja usuarios";

@@ -297,5 +297,24 @@ namespace WindowsFormsApp1
             }
             */
         }
+
+        private void TxtAfiliado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtAfiliado_Enter(object sender, EventArgs e)
+        {
+            if (TxtAfiliado.Text == "Número de afiliado")
+            {
+                TxtAfiliado.Text = "";
+                TxtAfiliado.ForeColor = Color.Black;
+            }
+        }
+
+        private void TxtAfiliado_Leave(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -206,6 +206,7 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.fondoFormulariosModificacion;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(659, 546);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Usuarios_modificacion";

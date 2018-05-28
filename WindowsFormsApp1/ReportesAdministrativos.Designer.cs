@@ -257,6 +257,7 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.fondoLogIn;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(724, 670);
+            this.ControlBox = false;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Name = "ReportesAdministrativos";

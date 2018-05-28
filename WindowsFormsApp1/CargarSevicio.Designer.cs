@@ -280,6 +280,7 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.fondoFormularios;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(441, 522);
+            this.ControlBox = false;
             this.Controls.Add(this.LblReintegro);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.LblTotal);

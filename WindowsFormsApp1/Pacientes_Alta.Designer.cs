@@ -49,6 +49,9 @@
             this.BtnSalir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.DTPNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.TxtAfiliado = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +60,7 @@
             // 
             this.TxtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtApellido.ForeColor = System.Drawing.Color.Silver;
-            this.TxtApellido.Location = new System.Drawing.Point(282, 77);
+            this.TxtApellido.Location = new System.Drawing.Point(236, 45);
             this.TxtApellido.Name = "TxtApellido";
             this.TxtApellido.Size = new System.Drawing.Size(167, 24);
             this.TxtApellido.TabIndex = 2;
@@ -69,7 +72,7 @@
             // 
             this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNombre.ForeColor = System.Drawing.Color.Silver;
-            this.TxtNombre.Location = new System.Drawing.Point(69, 77);
+            this.TxtNombre.Location = new System.Drawing.Point(23, 45);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(207, 24);
             this.TxtNombre.TabIndex = 1;
@@ -80,6 +83,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.TxtAfiliado);
+            this.panel1.Controls.Add(this.TxtApellido);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.TxtNombre);
+            this.panel1.Controls.Add(this.DTPNacimiento);
             this.panel1.Controls.Add(this.CmbSexo);
             this.panel1.Controls.Add(this.ChkLstObrasSociales);
             this.panel1.Controls.Add(this.groupBox1);
@@ -88,9 +96,9 @@
             this.panel1.Controls.Add(this.BtnAgregarOtra);
             this.panel1.Controls.Add(this.BtnSalir);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(46, 31);
+            this.panel1.Location = new System.Drawing.Point(46, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(443, 526);
+            this.panel1.Size = new System.Drawing.Size(443, 592);
             this.panel1.TabIndex = 13;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -99,7 +107,7 @@
             this.CmbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbSexo.FormattingEnabled = true;
-            this.CmbSexo.Location = new System.Drawing.Point(236, 88);
+            this.CmbSexo.Location = new System.Drawing.Point(236, 75);
             this.CmbSexo.Name = "CmbSexo";
             this.CmbSexo.Size = new System.Drawing.Size(166, 26);
             this.CmbSexo.TabIndex = 4;
@@ -114,7 +122,7 @@
             "Jerárquico Salud",
             "Osecac ",
             "Osprera"});
-            this.ChkLstObrasSociales.Location = new System.Drawing.Point(113, 345);
+            this.ChkLstObrasSociales.Location = new System.Drawing.Point(111, 425);
             this.ChkLstObrasSociales.Name = "ChkLstObrasSociales";
             this.ChkLstObrasSociales.Size = new System.Drawing.Size(213, 61);
             this.ChkLstObrasSociales.Sorted = true;
@@ -134,7 +142,7 @@
             this.groupBox1.Controls.Add(this.TxtTelefono);
             this.groupBox1.Controls.Add(this.TxtMail);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(13, 131);
+            this.groupBox1.Location = new System.Drawing.Point(12, 170);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(411, 208);
             this.groupBox1.TabIndex = 13;
@@ -149,7 +157,7 @@
             this.TxtNumero.Location = new System.Drawing.Point(228, 161);
             this.TxtNumero.Name = "TxtNumero";
             this.TxtNumero.Size = new System.Drawing.Size(68, 24);
-            this.TxtNumero.TabIndex = 10;
+            this.TxtNumero.TabIndex = 11;
             this.TxtNumero.Text = "Nro.";
             this.TxtNumero.TextChanged += new System.EventHandler(this.TxtNumero_TextChanged);
             // 
@@ -172,7 +180,7 @@
             this.TxtDepto.Location = new System.Drawing.Point(356, 161);
             this.TxtDepto.Name = "TxtDepto";
             this.TxtDepto.Size = new System.Drawing.Size(49, 24);
-            this.TxtDepto.TabIndex = 11;
+            this.TxtDepto.TabIndex = 13;
             this.TxtDepto.Text = "Dpto";
             this.TxtDepto.Enter += new System.EventHandler(this.TxtDepto_Enter);
             this.TxtDepto.Leave += new System.EventHandler(this.TxtDepto_Leave);
@@ -184,7 +192,7 @@
             this.TxtCelular.Location = new System.Drawing.Point(212, 32);
             this.TxtCelular.Name = "TxtCelular";
             this.TxtCelular.Size = new System.Drawing.Size(193, 24);
-            this.TxtCelular.TabIndex = 6;
+            this.TxtCelular.TabIndex = 7;
             this.TxtCelular.Text = "Celular";
             this.TxtCelular.Enter += new System.EventHandler(this.TxtCelular_Enter);
             this.TxtCelular.Leave += new System.EventHandler(this.TxtCelular_Leave);
@@ -196,7 +204,7 @@
             this.TxtDireccion.Location = new System.Drawing.Point(15, 161);
             this.TxtDireccion.Name = "TxtDireccion";
             this.TxtDireccion.Size = new System.Drawing.Size(207, 24);
-            this.TxtDireccion.TabIndex = 9;
+            this.TxtDireccion.TabIndex = 10;
             this.TxtDireccion.Text = "Dirección";
             this.TxtDireccion.Enter += new System.EventHandler(this.TxtDireccion_Enter);
             this.TxtDireccion.Leave += new System.EventHandler(this.TxtDireccion_Leave);
@@ -209,7 +217,7 @@
             this.CmbCiudad.Location = new System.Drawing.Point(15, 118);
             this.CmbCiudad.Name = "CmbCiudad";
             this.CmbCiudad.Size = new System.Drawing.Size(257, 26);
-            this.CmbCiudad.TabIndex = 8;
+            this.CmbCiudad.TabIndex = 9;
             // 
             // TxtTelefono
             // 
@@ -218,7 +226,7 @@
             this.TxtTelefono.Location = new System.Drawing.Point(15, 32);
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.Size = new System.Drawing.Size(164, 24);
-            this.TxtTelefono.TabIndex = 5;
+            this.TxtTelefono.TabIndex = 6;
             this.TxtTelefono.Text = "Teléfono";
             this.TxtTelefono.Enter += new System.EventHandler(this.TxtTelefono_Enter);
             this.TxtTelefono.Leave += new System.EventHandler(this.TxtTelefono_Leave);
@@ -230,7 +238,7 @@
             this.TxtMail.Location = new System.Drawing.Point(15, 75);
             this.TxtMail.Name = "TxtMail";
             this.TxtMail.Size = new System.Drawing.Size(254, 24);
-            this.TxtMail.TabIndex = 7;
+            this.TxtMail.TabIndex = 8;
             this.TxtMail.Text = "E-Mail";
             this.TxtMail.Enter += new System.EventHandler(this.TxtMail_Enter);
             this.TxtMail.Leave += new System.EventHandler(this.TxtMail_Leave);
@@ -239,7 +247,7 @@
             // 
             this.TxtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDNI.ForeColor = System.Drawing.Color.Silver;
-            this.TxtDNI.Location = new System.Drawing.Point(22, 88);
+            this.TxtDNI.Location = new System.Drawing.Point(22, 75);
             this.TxtDNI.Name = "TxtDNI";
             this.TxtDNI.Size = new System.Drawing.Size(207, 24);
             this.TxtDNI.TabIndex = 3;
@@ -255,7 +263,7 @@
             this.BtnAgregar.FlatAppearance.BorderSize = 0;
             this.BtnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAgregar.Location = new System.Drawing.Point(31, 423);
+            this.BtnAgregar.Location = new System.Drawing.Point(36, 507);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(70, 69);
             this.BtnAgregar.TabIndex = 14;
@@ -270,7 +278,7 @@
             this.BtnAgregarOtra.FlatAppearance.BorderSize = 0;
             this.BtnAgregarOtra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnAgregarOtra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAgregarOtra.Location = new System.Drawing.Point(177, 423);
+            this.BtnAgregarOtra.Location = new System.Drawing.Point(182, 507);
             this.BtnAgregarOtra.Name = "BtnAgregarOtra";
             this.BtnAgregarOtra.Size = new System.Drawing.Size(67, 69);
             this.BtnAgregarOtra.TabIndex = 15;
@@ -286,7 +294,7 @@
             this.BtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSalir.Location = new System.Drawing.Point(309, 423);
+            this.BtnSalir.Location = new System.Drawing.Point(314, 507);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(75, 78);
             this.BtnSalir.TabIndex = 16;
@@ -297,12 +305,46 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 15);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 18);
+            this.label1.Size = new System.Drawing.Size(279, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Agregar pacientes al sistema";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(20, 108);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(164, 18);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Fecha de nacimiento";
+            // 
+            // DTPNacimiento
+            // 
+            this.DTPNacimiento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTPNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTPNacimiento.Location = new System.Drawing.Point(23, 129);
+            this.DTPNacimiento.MinDate = new System.DateTime(2018, 5, 27, 0, 0, 0, 0);
+            this.DTPNacimiento.Name = "DTPNacimiento";
+            this.DTPNacimiento.Size = new System.Drawing.Size(326, 24);
+            this.DTPNacimiento.TabIndex = 5;
+            // 
+            // TxtAfiliado
+            // 
+            this.TxtAfiliado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtAfiliado.ForeColor = System.Drawing.Color.Silver;
+            this.TxtAfiliado.Location = new System.Drawing.Point(27, 395);
+            this.TxtAfiliado.Name = "TxtAfiliado";
+            this.TxtAfiliado.Size = new System.Drawing.Size(376, 24);
+            this.TxtAfiliado.TabIndex = 24;
+            this.TxtAfiliado.Text = "Número de afiliado";
+            this.TxtAfiliado.TextChanged += new System.EventHandler(this.TxtAfiliado_TextChanged);
+            this.TxtAfiliado.Enter += new System.EventHandler(this.TxtAfiliado_Enter);
+            this.TxtAfiliado.Leave += new System.EventHandler(this.TxtAfiliado_Leave);
             // 
             // Pacientes_Alta
             // 
@@ -310,10 +352,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.fondoFormularios;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(537, 589);
-            this.Controls.Add(this.TxtApellido);
-            this.Controls.Add(this.TxtNombre);
+            this.ClientSize = new System.Drawing.Size(537, 609);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Pacientes_Alta";
             this.Text = "Alta de pacientes";
             this.Load += new System.EventHandler(this.Pacientes_Alta_Load);
@@ -322,7 +365,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -348,5 +390,8 @@
         private System.Windows.Forms.ComboBox CmbSexo;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TextBox TxtNumero;
+        private System.Windows.Forms.TextBox TxtAfiliado;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker DTPNacimiento;
     }
 }

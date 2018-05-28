@@ -118,6 +118,7 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.fondoFormulariosBaja;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(551, 389);
+            this.ControlBox = false;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnCalendarRemove);

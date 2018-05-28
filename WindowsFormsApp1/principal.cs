@@ -47,11 +47,15 @@ namespace WindowsFormsApp1
             {
                 mnuReportes.Visible = true;
                 mnuPersonal.Visible = true;
+                MnuAgregarFeriados.Visible = true;
+                MnuBarCode.Visible = true;
             }
             else
             {
                 mnuReportes.Visible = false;
                 mnuPersonal.Visible = false;
+                MnuAgregarFeriados.Visible = false;
+                MnuBarCode.Visible = false;
             }
             this.Text = "Gestión de obras sociales - USUARIO " + Globales.userObject.Nombre + " " + Globales.userType;
         }

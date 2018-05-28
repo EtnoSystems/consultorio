@@ -42,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TxtRetencion = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.TxtPiso = new System.Windows.Forms.TextBox();
             this.TxtDepto = new System.Windows.Forms.TextBox();
             this.TxtCelular = new System.Windows.Forms.TextBox();
@@ -53,7 +54,8 @@
             this.BtnAgregarOtra = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DTPNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -62,18 +64,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 15);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(38, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(383, 18);
+            this.label1.Size = new System.Drawing.Size(375, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Agregar nuevos profesionales médicos al sistema";
+            this.label1.Text = "Agregar nuevos profesionales médicos";
             // 
             // TxtNombre
             // 
             this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNombre.ForeColor = System.Drawing.Color.Silver;
-            this.TxtNombre.Location = new System.Drawing.Point(43, 69);
+            this.TxtNombre.Location = new System.Drawing.Point(22, 56);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(207, 24);
             this.TxtNombre.TabIndex = 1;
@@ -83,7 +85,7 @@
             // 
             this.TxtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtApellido.ForeColor = System.Drawing.Color.Silver;
-            this.TxtApellido.Location = new System.Drawing.Point(256, 69);
+            this.TxtApellido.Location = new System.Drawing.Point(235, 56);
             this.TxtApellido.Name = "TxtApellido";
             this.TxtApellido.Size = new System.Drawing.Size(167, 24);
             this.TxtApellido.TabIndex = 2;
@@ -103,7 +105,7 @@
             // 
             this.TxtMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtMatricula.ForeColor = System.Drawing.Color.Silver;
-            this.TxtMatricula.Location = new System.Drawing.Point(285, 361);
+            this.TxtMatricula.Location = new System.Drawing.Point(285, 409);
             this.TxtMatricula.Name = "TxtMatricula";
             this.TxtMatricula.Size = new System.Drawing.Size(117, 24);
             this.TxtMatricula.TabIndex = 14;
@@ -113,7 +115,7 @@
             // 
             this.TxtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtValor.ForeColor = System.Drawing.Color.Silver;
-            this.TxtValor.Location = new System.Drawing.Point(91, 411);
+            this.TxtValor.Location = new System.Drawing.Point(91, 450);
             this.TxtValor.Name = "TxtValor";
             this.TxtValor.Size = new System.Drawing.Size(169, 24);
             this.TxtValor.TabIndex = 15;
@@ -122,6 +124,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.TxtApellido);
+            this.panel1.Controls.Add(this.TxtNombre);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.DTPNacimiento);
             this.panel1.Controls.Add(this.CmbSexo);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.ChkLstEspecialidad);
@@ -135,9 +141,9 @@
             this.panel1.Controls.Add(this.BtnSalir);
             this.panel1.Controls.Add(this.TxtValor);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(21, 23);
+            this.panel1.Location = new System.Drawing.Point(21, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(445, 568);
+            this.panel1.Size = new System.Drawing.Size(445, 599);
             this.panel1.TabIndex = 10;
             // 
             // CmbSexo
@@ -157,7 +163,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(67, 417);
+            this.label3.Location = new System.Drawing.Point(67, 456);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(22, 18);
             this.label3.TabIndex = 18;
@@ -171,7 +177,7 @@
             "Anestecista",
             "Cirujano",
             "Médico general"});
-            this.ChkLstEspecialidad.Location = new System.Drawing.Point(32, 363);
+            this.ChkLstEspecialidad.Location = new System.Drawing.Point(32, 411);
             this.ChkLstEspecialidad.Name = "ChkLstEspecialidad";
             this.ChkLstEspecialidad.Size = new System.Drawing.Size(213, 23);
             this.ChkLstEspecialidad.Sorted = true;
@@ -182,7 +188,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(314, 414);
+            this.label2.Location = new System.Drawing.Point(314, 453);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(22, 18);
             this.label2.TabIndex = 15;
@@ -192,7 +198,7 @@
             // 
             this.TxtRetencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtRetencion.ForeColor = System.Drawing.Color.Silver;
-            this.TxtRetencion.Location = new System.Drawing.Point(275, 411);
+            this.TxtRetencion.Location = new System.Drawing.Point(275, 450);
             this.TxtRetencion.Name = "TxtRetencion";
             this.TxtRetencion.Size = new System.Drawing.Size(36, 24);
             this.TxtRetencion.TabIndex = 16;
@@ -210,12 +216,22 @@
             this.groupBox1.Controls.Add(this.TxtTelefono);
             this.groupBox1.Controls.Add(this.TxtMail);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(13, 131);
+            this.groupBox1.Location = new System.Drawing.Point(13, 185);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(400, 208);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de contacto";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Silver;
+            this.textBox1.Location = new System.Drawing.Point(228, 161);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(51, 24);
+            this.textBox1.TabIndex = 10;
+            this.textBox1.Text = "Nro.";
             // 
             // TxtPiso
             // 
@@ -294,7 +310,7 @@
             this.BtnAgregar.FlatAppearance.BorderSize = 0;
             this.BtnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAgregar.Location = new System.Drawing.Point(32, 476);
+            this.BtnAgregar.Location = new System.Drawing.Point(32, 499);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(70, 69);
             this.BtnAgregar.TabIndex = 17;
@@ -308,7 +324,7 @@
             this.BtnAgregarOtra.FlatAppearance.BorderSize = 0;
             this.BtnAgregarOtra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnAgregarOtra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAgregarOtra.Location = new System.Drawing.Point(178, 476);
+            this.BtnAgregarOtra.Location = new System.Drawing.Point(178, 499);
             this.BtnAgregarOtra.Name = "BtnAgregarOtra";
             this.BtnAgregarOtra.Size = new System.Drawing.Size(67, 69);
             this.BtnAgregarOtra.TabIndex = 18;
@@ -323,22 +339,32 @@
             this.BtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSalir.Location = new System.Drawing.Point(310, 476);
+            this.BtnSalir.Location = new System.Drawing.Point(310, 499);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(75, 78);
             this.BtnSalir.TabIndex = 19;
             this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
-            // textBox1
+            // DTPNacimiento
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(228, 161);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(51, 24);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.Text = "Nro.";
+            this.DTPNacimiento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTPNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTPNacimiento.Location = new System.Drawing.Point(22, 145);
+            this.DTPNacimiento.Name = "DTPNacimiento";
+            this.DTPNacimiento.Size = new System.Drawing.Size(326, 24);
+            this.DTPNacimiento.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(19, 124);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(164, 18);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Fecha de nacimiento";
             // 
             // Medicos_Alta
             // 
@@ -346,10 +372,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.fondoFormularios;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(478, 617);
+            this.ClientSize = new System.Drawing.Size(478, 636);
             this.ControlBox = false;
-            this.Controls.Add(this.TxtApellido);
-            this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Medicos_Alta";
@@ -360,7 +384,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -391,5 +414,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox CmbSexo;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker DTPNacimiento;
     }
 }
