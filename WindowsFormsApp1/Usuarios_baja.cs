@@ -80,9 +80,8 @@ namespace WindowsFormsApp1
 
             if (MessageBox.Show("¿Está seguro que desea eliminar el usuario seleccionado?" , "Baja de usuarios", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                GestorUsuarios gestorUsuarios = new GestorUsuarios();
-
-                gestorUsuarios.EliminarUsuarioPorId(id);
+                GestorUsuarios.EliminarUsuarioPorId(id);
+            
             }
             EstadoInicial();
         }
@@ -117,8 +116,6 @@ namespace WindowsFormsApp1
             btnEliminar.Enabled = false;
             TxtUsuario.Text = "Nombre de usuario";
             TxtUsuario.ForeColor = Color.Black;
-            LblTipoUsuario.Text = "";
-            LblNombreCompleto.Text = "";
             TxtUsuario.SelectAll();
             TxtUsuario.Focus();
         }
@@ -143,12 +140,13 @@ namespace WindowsFormsApp1
 
         }
 
-        private void DgvResultadoBusqueda_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvResultadoBusqueda_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btnEliminar.Enabled = true;
             btnEliminar.BackgroundImage = Image.FromFile(@"..\..\images\botonEliminarUsuario.png");
             //MessageBox.Show("El id del usuario seleccionado es "+ DgvResultadoBusqueda.Rows[e.RowIndex].Cells[0].Value.ToString());
             id = Convert.ToInt32(DgvResultadoBusqueda.Rows[e.RowIndex].Cells[0].Value);
+            MessageBox.Show("el id seleccionado es " + id);
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)
@@ -166,13 +164,21 @@ namespace WindowsFormsApp1
                 DgvResultadoBusqueda.DataSource = resultado_busqueda;
                 DgvResultadoBusqueda.Columns["Id"].Visible = false;
                 DgvResultadoBusqueda.Visible = true;
-                //DgvResultadoBusqueda.BackgroundColor = Color.Transparent;
+
+                DgvResultadoBusqueda.RowHeadersVisible = false;
                 DgvResultadoBusqueda.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                DgvResultadoBusqueda.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                DgvResultadoBusqueda.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+                DgvResultadoBusqueda.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                DgvResultadoBusqueda.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells; 
+                DgvResultadoBusqueda.BackgroundColor = SystemColors.ControlLightLight;
+                
                 DgvResultadoBusqueda.Columns[1].HeaderText = "Usuario";
+                DgvResultadoBusqueda.Columns[1].Width = 60;
+                DgvResultadoBusqueda.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 DgvResultadoBusqueda.Columns[2].HeaderText = "Nombre completo";
+                DgvResultadoBusqueda.Columns[2].Width = 190;
                 DgvResultadoBusqueda.Columns[3].HeaderText = "Privilegios";
+                DgvResultadoBusqueda.Columns[3].Width = 80;
+                DgvResultadoBusqueda.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 btnEliminar.Enabled = true;
             }
             else
@@ -214,6 +220,15 @@ namespace WindowsFormsApp1
 
         }
 
-      
+        private void DgvResultadoBusqueda_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            var height = 40;
+            foreach (DataGridViewRow dr in DgvResultadoBusqueda.Rows)
+            {
+                height += dr.Height;
+            }
+
+            DgvResultadoBusqueda.Height = height;
+        }
     }
 }

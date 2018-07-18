@@ -34,10 +34,6 @@
             this.DgvResultadoBusqueda = new System.Windows.Forms.DataGridView();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.LblTipoUsuario = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.LblNombreCompleto = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.TxtUsuario = new System.Windows.Forms.TextBox();
@@ -54,10 +50,6 @@
             this.panel1.Controls.Add(this.DgvResultadoBusqueda);
             this.panel1.Controls.Add(this.BtnBuscar);
             this.panel1.Controls.Add(this.btnEliminar);
-            this.panel1.Controls.Add(this.LblTipoUsuario);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.LblNombreCompleto);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.TxtUsuario);
@@ -75,7 +67,8 @@
             this.DgvResultadoBusqueda.Name = "DgvResultadoBusqueda";
             this.DgvResultadoBusqueda.Size = new System.Drawing.Size(339, 77);
             this.DgvResultadoBusqueda.TabIndex = 19;
-            this.DgvResultadoBusqueda.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResultadoBusqueda_CellContentClick);
+            this.DgvResultadoBusqueda.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResultadoBusqueda_CellClick);
+            this.DgvResultadoBusqueda.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DgvResultadoBusqueda_DataBindingComplete);
             // 
             // BtnBuscar
             // 
@@ -111,54 +104,6 @@
             this.toolTip1.SetToolTip(this.btnEliminar, "Eliminar usuario");
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // LblTipoUsuario
-            // 
-            this.LblTipoUsuario.AutoSize = true;
-            this.LblTipoUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.LblTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTipoUsuario.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.LblTipoUsuario.Location = new System.Drawing.Point(38, 326);
-            this.LblTipoUsuario.Name = "LblTipoUsuario";
-            this.LblTipoUsuario.Size = new System.Drawing.Size(122, 18);
-            this.LblTipoUsuario.TabIndex = 13;
-            this.LblTipoUsuario.Text = "LblTipoUsuario";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(36, 302);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 18);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Tipo de usuario";
-            // 
-            // LblNombreCompleto
-            // 
-            this.LblNombreCompleto.AutoSize = true;
-            this.LblNombreCompleto.BackColor = System.Drawing.Color.Transparent;
-            this.LblNombreCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNombreCompleto.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.LblNombreCompleto.Location = new System.Drawing.Point(35, 266);
-            this.LblNombreCompleto.Name = "LblNombreCompleto";
-            this.LblNombreCompleto.Size = new System.Drawing.Size(163, 18);
-            this.LblNombreCompleto.TabIndex = 11;
-            this.LblNombreCompleto.Text = "LblNombreCompleto";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(35, 241);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 18);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Nombre completo";
             // 
             // label1
             // 
@@ -240,10 +185,6 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.TextBox TxtUsuario;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label LblTipoUsuario;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label LblNombreCompleto;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button BtnBuscar;

@@ -209,7 +209,7 @@ namespace Logica
         }
 
 
-        public void EliminarUsuarioPorId (int id)
+        public static void EliminarUsuarioPorId (int id)
         {
             try
             {
