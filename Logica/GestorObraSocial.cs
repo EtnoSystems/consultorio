@@ -10,7 +10,7 @@ namespace Logica
 {
     public class GestorObraSocial
     {
-        public List<ListaObraSocialDTO> ObtenerListado()
+        public static List<ListaObraSocialDTO> ObtenerListado()
         {
             try
             {
@@ -32,7 +32,7 @@ namespace Logica
             }
         }
 
-        public Obra_social ObtenerObraSocialPorID(int id)
+        public static Obra_social ObtenerObraSocialPorID(int id)
         {
             try
             {
@@ -50,7 +50,7 @@ namespace Logica
             }
         }
 
-        public List<ObraSocialDTO> ListarObrasSociales()
+        public static List<ObraSocialDTO> ListarObrasSociales()
         {
             try
             {
@@ -77,7 +77,7 @@ namespace Logica
             }
         }
 
-        public void EliminarObraSocialPorId(int id)
+        public static void EliminarObraSocialPorId(int id)
         {
             try
             {
@@ -96,7 +96,7 @@ namespace Logica
             }
         }
 
-        public int AgregarObraSocial(string denominacion, string nombre, decimal plus, bool activa, string direccion, string telefono, string observacion)
+        public static int AgregarObraSocial(string denominacion, string nombre, decimal plus, bool activa, string direccion, string telefono, string observacion)
         {
             try
             {

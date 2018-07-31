@@ -9,7 +9,7 @@ namespace Logica
 {
     public class GestorDatosContacto
     {
-        public Nullable<int> AgregarDatosDeContacto(string email, string celular, string fijo, int idPersona)
+        public static Nullable<int> AgregarDatosDeContacto(string email, string celular, string fijo, int idPersona)
         {
             try
             {

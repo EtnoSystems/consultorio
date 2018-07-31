@@ -109,6 +109,7 @@
             this.TxtDenominacion.Text = "Denominación";
             this.toolTip1.SetToolTip(this.TxtDenominacion, "Coloque el nombre completo de la obra social (Ej. Obra Social de los Empleados de" +
         " Comercio y Actividades Civiles)");
+            this.TxtDenominacion.TextChanged += new System.EventHandler(this.TxtDenominacion_TextChanged);
             this.TxtDenominacion.Enter += new System.EventHandler(this.TxtDenominacion_Enter_1);
             this.TxtDenominacion.Leave += new System.EventHandler(this.TxtDenominacion_Leave);
             // 

@@ -31,12 +31,12 @@ namespace WindowsFormsApp1
             EstadoInicial();
             
 
-            GestorTiposDeUsuarios gestorTiposUsuarios = new GestorTiposDeUsuarios();
+            //GestorTiposDeUsuarios gestorTiposUsuarios = new GestorTiposDeUsuarios();
             /*List<Tipo_usuarioDTO> listaTipos = gestorTiposUsuarios.ListarTiposUsuarios();
             /*CmbTipo.DataSource= (from n in listaTipos
                         select n.Denominacion).ToList();*/
             
-            CmbTipo.DataSource = gestorTiposUsuarios.ListarTiposUsuarios();
+            CmbTipo.DataSource = GestorTiposDeUsuarios.ListarTiposUsuarios();
             CmbTipo.ValueMember = "Id";
             CmbTipo.DisplayMember = "Denominacion";
             CmbTipo.SelectedIndex = 1;
@@ -133,8 +133,8 @@ namespace WindowsFormsApp1
         private void TxtUsuario_Validating(object sender, CancelEventArgs e)
         {
             //verifica que el usuario ingresado no exista
-            GestorUsuarios gestorUsuarios = new GestorUsuarios();
-            UsuarioDTO usuario = gestorUsuarios.ObtenerCuentaPorUsername(txtUsuario.Text.ToLower().Trim());
+            //GestorUsuarios gestorUsuarios = new GestorUsuarios();
+            UsuarioDTO usuario = GestorUsuarios.ObtenerCuentaPorUsername(txtUsuario.Text.ToLower().Trim());
 
             if (usuario != null)
             {
@@ -315,15 +315,15 @@ namespace WindowsFormsApp1
 
         void AgregarUsuario(string nombreCompleto, string username, string clave, int id)
         {
-            GestorTiposDeUsuarios gestorTiposDeUsuarios = new GestorTiposDeUsuarios();
-            gestorTiposDeUsuarios.ObtenerTipoUsuarioPorId(Convert.ToInt32(CmbTipo.SelectedValue.ToString()));
+            //GestorTiposDeUsuarios gestorTiposDeUsuarios = new GestorTiposDeUsuarios();
+            GestorTiposDeUsuarios.ObtenerTipoUsuarioPorId(Convert.ToInt32(CmbTipo.SelectedValue.ToString()));
             
             //PRIMERO DEBO CREAR UN OBJETO TIPO_USUARIO BUSCANDOLO POR ID EN LA BASE DE DATOS
-            Tipo_usuarioDTO tipo_UsuarioDTO = gestorTiposDeUsuarios.ObtenerTipoUsuarioPorId(id);
+            Tipo_usuarioDTO tipo_UsuarioDTO = GestorTiposDeUsuarios.ObtenerTipoUsuarioPorId(id);
 
-            GestorUsuarios gestorUsuarios = new GestorUsuarios();
+            //GestorUsuarios gestorUsuarios = new GestorUsuarios();
 
-            if (gestorUsuarios.AgregarUsuario(nombreCompleto, username, clave, tipo_UsuarioDTO) > 0)
+            if (GestorUsuarios.AgregarUsuario(nombreCompleto, username, clave, tipo_UsuarioDTO) > 0)
                 MessageBox.Show("El usuario " + username + " ha sido agregado correctamente","¡Nuevo usuario en el sistema!",MessageBoxButtons.OK,MessageBoxIcon.Information);
             else
                 MessageBox.Show("El usuario no pudo ser guardado","Error de guardado",MessageBoxButtons.OK,MessageBoxIcon.Error);

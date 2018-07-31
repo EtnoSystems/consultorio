@@ -10,7 +10,7 @@ namespace Logica
 {
     public class GestorTiposDeUsuarios
     {
-        public List<Tipo_usuarioDTO> ListarTiposUsuarios() //DEVUELVE UN LIST DE TIPOS DE USUARIOS
+        public static List<Tipo_usuarioDTO> ListarTiposUsuarios() //DEVUELVE UN LIST DE TIPOS DE USUARIOS
         {
             try
             {
@@ -31,7 +31,7 @@ namespace Logica
             }
         }
 
-        public Tipo_usuarioDTO ObtenerTipoUsuarioPorId(int id)
+        public static Tipo_usuarioDTO ObtenerTipoUsuarioPorId(int id)
         {
             try
             {

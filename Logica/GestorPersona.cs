@@ -9,7 +9,7 @@ namespace Logica
 {
     public class GestorPersona
     {
-        public int AgregarPersona(string dni, string nombre, string apellido, string sexo, Nullable<int> direccionId, string matricula, Nullable<decimal> porcentaje,List<Nullable<int>> listID_OS)
+        public static int AgregarPersona(string dni, string nombre, string apellido, string sexo, Nullable<int> direccionId, string matricula, Nullable<decimal> porcentaje,List<Nullable<int>> listID_OS)
         {
             try
             {

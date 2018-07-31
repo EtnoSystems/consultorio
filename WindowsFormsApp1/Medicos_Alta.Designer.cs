@@ -36,6 +36,8 @@
             this.TxtMatricula = new System.Windows.Forms.TextBox();
             this.TxtValor = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.DTPNacimiento = new System.Windows.Forms.DateTimePicker();
             this.CmbSexo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.ChkLstEspecialidad = new System.Windows.Forms.CheckedListBox();
@@ -54,8 +56,6 @@
             this.BtnAgregarOtra = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.DTPNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -145,6 +145,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(445, 599);
             this.panel1.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(19, 124);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(164, 18);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Fecha de nacimiento";
+            // 
+            // DTPNacimiento
+            // 
+            this.DTPNacimiento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTPNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTPNacimiento.Location = new System.Drawing.Point(22, 145);
+            this.DTPNacimiento.Name = "DTPNacimiento";
+            this.DTPNacimiento.Size = new System.Drawing.Size(326, 24);
+            this.DTPNacimiento.TabIndex = 20;
             // 
             // CmbSexo
             // 
@@ -315,6 +335,7 @@
             this.BtnAgregar.Size = new System.Drawing.Size(70, 69);
             this.BtnAgregar.TabIndex = 17;
             this.BtnAgregar.UseVisualStyleBackColor = false;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // BtnAgregarOtra
             // 
@@ -329,6 +350,7 @@
             this.BtnAgregarOtra.Size = new System.Drawing.Size(67, 69);
             this.BtnAgregarOtra.TabIndex = 18;
             this.BtnAgregarOtra.UseVisualStyleBackColor = false;
+            this.BtnAgregarOtra.Click += new System.EventHandler(this.BtnAgregarOtra_Click);
             // 
             // BtnSalir
             // 
@@ -345,26 +367,6 @@
             this.BtnSalir.TabIndex = 19;
             this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
-            // 
-            // DTPNacimiento
-            // 
-            this.DTPNacimiento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DTPNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DTPNacimiento.Location = new System.Drawing.Point(22, 145);
-            this.DTPNacimiento.Name = "DTPNacimiento";
-            this.DTPNacimiento.Size = new System.Drawing.Size(326, 24);
-            this.DTPNacimiento.TabIndex = 20;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 124);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 18);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Fecha de nacimiento";
             // 
             // Medicos_Alta
             // 

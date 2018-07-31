@@ -31,7 +31,7 @@ namespace Logica
             }
         }*/
 
-        public List<UsuarioDTO> ListarUsuarios() //DEVUELVE UN LIST DE USUARIOS
+        public static List<UsuarioDTO> ListarUsuarios() //DEVUELVE UN LIST DE USUARIOS
         {
             try
             {
@@ -54,7 +54,7 @@ namespace Logica
             }
         }
 
-        public UsuarioDTO ObtenerCuentaPorUsername(string username) //BUSCA UN USUARIO POR "USERNAME": SI LO ENCUENTRA DEVUELVE EL OBJETO. sINO DEVUELVE NULL
+        public static UsuarioDTO ObtenerCuentaPorUsername(string username) //BUSCA UN USUARIO POR "USERNAME": SI LO ENCUENTRA DEVUELVE EL OBJETO. sINO DEVUELVE NULL
         {
             try
             {
@@ -82,7 +82,7 @@ namespace Logica
         }
 
 
-        public UsuarioDTO BuscarUsuarioPorUsername(string username) //FUNCION INICIAR SESION
+        public static UsuarioDTO BuscarUsuarioPorUsername(string username) //FUNCION INICIAR SESION
         {
             try
             {
@@ -131,7 +131,7 @@ namespace Logica
 
          }*/
 
-        public int AgregarUsuario (string nombreCompleto, string userName, string clave, Tipo_usuarioDTO tipo_UsuarioDTO)
+        public static int AgregarUsuario (string nombreCompleto, string userName, string clave, Tipo_usuarioDTO tipo_UsuarioDTO)
         {
             try
             {
@@ -159,7 +159,7 @@ namespace Logica
         }
 
         
-        public void ModificarUsuario (UsuarioDTO _Usuario)
+        public static void ModificarUsuario (UsuarioDTO _Usuario)
         {
             try
             {
@@ -183,7 +183,7 @@ namespace Logica
         }
 
 
-        public List<object> BuscarUsuarios(string NombreCompleto)
+        public static List<object> BuscarUsuarios(string NombreCompleto)
         {
             try
             {

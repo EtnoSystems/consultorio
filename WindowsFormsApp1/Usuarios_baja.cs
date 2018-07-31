@@ -156,8 +156,8 @@ namespace WindowsFormsApp1
 
         void BuscarUsuarios()
         {
-            GestorUsuarios gestorUsuarios = new GestorUsuarios();
-            List<object> resultado_busqueda = gestorUsuarios.BuscarUsuarios(TxtUsuario.Text);
+            //GestorUsuarios gestorUsuarios = new GestorUsuarios();
+            List<object> resultado_busqueda = GestorUsuarios.BuscarUsuarios(TxtUsuario.Text);
 
             if (resultado_busqueda.Count != 0)
             {

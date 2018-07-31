@@ -9,7 +9,7 @@ namespace Logica
 {
     public class GestorDireccion
     {
-        public Nullable<int> AgregarDireccion(string calle, string numero, string piso, string depto, int ciudadId)
+        public static Nullable<int> AgregarDireccion(string calle, string numero, string piso, string depto, int ciudadId)
         {
             try
             {

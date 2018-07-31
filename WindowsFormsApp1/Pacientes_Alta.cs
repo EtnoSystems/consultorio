@@ -177,8 +177,8 @@ namespace WindowsFormsApp1
             CmbSexo.ValueMember = "Key";
             CmbSexo.DisplayMember="Value";
 
-            GestorObraSocial gestorObraSocial = new GestorObraSocial();
-            List<ListaObraSocialDTO> listadoDeObrasSociales = gestorObraSocial.ObtenerListado();
+           // GestorObraSocial gestorObraSocial = new GestorObraSocial();
+            List<ListaObraSocialDTO> listadoDeObrasSociales = GestorObraSocial.ObtenerListado();
 
             ((ListBox)ChkLstObrasSociales).DataSource = listadoDeObrasSociales;
             ((ListBox)ChkLstObrasSociales).DisplayMember = "Nombre";
@@ -239,8 +239,8 @@ namespace WindowsFormsApp1
             if (TxtDepto.Text != "Dpto") dpto = TxtDepto.Text.ToLower();
             if (TxtNumero.Text != "Nro.") numero = TxtNumero.Text.ToLower();
             
-            GestorDireccion gestorDireccion = new GestorDireccion();
-            Nullable<int> idDireccion = gestorDireccion.AgregarDireccion(direccion, numero,piso, dpto, Convert.ToInt32(CmbCiudad.SelectedValue.ToString()));
+            //GestorDireccion gestorDireccion = new GestorDireccion();
+            Nullable<int> idDireccion = GestorDireccion.AgregarDireccion(direccion, numero,piso, dpto, Convert.ToInt32(CmbCiudad.SelectedValue.ToString()));
 
             List<Nullable<int>> obrasChequeadas = new List<Nullable<int>>();
 
@@ -249,8 +249,8 @@ namespace WindowsFormsApp1
                 obrasChequeadas.Add(os.Id);
             }
 
-            GestorPersona gestorPersona = new GestorPersona();
-            int idPersona = gestorPersona.AgregarPersona(documento, nombre, apellido, CmbSexo.SelectedValue.ToString(), idDireccion, null,null,obrasChequeadas);
+            //GestorPersona gestorPersona = new GestorPersona();
+            int idPersona = GestorPersona.AgregarPersona(documento, nombre, apellido, CmbSexo.SelectedValue.ToString(), idDireccion, null,null,obrasChequeadas);
 
 
             string telFijo=null, telCelular=null, email=null;
@@ -259,8 +259,8 @@ namespace WindowsFormsApp1
             if (TxtCelular.Text != "Celular") telCelular = TxtCelular.Text.ToLower();
             if (TxtMail.Text != "E-Mail") email = TxtMail.Text.ToLower();
 
-            GestorDatosContacto gestorDatosContacto = new GestorDatosContacto();
-            Nullable<int> idDC=gestorDatosContacto.AgregarDatosDeContacto(email,telCelular,telFijo, idPersona);
+            //GestorDatosContacto gestorDatosContacto = new GestorDatosContacto();
+            Nullable<int> idDC= GestorDatosContacto.AgregarDatosDeContacto(email,telCelular,telFijo, idPersona);
 
             if (idDC != 0) MessageBox.Show("El paciente se ha guardado correctamente");
             
@@ -313,6 +313,11 @@ namespace WindowsFormsApp1
         }
 
         private void TxtAfiliado_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtNombre_TextChanged(object sender, EventArgs e)
         {
 
         }

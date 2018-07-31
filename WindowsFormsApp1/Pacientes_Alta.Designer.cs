@@ -32,6 +32,9 @@
             this.TxtApellido = new System.Windows.Forms.TextBox();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TxtAfiliado = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.DTPNacimiento = new System.Windows.Forms.DateTimePicker();
             this.CmbSexo = new System.Windows.Forms.ComboBox();
             this.ChkLstObrasSociales = new System.Windows.Forms.CheckedListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -49,9 +52,6 @@
             this.BtnSalir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.DTPNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.TxtAfiliado = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +77,7 @@
             this.TxtNombre.Size = new System.Drawing.Size(207, 24);
             this.TxtNombre.TabIndex = 1;
             this.TxtNombre.Text = "Nombre";
+            this.TxtNombre.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
             this.TxtNombre.Enter += new System.EventHandler(this.TxtNombre_Enter);
             this.TxtNombre.Leave += new System.EventHandler(this.TxtNombre_Leave);
             // 
@@ -101,6 +102,40 @@
             this.panel1.Size = new System.Drawing.Size(443, 592);
             this.panel1.TabIndex = 13;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // TxtAfiliado
+            // 
+            this.TxtAfiliado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtAfiliado.ForeColor = System.Drawing.Color.Silver;
+            this.TxtAfiliado.Location = new System.Drawing.Point(27, 395);
+            this.TxtAfiliado.Name = "TxtAfiliado";
+            this.TxtAfiliado.Size = new System.Drawing.Size(376, 24);
+            this.TxtAfiliado.TabIndex = 24;
+            this.TxtAfiliado.Text = "Número de afiliado";
+            this.TxtAfiliado.TextChanged += new System.EventHandler(this.TxtAfiliado_TextChanged);
+            this.TxtAfiliado.Enter += new System.EventHandler(this.TxtAfiliado_Enter);
+            this.TxtAfiliado.Leave += new System.EventHandler(this.TxtAfiliado_Leave);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(20, 108);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(164, 18);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Fecha de nacimiento";
+            // 
+            // DTPNacimiento
+            // 
+            this.DTPNacimiento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTPNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTPNacimiento.Location = new System.Drawing.Point(23, 129);
+            this.DTPNacimiento.MinDate = new System.DateTime(2018, 5, 27, 0, 0, 0, 0);
+            this.DTPNacimiento.Name = "DTPNacimiento";
+            this.DTPNacimiento.Size = new System.Drawing.Size(326, 24);
+            this.DTPNacimiento.TabIndex = 5;
             // 
             // CmbSexo
             // 
@@ -311,40 +346,6 @@
             this.label1.Size = new System.Drawing.Size(279, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Agregar pacientes al sistema";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(20, 108);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 18);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Fecha de nacimiento";
-            // 
-            // DTPNacimiento
-            // 
-            this.DTPNacimiento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DTPNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DTPNacimiento.Location = new System.Drawing.Point(23, 129);
-            this.DTPNacimiento.MinDate = new System.DateTime(2018, 5, 27, 0, 0, 0, 0);
-            this.DTPNacimiento.Name = "DTPNacimiento";
-            this.DTPNacimiento.Size = new System.Drawing.Size(326, 24);
-            this.DTPNacimiento.TabIndex = 5;
-            // 
-            // TxtAfiliado
-            // 
-            this.TxtAfiliado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtAfiliado.ForeColor = System.Drawing.Color.Silver;
-            this.TxtAfiliado.Location = new System.Drawing.Point(27, 395);
-            this.TxtAfiliado.Name = "TxtAfiliado";
-            this.TxtAfiliado.Size = new System.Drawing.Size(376, 24);
-            this.TxtAfiliado.TabIndex = 24;
-            this.TxtAfiliado.Text = "Número de afiliado";
-            this.TxtAfiliado.TextChanged += new System.EventHandler(this.TxtAfiliado_TextChanged);
-            this.TxtAfiliado.Enter += new System.EventHandler(this.TxtAfiliado_Enter);
-            this.TxtAfiliado.Leave += new System.EventHandler(this.TxtAfiliado_Leave);
             // 
             // Pacientes_Alta
             // 

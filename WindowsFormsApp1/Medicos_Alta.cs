@@ -26,5 +26,15 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAgregarOtra_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
