@@ -36,5 +36,65 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void BtnSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void TxtNombre_Enter(object sender, EventArgs e)
+        {
+            TxtNombre.Text = "";
+            TxtNombre.ForeColor = Color.Black;
+        }
+
+        private void TxtNombreEditar_Enter(object sender, EventArgs e)
+        {
+            TxtNombreEditar.Text = "";
+            TxtNombreEditar.ForeColor = Color.Black;
+        }
+
+        private void TxtApellidoEditar_Enter(object sender, EventArgs e)
+        {
+            TxtApellidoEditar.Text = "";
+            TxtApellidoEditar.ForeColor = Color.Black;
+        }
+
+        private void TxtDocumentoEditar_Enter(object sender, EventArgs e)
+        {
+            TxtDocumentoEditar.Text = "";
+            TxtDocumentoEditar.ForeColor = Color.Black;
+        }
+
+        private void BtnBuscarOtro_Click(object sender, EventArgs e)
+        {
+            EstadoInicial();
+            TxtNombreEditar.Focus();
+        }
+
+        void EstadoInicial()
+        {
+            TxtNombreEditar.Text = "";
+            TxtApellidoEditar.Text = "";
+            TxtDocumentoEditar.Text = "";
+            panel3.Enabled = false;
+            TxtTelefonoEditar.Text = "";
+            TxtCelularEditar.Text = "";
+            TxtEMailEditar.Text = "";
+            CmbCiudadEditar.Text = "Ciudad";
+            TxtDireccionEditar.Text = "";
+            TxtDireccionEditar.Text = "";
+            TxtNumeroEditar.Text = "";
+            TxtPîsoEditar.Text = "";
+            TxtMatriculaEditar.Text = "";
+            TxtValorConsultaEditar.Text = "";
+            TxtPorcentajeEditar.Text = "";
+            TxtNombreEditar.Focus();
+
+            //Destildar todos los items del checkedListBox
+            for (int i = 0; i < ChkLstEspecialidadesEditar.Items.Count; i++)
+                ChkLstEspecialidadesEditar.SetItemChecked(i, false);
+        }
+
     }
 }

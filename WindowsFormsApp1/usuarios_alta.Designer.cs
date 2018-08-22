@@ -105,7 +105,6 @@
             this.btnGuardarAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.toolTip1.SetToolTip(this.btnGuardarAgregar, "Guardar datos y agregar otro usuario");
             this.btnGuardarAgregar.UseVisualStyleBackColor = false;
-            //this.btnGuardarAgregar.Click += new System.EventHandler(this.btnGuardarAgregar_Click);
             // 
             // btnSalir
             // 
@@ -235,12 +234,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(659, 546);
+            this.ClientSize = new System.Drawing.Size(653, 546);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Usuarios_alta";
-            this.Text = "Alta de usuarios";
+            this.Text = "Altas de usuarios";
             this.Load += new System.EventHandler(this.Usuarios_alta_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

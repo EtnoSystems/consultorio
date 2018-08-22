@@ -33,12 +33,12 @@ namespace WindowsFormsApp1
 
         void CompletarCombos()
         {
-            GestorObraSocial gestor = new GestorObraSocial();
-            CmbObrasSociales.DataSource = gestor.ListarObrasSociales();
+            //GestorObraSocial gestor = new GestorObraSocial();
+            CmbObrasSociales.DataSource = GestorObraSocial.ListarObrasSociales();
             CmbObrasSociales.DisplayMember = "Denominacion";
             CmbObrasSociales.ValueMember = "Id";
 
-            CmbObrasSocialesModif.DataSource = gestor.ListarObrasSociales();
+            CmbObrasSocialesModif.DataSource = GestorObraSocial.ListarObrasSociales();
             CmbObrasSocialesModif.DisplayMember = "Denominacion";
             CmbObrasSocialesModif.ValueMember = "Id";
         }
@@ -328,9 +328,9 @@ namespace WindowsFormsApp1
         int GuardarDatos()
         {
             decimal decimalVal = 0;
-            GestorObraSocial gestorObraSocial = new GestorObraSocial();
+            //GestorObraSocial gestorObraSocial = new GestorObraSocial();
             decimalVal = Convert.ToDecimal(TxtPlus.Text);
-            if (gestorObraSocial.AgregarObraSocial(TxtDenominacion.Text, TxtNombre.Text, decimalVal, ChkActiva.Checked, TxtDireccion.Text, TxtTelefono.Text, TxtObservaciones.Text) == 1)
+            if (GestorObraSocial.AgregarObraSocial(TxtDenominacion.Text, TxtNombre.Text, decimalVal, ChkActiva.Checked, TxtDireccion.Text, TxtTelefono.Text, TxtObservaciones.Text) == 1)
             {
                 return 1;
             }

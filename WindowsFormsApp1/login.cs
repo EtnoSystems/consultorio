@@ -174,17 +174,17 @@ namespace WindowsFormsApp1
 
         private void IniciarSesion(string nombre, string clave)
         {
-            GestorUsuarios _gestorUsuarios = new GestorUsuarios();
+            //GestorUsuarios _gestorUsuarios = new GestorUsuarios();
             UsuarioDTO _usuario = new UsuarioDTO();
             
-            _usuario = _gestorUsuarios.BuscarUsuarioPorUsername(nombre);
+            _usuario = GestorUsuarios.BuscarUsuarioPorUsername(nombre);
 
             if (_usuario != null)
             {
                 
                 if (string.Equals(clave, _usuario.Password))
                 {
-                    Globales.userObject = _gestorUsuarios.ObtenerCuentaPorUsername(_usuario.Nombre);
+                    Globales.userObject = GestorUsuarios.ObtenerCuentaPorUsername(_usuario.Nombre);
 
                     Globales.userName = _usuario.Nombre;
                     Globales.userType = _usuario.Tipo_usuario.Denominacion;
