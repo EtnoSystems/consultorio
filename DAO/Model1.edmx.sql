@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 04/04/2018 00:47:04
--- Generated from EDMX file: C:\Users\Jorge\Desktop\consultorios\consultorio\DAO\Model1.edmx
+-- Date Created: 08/23/2018 22:20:12
+-- Generated from EDMX file: C:\Users\Jorge\Desktop\Proyecto\consultorio\DAO\Model1.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -191,7 +191,8 @@ CREATE TABLE [dbo].[Persona] (
     [Direccion_Id] int  NULL,
     [Matricula] nvarchar(12)  NULL,
     [Valor_consulta] decimal(6,2)  NULL,
-    [Porcentaje_retencion] decimal(3,2)  NULL
+    [Porcentaje_retencion] decimal(3,2)  NULL,
+    [Fecha_nacimiento] datetime  NULL
 );
 GO
 
