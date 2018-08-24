@@ -362,27 +362,28 @@ insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('Swi
 insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('Union Personal',null,0,'TRUE');
 
 
--- INSERTS PARA CREAR UN PACIENTE
+-- INSERTS PARA CREAR UN PACIENTE	
 insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('chile',157,null,null,1);
-insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo) values (34116494,'jorge javier','robas',1,'M');
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values (34116494,'jorge javier','robas',1,'M','03-03-1989');
 insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('javier_robas@hotmail.com','+5493455430130','+543455420313',1);
 
-insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo) values (34116494,'matias','flores fabbro',null,'M');
+insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('leopoldo herrera',1015,null,null,1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values (34369093,'julio matias sebastian','flores fabbro',2,'M','04-07-1989');
 insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('matybienalto@gmail.com','+5493455510599',null,2);
 
 insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('juan herrero',100,null,null,1);
-insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo) values (16328437,'maria elena','bielinis',2,'F');
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values (16328437,'maria elena','bielinis',3,'F',null);
 insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('mariaelena.bielinis@hotmail.com','+5493455527719',null,3);
 
 
 -- INSERTS PARA CREAR UN MEDICO
 insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('san martin',1114,1,4,1);
-insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Matricula,Valor_consulta,Porcentaje_retencion) values (34195888,'johanna natalia','buiatti',2,'F',500,'0001',0);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Matricula,Valor_consulta,Porcentaje_retencion) values (34195888,'johanna natalia','buiatti',4,'F',400,'0001',0);
 insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('johanna_buiatti@hotmail.com','+5493455406811','+543455420282',4);
 insert into dbo.especialidadPersona(especialidad_id,persona_id) values (73,4);
 
 insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('juan j. passo',562,null,null,1);
-insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Matricula,Valor_consulta,Porcentaje_retencion) values (23539783,'sergio julian','leissa',3,'M',500,'0001',0);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Matricula,Valor_consulta,Porcentaje_retencion) values (23539783,'sergio julian','leissa',5,'M',500,'0001',0);
 insert into dbo.especialidadPersona(especialidad_id,persona_id) values (22,5);
 insert into dbo.especialidadPersona(especialidad_id,persona_id) values (40,5);
 
