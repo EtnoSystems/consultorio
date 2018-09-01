@@ -7,26 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DAO
+namespace BD
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Direccion
+    public partial class Datos_contacto
     {
-        public Direccion()
-        {
-            this.Persona = new HashSet<Persona>();
-        }
-    
         public int Id { get; set; }
-        public string Calle { get; set; }
-        public string Numero { get; set; }
-        public string Piso { get; set; }
-        public string Departamento { get; set; }
-        public int Ciudad_Id { get; set; }
+        public string Email { get; set; }
+        public string Tel_celular { get; set; }
+        public string Tel_fijo { get; set; }
+        public int Persona_Id { get; set; }
     
-        public virtual Ciudad Ciudad { get; set; }
-        public virtual ICollection<Persona> Persona { get; set; }
+        public virtual Persona Persona { get; set; }
     }
 }

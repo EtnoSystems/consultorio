@@ -49,10 +49,10 @@
             this.MnuRecetarios = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuAgregarFeriados = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuBarCode = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuCambiarUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAyuda = new System.Windows.Forms.ToolStripMenuItem();
-            this.MnuBarCode = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.menuStrip1.SuspendLayout();
@@ -74,7 +74,7 @@
             this.mnuAyuda});
             this.menuStrip1.Location = new System.Drawing.Point(1237, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(125, 1061);
+            this.menuStrip1.Size = new System.Drawing.Size(125, 749);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuStrip1_ItemClicked);
@@ -112,6 +112,7 @@
             this.MnuUsuarios.Text = "Principal";
             this.MnuUsuarios.ToolTipText = "Administrador de mèdicos, pacientes y usuarios (ctrl + u)";
             this.MnuUsuarios.Click += new System.EventHandler(this.PrincipalToolStripMenuItem_Click);
+            this.MnuUsuarios.DoubleClick += new System.EventHandler(this.MnuUsuarios_DoubleClick);
             // 
             // mnuMedicos
             // 
@@ -129,7 +130,7 @@
             this.mnuMedicos.MergeAction = System.Windows.Forms.MergeAction.MatchOnly;
             this.mnuMedicos.Name = "mnuMedicos";
             this.mnuMedicos.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mnuMedicos.Size = new System.Drawing.Size(183, 82);
+            this.mnuMedicos.Size = new System.Drawing.Size(239, 82);
             this.mnuMedicos.Text = "Usuarios";
             this.mnuMedicos.ToolTipText = "Gestionar personal médico";
             this.mnuMedicos.Click += new System.EventHandler(this.UsuariosToolStripMenuItem_Click);
@@ -182,7 +183,7 @@
             this.mnuPacientes.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuPacientes.Name = "mnuPacientes";
             this.mnuPacientes.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mnuPacientes.Size = new System.Drawing.Size(183, 82);
+            this.mnuPacientes.Size = new System.Drawing.Size(239, 82);
             this.mnuPacientes.Text = "Pacientes";
             this.mnuPacientes.ToolTipText = "Gestionar los pacientes";
             // 
@@ -238,7 +239,7 @@
             this.mnuPersonal.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.mnuPersonal.Name = "mnuPersonal";
             this.mnuPersonal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mnuPersonal.Size = new System.Drawing.Size(183, 82);
+            this.mnuPersonal.Size = new System.Drawing.Size(239, 82);
             this.mnuPersonal.Text = "admins";
             this.mnuPersonal.ToolTipText = "Gestionar el personal ";
             // 
@@ -333,6 +334,16 @@
             this.MnuAgregarFeriados.Text = "Agregar feriados";
             this.MnuAgregarFeriados.Click += new System.EventHandler(this.MnuAgregarFeriados_Click);
             // 
+            // MnuBarCode
+            // 
+            this.MnuBarCode.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MnuBarCode.Image = global::WindowsFormsApp1.Properties.Resources.barCodeIcon1;
+            this.MnuBarCode.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.MnuBarCode.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.MnuBarCode.Name = "MnuBarCode";
+            this.MnuBarCode.Size = new System.Drawing.Size(112, 79);
+            this.MnuBarCode.Text = "BarCode";
+            // 
             // mnuCambiarUsuario
             // 
             this.mnuCambiarUsuario.AutoToolTip = true;
@@ -374,16 +385,6 @@
             this.mnuAyuda.Text = "help";
             this.mnuAyuda.ToolTipText = "Ayuda";
             // 
-            // MnuBarCode
-            // 
-            this.MnuBarCode.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.MnuBarCode.Image = global::WindowsFormsApp1.Properties.Resources.barCodeIcon1;
-            this.MnuBarCode.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.MnuBarCode.ImageTransparentColor = System.Drawing.Color.Transparent;
-            this.MnuBarCode.Name = "MnuBarCode";
-            this.MnuBarCode.Size = new System.Drawing.Size(112, 79);
-            this.MnuBarCode.Text = "BarCode";
-            // 
             // monthCalendar1
             // 
             this.monthCalendar1.FirstDayOfWeek = System.Windows.Forms.Day.Monday;
@@ -398,7 +399,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1362, 1061);
+            this.ClientSize = new System.Drawing.Size(1362, 749);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

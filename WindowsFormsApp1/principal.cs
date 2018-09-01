@@ -38,7 +38,8 @@ namespace WindowsFormsApp1
 
         private void PrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Filtros_busqueda filtros_Busqueda = new Filtros_busqueda();
+            filtros_Busqueda.Show();
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -150,6 +151,11 @@ namespace WindowsFormsApp1
         {
             ObrasSociales_alta _ObrasSociales = new ObrasSociales_alta();
             _ObrasSociales.Show();
+        }
+
+        private void MnuUsuarios_DoubleClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("ay!");
         }
     }
 }

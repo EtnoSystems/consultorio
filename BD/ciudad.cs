@@ -7,21 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DAO
+namespace BD
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Tipo_usuario
+    public partial class Ciudad
     {
-        public Tipo_usuario()
+        public Ciudad()
         {
-            this.Usuario = new HashSet<Usuario>();
+            this.Direccion = new HashSet<Direccion>();
         }
     
         public int Id { get; set; }
         public string Denominacion { get; set; }
     
-        public virtual ICollection<Usuario> Usuario { get; set; }
+        public virtual ICollection<Direccion> Direccion { get; set; }
     }
 }

@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 08/23/2018 22:20:12
--- Generated from EDMX file: C:\Users\Jorge\Desktop\Proyecto\consultorio\DAO\Model1.edmx
+-- Date Created: 08/30/2018 01:36:01
+-- Generated from EDMX file: C:\Users\Jorge\Desktop\Proyecto\consultorio\BD\Model1.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -20,8 +20,20 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_direccionciudad]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Direccion] DROP CONSTRAINT [FK_direccionciudad];
 GO
+IF OBJECT_ID(N'[dbo].[FK_EspecialidadPersona_Especialidad]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[EspecialidadPersona] DROP CONSTRAINT [FK_EspecialidadPersona_Especialidad];
+GO
+IF OBJECT_ID(N'[dbo].[FK_EspecialidadPersona_Persona]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[EspecialidadPersona] DROP CONSTRAINT [FK_EspecialidadPersona_Persona];
+GO
 IF OBJECT_ID(N'[dbo].[FK_Obra_socialConsulta]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_Obra_socialConsulta];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Obra_socialPersona_Obra_social]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Obra_socialPersona] DROP CONSTRAINT [FK_Obra_socialPersona_Obra_social];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Obra_socialPersona_Persona]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Obra_socialPersona] DROP CONSTRAINT [FK_Obra_socialPersona_Persona];
 GO
 IF OBJECT_ID(N'[dbo].[FK_PersonaConsulta]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Consulta] DROP CONSTRAINT [FK_PersonaConsulta];
@@ -37,18 +49,6 @@ IF OBJECT_ID(N'[dbo].[FK_personadireccion]', 'F') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[FK_UsuarioTipo_usuario]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Usuario] DROP CONSTRAINT [FK_UsuarioTipo_usuario];
-GO
-IF OBJECT_ID(N'[dbo].[FK_EspecialidadPersona_Especialidad]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[EspecialidadPersona] DROP CONSTRAINT [FK_EspecialidadPersona_Especialidad];
-GO
-IF OBJECT_ID(N'[dbo].[FK_EspecialidadPersona_Persona]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[EspecialidadPersona] DROP CONSTRAINT [FK_EspecialidadPersona_Persona];
-GO
-IF OBJECT_ID(N'[dbo].[FK_Obra_socialPersona_Obra_social]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Obra_socialPersona] DROP CONSTRAINT [FK_Obra_socialPersona_Obra_social];
-GO
-IF OBJECT_ID(N'[dbo].[FK_Obra_socialPersona_Persona]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Obra_socialPersona] DROP CONSTRAINT [FK_Obra_socialPersona_Persona];
 GO
 
 -- --------------------------------------------------
@@ -73,11 +73,17 @@ GO
 IF OBJECT_ID(N'[dbo].[Especialidad]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Especialidad];
 GO
+IF OBJECT_ID(N'[dbo].[EspecialidadPersona]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[EspecialidadPersona];
+GO
 IF OBJECT_ID(N'[dbo].[Feriado]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Feriado];
 GO
 IF OBJECT_ID(N'[dbo].[Obra_social]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Obra_social];
+GO
+IF OBJECT_ID(N'[dbo].[Obra_socialPersona]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Obra_socialPersona];
 GO
 IF OBJECT_ID(N'[dbo].[Persona]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Persona];
@@ -87,12 +93,6 @@ IF OBJECT_ID(N'[dbo].[Tipo_usuario]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[Usuario]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Usuario];
-GO
-IF OBJECT_ID(N'[dbo].[EspecialidadPersona]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[EspecialidadPersona];
-GO
-IF OBJECT_ID(N'[dbo].[Obra_socialPersona]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Obra_socialPersona];
 GO
 
 -- --------------------------------------------------

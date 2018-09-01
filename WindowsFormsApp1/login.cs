@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica; //Agregué la referencia a la capa lógica para tener acceso al gestor de usuarios
-using DAO;
+using BD;
 using Entidades;
 
 namespace WindowsFormsApp1

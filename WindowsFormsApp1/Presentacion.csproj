@@ -78,6 +78,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>consultoriosDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Filtros_busqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Filtros_busqueda.Designer.cs">
+      <DependentUpon>Filtros_busqueda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Globales.cs" />
     <Compile Include="IngresoPaciente.cs">
       <SubType>Form</SubType>
@@ -178,6 +184,9 @@
     <EmbeddedResource Include="ConsultasUsuarios.resx">
       <DependentUpon>ConsultasUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Filtros_busqueda.resx">
+      <DependentUpon>Filtros_busqueda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IngresoPaciente.resx">
       <DependentUpon>IngresoPaciente.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,9 +268,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAO\DAO.csproj">
+    <ProjectReference Include="..\BD\BD.csproj">
       <Project>{d9a92453-4ff3-4ff9-a236-f1710074e9f3}</Project>
-      <Name>DAO</Name>
+      <Name>BD</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{bf1d4d40-e480-4e36-9012-87e5c9fabe3d}</Project>

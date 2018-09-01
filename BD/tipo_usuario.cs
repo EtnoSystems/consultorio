@@ -7,29 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DAO
+namespace BD
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Obra_social
+    public partial class Tipo_usuario
     {
-        public Obra_social()
+        public Tipo_usuario()
         {
-            this.Consulta = new HashSet<Consulta>();
-            this.Persona = new HashSet<Persona>();
+            this.Usuario = new HashSet<Usuario>();
         }
     
         public int Id { get; set; }
         public string Denominacion { get; set; }
-        public decimal Plus { get; set; }
-        public string Telefono { get; set; }
-        public string Direccion { get; set; }
-        public string Observaciones { get; set; }
-        public bool Activa { get; set; }
-        public string Nombre_largo { get; set; }
     
-        public virtual ICollection<Consulta> Consulta { get; set; }
-        public virtual ICollection<Persona> Persona { get; set; }
+        public virtual ICollection<Usuario> Usuario { get; set; }
     }
 }

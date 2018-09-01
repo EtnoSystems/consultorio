@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DAO
+namespace BD
 {
     using System;
     using System.Data.Entity;

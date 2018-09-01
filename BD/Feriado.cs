@@ -7,19 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DAO
+namespace BD
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Datos_contacto
+    public partial class Feriado
     {
         public int Id { get; set; }
-        public string Email { get; set; }
-        public string Tel_celular { get; set; }
-        public string Tel_fijo { get; set; }
-        public int Persona_Id { get; set; }
-    
-        public virtual Persona Persona { get; set; }
+        public System.DateTime Fecha { get; set; }
+        public string Descripcion { get; set; }
     }
 }

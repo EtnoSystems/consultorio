@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
 using Entidades;
-using DAO;
+using BD;
 
 namespace WindowsFormsApp1
 {

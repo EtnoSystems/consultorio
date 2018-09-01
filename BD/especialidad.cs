@@ -7,19 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DAO
+namespace BD
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Usuario
+    public partial class Especialidad
     {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Password { get; set; }
-        public string Nombre_completo { get; set; }
-        public int Tipo_usuario_Id { get; set; }
+        public Especialidad()
+        {
+            this.Persona = new HashSet<Persona>();
+        }
     
-        public virtual Tipo_usuario Tipo_usuario { get; set; }
+        public int Id { get; set; }
+        public string Denominacion { get; set; }
+    
+        public virtual ICollection<Persona> Persona { get; set; }
     }
 }

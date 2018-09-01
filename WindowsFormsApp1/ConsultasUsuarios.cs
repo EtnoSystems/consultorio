@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
-using DAO;
+using BD;
 using Entidades;
 
 namespace WindowsFormsApp1

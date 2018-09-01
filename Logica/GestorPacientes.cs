@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entidades;
-using DAO;
+using BD;
 
 namespace Logica
 {
-    public class GestorPacientes
+    public static class GestorPacientes
     { 
-        public PacienteDTO BuscarPacientePorDNI(string DNI)
+        public static PacienteDTO BuscarPacientePorDNI(string DNI)
         {
             try
             {
@@ -35,7 +35,7 @@ namespace Logica
             }
         }
 
-        public int AgregarPaciente(string nombre, string apellido, string documento, string sexo, Obra_social obraSocial, Datos_contacto datos_contacto, Direccion direccion)
+        public static int AgregarPaciente(string nombre, string apellido, string documento, string sexo, Obra_social obraSocial, Datos_contacto datos_contacto, Direccion direccion)
         {
             try
             {

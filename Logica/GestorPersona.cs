@@ -3,12 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BD;
 using DAO;
+
 
 namespace Logica
 {
-    public class GestorPersona
+    public static class GestorPersona
     {
+       public static List<Persona> BuscarPersonas(string dni,string apellido,string nombre)
+        {
+            return PersonaDAO.BuscarPorFiltros(dni, apellido, nombre);            
+        }
+
         public static int AgregarPersona(string dni, string nombre, string apellido, string sexo, Nullable<int> direccionId, string matricula, Nullable<decimal> porcentaje,List<Nullable<int>> listID_OS)
         {
             try

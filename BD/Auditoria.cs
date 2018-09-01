@@ -7,15 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DAO
+namespace BD
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Feriado
+    public partial class Auditoria
     {
         public int Id { get; set; }
-        public System.DateTime Fecha { get; set; }
-        public string Descripcion { get; set; }
+        public string fecha { get; set; }
+        public string Usuario { get; set; }
+        public string Tabla { get; set; }
+        public string Elemento { get; set; }
+        public string Accion { get; set; }
     }
 }
