@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
 
         private void Medicos_Alta_Load(object sender, EventArgs e)
         {
-
+            tabControl1.SelectTab(1);
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)

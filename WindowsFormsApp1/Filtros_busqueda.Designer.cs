@@ -32,18 +32,20 @@
             this.TxtApellido = new System.Windows.Forms.TextBox();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.BtnBuscar = new System.Windows.Forms.Button();
+            this.DgvResultadoBusqueda = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvResultadoBusqueda)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtDNI
             // 
-            this.TxtDNI.Location = new System.Drawing.Point(144, 85);
+            this.TxtDNI.Location = new System.Drawing.Point(42, 25);
             this.TxtDNI.Name = "TxtDNI";
             this.TxtDNI.Size = new System.Drawing.Size(100, 20);
             this.TxtDNI.TabIndex = 0;
             // 
             // TxtApellido
             // 
-            this.TxtApellido.Location = new System.Drawing.Point(305, 85);
+            this.TxtApellido.Location = new System.Drawing.Point(42, 81);
             this.TxtApellido.Name = "TxtApellido";
             this.TxtApellido.Size = new System.Drawing.Size(100, 20);
             this.TxtApellido.TabIndex = 1;
@@ -51,33 +53,46 @@
             // 
             // TxtNombre
             // 
-            this.TxtNombre.Location = new System.Drawing.Point(470, 85);
+            this.TxtNombre.Location = new System.Drawing.Point(42, 134);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(100, 20);
             this.TxtNombre.TabIndex = 2;
             // 
             // BtnBuscar
             // 
-            this.BtnBuscar.Location = new System.Drawing.Point(454, 166);
+            this.BtnBuscar.Location = new System.Drawing.Point(42, 189);
             this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.BtnBuscar.Size = new System.Drawing.Size(100, 23);
             this.BtnBuscar.TabIndex = 3;
             this.BtnBuscar.Text = "Buscar";
             this.BtnBuscar.UseVisualStyleBackColor = true;
             this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
+            // DgvResultadoBusqueda
+            // 
+            this.DgvResultadoBusqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvResultadoBusqueda.Location = new System.Drawing.Point(198, 25);
+            this.DgvResultadoBusqueda.MultiSelect = false;
+            this.DgvResultadoBusqueda.Name = "DgvResultadoBusqueda";
+            this.DgvResultadoBusqueda.Size = new System.Drawing.Size(492, 187);
+            this.DgvResultadoBusqueda.TabIndex = 4;
+            this.DgvResultadoBusqueda.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResultadoBusqueda_CellClick);
+            this.DgvResultadoBusqueda.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResultadoBusqueda_CellDoubleClick);
+            // 
             // Filtros_busqueda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(720, 241);
+            this.Controls.Add(this.DgvResultadoBusqueda);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.TxtApellido);
             this.Controls.Add(this.TxtDNI);
             this.Name = "Filtros_busqueda";
-            this.Text = "Filtros_busqueda";
+            this.Text = "Búsqueda";
             this.Load += new System.EventHandler(this.Filtros_busqueda_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvResultadoBusqueda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,5 +104,6 @@
         private System.Windows.Forms.TextBox TxtApellido;
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Button BtnBuscar;
+        private System.Windows.Forms.DataGridView DgvResultadoBusqueda;
     }
 }

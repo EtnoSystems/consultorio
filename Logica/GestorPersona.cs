@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using BD;
 using DAO;
+using Entidades;
 
 
 namespace Logica
 {
     public static class GestorPersona
     {
-       public static List<Persona> BuscarPersonas(string dni,string apellido,string nombre)
+       public static List<PersonaDTO_ResultadoBusqueda> BuscarPersonas(string dni,string apellido,string nombre)
         {
             return PersonaDAO.BuscarPorFiltros(dni, apellido, nombre);            
         }
