@@ -25,6 +25,7 @@ namespace BD
         public string Piso { get; set; }
         public string Departamento { get; set; }
         public int Ciudad_Id { get; set; }
+        public string Barrio { get; set; }
     
         public virtual Ciudad Ciudad { get; set; }
         public virtual ICollection<Persona> Persona { get; set; }

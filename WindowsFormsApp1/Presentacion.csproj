@@ -232,6 +232,7 @@
     <EmbeddedResource Include="Usuarios_modificacion.resx">
       <DependentUpon>Usuarios_modificacion.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="App.Config" />
     <None Include="consultoriosDataSet.xsc">
       <DependentUpon>consultoriosDataSet.xsd</DependentUpon>
     </None>
@@ -263,9 +264,6 @@
     <None Include="reportes\DSConsultas.xss">
       <DependentUpon>DSConsultas.xsd</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BD\BD.csproj">

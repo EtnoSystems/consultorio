@@ -363,29 +363,85 @@ insert into dbo.obra_social (denominacion,nombre_largo,plus,activa) values ('Uni
 
 
 -- INSERTS PARA CREAR UN PACIENTE	
-insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('chile',157,null,null,1);
-insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values (34116494,'jorge javier','robas',1,'M','03-03-1989');
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('chile',157,null,null,'obras sanitarias',1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('34116494','jorge javier','robas',1,'M','03-03-1989');
 insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('javier_robas@hotmail.com','+5493455430130','+543455420313',1);
 
-insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('leopoldo herrera',1015,null,null,1);
-insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values (34369093,'julio matias sebastian','flores fabbro',2,'M','04-07-1989');
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('leopoldo herrera',1015,null,null,null,1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('34369093','julio matias sebastian','flores fabbro',2,'M','07-04-1989');
 insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('matybienalto@gmail.com','+5493455510599',null,2);
 
-insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('juan herrero',100,null,null,1);
-insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values (16328437,'maria elena','bielinis',3,'F',null);
-insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('mariaelena.bielinis@hotmail.com','+5493455527719',null,3);
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('juan herrero',100,null,null,null,1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('16328437','maria elena','bielinis',3,'F','07-07-1963');
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('bielinismariaelena@gmail.com','+5493455527719',null,3);
 
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('publica',940,null,null,'barrio evita',1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('48201594','gimena daiana','robas',4,'F','12-25-2007');
+--insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values (null,null,null,4);
 
 -- INSERTS PARA CREAR UN MEDICO
-insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('san martin',1114,1,4,1);
-insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Matricula,Valor_consulta,Porcentaje_retencion) values (34195888,'johanna natalia','buiatti',4,'F',400,'0001',0);
-insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('johanna_buiatti@hotmail.com','+5493455406811','+543455420282',4);
-insert into dbo.especialidadPersona(especialidad_id,persona_id) values (73,4);
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('san martin',1114,1,4,null,1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento,Matricula,Valor_consulta,Porcentaje_retencion) values ('34195888','johanna natalia','buiatti',5,'F','01-26-1989',400,'0001',0);
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('johanna_buiatti@hotmail.com','+5493455406811','+543455420282',5);
+insert into dbo.especialidadPersona(especialidad_id,persona_id) values (73,5);
 
-insert into dbo.direccion (calle,numero,piso,departamento,ciudad_id) values ('juan j. passo',562,null,null,1);
-insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Matricula,Valor_consulta,Porcentaje_retencion) values (23539783,'sergio julian','leissa',5,'M',500,'0001',0);
-insert into dbo.especialidadPersona(especialidad_id,persona_id) values (22,5);
-insert into dbo.especialidadPersona(especialidad_id,persona_id) values (40,5);
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('juan j. passo',562,null,null,null,1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Matricula,Valor_consulta,Porcentaje_retencion) values ('23539783','sergio julian','leissa',6,'M',500,'0001',0);
+insert into dbo.especialidadPersona(especialidad_id,persona_id) values (22,6);
+insert into dbo.especialidadPersona(especialidad_id,persona_id) values (40,6);
+
+-- SIGO CON PACIENTES
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('juan herrero',100,null,null,'buen pastor',1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('37543358','maria silvia','robas',7,'F','09-02-1993');
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('mariasilviarobas@gmail.com','+5493424297885',null,7);
+
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('chile',367,null,null,'obras sanitarias',1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('46926611','maximo','noguera bielinis',8,'M','10-29-2005');
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('maximonoguera1@gmail.com',null,+543455421743,8);
+
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('publica',940,null,null,'barrio evita',1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('47410341','pilar','robas',9,'F','08-04-2006');
+--insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values (null,null,null,8);
+
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('chile',157,null,null,'obras sanitarias',1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('24488758','maria cecilia','bielinis',10,'F','12-22-1975');
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('ceciliabielinis@hotmail.com','+5493455444505','+543455420313',10);
+
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('estrada',257,null,null,'club policial',1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('10974598','hector ariel','robas',11,'M','10-20-1953');
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('ariel.robas@hotmail.com','+5493455624442',null,11);
+
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('san martin',1114,1,4,null,1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('34904841','diego emanuel','buiatti',12,'M','08-01-1990');
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('diegobuiatti25@gmail.com','+5493455466227',null,12);
+
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('juan herrero',100,null,null,null,1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('41866660','juan ignacio','robas',13,'M','09-18-1999');
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('juanrobas@hotmail.com.ar',null,null,13);
+
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('balcarce',543,null,null,null,1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('20259469','gabriela raquel','decurnex',14,'F','03-06-1969');
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('gabrielardecurnex@gmail.com','+5493455418524','+543455420282',14);
+
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('belgrano',1549,null,null,null,1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('34945837','jonatan','paccor',15,'M','01-11-1991');
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('jonatanpaccor86@gmail.com','+5493455435195',null,15);
+
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('ituzaingo',188,null,null,null,185);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('35442564','josé luís','zapata',16,'M','11-02-1990');
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('harryelchachy@gmail.com','+5493435444373',null,16);
+
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('parodi',188,null,null,null,164);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('5865416','pablo joel','decurnex',17,'M','11-02-1990');
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('pablojoeldecurnex@hotmail.com','+5493445406616','+543445423333',17);
+
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('parodi',188,null,null,null,164);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('4959956','angelita','cabral',18,'F','05-19-1945');
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('angelitacabraldecurnex@hotmail.com','+5493445473234','+543445423333',18);
+
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('velez sarsfield',145,null,null,null,1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('25243271','mauro ceferino','pereyra',19,'M','02-04-1977');
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('mauro.pereyra@hotmail.com','+5493455407452',null,19);
 
 
 -- INSERTS DE LA TABLA PACIENTE-OBRA SOCIALES
@@ -395,6 +451,6 @@ insert into dbo.obra_socialPersona (Obra_social_Id,Persona_Id) values (11,2);
 
 
 -- INSERTS DE LA TABLA CONSULTA MEDICA
-insert into dbo.consulta (precio,fecha,plus,retencion_medico,reintegro_por_orden,orden_presentada,obra_social_id,persona_medico_id,persona_paciente_id) values (500,'2018-02-28',250,0,0,'FALSE',1,5,1);
+insert into dbo.consulta (precio,fecha,plus,retencion_medico,reintegro_por_orden,orden_presentada,obra_social_id,persona_medico_id,persona_paciente_id) values (500,'2018-02-28',250,0,0,'FALSE',1,6,1);
 
 

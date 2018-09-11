@@ -117,6 +117,7 @@
     <Property Name="Piso" Type="varchar" Nullable="true" MaxLength="3" />
     <Property Name="Departamento" Type="varchar" Nullable="true" MaxLength="3" />
     <Property Name="Ciudad_Id" Type="int" Nullable="false" />
+    <Property Name="Barrio" Type="nvarchar" Nullable="true" MaxLength="100" />
   </EntityType>
   <EntityType Name="Especialidad">
     <Key>
@@ -360,7 +361,7 @@
           <Property Name="Retencion_medico" Type="Decimal" Precision="3" Scale="2" Nullable="false" />
           <Property Name="Reintegro_por_orden" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
           <Property Name="Orden_presentada" Type="Boolean" Nullable="false" />
-          <Property Name="Obra_social_Id" Type="Int32" Nullable="true" />
+          <Property Name="Obra_social_Id" Type="Int32" />
           <Property Name="Persona_medico_Id" Type="Int32" Nullable="false" />
           <Property Name="Persona_paciente_Id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Obra_social" Relationship="Self.FK_Obra_socialConsulta" FromRole="Consulta" ToRole="Obra_social" />
@@ -390,6 +391,7 @@
           <Property Name="Ciudad_Id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Ciudad" Relationship="Self.FK_direccionciudad" FromRole="Direccion" ToRole="Ciudad" />
           <NavigationProperty Name="Persona" Relationship="Self.FK_personadireccion" FromRole="Direccion" ToRole="Persona" />
+          <Property Name="Barrio" Type="String" Nullable="true" MaxLength="100" FixedLength="false" />
         </EntityType>
         <EntityType Name="Especialidad">
           <Key>
@@ -435,13 +437,13 @@
           <Property Name="Matricula" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
           <Property Name="Valor_consulta" Type="Decimal" Precision="6" Scale="2" />
           <Property Name="Porcentaje_retencion" Type="Decimal" Precision="3" Scale="2" />
+          <Property Name="Fecha_nacimiento" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Consulta" Relationship="Self.FK_PersonaConsulta" FromRole="Persona" ToRole="Consulta" />
           <NavigationProperty Name="Consulta1" Relationship="Self.FK_PersonaConsulta1" FromRole="Persona" ToRole="Consulta" />
           <NavigationProperty Name="Datos_contacto" Relationship="Self.FK_PersonaDatos_contacto" FromRole="Persona" ToRole="Datos_contacto" />
           <NavigationProperty Name="Direccion" Relationship="Self.FK_personadireccion" FromRole="Persona" ToRole="Direccion" />
           <NavigationProperty Name="Especialidad" Relationship="Self.EspecialidadPersona" FromRole="Persona" ToRole="Especialidad" />
           <NavigationProperty Name="Obra_social" Relationship="Self.Obra_socialPersona" FromRole="Persona" ToRole="Obra_social" />
-          <Property Name="Fecha_nacimiento" Type="DateTime" Nullable="true" Precision="3" />
         </EntityType>
         <EntityType Name="Tipo_usuario">
           <Key>
@@ -665,6 +667,7 @@
           <ScalarProperty Name="Piso" ColumnName="Piso" />
           <ScalarProperty Name="Departamento" ColumnName="Departamento" />
           <ScalarProperty Name="Ciudad_Id" ColumnName="Ciudad_Id" />
+          <ScalarProperty Name="Barrio" ColumnName="Barrio" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
