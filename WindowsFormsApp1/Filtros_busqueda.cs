@@ -88,5 +88,50 @@ namespace WindowsFormsApp1
             Medicos_Alta medicos = new Medicos_Alta();
             medicos.Show();
         }
+
+        private void TxtDNI_Enter(object sender, EventArgs e)
+        {
+            TxtDNI.ForeColor = Color.Black;
+            TxtDNI.Text = "";
+        }
+
+        private void TxtApellido_Enter(object sender, EventArgs e)
+        {
+            TxtApellido.ForeColor = Color.Black;
+            TxtApellido.Text = "";
+        }
+
+        private void TxtNombre_Enter(object sender, EventArgs e)
+        {
+            TxtNombre.ForeColor = Color.Black;
+            TxtNombre.Text = "";
+        }
+
+        private void TxtDNI_Leave(object sender, EventArgs e)
+        {
+            if (TxtDNI.Text == "")
+            {
+                TxtDNI.Text = "DNI";
+                TxtDNI.ForeColor = Color.Gray;
+            }
+        }
+
+        private void TxtApellido_Leave(object sender, EventArgs e)
+        {
+            if (TxtApellido.Text == "")
+            {
+                TxtApellido.Text = "DNI";
+                TxtApellido.ForeColor = Color.Gray;
+            }
+        }
+
+        private void TxtNombre_Leave(object sender, EventArgs e)
+        {
+            if (TxtNombre.Text == "")
+            {
+                TxtNombre.Text = "DNI";
+                TxtNombre.ForeColor = Color.Gray;
+            }
+        }
     }
 }

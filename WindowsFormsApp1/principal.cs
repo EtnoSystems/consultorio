@@ -26,8 +26,10 @@ namespace WindowsFormsApp1
         {
             //consultaUsuarios consultaUsuarios = new consultaUsuarios();
             //consultaUsuarios.Show();    
-            Usuarios_alta usuariosAlta = new Usuarios_alta();
-            usuariosAlta.Show();
+            //Usuarios_alta usuariosAlta = new Usuarios_alta();
+            //usuariosAlta.Show();
+            Medicos_Alta medicos = new Medicos_Alta();
+            medicos.Show();
         }
 
         private void LoginToolStripMenuItem_Click(object sender, EventArgs e)
@@ -38,8 +40,8 @@ namespace WindowsFormsApp1
 
         private void PrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Filtros_busqueda filtros_Busqueda = new Filtros_busqueda();
-            filtros_Busqueda.Show();
+           // Filtros_busqueda filtros_Busqueda = new Filtros_busqueda();
+            //filtros_Busqueda.Show();
         }
 
         private void Principal_Load(object sender, EventArgs e)
