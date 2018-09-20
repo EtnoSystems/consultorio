@@ -56,7 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BD\BD.csproj">
-      <Project>{d9a92453-4ff3-4ff9-a236-f1710074e9f3}</Project>
+      <Project>{9364f73e-eec6-467f-af4d-53b65c366acc}</Project>
       <Name>BD</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAO\DAO.csproj">

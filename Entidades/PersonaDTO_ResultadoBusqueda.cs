@@ -7,9 +7,9 @@ using BD;
 
 namespace Entidades
 {
-    public class PersonaDTO_ResultadoBusqueda
+    public class PersonaDTO
     {
-        public PersonaDTO_ResultadoBusqueda()
+        public PersonaDTO()
         {
             this.Consulta = new HashSet<Consulta>();
             this.Consulta1 = new HashSet<Consulta>();

@@ -33,6 +33,7 @@
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.DgvResultadoBusqueda = new System.Windows.Forms.DataGridView();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvResultadoBusqueda)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             this.TxtDNI.TabIndex = 0;
             this.TxtDNI.Text = "DNI";
             this.TxtDNI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtDNI.TextChanged += new System.EventHandler(this.TxtDNI_TextChanged);
             this.TxtDNI.Enter += new System.EventHandler(this.TxtDNI_Enter);
             this.TxtDNI.Leave += new System.EventHandler(this.TxtDNI_Leave);
             // 
@@ -103,13 +105,24 @@
             this.DgvResultadoBusqueda.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResultadoBusqueda_CellClick);
             this.DgvResultadoBusqueda.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResultadoBusqueda_CellDoubleClick);
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(241, 235);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 5;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // Filtros_busqueda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.fondoFormularios;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(717, 253);
+            this.ClientSize = new System.Drawing.Size(717, 274);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.DgvResultadoBusqueda);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.TxtNombre);
@@ -131,5 +144,6 @@
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.DataGridView DgvResultadoBusqueda;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

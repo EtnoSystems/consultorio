@@ -10,16 +10,16 @@ namespace DAO
 {
     public static class PersonaDAO
     {
-        public static List<PersonaDTO_ResultadoBusqueda> BuscarPorFiltros (string dni, string apellido, string nombre)
+        public static List<PersonaDTO> BuscarPorFiltros (string dni, string apellido, string nombre)
         {
-            List<PersonaDTO_ResultadoBusqueda> resultado = new List<PersonaDTO_ResultadoBusqueda>();
-            List<PersonaDTO_ResultadoBusqueda> resultadoDNI = new List<PersonaDTO_ResultadoBusqueda>();
-            List<PersonaDTO_ResultadoBusqueda> resultadoAPELLIDO = new List<PersonaDTO_ResultadoBusqueda>();
-            List<PersonaDTO_ResultadoBusqueda> resultadoNOMBRE = new List<PersonaDTO_ResultadoBusqueda>();
-            List<PersonaDTO_ResultadoBusqueda> resultadoDniApellido = new List<PersonaDTO_ResultadoBusqueda>();
-            List<PersonaDTO_ResultadoBusqueda> resultadoDniNombre = new List<PersonaDTO_ResultadoBusqueda>();
-            List<PersonaDTO_ResultadoBusqueda> resultadoDniApellidoNombre = new List<PersonaDTO_ResultadoBusqueda>();
-            List<PersonaDTO_ResultadoBusqueda> resultadoApellidoNombre = new List<PersonaDTO_ResultadoBusqueda>();
+            List<PersonaDTO> resultado = new List<PersonaDTO>();
+            List<PersonaDTO> resultadoDNI = new List<PersonaDTO>();
+            List<PersonaDTO> resultadoAPELLIDO = new List<PersonaDTO>();
+            List<PersonaDTO> resultadoNOMBRE = new List<PersonaDTO>();
+            List<PersonaDTO> resultadoDniApellido = new List<PersonaDTO>();
+            List<PersonaDTO> resultadoDniNombre = new List<PersonaDTO>();
+            List<PersonaDTO> resultadoDniApellidoNombre = new List<PersonaDTO>();
+            List<PersonaDTO> resultadoApellidoNombre = new List<PersonaDTO>();
             //PersonaDTO_ResultadoBusqueda persona = new PersonaDTO_ResultadoBusqueda();
             try
             {
@@ -30,7 +30,7 @@ namespace DAO
                     {
                        resultadoDNI = (from n in dbContext.Persona
                                         where n.DNI.Equals(dni)
-                                        select new PersonaDTO_ResultadoBusqueda
+                                        select new PersonaDTO
                                         {
                                             Id = n.Id,
                                             DNI = n.DNI,
@@ -54,8 +54,8 @@ namespace DAO
                             if (apellido != "")
                             {
                                 resultadoDniApellido = (from n in resultadoDNI
-                                                        where n.Apellido.Equals(apellido)
-                                                        select new PersonaDTO_ResultadoBusqueda
+                                                        where n.Apellido.Contains(apellido)
+                                                        select new PersonaDTO
                                                         {
                                                             Id = n.Id,
                                                             DNI = n.DNI,
@@ -80,8 +80,8 @@ namespace DAO
                                     if (nombre != "")
                                     {
                                         resultadoDniApellidoNombre = (from n in resultadoDniApellido
-                                                                      where n.Nombre.Equals(nombre)
-                                                                      select n).ToList<PersonaDTO_ResultadoBusqueda>();
+                                                                      where n.Nombre.Contains(nombre)
+                                                                      select n).ToList<PersonaDTO>();
                                         if (resultadoDniApellidoNombre.Count>0)
                                         {
                                             return resultadoDniApellidoNombre;
@@ -106,8 +106,8 @@ namespace DAO
                                 if (nombre != "")
                                 {
                                     resultadoDniNombre = (from n in resultadoDNI
-                                                          where n.Nombre.Equals(nombre)
-                                                          select n).ToList<PersonaDTO_ResultadoBusqueda>();
+                                                          where n.Nombre.Contains(nombre)
+                                                          select n).ToList<PersonaDTO>();
 
                                     if (resultadoDniNombre.Count > 0)
                                     {
@@ -135,7 +135,7 @@ namespace DAO
                         {
                             resultadoAPELLIDO = (from n in dbContext.Persona
                                                  where n.Apellido.Contains(apellido)
-                                                 select new PersonaDTO_ResultadoBusqueda
+                                                 select new PersonaDTO
                                                  {
                                                      Id = n.Id,
                                                      DNI = n.DNI,
@@ -160,8 +160,8 @@ namespace DAO
                                 if (nombre != "")
                                 {
                                     resultadoApellidoNombre = (from n in resultadoAPELLIDO
-                                                               where n.Nombre.Equals(nombre)
-                                                               select n).ToList<PersonaDTO_ResultadoBusqueda>();
+                                                               where n.Nombre.Contains(nombre)
+                                                               select n).ToList<PersonaDTO>();
 
                                     if (resultadoApellidoNombre.Count > 0)
                                     {
@@ -188,7 +188,7 @@ namespace DAO
                             {
                                 resultadoNOMBRE = (from n in dbContext.Persona
                                                    where n.Nombre.Contains(nombre)
-                                                   select new PersonaDTO_ResultadoBusqueda
+                                                   select new PersonaDTO
                                                    {
                                                        Id = n.Id,
                                                        DNI = n.DNI,
@@ -235,6 +235,27 @@ namespace DAO
             
         }
 
+
+        public static void EliminarPersona (PersonaDTO unSeleccionado)
+        {
+            try
+            {
+                using (consultoriosEntities dbContext = new consultoriosEntities())
+                {
+                    var query = (from n in dbContext.Persona
+                                 where n.Id == unSeleccionado.Id
+                                 select n).Single();
+
+                    dbContext.Persona.Remove(query);
+                    dbContext.SaveChanges();
+
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
     }    
     

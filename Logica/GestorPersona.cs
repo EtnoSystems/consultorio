@@ -12,7 +12,7 @@ namespace Logica
 {
     public static class GestorPersona
     {
-       public static List<PersonaDTO_ResultadoBusqueda> BuscarPersonas(string dni,string apellido,string nombre)
+       public static List<PersonaDTO> BuscarPersonas(string dni,string apellido,string nombre)
         {
             return PersonaDAO.BuscarPorFiltros(dni, apellido, nombre);            
         }
@@ -52,6 +52,13 @@ namespace Logica
             {
                 throw;
             }
+        }
+        
+
+
+        public static void EliminarPersona(PersonaDTO unaPersona)
+        {
+            PersonaDAO.EliminarPersona(unaPersona);
         }
     }
 }

@@ -1,4 +1,4 @@
-Nombre de la base: 	denn1.mssql2.gear.host
+Nombre de la base: 	den1.mssql2.gear.host
 Autenticación:		autenticación de sql
 Usuario:		consultorios
 Password:		etnosoft_2018

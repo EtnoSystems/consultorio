@@ -15,7 +15,12 @@ namespace WindowsFormsApp1
 {
     public partial class Filtros_busqueda : Form
     {
-        List<PersonaDTO_ResultadoBusqueda> resultado; 
+        List<PersonaDTO> resultadoBusqueda;
+        PersonaDTO seleccionado;
+        
+        string dni = "";
+        string nombre = "";
+        string apellido = "";
 
         public Filtros_busqueda()
         {
@@ -36,11 +41,11 @@ namespace WindowsFormsApp1
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            resultado = GestorPersona.BuscarPersonas(TxtDNI.Text, TxtApellido.Text, TxtNombre.Text);
+            resultadoBusqueda = GestorPersona.BuscarPersonas(dni, apellido, nombre);
 
-            if (resultado.Count > 1)
+            if (resultadoBusqueda.Count > 0)
             {
-                DgvResultadoBusqueda.DataSource = resultado;
+                DgvResultadoBusqueda.DataSource = resultadoBusqueda;
                 DgvResultadoBusqueda.Columns["Id"].Visible = false;
                 DgvResultadoBusqueda.Columns["Direccion"].Visible = false;
                 DgvResultadoBusqueda.Columns["Matricula"].Visible = false;
@@ -84,7 +89,8 @@ namespace WindowsFormsApp1
         //se hace dobleclick sobre el grid
         private void DgvResultadoBusqueda_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show(resultado[DgvResultadoBusqueda.CurrentCell.RowIndex].DNI.ToString());
+            seleccionado = resultadoBusqueda[DgvResultadoBusqueda.CurrentCell.RowIndex];
+            MessageBox.Show(seleccionado.DNI.ToString());
             Medicos_Alta medicos = new Medicos_Alta();
             medicos.Show();
         }
@@ -113,6 +119,11 @@ namespace WindowsFormsApp1
             {
                 TxtDNI.Text = "DNI";
                 TxtDNI.ForeColor = Color.Gray;
+                dni = "";
+            }
+            else
+            {
+                dni = TxtDNI.Text;
             }
         }
 
@@ -120,8 +131,13 @@ namespace WindowsFormsApp1
         {
             if (TxtApellido.Text == "")
             {
-                TxtApellido.Text = "DNI";
+                TxtApellido.Text = "APELLIDO";
                 TxtApellido.ForeColor = Color.Gray;
+                apellido = "";
+            }
+            else
+            {
+                apellido = TxtApellido.Text;
             }
         }
 
@@ -129,9 +145,23 @@ namespace WindowsFormsApp1
         {
             if (TxtNombre.Text == "")
             {
-                TxtNombre.Text = "DNI";
+                TxtNombre.Text = "Nombre";
                 TxtNombre.ForeColor = Color.Gray;
+                nombre = "";
+            } else
+            {
+                nombre = TxtNombre.Text;
             }
+        }
+
+        private void TxtDNI_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            GestorPersona.EliminarPersona(seleccionado);
         }
     }
 }

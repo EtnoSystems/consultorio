@@ -424,7 +424,7 @@ insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento)
 insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('gabrielardecurnex@gmail.com','+5493455418524','+543455420282',14);
 
 insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('belgrano',1549,null,null,null,1);
-insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('34945837','jonatan','paccor',15,'M','01-11-1991');
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('34945837','jonatan','paccor',15,'M','01-11-1990');
 insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('jonatanpaccor86@gmail.com','+5493455435195',null,15);
 
 insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('ituzaingo',188,null,null,null,185);
@@ -443,6 +443,17 @@ insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) valu
 insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('25243271','mauro ceferino','pereyra',19,'M','02-04-1977');
 insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('mauro.pereyra@hotmail.com','+5493455407452',null,19);
 
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('chile',157,null,null,'obras sanitarias',1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('5928106','julio manuel','bielinis',20,'M','06-17-1937');
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('juliobielinis@live.com','+5493442556401','+543455420313',20);
+
+insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('belgrano',1549,null,null,null,1);
+insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('35713736','magalí','kerps',21,'F','04-07-1991');
+insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('magakerps@gmail.com','+5493455456268',null,21);
+
+--insert into dbo.direccion (calle,numero,piso,departamento,barrio,ciudad_id) values ('belgrano',1549,null,null,null,1);
+--insert into dbo.persona (DNI,Nombre,Apellido,Direccion_id,Sexo,Fecha_nacimiento) values ('5928106','ciro','paccor',21,'M','05-07-2018');
+--insert into dbo.datos_contacto (email,tel_celular,tel_fijo,persona_id) values ('jonatanpaccor86@gmail.com','+5493455435195',null,21);
 
 -- INSERTS DE LA TABLA PACIENTE-OBRA SOCIALES
 insert into dbo.obra_socialPersona (Obra_social_Id,Persona_Id) values (14,1);
