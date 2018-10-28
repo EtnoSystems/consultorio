@@ -34,6 +34,7 @@
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.DgvResultadoBusqueda = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvResultadoBusqueda)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,6 +50,7 @@
             this.TxtDNI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtDNI.TextChanged += new System.EventHandler(this.TxtDNI_TextChanged);
             this.TxtDNI.Enter += new System.EventHandler(this.TxtDNI_Enter);
+            this.TxtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDNI_KeyPress);
             this.TxtDNI.Leave += new System.EventHandler(this.TxtDNI_Leave);
             // 
             // TxtApellido
@@ -86,6 +88,7 @@
             this.BtnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.BtnBuscar.FlatAppearance.BorderSize = 0;
+            this.BtnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscar.Location = new System.Drawing.Point(54, 160);
             this.BtnBuscar.Name = "BtnBuscar";
@@ -103,17 +106,38 @@
             this.DgvResultadoBusqueda.Size = new System.Drawing.Size(492, 204);
             this.DgvResultadoBusqueda.TabIndex = 4;
             this.DgvResultadoBusqueda.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResultadoBusqueda_CellClick);
+            this.DgvResultadoBusqueda.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResultadoBusqueda_CellContentClick);
             this.DgvResultadoBusqueda.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResultadoBusqueda_CellDoubleClick);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(241, 235);
+            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.EliminarBoton;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Location = new System.Drawing.Point(717, 25);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(75, 79);
             this.btnEliminar.TabIndex = 5;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.exitIcon;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(724, 140);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(67, 79);
+            this.button1.TabIndex = 6;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Filtros_busqueda
             // 
@@ -121,7 +145,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.fondoFormularios;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(717, 274);
+            this.ClientSize = new System.Drawing.Size(820, 274);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.DgvResultadoBusqueda);
             this.Controls.Add(this.BtnBuscar);
@@ -145,5 +170,6 @@
         private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.DataGridView DgvResultadoBusqueda;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button button1;
     }
 }

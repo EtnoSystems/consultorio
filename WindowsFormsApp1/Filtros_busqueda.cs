@@ -41,6 +41,11 @@ namespace WindowsFormsApp1
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
+            Buscar();
+        }
+
+        void Buscar()
+        {
             resultadoBusqueda = GestorPersona.BuscarPersonas(dni, apellido, nombre);
 
             if (resultadoBusqueda.Count > 0)
@@ -83,16 +88,16 @@ namespace WindowsFormsApp1
         //se hace click sobre el grid
         private void DgvResultadoBusqueda_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            seleccionado = resultadoBusqueda[DgvResultadoBusqueda.CurrentCell.RowIndex];
         }
         
         //se hace dobleclick sobre el grid
         private void DgvResultadoBusqueda_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             seleccionado = resultadoBusqueda[DgvResultadoBusqueda.CurrentCell.RowIndex];
-            MessageBox.Show(seleccionado.DNI.ToString());
-            Medicos_Alta medicos = new Medicos_Alta();
-            medicos.Show();
+            //MessageBox.Show(seleccionado.DNI.ToString());
+            //Medicos_Alta medicos = new Medicos_Alta();
+            //medicos.Show();
         }
 
         private void TxtDNI_Enter(object sender, EventArgs e)
@@ -161,7 +166,25 @@ namespace WindowsFormsApp1
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            GestorPersona.EliminarPersona(seleccionado);
+            if (MessageBox.Show("¿Está seguro que desea eliminar a " + seleccionado.Nombre + " " + seleccionado.Apellido,"Atención",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                GestorPersona.EliminarPersona(seleccionado);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void DgvResultadoBusqueda_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void TxtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13) Buscar();
         }
     }
 }

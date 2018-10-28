@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 using System.Text;
 using System.Threading.Tasks;
 using BD;
@@ -240,8 +241,10 @@ namespace DAO
         {
             try
             {
+
                 using (consultoriosEntities dbContext = new consultoriosEntities())
                 {
+                   
                     var query = (from n in dbContext.Persona
                                  where n.Id == unSeleccionado.Id
                                  select n).Single();
@@ -258,5 +261,7 @@ namespace DAO
         }
 
     }    
+
+    
     
 }
