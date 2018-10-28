@@ -46,6 +46,10 @@ namespace WindowsFormsApp1
 
         void Buscar()
         {
+            if (TxtDNI.Text != "DNI") dni = TxtDNI.Text; else dni = "";
+            if (TxtNombre.Text != "Nombre") nombre = TxtNombre.Text; else nombre = "";
+            if (TxtApellido.Text != "Apellido") apellido = TxtApellido.Text; else apellido = "";
+
             resultadoBusqueda = GestorPersona.BuscarPersonas(dni, apellido, nombre);
 
             if (resultadoBusqueda.Count > 0)
@@ -103,19 +107,19 @@ namespace WindowsFormsApp1
         private void TxtDNI_Enter(object sender, EventArgs e)
         {
             TxtDNI.ForeColor = Color.Black;
-            TxtDNI.Text = "";
+            if (TxtDNI.Text == "DNI") TxtDNI.Text = "";
         }
 
         private void TxtApellido_Enter(object sender, EventArgs e)
         {
             TxtApellido.ForeColor = Color.Black;
-            TxtApellido.Text = "";
+            if (TxtApellido.Text == "Apellido") TxtApellido.Text = "";
         }
 
         private void TxtNombre_Enter(object sender, EventArgs e)
         {
             TxtNombre.ForeColor = Color.Black;
-            TxtNombre.Text = "";
+            if (TxtNombre.Text == "Nombre") TxtNombre.Text = "";
         }
 
         private void TxtDNI_Leave(object sender, EventArgs e)
@@ -184,7 +188,20 @@ namespace WindowsFormsApp1
 
         private void TxtDNI_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 13) Buscar();
+            if (e.KeyChar == 13)
+                Buscar();
+        }
+
+        private void TxtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                Buscar();
+        }
+
+        private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                Buscar();
         }
     }
 }

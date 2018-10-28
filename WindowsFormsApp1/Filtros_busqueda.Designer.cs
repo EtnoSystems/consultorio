@@ -65,6 +65,7 @@
             this.TxtApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtApellido.TextChanged += new System.EventHandler(this.TxtApellido_TextChanged);
             this.TxtApellido.Enter += new System.EventHandler(this.TxtApellido_Enter);
+            this.TxtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtApellido_KeyPress);
             this.TxtApellido.Leave += new System.EventHandler(this.TxtApellido_Leave);
             // 
             // TxtNombre
@@ -78,6 +79,7 @@
             this.TxtNombre.Text = "Nombre";
             this.TxtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtNombre.Enter += new System.EventHandler(this.TxtNombre_Enter);
+            this.TxtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_KeyPress);
             this.TxtNombre.Leave += new System.EventHandler(this.TxtNombre_Leave);
             // 
             // BtnBuscar
@@ -127,8 +129,9 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.exitIcon;
+            this.button1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.checkout;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
