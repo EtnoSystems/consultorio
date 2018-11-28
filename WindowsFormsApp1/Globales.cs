@@ -10,11 +10,10 @@ namespace WindowsFormsApp1
 {
     static class Globales
     {
-        //Logica.gestorUsuarios _gestorUsuarios = new gestorUsuarios();
-
         private static UsuarioDTO _globalUserObject;
         private static string _globalUserName = "";
         private static string _globalUserType = "";
+        private static string _dni = "";
         private static int _codigoFormularios = 0;
 
         public static UsuarioDTO userObject
@@ -39,6 +38,12 @@ namespace WindowsFormsApp1
         {
             get { return _codigoFormularios; }
             set { _codigoFormularios = value; }
+        }
+
+        public static string dni
+        {
+            get { return _dni; }
+            set { _dni = value; }
         }
 
 

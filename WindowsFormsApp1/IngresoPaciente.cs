@@ -14,6 +14,7 @@ namespace WindowsFormsApp1
 {
     public partial class IngresoPaciente : Form
     {
+        PacienteDTO paciente; //agregado
 
         private string codigo = "";
 
@@ -34,25 +35,25 @@ namespace WindowsFormsApp1
 
         private void BtnBuscarPaciente_Click(object sender, EventArgs e)
         {
-            CargarSevicio servicio = new CargarSevicio();
-            servicio.Show(); 
-
-            //GestorPacientes gestorPacientes = new GestorPacientes();
-            //PacienteDTO paciente = gestorPacientes.BuscarPacientePorDNI(TxtBusqueda.Text);
-
-            //if (paciente!=null)
-            //{
-            //    CargarSevicio servicio = new CargarSevicio();
-            //    servicio.paciente = paciente;
-            //    servicio.Show();
-            //    this.Hide();
-
-            //    //MessageBox.Show("encontre algo papee");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("no encontre nada papee");
-            //}
+            paciente = GestorPacientes.BuscarPacientePorDNI(TxtBusqueda.ToString()); //agregado
+            if (paciente != null)
+            {
+                if (MessageBox.Show("El DNI ingresado no existe, ¿desea cargar los datos?", "DNI no encontrado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Pacientes_Alta pacientes_Alta = new Pacientes_Alta();
+                    Globales.dni = TxtBusqueda.ToString();
+                    pacientes_Alta.Show();
+                }
+                else
+                {
+                    TxtBusqueda.Focus();
+                }
+            }
+            else
+            {
+                MostrarDatosPaciente datos = new MostrarDatosPaciente();
+                datos.Show();
+            }
         }
 
         void Redireccionar(int dni, int codigo)

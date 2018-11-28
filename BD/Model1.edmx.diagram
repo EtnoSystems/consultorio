@@ -7,7 +7,7 @@
       <Diagram DiagramId="363bd501b77745e8acd58d4c53eb40aa" Name="Diagram1" ZoomLevel="106">
         <EntityTypeShape EntityType="consultoriosModel.Auditoria" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
         <EntityTypeShape EntityType="consultoriosModel.Ciudad" Width="1.5" PointX="1.5" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="consultoriosModel.Consulta" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="consultoriosModel.Consulta" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
         <EntityTypeShape EntityType="consultoriosModel.Datos_contacto" Width="1.5" PointX="8.25" PointY="5.25" IsExpanded="true" />
         <EntityTypeShape EntityType="consultoriosModel.Direccion" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="consultoriosModel.Especialidad" Width="1.5" PointX="3.75" PointY="9.25" IsExpanded="true" />

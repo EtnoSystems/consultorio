@@ -162,6 +162,13 @@ namespace WindowsFormsApp1
 
         private void Pacientes_Alta_Load(object sender, EventArgs e)
         {
+            //Agregado
+            if (Globales.dni != "")
+            {
+                TxtDNI.Text = Globales.dni;
+                Globales.dni = "";
+            }
+
             GestorCiudades gestorCiudades = new GestorCiudades();
 
             CmbCiudad.DataSource = gestorCiudades.ListarCiudades();

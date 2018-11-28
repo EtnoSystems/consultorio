@@ -106,6 +106,12 @@
     <Compile Include="Medicos_Alta.Designer.cs">
       <DependentUpon>Medicos_Alta.cs</DependentUpon>
     </Compile>
+    <Compile Include="MostrarDatosPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarDatosPaciente.Designer.cs">
+      <DependentUpon>MostrarDatosPaciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="ObrasSociales_alta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Medicos_Alta.resx">
       <DependentUpon>Medicos_Alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarDatosPaciente.resx">
+      <DependentUpon>MostrarDatosPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ObrasSociales_Alta.resx">
       <DependentUpon>ObrasSociales_alta.cs</DependentUpon>
@@ -429,6 +438,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\buscar de nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cancelIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\editIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\okIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Certificado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\OrdenMedicamentos.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

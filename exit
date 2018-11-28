@@ -1,0 +1,564 @@
+[33mcommit 52a4e35873c845be96f60b5305e85b27e46fff7e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Sun Oct 28 14:02:56 2018 -0300
+
+    los choris
+
+[33mcommit d9e5f08d536922747e01ccab9753088e4c293705[m
+Author: CondeRobas <javier_robas@hotmail.com>
+Date:   Wed Sep 19 21:06:57 2018 -0300
+
+    de todo un poco
+
+[33mcommit ceb426f7cd574d8d85dc9db9e7d03044b2e13d2b[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Wed Sep 12 19:28:33 2018 -0300
+
+    se agregaron aspectos visuales a los formularios
+
+[33mcommit 370d418d0162724662bc87d6c925a5650ad49a8f[m
+Merge: 8bcb225 671f6dd
+Author: matiasff <matybienalto@gmail.com>
+Date:   Tue Sep 11 19:02:06 2018 -0300
+
+    segundo intento
+
+[33mcommit 8bcb225c7af3f78de6e7217602a1d0ac12b7d690[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Fri Sep 7 20:06:21 2018 -0300
+
+    las buscquedas traen los objetos con sus propiedades
+
+[33mcommit 671f6dd2774ec93624339baa61842635f9ccc097[m
+Author: CondeRobas <javier_robas@hotmail.com>
+Date:   Wed Sep 5 00:03:48 2018 -0300
+
+    se agregó el campo BARRIO a la dirrecion en la BD
+
+[33mcommit 7fd13a13080444021677c3fd9069b50fd6497413[m
+Author: CondeRobas <javier_robas@hotmail.com>
+Date:   Sat Sep 1 19:21:37 2018 -0300
+
+    formulario de busquedas
+
+[33mcommit 854651fddfa5640975c68f4d5f7ca954e7eea36b[m
+Author: CondeRobas <javier_robas@hotmail.com>
+Date:   Fri Aug 24 20:02:25 2018 -0300
+
+    correccion de scripts sql
+
+[33mcommit a1e8cd3f5fdeb64fcf3a97a0bf4cd9553c57b1bf[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Fri Aug 24 00:47:03 2018 -0300
+
+    Se agrego el campo fech.nac. a la BBDD y se corrigio un indice
+
+[33mcommit 6060da99b0c4ef309b33ac2b403a56ff989970ed[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Wed Aug 22 20:56:40 2018 -0300
+
+    cambios en formularios de medicos
+
+[33mcommit ac34e6f872efe8509acf2c69ebb49cb4cda52417[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Mon Jul 30 21:37:10 2018 -0300
+
+    Se definieron todos los metodos como 'static' y se elimino la creacion de una nueva instancia de clase en cada caso
+
+[33mcommit b22efebe4be9cc0f1dd4beb4391d4ce282b4809c[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Tue Jul 17 22:07:14 2018 -0300
+
+    Datagrid de usuarios funciona completo
+
+[33mcommit d6ff39ed353cab4d8ed439f7a1380e842f4dd6b8[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Sun May 27 23:54:55 2018 -0300
+
+    Algunos agregados menores
+
+[33mcommit f5b6a387f8bf3ad582c6a2dad486a84e7a8f246e[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Wed May 2 23:40:50 2018 -0300
+
+    detalles pre presentacion 1
+
+[33mcommit cf7787e41030f814590b1838930f6f7e6be4f425[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Thu Apr 5 19:51:04 2018 -0300
+
+    Se corrigieron validaciones en funcion agregar pacientes, y se trabajo en el pasaje de parametros de busqueda dni paciente -> alta servicio
+
+[33mcommit 9772e2ed20a70700421ef5a5719f7bc6f253d4af[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Thu Apr 5 01:08:49 2018 -0300
+
+    Se trabajo en la busqueda del paciente para asentar el servicio.
+
+[33mcommit fe945c0a795635d5fd3a22d56ad037e9b114899a[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Wed Apr 4 01:55:55 2018 -0300
+
+    Se comenzo a trabajar con los filtros en los listados medicos del formulario de carga de un servicio
+
+[33mcommit 99567bf4c9d599b5afe36f293af9748d4764dfc6[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Wed Apr 4 00:57:24 2018 -0300
+
+    Se corrigio la cardinalidad de la BBDD consulta-obra_social
+
+[33mcommit e853ee536262dc9f9a6615a4a8c38e18ea6c44b2[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Sat Mar 31 17:59:34 2018 -0300
+
+    alta pacientes, obra social, que guarde de a muchas
+
+[33mcommit c4a9ea1e3c0ac31dec86ed0aae894bfa3e340428[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Fri Mar 30 20:47:44 2018 -0300
+
+    anda el agregar persona! hackathon de viernes santo
+
+[33mcommit 793882428c4d0b45724915543b6f3052413c2616[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Fri Mar 30 14:43:51 2018 -0300
+
+    se trabajo en la funcion de alta de pacientes
+
+[33mcommit af1d586142bd746c84cdadad9519041de83539ef[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Sat Mar 24 20:23:56 2018 -0300
+
+    varias mejoras y funcionalidades al formulario Obras Sociales
+
+[33mcommit 7cdc5feb2fd146b18db9aa054daa9c05180378b3[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Fri Mar 23 20:19:32 2018 -0300
+
+    Los combo de obra social levantan los nombres de la tabla y se arreglaron enters y leaving
+
+[33mcommit e214f463757be5260ffec940b6a2bc082556f3f9[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Tue Mar 20 18:31:51 2018 -0300
+
+    Se agrego el tabcontrol para las obras sociales junto con los formularios que faltaban ahi
+
+[33mcommit 7d49190b62cc8f9d2f87bc0fbd1e338809971a8d[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Sun Mar 11 19:47:22 2018 -0300
+
+    Se agrego el DataSet para los Crystal Report
+
+[33mcommit f2c803f2112a7ca248981c8006922a60254756f6[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Sat Mar 10 00:04:06 2018 -0300
+
+    Se agregaron las funciones de fuargar persona
+
+[33mcommit 6bad6555baa6b07cffcedccd261d0f40df206a55[m
+Merge: cd4e260 303b6bc
+Author: JJ <javier_robas@hotmail.com>
+Date:   Thu Mar 1 02:34:35 2018 -0300
+
+    Merge branch 'master' of https://github.com/EtnoSystems/consultorio
+
+[33mcommit cd4e2604c399eb3064827f8e2e20a9558e711f1b[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Thu Mar 1 02:34:12 2018 -0300
+
+    se agregaron entradas a la tabla feriados
+
+[33mcommit 303b6bc8fc2c03c89fbec121c611a96c2f7aa592[m
+Author: reznov89 <matybienalto@gmail.com>
+Date:   Thu Mar 1 00:04:32 2018 -0300
+
+    Arreglos menores
+
+[33mcommit 9f658413ad8117208bc7b13fa15b61c8c09df337[m
+Merge: f59fff6 7eafec2
+Author: JJ <javier_robas@hotmail.com>
+Date:   Wed Feb 28 03:07:52 2018 -0300
+
+    Merge branch 'master' of https://github.com/EtnoSystems/consultorio
+
+[33mcommit f59fff64357165edc11cea2ba97bce54610ed571[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Wed Feb 28 03:07:30 2018 -0300
+
+    Se quito el campo email_secundario y se poblo un poco mas la BD
+
+[33mcommit 7eafec24ad6cb9563fece8f0f4d3f7fda081ce8f[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Tue Feb 27 20:05:38 2018 -0300
+
+    Se agregaron varias clases, a revisar
+
+[33mcommit 1bd86581fdef5932dfd21a3a317114db4b06c8f3[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Tue Feb 27 01:23:19 2018 -0300
+
+    Se corrigieron cardinalidades medico-especialidad y se agregaron entradas a la BD para medicos y pacientes
+
+[33mcommit fc177694d7460797c14424b6c8242307f4378308[m
+Merge: d73a868 5b6db0e
+Author: JJ <javier_robas@hotmail.com>
+Date:   Mon Feb 26 22:27:07 2018 -0300
+
+    Merge branch 'master' of https://github.com/EtnoSystems/consultorio
+
+[33mcommit d73a868d5c2c4d0a3c9b9858052664c0427b25bf[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Mon Feb 26 22:25:58 2018 -0300
+
+    correcciones sobre cardinalidad BD + script insercion paciente y medico
+
+[33mcommit 5b6db0ec165010cda6909b9b334ab4297d948528[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Mon Feb 26 19:40:45 2018 -0300
+
+    Se agregó formulario pacientes alta
+
+[33mcommit e991d9b6c1af1a4ffea2c3caf9cbf1c68809c8e5[m
+Merge: 0d4a17b 1781cdd
+Author: JJ <javier_robas@hotmail.com>
+Date:   Fri Feb 23 23:25:25 2018 -0300
+
+    Merge branch 'master' of https://github.com/EtnoSystems/consultorio
+
+[33mcommit 0d4a17b4e312be8fa99df1d96204709143be4cc0[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Fri Feb 23 23:23:03 2018 -0300
+
+    se corrigio el app.config en la capa presentacion
+
+[33mcommit 1781cdd9c3c6a8a067ca4b4fb305cd500c1b85c1[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Fri Feb 23 21:14:20 2018 -0300
+
+    agregué form AgregarFeriados y PacientesDTO
+
+[33mcommit d80a8624ccc2df268d4666233c5b392775e1e539[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Thu Feb 22 23:38:31 2018 -0300
+
+    solucionado el problema de las relaciones
+
+[33mcommit c03334ada5a87cfec412b2da4822316ad7dee960[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Thu Feb 22 20:11:21 2018 -0300
+
+    capa dao
+
+[33mcommit 7f4fcb92d3d82c309e816dd8aaaef922efc9db2a[m
+Merge: 90574fc b95b8e5
+Author: JJ <javier_robas@hotmail.com>
+Date:   Thu Feb 22 04:27:15 2018 -0300
+
+    modificaciones sobre la base de datos
+
+[33mcommit 90574fceb84b2fcc0225d5c1954c617738cf5f14[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Thu Feb 22 04:24:40 2018 -0300
+
+    modificacion sobre la base de datos
+
+[33mcommit b95b8e52e21aca29c987ae6ca867e9c3482939b5[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Sat Feb 17 22:48:09 2018 -0300
+
+    emm.. cositas.. de aqui,de alla, nada importante
+
+[33mcommit 742afb05a9c17bef47d4b2f2ed4f3dae27f18a39[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Sun Feb 11 01:09:29 2018 -0300
+
+    Se agrego formulario Reportes
+
+[33mcommit e0a9e156eae7a87e2ca32702943695e1c2a81dd1[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Thu Feb 8 03:24:07 2018 -0300
+
+    Revert "creacion de scripts para poblar la BD"
+    
+    This reverts commit 4dea050a4c94933a71a3330f484fd10692fb1541.
+
+[33mcommit 683d77b7b1780197d9934f5513e9c3a927b2439e[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Thu Feb 8 00:11:38 2018 -0300
+
+    Conexion de Crystal Report con base de datos
+
+[33mcommit 8bcf57aac30392dd5030c03e8fd35ff798651b28[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Wed Feb 7 20:20:49 2018 -0300
+
+    Formulario alta medico y arreglos varios
+
+[33mcommit 5bafc46ce135bf1d15eb743eeb84fb5728c35b50[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Mon Feb 5 18:51:35 2018 -0300
+
+    Algunos arreglos visuales
+
+[33mcommit 4dea050a4c94933a71a3330f484fd10692fb1541[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Mon Feb 5 03:04:57 2018 -0300
+
+    creacion de scripts para poblar la BD
+
+[33mcommit a55375f14652e1adaf8e573f9b73b7756acf6b58[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Mon Feb 5 00:54:15 2018 -0300
+
+    acomodo sobre el modelo de datos
+
+[33mcommit fd0a3320f92b186641ac8342a78a1773cb7e29fd[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Sun Feb 4 23:27:50 2018 -0300
+
+    refinamientos sobre el modelo de datos
+
+[33mcommit f172a1b7641f4e07f6782a864f73b3bda283dea8[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Sun Feb 4 17:33:26 2018 -0300
+
+    ultimando detalles de la BD
+
+[33mcommit f613c1c3b96e5e7d8b223927d187942cb2941acd[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Sun Feb 4 17:19:30 2018 -0300
+
+    se agregaron relaciones de auditoria a la BD
+
+[33mcommit 58f6379bf476da908a431115a493a1a0a9b391c7[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Sun Feb 4 16:05:56 2018 -0300
+
+    nuevo modelo de datos y correcciones sobre usuarios baja
+
+[33mcommit 05e00d0f943fc0f84a609067de86183746477c93[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Fri Feb 2 23:46:34 2018 -0300
+
+    Se agrego el primer Crystal Report y el form OS altas
+
+[33mcommit d6cddc7259da6ee51c159eb19a69ea6f647b49b4[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Thu Feb 1 18:34:56 2018 -0300
+
+    Arreglos estéticos antes de la primera presentación a secretaria
+
+[33mcommit 7489360941b2c901a1997a83a9fe4205b57e4412[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Wed Jan 31 20:15:51 2018 -0300
+
+    Se arreglaron aspectos visuales y funciones basicas
+
+[33mcommit bf5d51e10a516167de3970cce6b144f68f22d021[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Mon Jan 29 21:47:19 2018 -0300
+
+    Formulario asentar servicio
+
+[33mcommit 79c745ab8c92c6ba7c9ef08cfb16f70c110488cd[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Mon Jan 29 21:46:25 2018 -0300
+
+    Se agrego formulario pretar servicio
+
+[33mcommit 35086d55a958aad437b98cd90ba58850495d4406[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Mon Jan 29 18:15:16 2018 -0300
+
+    Se soluciono problema con rutas absolutas
+
+[33mcommit 335f7c00497646db4e690d90be65e09e8e3381f5[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Mon Jan 29 17:59:15 2018 -0300
+
+    Ultimas version, todos los cambios
+
+[33mcommit a73d893b7052e7314e2ab076645568eef8b0e1b3[m
+Merge: 8ae4b46 3711e4e
+Author: matiasff <matybienalto@gmail.com>
+Date:   Mon Jan 29 17:20:49 2018 -0300
+
+    Cambios y mas cambios
+
+[33mcommit 3711e4ef5a44ee4130be86794bf457bb0e149882[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Mon Jan 29 16:31:36 2018 -0300
+
+    Se trabajo sobre el formulario de baja
+
+[33mcommit 1360abe4d2ee21fe91597316985ba0f5330165e0[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Mon Jan 29 16:17:05 2018 -0300
+
+    Se modifico la logica interna del loggin
+
+[33mcommit e1d5892da9106450a5cb2ad27383d755a9b8df1b[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Mon Jan 29 15:34:09 2018 -0300
+
+    se trabajo sobre las validaciones en errorproviders
+
+[33mcommit b9d1122d453e118040dab5643069470721c208f9[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Mon Jan 29 05:20:36 2018 -0300
+
+    se trabajo sobre el flujo de trabajo de los errores
+
+[33mcommit a2ce9ad22936db444902e5267d915c6cff0310a9[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Mon Jan 29 03:28:43 2018 -0300
+
+    modificaciones sobre el formulario de altas
+
+[33mcommit b6b96e8bdb66c8a9a1fa361ac575284776bb1e06[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Sun Jan 28 21:30:38 2018 -0300
+
+    Se cargo nuevamente el modelo edmx porque se modificarons tipos de datos en la base de datos
+
+[33mcommit c458cf3a155e65e388eeae712d112f38096457ab[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Sun Jan 28 19:31:52 2018 -0300
+
+    modificaciones tolower sobre los campos del form altas
+
+[33mcommit 44d5760992333e981b8744e257922ac143ce010b[m[33m ([m[1;31morigin/noseeee[m[33m)[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Sun Jan 28 06:03:30 2018 -0300
+
+    Revert "modificaciones sobre los iconos y validaciones del formulario de altas"
+    
+    This reverts commit b446cbdc1a972ebc49a9d3e63c990f554d2516d5.
+
+[33mcommit b446cbdc1a972ebc49a9d3e63c990f554d2516d5[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Sun Jan 28 05:39:51 2018 -0300
+
+    modificaciones sobre los iconos y validaciones del formulario de altas
+
+[33mcommit 514fe69aea95a38347ed1b0f0640a630759c33d1[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Sat Jan 27 22:59:34 2018 -0300
+
+    modificaciones sobre el formulario de eliminacion de usuarios
+
+[33mcommit 8ae4b46019711a540e0ca546c174591288f96ec5[m[33m ([m[1;31morigin/cambiosMati[m[33m, [m[1;32mcambiosMati[m[33m)[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Thu Jan 25 18:05:02 2018 -0300
+
+    Se agregaron detalles de los menus y formularios
+
+[33mcommit 6659a50ad130feed6c939e386355604a3c287be8[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Wed Jan 24 04:27:37 2018 -0300
+
+    Ya se puede guardar un usuario en la BD
+
+[33mcommit 2c523dab7e137ece87c9e104d6b296b36ea494df[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Wed Jan 24 01:41:54 2018 -0300
+
+    Se corrigieron los nombres que deben empezar con mayuscula
+
+[33mcommit 25ce5d1ce55f4e3d608caf1b258279e6593bf2d6[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Tue Jan 23 20:59:56 2018 -0300
+
+    se arreglo el form Usuarios_alta, falta agregar usuario
+
+[33mcommit 5ef40a92db6db2606b86382b71851ebfc473e9b5[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Tue Jan 23 14:51:11 2018 -0300
+
+    Se agrego form Usuarios_baja y otros arreglos
+
+[33mcommit c24c09486fc46d2011c300ee7ef6ea66f9f18783[m
+Merge: 2beb612 397c64d
+Author: JJ <javier_robas@hotmail.com>
+Date:   Tue Jan 23 06:23:48 2018 -0300
+
+    Merge branch 'master' of https://github.com/EtnoSystems/consultorio
+
+[33mcommit 2beb61237610f82b7a23d126814f200ffd93297f[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Tue Jan 23 06:23:01 2018 -0300
+
+    se volvio a crear el modelo de datos con los nombres de atributos en mayuscula
+
+[33mcommit 397c64d54e812c15d52e92bc42fd4712a60ed56c[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Mon Jan 22 17:20:39 2018 -0300
+
+    Se mejoraron aspectos visuales y funciones form Agregar_usuario
+
+[33mcommit 8a69fc47210765998501f6aa0037cf5dcdf4592a[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Mon Jan 22 16:25:52 2018 -0300
+
+    se pusieron los nombres de los formularios en mayuscula
+
+[33mcommit 59c2cb52c73a897f884a618e000f0529f8cec679[m
+Merge: 47f1e1f 58adf2d
+Author: JJ <javier_robas@hotmail.com>
+Date:   Mon Jan 22 16:23:01 2018 -0300
+
+    Merge branch 'master' of https://github.com/EtnoSystems/consultorio
+
+[33mcommit 58adf2da3579d91ba57e546a35d95f69ac297e47[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Mon Jan 22 16:21:24 2018 -0300
+
+    trabaje en el form Usuario_alta
+
+[33mcommit 47f1e1f54033460050959cedce5e8110211d042f[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Mon Jan 22 16:14:00 2018 -0300
+
+    lo ultimo que hice
+
+[33mcommit 949b5e0a6240d29df2ae19ea4956e37648c24396[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Sat Jan 20 16:14:45 2018 -0300
+
+    Agregué el menu con algunos fallos y empecé el formulario agregar usuario
+
+[33mcommit d4d393574cd3b8125572f5249e7aa17840fa7829[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Thu Jan 18 23:47:58 2018 -0300
+
+    se volvio a generar el modelo, se agrego una tabla de prueba para probar las propiedades de navegacion
+
+[33mcommit 2f0018857d8b09a9f35be76cd47638a89dd0475c[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Thu Jan 18 05:59:11 2018 -0300
+
+    se modifico la BD y se volvio a agregar el modelo
+
+[33mcommit 20b1bd5e4de0e328bc2e8e312b3bc29dd9c2bd15[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Thu Jan 18 04:37:08 2018 -0300
+
+    agregue el objeto usuario a la clase de vbles globales
+
+[33mcommit bbe4fdf8a163addb39645e40ed384be309c130d7[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Wed Jan 17 19:44:23 2018 -0300
+
+    inicio de sesion y form principal
+
+[33mcommit f0dc1faefd945a659f0e5652cb9f471acc30249f[m
+Author: matiasff <matybienalto@gmail.com>
+Date:   Wed Jan 17 19:42:13 2018 -0300
+
+    varios avances inicio sesion
+
+[33mcommit 931960f0fe30205a5f98c06412b64a170aa8f169[m
+Author: JJ <javier_robas@hotmail.com>
+Date:   Wed Jan 17 17:11:29 2018 -0300
+
+    va de nuevo
